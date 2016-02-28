@@ -1,0 +1,165 @@
+body {
+    background: #1b2838;
+}
+
+.card {
+    position: relative;
+    display: block;
+    margin-bottom: .75rem;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: .25rem;
+}
+
+.card-block {
+    padding: 1.25rem;
+}
+
+.card-map {
+    height: 35rem;
+    padding: 0rem;
+}
+
+.div-content {
+    max-width: 1200px;
+    width: 100%;
+    padding-bottom: 10px;
+    margin: auto;
+}
+
+.select-year{
+    width: 100%;
+    margin: auto;
+}
+
+/**
+ * Bootstrap nav bar
+ */
+
+.navbar-brand {
+    color: #4483b4 !important;
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #FFFFFF;
+    border-radius: 0;
+}
+.navbar-default .navbar-brand {
+    color: #3a84bd;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #225b87;
+}
+.navbar-default .navbar-text {
+    color: #3a84bd;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #3a84bd;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #225b87;
+    -webkit-box-shadow:inset 0px -4px 0px 0px #225b87;
+    -moz-box-shadow:inset 0px -4px 0px 0px #225b87;
+    box-shadow:inset 0px -4px 0px 0px #225b87;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+    background-color: #ffffff;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+    color: #3a84bd;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+    color: #225b87;
+    background-color: #3a84bd;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+    background-color: #3a84bd;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #225b87;
+    background-color: #3a84bd;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #225b87;
+    background-color: #3a84bd;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #225b87;
+    background-color: #3a84bd;
+}
+.navbar-default .navbar-toggle {
+    border-color: #3a84bd;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #3a84bd;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #3a84bd;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #3a84bd;
+}
+.navbar-default .navbar-link {
+    color: #3a84bd;
+}
+.navbar-default .navbar-link:hover {
+    color: #225b87;
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #3a84bd;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #225b87;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #225b87;
+        background-color: #3a84bd;
+    }
+}
+
+
+/**
+ * Google maps api
+ */
+
+#map{
+    height: 35rem;
+}
+
+
+/**
+ * Bootstrap slider plugin
+ */
+
+.slider.slider-horizontal {
+    width: 90%;
+    height: 20px;
+    margin: auto;
+}
+
+.slider-selection {
+    background: #3a84bd;
+}
+
+.slider-track {
+    background: lightgray;
+}
