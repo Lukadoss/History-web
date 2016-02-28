@@ -1,0 +1,1028 @@
+2016-02-25 17:25:49 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Test could not be found.
+Exception Attributes: array (
+  'class' => 'Test',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-25 17:26:24 Error: [ReflectionException] Class App\Controller\TestController does not have a constructor, so you cannot pass any constructor arguments
+Request URL: /historyweb/test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(100): ReflectionClass->newInstance(Object(Cake\Network\Request), Object(Cake\Network\Response), 'Test')
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Filter\ControllerFactoryFilter.php(51): Cake\Routing\Filter\ControllerFactoryFilter->_getController(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\DispatcherFilter.php(145): Cake\Routing\Filter\ControllerFactoryFilter->beforeDispatch(Object(Cake\Event\Event))
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Event\EventManager.php(390): Cake\Routing\DispatcherFilter->handle(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Event\EventManager.php(356): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(62): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.befo...', Array)
+#7 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-02-25 17:28:24 Error: Fatal Error (1): Class 'AppController' not found in [C:\xampp\htdocs\historyweb\src\Controller\TestController.php, line 9]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-02-25 17:28:24 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /historyweb/test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', 'C:\\xampp\\htdocs...', 9)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-25 17:35:20 Error: Fatal Error (1): Class 'AppController' not found in [C:\xampp\htdocs\historyweb\src\Controller\TestController.php, line 9]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-02-25 17:35:20 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /historyweb/test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', 'C:\\xampp\\htdocs...', 9)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-25 17:37:32 Error: Fatal Error (1): Class 'AppController' not found in [C:\xampp\htdocs\historyweb\src\Controller\TestController.php, line 9]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-02-25 17:37:32 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /historyweb/Test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', 'C:\\xampp\\htdocs...', 9)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-25 17:37:37 Error: Fatal Error (1): Class 'AppController' not found in [C:\xampp\htdocs\historyweb\src\Controller\TestController.php, line 9]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-02-25 17:37:37 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /historyweb/Test/index
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', 'C:\\xampp\\htdocs...', 9)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-25 17:37:41 Error: Fatal Error (1): Class 'AppController' not found in [C:\xampp\htdocs\historyweb\src\Controller\TestController.php, line 9]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-02-25 17:37:41 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /historyweb/Test/kek
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', 'C:\\xampp\\htdocs...', 9)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-25 17:37:46 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Kek could not be found.
+Exception Attributes: array (
+  'class' => 'Kek',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/kek
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-25 17:42:48 Error: Fatal Error (1): Class 'AppController' not found in [C:\xampp\htdocs\historyweb\src\Controller\TestController.php, line 9]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-02-25 17:42:48 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /historyweb/Test/index
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', 'C:\\xampp\\htdocs...', 9)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-25 17:42:50 Error: Fatal Error (1): Class 'AppController' not found in [C:\xampp\htdocs\historyweb\src\Controller\TestController.php, line 9]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-02-25 17:42:50 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /historyweb/Test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', 'C:\\xampp\\htdocs...', 9)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-25 17:43:10 Error: Fatal Error (1): Class 'AppController' not found in [C:\xampp\htdocs\historyweb\src\Controller\TestController.php, line 9]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-02-25 17:43:10 Error: [Cake\Error\FatalErrorException] Class 'AppController' not found
+Request URL: /historyweb/Test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'AppContr...', 'C:\\xampp\\htdocs...', 9)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-25 17:44:06 Error: Fatal Error (1): Class 'App' not found in [C:\xampp\htdocs\historyweb\src\Controller\TestController.php, line 9]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-02-25 17:44:06 Error: [Cake\Error\FatalErrorException] Class 'App' not found
+Request URL: /historyweb/Test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App' not...', 'C:\\xampp\\htdocs...', 9)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-25 17:46:18 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Test could not be found.
+Exception Attributes: array (
+  'class' => 'Test',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/Test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-25 17:46:56 Error: [Cake\View\Exception\MissingTemplateException] Template file "Test\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Test\\index.ctp',
+)
+Request URL: /historyweb/Test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#4 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-02-25 17:48:05 Error: [Cake\View\Exception\MissingTemplateException] Template file "Test\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Test\\index.ctp',
+)
+Request URL: /historyweb/Test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#4 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-02-25 17:48:07 Error: [Cake\View\Exception\MissingTemplateException] Template file "Test\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Test\\index.ctp',
+)
+Request URL: /historyweb/Test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#4 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-02-25 17:48:08 Error: [Cake\View\Exception\MissingTemplateException] Template file "Test\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Test\\index.ctp',
+)
+Request URL: /historyweb/Test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#4 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-02-25 17:48:08 Error: [Cake\View\Exception\MissingTemplateException] Template file "Test\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Test\\index.ctp',
+)
+Request URL: /historyweb/Test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#4 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-02-25 17:48:38 Error: [Cake\View\Exception\MissingTemplateException] Template file "Test\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Test\\index.ctp',
+)
+Request URL: /historyweb/Test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#4 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-02-25 17:48:40 Error: [Cake\View\Exception\MissingTemplateException] Template file "Test\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Test\\index.ctp',
+)
+Request URL: /historyweb/Test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#4 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-02-25 17:53:42 Error: [Cake\View\Exception\MissingTemplateException] Template file "Test\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Test\\index.ctp',
+)
+Request URL: /historyweb/Test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#4 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-02-25 17:55:52 Error: [Cake\View\Exception\MissingTemplateException] Template file "Test\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Test\\index.ctp',
+)
+Request URL: /History-web/test
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#4 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-02-25 17:55:54 Error: [Cake\View\Exception\MissingTemplateException] Template file "Test\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Test\\index.ctp',
+)
+Request URL: /History-web/test
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#4 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-02-25 17:57:51 Error: [Cake\View\Exception\MissingTemplateException] Template file "Test\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Test\\index.ctp',
+)
+Request URL: /historyweb/Test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#4 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-02-25 18:01:20 Error: [Cake\View\Exception\MissingTemplateException] Template file "Test\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Test\\index.ctp',
+)
+Request URL: /historyweb/Test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#4 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-02-25 18:12:49 Error: [Cake\Controller\Exception\MissingActionException] Action TestController::kekek() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TestController',
+  'action' => 'kekek',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/test/kekek
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-25 18:18:51 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Test could not be found.
+Exception Attributes: array (
+  'class' => 'Test',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-25 18:20:09 Error: [Cake\Controller\Exception\MissingActionException] Action TestController::textnext() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TestController',
+  'action' => 'textnext',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/test/textnext
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-25 18:20:41 Error: [Cake\View\Exception\MissingTemplateException] Template file "Test\testnext.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Test\\testnext.ctp',
+)
+Request URL: /historyweb/test/testnext
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#4 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-02-25 18:28:38 Error: [Cake\Controller\Exception\MissingActionException] Action TestController::nexttest() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TestController',
+  'action' => 'nexttest',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/test/nexttest
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-25 18:33:01 Error: [Cake\Controller\Exception\MissingActionException] Action TestController::testnex() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TestController',
+  'action' => 'testnex',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /History-web/test/testnex
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#2 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-25 18:41:08 Error: [Cake\Controller\Exception\MissingActionException] Action TestController::next() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'TestController',
+  'action' => 'next',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /history/test/next
+Stack Trace:
+#0 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#2 C:\xampp\htdocs\history\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-25 18:41:15 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Testnext could not be found.
+Exception Attributes: array (
+  'class' => 'Testnext',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /history/testnext
+Stack Trace:
+#0 C:\xampp\htdocs\history\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-25 18:49:39 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "panels"
+Request URL: /historyweb/debug_kit/panels/view/6243b252-f35e-4471-a352-12ec38ef7cc7
+Referer URL: http://localhost/historyweb/debug_kit/toolbar/f911ec37-6b66-4b95-9ced-8c0361734dce
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\ORM\Table.php(1215): Cake\ORM\Query->firstOrFail()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\debug_kit\src\Controller\PanelsController.php(89): Cake\ORM\Table->get('6243b252-f35e-4...')
+#2 [internal function]: DebugKit\Controller\PanelsController->view('6243b252-f35e-4...')
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(DebugKit\Controller\PanelsController))
+#6 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-02-26 17:02:34 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Public could not be found.
+Exception Attributes: array (
+  'class' => 'Public',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/Public/bootstrap-3.3.5-dist/css/bootstrap.css
+Referer URL: http://localhost/historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-26 17:02:34 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Public could not be found.
+Exception Attributes: array (
+  'class' => 'Public',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/Public/styl.css
+Referer URL: http://localhost/historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-26 17:02:35 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Public could not be found.
+Exception Attributes: array (
+  'class' => 'Public',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/Public/img/logo-top.png
+Referer URL: http://localhost/historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-26 17:02:35 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Public could not be found.
+Exception Attributes: array (
+  'class' => 'Public',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/Public/bootstrap-3.3.5-dist/js/bootstrap.min.js
+Referer URL: http://localhost/historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-26 17:02:35 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Public could not be found.
+Exception Attributes: array (
+  'class' => 'Public',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/Public/img/logo-top.png
+Referer URL: http://localhost/historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-26 17:05:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Public could not be found.
+Exception Attributes: array (
+  'class' => 'Public',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/Public/img/logo-top.png
+Referer URL: http://localhost/historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-26 17:05:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Public could not be found.
+Exception Attributes: array (
+  'class' => 'Public',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/Public/img/logo-top.png
+Referer URL: http://localhost/historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-26 17:05:32 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Public could not be found.
+Exception Attributes: array (
+  'class' => 'Public',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/Public/img/logo-top.png
+Referer URL: http://localhost/historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-26 17:07:36 Error: Fatal Error (4): syntax error, unexpected '}' in [C:\xampp\htdocs\historyweb\src\Template\Pages\home.ctp, line 73]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-02-26 17:07:36 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '}'
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 73)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-26 17:07:48 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Public could not be found.
+Exception Attributes: array (
+  'class' => 'Public',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/Public/img/logo-top.png
+Referer URL: http://localhost/historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-26 17:07:49 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Public could not be found.
+Exception Attributes: array (
+  'class' => 'Public',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/Public/img/logo-top.png
+Referer URL: http://localhost/historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-26 17:08:43 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Public could not be found.
+Exception Attributes: array (
+  'class' => 'Public',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/Public/img/logo-top.png
+Referer URL: http://localhost/historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-26 17:09:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Public could not be found.
+Exception Attributes: array (
+  'class' => 'Public',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/Public/img/logo-top.png
+Referer URL: http://localhost/historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-26 17:09:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Public could not be found.
+Exception Attributes: array (
+  'class' => 'Public',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/Public/img/logo-top.png
+Referer URL: http://localhost/historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-26 17:15:08 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Base.css could not be found.
+Exception Attributes: array (
+  'class' => 'Base.css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/base.css
+Referer URL: http://localhost/historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-26 23:19:21 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 24]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-02-26 23:19:21 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /historyweb/test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 24)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-26 23:19:30 Error: Fatal Error (4): syntax error, unexpected '?' in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 25]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-02-26 23:19:30 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?'
+Request URL: /historyweb/test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-26 23:19:55 Error: Fatal Error (4): syntax error, unexpected '$this' (T_VARIABLE), expecting ',' or ';' in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 24]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-02-26 23:19:55 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '$this' (T_VARIABLE), expecting ',' or ';'
+Request URL: /historyweb/test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 24)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-02-26 23:22:07 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Kek could not be found.
+Exception Attributes: array (
+  'class' => 'Kek',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/kek
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-26 23:32:40 Error: [Cake\Network\Exception\NotFoundException] Please replace Pages/home.ctp with your own version.
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(992): include()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('home', NULL)
+#4 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('home')
+#5 [internal function]: App\Controller\PagesController->display('home')
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#9 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-02-26 23:36:24 Error: [Cake\Network\Exception\NotFoundException] Please replace Pages/home.ctp with your own version.
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(992): include()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('home', NULL)
+#4 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('home')
+#5 [internal function]: App\Controller\PagesController->display('home')
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#9 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-02-26 23:36:37 Error: [Cake\Network\Exception\NotFoundException] Please replace Pages/home.ctp with your own version.
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(992): include()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('home', NULL)
+#4 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('home')
+#5 [internal function]: App\Controller\PagesController->display('home')
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#9 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-02-26 23:36:38 Error: [Cake\Network\Exception\NotFoundException] Please replace Pages/home.ctp with your own version.
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(992): include()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('home', NULL)
+#4 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('home')
+#5 [internal function]: App\Controller\PagesController->display('home')
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#9 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-02-26 23:37:10 Error: [Cake\Network\Exception\NotFoundException] Please replace Pages/home.ctp with your own version.
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(992): include()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('home', NULL)
+#4 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('home')
+#5 [internal function]: App\Controller\PagesController->display('home')
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#9 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-02-27 00:22:30 Error: [Cake\Network\Exception\NotFoundException] Please replace Pages/home.ctp with your own version.
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(992): include()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('home', NULL)
+#4 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('home')
+#5 [internal function]: App\Controller\PagesController->display('home')
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#9 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-02-27 13:42:59 Error: [Cake\Network\Exception\NotFoundException] Please replace Pages/home.ctp with your own version.
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(992): include()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('home', NULL)
+#4 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('home')
+#5 [internal function]: App\Controller\PagesController->display('home')
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#9 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-02-27 13:43:04 Error: [Cake\Network\Exception\NotFoundException] Please replace Pages/home.ctp with your own version.
+Request URL: /historyweb/pages/home
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(992): include()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('home', NULL)
+#4 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('home')
+#5 [internal function]: App\Controller\PagesController->display('home')
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#9 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-02-27 13:43:08 Error: [Cake\Network\Exception\NotFoundException] Please replace Pages/home.ctp with your own version.
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(992): include()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('home', NULL)
+#4 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('home')
+#5 [internal function]: App\Controller\PagesController->display('home')
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#9 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-02-27 14:18:30 Error: [Cake\Network\Exception\NotFoundException] Please replace Pages/home.ctp with your own version.
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(992): include()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('home', NULL)
+#4 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('home')
+#5 [internal function]: App\Controller\PagesController->display('home')
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#9 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-02-27 15:07:03 Error: [Cake\Controller\Exception\MissingActionException] Action TestController::display() could not be found, or is not accessible.
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TestController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-02-27 15:07:48 Error: [Cake\Network\Exception\NotFoundException] Please replace Pages/home.ctp with your own version.
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(992): include()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('home', NULL)
+#4 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('home')
+#5 [internal function]: App\Controller\PagesController->display('home')
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#9 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-02-27 16:02:43 Error: [Cake\Network\Exception\NotFoundException] Please replace Pages/home.ctp with your own version.
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(992): include()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('home', NULL)
+#4 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('home')
+#5 [internal function]: App\Controller\PagesController->display('home')
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#9 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-02-28 10:27:17 Error: [Cake\Network\Exception\NotFoundException] Please replace Pages/home.ctp with your own version.
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(992): include()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('home', NULL)
+#4 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('home')
+#5 [internal function]: App\Controller\PagesController->display('home')
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#9 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-02-28 12:14:34 Error: [Cake\Network\Exception\NotFoundException] Please replace Pages/home.ctp with your own version.
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(992): include()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(952): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(587): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('home', NULL)
+#4 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('home')
+#5 [internal function]: App\Controller\PagesController->display('home')
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#9 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-02-28 14:06:01 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Css could not be found.
+Exception Attributes: array (
+  'class' => 'Css',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /history/css/addt.css
+Referer URL: http://localhost/history/test
+Stack Trace:
+#0 C:\xampp\htdocs\history\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-02-28 14:06:02 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "requests"
+Request URL: /history/debug_kit/toolbar/7b0b7203-acf2-4f28-afe7-9880b735fe84
+Referer URL: http://localhost/history/test
+Stack Trace:
+#0 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\ORM\Table.php(1215): Cake\ORM\Query->firstOrFail()
+#1 C:\xampp\htdocs\history\vendor\cakephp\debug_kit\src\Controller\RequestsController.php(62): Cake\ORM\Table->get('7b0b7203-acf2-4...', Array)
+#2 [internal function]: DebugKit\Controller\RequestsController->view('7b0b7203-acf2-4...')
+#3 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(DebugKit\Controller\RequestsController))
+#6 C:\xampp\htdocs\history\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
