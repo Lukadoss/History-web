@@ -1,34 +1,34 @@
 <?php
 /**
- * 
+ *
  * This file is part of the Aura Project for PHP.
- * 
+ *
  * @package Aura.Intl
- * 
+ *
  * @license http://opensource.org/licenses/bsd-license.php BSD
- * 
+ *
  */
 namespace Aura\Intl;
 
 use MessageFormatter;
 
 /**
- * 
+ *
  * Uses php intl extension to format messages
- * 
+ *
  * @package Aura.Intl
- * 
+ *
  */
 class IntlFormatter implements FormatterInterface
 {
     /**
-     * 
+     *
      * Constructor.
      *
-     * @param string $icu_version The current ICU version; mostly used for 
+     * @param string $icu_version The current ICU version; mostly used for
      * testing.
-     * 
-     * @throws Exception\IcuVersionTooLow when the Version of ICU installed 
+     *
+     * @throws Exception\IcuVersionTooLow when the Version of ICU installed
      * is too low for Aura.Intl to work properly.
      *
      */
@@ -40,9 +40,9 @@ class IntlFormatter implements FormatterInterface
     }
 
     /**
-     * 
+     *
      * Format the message with the help of php intl extension
-     * 
+     *
      * @param string $locale
      * @param string $string
      * @param array $tokens_values
@@ -59,19 +59,19 @@ class IntlFormatter implements FormatterInterface
         // followed by any non-token word character
         $regex = '/(\{)([A-Za-z0-9_]+)([\,\}])/m';
         preg_match_all($regex, $string, $matches, PREG_SET_ORDER);
-        
+
         foreach ($matches as $match) {
-        
+
             // the token name
             $key = $match[2];
-            if (! isset($tokens[$key])) {
+            if (!isset($tokens[$key])) {
                 $tokens[$key] = $i;
                 $num = $i;
                 $i++;
             } else {
                 $num = $tokens[$key];
             }
-            
+
             // replace just the first occurence;
             // other occurrences will get replaced later.
             $string = preg_replace(
@@ -81,25 +81,25 @@ class IntlFormatter implements FormatterInterface
                 1
             );
         }
-        
+
         $values = [];
         foreach ($tokens as $token => $i) {
-            if (! isset($tokens_values[$token])) {
+            if (!isset($tokens_values[$token])) {
                 continue;
             }
-            
+
             $value = $tokens_values[$token];
-            
+
             // convert an array to a CSV string
             if (is_array($value)) {
                 $value = '"' . implode('", "', $value) . '"';
             }
-            
+
             $values[$i] = $value;
         }
 
         $formatter = new MessageFormatter($locale, $string);
-        if (! $formatter) {
+        if (!$formatter) {
             throw new Exception\CannotInstantiateFormatter(
                 intl_get_error_message(),
                 intl_get_error_code()

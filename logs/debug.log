@@ -478,3 +478,120 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2016-03-12 19:49:37 Notice: Notice (8): Use of undefined constant URL - assumed 'URL' in [C:\xampp\htdocs\historyweb\src\Template\Prispevek\novy.ctp, line 15]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Prispevek\novy.ctp, line 15
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-13 19:55:47 Notice: Notice (8): Use of undefined constant wwwRoot - assumed 'wwwRoot' in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Layout\default.ctp, line 58
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 633
+Cake\View\View::render() - CORE\src\View\View.php, line 592
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-13 19:57:06 Notice: Notice (8): Use of undefined constant App - assumed 'App' in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Layout\default.ctp, line 58
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 633
+Cake\View\View::render() - CORE\src\View\View.php, line 592
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-13 19:57:06 Notice: Notice (8): Use of undefined constant wwwRoot - assumed 'wwwRoot' in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Layout\default.ctp, line 58
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 633
+Cake\View\View::render() - CORE\src\View\View.php, line 592
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-13 19:58:49 Notice: Notice (8): Use of undefined constant wwwRoot - assumed 'wwwRoot' in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Layout\default.ctp, line 58
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 633
+Cake\View\View::render() - CORE\src\View\View.php, line 592
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-13 19:58:49 Notice: Notice (8): Undefined variable: App in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Layout\default.ctp, line 58
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 633
+Cake\View\View::render() - CORE\src\View\View.php, line 592
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-13 22:13:49 Notice: Notice (8): Undefined variable: html in [C:\xampp\htdocs\historyweb\src\Template\Mapa\index.ctp, line 105]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Mapa\index.ctp, line 105
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-13 22:13:58 Notice: Notice (8): Undefined variable: html in [C:\xampp\htdocs\historyweb\src\Template\Mapa\index.ctp, line 105]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Mapa\index.ctp, line 105
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 992
+Cake\View\View::_render() - CORE\src\View\View.php, line 952
+Cake\View\View::render() - CORE\src\View\View.php, line 587
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+

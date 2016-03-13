@@ -1026,3 +1026,1474 @@ Stack Trace:
 #7 {main}
 
 
+2016-03-11 21:17:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Logo.png could not be found.
+Exception Attributes: array (
+  'class' => 'Logo.png',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/logo.png
+Referer URL: http://localhost/historyweb/test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-11 21:21:57 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 53]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-11 21:21:57 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /historyweb/test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 53)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-11 21:22:07 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 53]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-11 21:22:07 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /historyweb/test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 53)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-11 21:22:53 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 53]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-11 21:22:54 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /historyweb/test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 53)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-11 21:31:26 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 53]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-11 21:31:26 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /historyweb/test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 53)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-12 19:32:41 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Test could not be found.
+Exception Attributes: array (
+  'class' => 'Test',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-12 19:32:44 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Mapa could not be found.
+Exception Attributes: array (
+  'class' => 'Mapa',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-12 19:32:47 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Mapa could not be found.
+Exception Attributes: array (
+  'class' => 'Mapa',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/Mapa
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-12 19:33:18 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Mapa could not be found.
+Exception Attributes: array (
+  'class' => 'Mapa',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-12 19:33:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Mapa could not be found.
+Exception Attributes: array (
+  'class' => 'Mapa',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/Mapa
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-12 19:34:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Mapa could not be found.
+Exception Attributes: array (
+  'class' => 'Mapa',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-12 19:49:38 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/fileinput_locale_cz.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:49:38 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/plugins/canvas-to-blob.min.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:49:38 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/fileinput.min.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:49:39 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/css/fileinput.min.css
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:50:10 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/fileinput_locale_cz.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:50:10 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/fileinput.min.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:50:10 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/plugins/canvas-to-blob.min.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:50:10 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/css/fileinput.min.css
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:55:19 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/plugins/canvas-to-blob.min.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:55:19 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/fileinput_locale_cz.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:55:19 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/css/fileinput.min.css
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:55:19 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/fileinput.min.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:56:30 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/fileinput_locale_cz.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:56:30 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/fileinput.min.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:56:30 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/css/fileinput.min.css
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:56:30 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/plugins/canvas-to-blob.min.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:56:41 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/plugins/canvas-to-blob.min.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:56:41 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/fileinput_locale_cz.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:56:41 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/fileinput.min.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:56:41 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/css/fileinput.min.css
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:57:40 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/fileinput.min.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:57:40 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/css/fileinput.min.css
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:57:41 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/plugins/canvas-to-blob.min.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 19:57:41 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::path() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'path',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/path/to/js/fileinput_locale_cz.js
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 20:06:29 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\xampp\htdocs\historyweb\src\Template\Prispevek\novy.ctp, line 8]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-12 20:06:30 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 8)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-12 20:06:51 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-12 20:07:00 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-12 20:07:43 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-12 20:11:27 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-12 20:12:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-12 20:18:17 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-12 21:10:54 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-12 21:11:51 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-12 21:18:05 Error: [Cake\Controller\Exception\MissingActionException] Action PrispevekController::index() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'PrispevekController',
+  'action' => 'index',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/prispevek/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PrispevekController))
+#2 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-03-12 21:20:56 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Test could not be found.
+Exception Attributes: array (
+  'class' => 'Test',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/test
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-12 21:21:23 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 19:30:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class HistoryWeb could not be found.
+Exception Attributes: array (
+  'class' => 'HistoryWeb',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/history-web/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 19:31:12 Error: [Cake\Routing\Exception\MissingControllerException] Controller class HistoryWeb could not be found.
+Exception Attributes: array (
+  'class' => 'HistoryWeb',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/history-web/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 19:31:49 Error: [Cake\Routing\Exception\MissingControllerException] Controller class HistoryWeb could not be found.
+Exception Attributes: array (
+  'class' => 'HistoryWeb',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/history-web/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 19:33:21 Error: Fatal Error (1): Call to undefined method App\View\AppView::redirect() in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 19:33:21 Error: [Cake\Error\FatalErrorException] Call to undefined method App\View\AppView::redirect()
+Request URL: /historyweb/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 58)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 19:33:36 Error: Fatal Error (1): Call to undefined method App\View\AppView::redirect() in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 19:33:36 Error: [Cake\Error\FatalErrorException] Call to undefined method App\View\AppView::redirect()
+Request URL: /historyweb/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 58)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 19:35:11 Error: Fatal Error (1): Call to undefined method App\View\AppView::redirect() in [C:\xampp\htdocs\History-web\src\Template\Layout\default.ctp, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 19:35:11 Error: [Cake\Error\FatalErrorException] Call to undefined method App\View\AppView::redirect()
+Request URL: /History-web/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 58)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 19:40:28 Error: Fatal Error (4): syntax error, unexpected 'return' (T_RETURN) in [C:\xampp\htdocs\History-web\src\Template\Layout\default.ctp, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 19:40:29 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'return' (T_RETURN)
+Request URL: /History-web/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 58)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 19:40:30 Error: Fatal Error (4): syntax error, unexpected 'return' (T_RETURN) in [C:\xampp\htdocs\History-web\src\Template\Layout\default.ctp, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 19:40:30 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'return' (T_RETURN)
+Request URL: /History-web/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 58)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 19:40:30 Error: Fatal Error (4): syntax error, unexpected 'return' (T_RETURN) in [C:\xampp\htdocs\History-web\src\Template\Layout\default.ctp, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 19:40:31 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'return' (T_RETURN)
+Request URL: /History-web/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 58)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 19:40:31 Error: Fatal Error (4): syntax error, unexpected 'return' (T_RETURN) in [C:\xampp\htdocs\History-web\src\Template\Layout\default.ctp, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 19:40:31 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'return' (T_RETURN)
+Request URL: /History-web/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 58)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 19:40:38 Error: Fatal Error (1): Call to undefined method App\View\AppView::redirect() in [C:\xampp\htdocs\History-web\src\Template\Layout\default.ctp, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 19:40:38 Error: [Cake\Error\FatalErrorException] Call to undefined method App\View\AppView::redirect()
+Request URL: /History-web/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 58)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 19:47:56 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Orders could not be found.
+Exception Attributes: array (
+  'class' => 'Orders',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/orders
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 19:48:05 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Orders could not be found.
+Exception Attributes: array (
+  'class' => 'Orders',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/orders
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 19:48:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Orders could not be found.
+Exception Attributes: array (
+  'class' => 'Orders',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/orders
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 19:54:10 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 19:59:54 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 19:59:54 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /historyweb/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 58)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 20:00:01 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 20:00:01 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /historyweb/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 58)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 22:04:16 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://10.10.85.24/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 22:04:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://10.10.85.24/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 22:13:49 Error: Fatal Error (1): Call to a member function link() on null in [C:\xampp\htdocs\historyweb\src\Template\Mapa\index.ctp, line 105]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 22:13:49 Error: [Cake\Error\FatalErrorException] Call to a member function link() on null
+Request URL: /historyweb/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 105)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 22:13:58 Error: Fatal Error (1): Call to a member function redirect() on null in [C:\xampp\htdocs\historyweb\src\Template\Mapa\index.ctp, line 105]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 22:13:58 Error: [Cake\Error\FatalErrorException] Call to a member function redirect() on null
+Request URL: /historyweb/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 105)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 22:15:47 Error: [Cake\Routing\Exception\MissingControllerException] Controller class TestDisplay could not be found.
+Exception Attributes: array (
+  'class' => 'TestDisplay',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /history/testDisplay
+Stack Trace:
+#0 C:\xampp\htdocs\history\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 22:15:54 Error: [Cake\View\Exception\MissingTemplateException] Template file "Pages\test_display.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages\\test_display.ctp',
+)
+Request URL: /history/pages/testDisplay
+Stack Trace:
+#0 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName('testDisplay')
+#1 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('testDisplay', NULL)
+#2 C:\xampp\htdocs\history\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('testDisplay')
+#3 [internal function]: App\Controller\PagesController->display('testDisplay')
+#4 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#7 C:\xampp\htdocs\history\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-03-13 22:16:34 Error: [Cake\View\Exception\MissingTemplateException] Template file "Pages\notexisting.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages\\notexisting.ctp',
+)
+Request URL: /history/pages/notexisting
+Stack Trace:
+#0 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName('notexisting')
+#1 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('notexisting', NULL)
+#2 C:\xampp\htdocs\history\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('notexisting')
+#3 [internal function]: App\Controller\PagesController->display('notexisting')
+#4 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#7 C:\xampp\htdocs\history\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-03-13 22:16:39 Error: [Cake\View\Exception\MissingTemplateException] Template file "Pages\not_existing.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages\\not_existing.ctp',
+)
+Request URL: /history/pages/not_existing
+Stack Trace:
+#0 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName('not_existing')
+#1 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('not_existing', NULL)
+#2 C:\xampp\htdocs\history\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('not_existing')
+#3 [internal function]: App\Controller\PagesController->display('not_existing')
+#4 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 C:\xampp\htdocs\history\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#7 C:\xampp\htdocs\history\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-03-13 22:19:09 Error: [Cake\View\Exception\MissingTemplateException] Template file "Pages\faq.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages\\faq.ctp',
+)
+Request URL: /historyweb/pages/faq
+Referer URL: http://localhost/historyweb/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName('faq')
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('faq', NULL)
+#2 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('faq')
+#3 [internal function]: App\Controller\PagesController->display('faq')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#7 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-03-13 22:26:14 Error: Fatal Error (4): syntax error, unexpected 'fa' (T_STRING) in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 77]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 22:26:14 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'fa' (T_STRING)
+Request URL: /historyweb/prispevek/novy
+Referer URL: http://localhost/historyweb/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 77)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 22:27:00 Error: [Cake\View\Exception\MissingTemplateException] Template file "Pages\faq.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages\\faq.ctp',
+)
+Request URL: /History-web/pages/faq
+Referer URL: http://localhost/History-web/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName('faq')
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('faq', NULL)
+#2 C:\xampp\htdocs\History-web\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('faq')
+#3 [internal function]: App\Controller\PagesController->display('faq')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-03-13 22:27:14 Error: [Cake\View\Exception\MissingTemplateException] Template file "Pages\faq.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages\\faq.ctp',
+)
+Request URL: /History-web/pages/faq
+Referer URL: http://localhost/History-web/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName('faq')
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('faq', NULL)
+#2 C:\xampp\htdocs\History-web\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('faq')
+#3 [internal function]: App\Controller\PagesController->display('faq')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-03-13 22:29:25 Error: [Cake\View\Exception\MissingTemplateException] Template file "Pages\faq.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages\\faq.ctp',
+)
+Request URL: /History-web/pages/faq
+Referer URL: http://localhost/History-web/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName('faq')
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('faq', NULL)
+#2 C:\xampp\htdocs\History-web\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('faq')
+#3 [internal function]: App\Controller\PagesController->display('faq')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-03-13 22:29:27 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 22:29:09 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 22:29:18 Error: [Cake\View\Exception\MissingTemplateException] Template file "Pages\faq.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages\\faq.ctp',
+)
+Request URL: /historyweb/pages/faq
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName('faq')
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('faq', NULL)
+#2 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('faq')
+#3 [internal function]: App\Controller\PagesController->display('faq')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#7 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-03-13 22:29:23 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 22:29:33 Error: [Cake\View\Exception\MissingTemplateException] Template file "Pages\faq.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages\\faq.ctp',
+)
+Request URL: /historyweb/pages/faq
+Referer URL: http://localhost/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName('faq')
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('faq', NULL)
+#2 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('faq')
+#3 [internal function]: App\Controller\PagesController->display('faq')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#7 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-03-13 22:29:47 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://10.10.85.24/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 22:31:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 22:31:10 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 22:32:42 Error: [Cake\View\Exception\MissingTemplateException] Template file "Pages\faq.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages\\faq.ctp',
+)
+Request URL: /historyweb/pages/faq
+Referer URL: http://localhost/historyweb/mapa
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName('faq')
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('faq', NULL)
+#2 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('faq')
+#3 [internal function]: App\Controller\PagesController->display('faq')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#7 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-03-13 22:33:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://10.10.85.24/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 22:34:30 Error: [Cake\View\Exception\MissingTemplateException] Template file "Pages\faq.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages\\faq.ctp',
+)
+Request URL: /historyweb/pages/faq
+Referer URL: http://10.10.85.24/historyweb/prispevek/novy
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(584): Cake\View\View->_getViewFileName('faq')
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render('faq', NULL)
+#2 C:\xampp\htdocs\historyweb\src\Controller\PagesController.php(57): Cake\Controller\Controller->render('faq')
+#3 [internal function]: App\Controller\PagesController->display('faq')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\PagesController))
+#7 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-03-13 22:46:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 22:52:05 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\xampp\htdocs\History-web\src\Template\Layout\default.ctp, line 79]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 22:52:05 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /History-web/info
+Referer URL: http://localhost/History-web/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 79)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 22:52:09 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\xampp\htdocs\History-web\src\Template\Layout\default.ctp, line 79]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 22:52:09 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /History-web/info
+Referer URL: http://localhost/History-web/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 79)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 22:52:22 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 79]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 22:52:22 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /historyweb/mapa
+Referer URL: http://localhost/historyweb/info
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 79)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 22:52:34 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 79]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 22:52:34 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /historyweb/mapa
+Referer URL: http://localhost/historyweb/info
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 79)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 22:52:32 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\xampp\htdocs\History-web\src\Template\Layout\default.ctp, line 79]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-13 22:52:32 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /History-web/info
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 79)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-13 22:53:07 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-13 23:05:38 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /history/img/loading.gif
+Referer URL: http://localhost/history/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\history\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+

@@ -2,132 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f77ee8a-7dc7-4d9d-9eea-51a94d6233cc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/Component/empty" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Model/Behavior/empty" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Model/Entity/empty" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Model/Table/empty" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/Helper/empty" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_panels" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/models/myapp_cake_model_debug_kit_requests" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations_cake_en__u_s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations_debug_kit_en__u_s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations_default_en__u_s" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tmp/debug_kit.sqlite" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cakephp/debug_kit/src/Template/Requests/index.ctp" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cakephp/debug_kit/webroot/img/cake.icon.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/console/Resources/bin/hiddeninput.exe" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/console/Tests/Fixtures/input_definition_1.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/img/cake.icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/img/cake.power.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/img/logo2.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.editorconfig" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.floo" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.flooignore" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitattributes" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/history.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/cake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/cake.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/cake.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/app.default.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/bootstrap_cli.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/paths.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/routes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/schema/i18n.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/schema/sessions.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logs/debug.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logs/error.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/phpunit.xml.dist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Console/Installer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/AppController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/PagesController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/TestController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Model/Test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Shell/ConsoleShell.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Element/Flash/default.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Element/Flash/error.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Element/Flash/success.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Email/html/default.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Email/text/default.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Error/error400.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Error/error500.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Layout/Email/html/default.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Layout/Email/text/default.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Layout/ajax.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Layout/default.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Layout/error.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Layout/rss/default.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Pages/home.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Test/index.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Test/testnext.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/AjaxView.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/AppView.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/TestCase/Controller/PagesControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/installer-default/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/installer-default/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/installer-default/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/installer-default/src/Aura/Composer/DefaultInstaller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/InfoController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/MapaController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Controller/PrispevekController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Info/index.ctp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Mapa/index.ctp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Mapa/testnext.ctp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Template/Prispevek/novy.ctp" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/.gitignore" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/TODO.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/config/Common.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/config/default.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/config/test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/meta/authors.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/meta/changes.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/meta/description.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/meta/keywords.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/meta/require.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/meta/summary.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/scripts/instance.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/BasicFormatter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/Exception.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/Exception/CannotFormat.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/Exception/CannotInstantiateFormatter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/Exception/FormatterNotMapped.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/Exception/IcuVersionTooLow.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/FormatterInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/FormatterLocator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/IntlFormatter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/Package.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/PackageFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/PackageLocator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/PackageLocatorInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/Translator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/TranslatorFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/TranslatorInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/TranslatorLocator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/tests/Aura/Intl/BasicFormatterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/tests/Aura/Intl/FormatterLocatorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/tests/Aura/Intl/IntlFormatterTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/tests/Aura/Intl/MockFormatter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/tests/Aura/Intl/PackageLocatorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/tests/Aura/Intl/PackageTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/tests/Aura/Intl/TranslatorLocatorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/tests/Aura/Intl/TranslatorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/tests/WiringTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/tests/bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/aura/intl/tests/phpunit.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bin/phinx" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bin/phinx.bat" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bin/php-parse" />
@@ -805,6 +700,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cakephp/debug_kit/src/Template/Layout/panel.ctp" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cakephp/debug_kit/src/Template/Layout/toolbar.ctp" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cakephp/debug_kit/src/Template/Panels/view.ctp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cakephp/debug_kit/src/Template/Requests/index.ctp" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cakephp/debug_kit/src/Template/Requests/view.ctp" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cakephp/debug_kit/src/View/Helper/SimpleGraphHelper.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/cakephp/debug_kit/src/View/Helper/TidyHelper.php" />
@@ -2156,10 +2052,31 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/composer.json" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/yaml/phpunit.xml.dist" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/css/addt.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/css/base.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/css/cake.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/css/fileinput.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/js/canvas-to-blob.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/js/fileinput.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webroot/js/fileinput_locale_cz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/debug_kit.sqlite" afterPath="$PROJECT_DIR$/tmp/debug_kit.sqlite" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.default.php" afterPath="$PROJECT_DIR$/config/app.default.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/bootstrap.php" afterPath="$PROJECT_DIR$/config/bootstrap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.php" afterPath="$PROJECT_DIR$/config/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/debug.log" afterPath="$PROJECT_DIR$/logs/debug.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/error.log" afterPath="$PROJECT_DIR$/logs/error.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/aura/intl/config/default.php" afterPath="$PROJECT_DIR$/vendor/aura/intl/config/default.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/aura/intl/scripts/instance.php" afterPath="$PROJECT_DIR$/vendor/aura/intl/scripts/instance.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/BasicFormatter.php" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/BasicFormatter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/Exception/CannotFormat.php" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/Exception/CannotFormat.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/IntlFormatter.php" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/IntlFormatter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/PackageLocator.php" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/PackageLocator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/PackageLocatorInterface.php" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/PackageLocatorInterface.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/Translator.php" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/Translator.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/TranslatorFactory.php" afterPath="$PROJECT_DIR$/vendor/aura/intl/src/Aura/Intl/TranslatorFactory.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/aura/intl/tests/Aura/Intl/BasicFormatterTest.php" afterPath="$PROJECT_DIR$/vendor/aura/intl/tests/Aura/Intl/BasicFormatterTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/aura/intl/tests/Aura/Intl/IntlFormatterTest.php" afterPath="$PROJECT_DIR$/vendor/aura/intl/tests/Aura/Intl/IntlFormatterTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webroot/css/addt.css" afterPath="$PROJECT_DIR$/webroot/css/addt.css" />
     </list>
     <ignored path="history.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -2181,11 +2098,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cake.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cake.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bin/cake.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19058296">
-              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+            <state vertical-scroll-proportion="-10.461538">
+              <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.ctp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Template/Layout/default.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-26.153847">
+              <caret line="52" column="6" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+              <folding>
+                <element signature="e#6#591#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".flooignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.flooignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ctp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Template/Info/index.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.038462">
+              <caret line="31" column="85" selection-start-line="31" selection-start-column="85" selection-end-line="31" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -2195,12 +2155,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/bin/cake.php" />
+        <option value="$PROJECT_DIR$/src/Template/Layout/default.ctp" />
+        <option value="$PROJECT_DIR$/src/Template/Info/index.ctp" />
       </list>
     </option>
   </component>
@@ -2249,31 +2216,93 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="history" />
+              <option name="myItemId" value="History-web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="history" />
+              <option name="myItemId" value="History-web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="history" />
+              <option name="myItemId" value="History-web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="history" />
+              <option name="myItemId" value="History-web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="history" />
+              <option name="myItemId" value="History-web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="History-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="History-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="History-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="History-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Layout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="History-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="History-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Info" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2288,9 +2317,25 @@
     <property name="SearchEverywhereHistoryKey" value="plugins&#9;ACTION&#9;WelcomeScreen.Plugins&#10;github&#9;ACTION&#9;Github.Share" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="271" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="299" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="301" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="975" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="293" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="292" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="293" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="968" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.test">
-    <configuration default="false" name="test" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/history/test">
+  <component name="RunManager" selected="JavaScript Debug.history">
+    <configuration default="false" name="history" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost/history">
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -2322,11 +2367,11 @@
       <method />
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.test" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.history" />
     </list>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.test" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.history" />
       </list>
     </recent_temporary>
   </component>
@@ -2347,26 +2392,30 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1265625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12633263" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Floobits" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2234375" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Floobits" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22334754" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.flooignore" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -2384,6 +2433,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/bin/cake.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/cake.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2456,10 +2513,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bin/cake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bin/cake.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19058296">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Info/index.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.038462">
+          <caret line="31" column="85" selection-start-line="31" selection-start-column="85" selection-end-line="31" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Layout/default.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.153847">
+          <caret line="52" column="6" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+          <folding>
+            <element signature="e#6#591#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.flooignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -1,36 +1,26 @@
-# History web pro ZSWI
+# CakePHP Application Skeleton
 
-_Webový portál pro sběr kulturních a historických artefaktů_
+[![Build Status](https://img.shields.io/travis/cakephp/app/master.svg?style=flat-square)](https://travis-ci.org/cakephp/app)
+[![License](https://img.shields.io/packagist/l/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
 
-Tým:  
-Lukašík Petr - šéf/programátor  
-Šedivý Jan - designer/programátor  
-Palcút Jan - analytik/PR/správce databáze  
+A skeleton for creating applications with [CakePHP](http://cakephp.org) 3.x.
 
-***
+The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
 
-**1.Týden**
+## Installation
 
-Petr Lukašík: 
-Výběr uložiště, webhostingu, serveru (3h)
+1. Download [Composer](http://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
+2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
 
-Jan Šedivý:
-Grafika webu (6h)
+If Composer is installed globally, run
+```bash
+composer create-project --prefer-dist cakephp/app [app_name]
+```
 
-Jan Palcút: 
-Analýza hlavních komponentů (3h)
+You should now be able to visit the path to where you installed the app and see
+the setup traffic lights.
 
-***
+## Configuration
 
-**2.Týden**
-
-Petr Lukašík: 
-Zajištění a pochopení fungování githubu a gitu. Naučení frameworku CakePHP a vybrání komponentů využitelné v projektu. (5h)
-
-Jan Šedivý:
-Hrubá implementace grafických návrhů. Jejich modifikace a poslední úpravy. Dokončování finálního vzhledu webu. (6h)
-
-Jan Palcút: 
-Návrh databáze, ERA diagram (5h)
-
-***
+Read and edit `config/app.php` and setup the 'Datasources' and any other
+configuration relevant for your application.

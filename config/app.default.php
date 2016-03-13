@@ -9,7 +9,7 @@ return [
      * Development Mode:
      * true: Errors and warnings shown.
      */
-    'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
+    'debug' => filter_var(env('DEBUG', false), FILTER_VALIDATE_BOOLEAN),
 
     /**
      * Configure basic information about the application.
@@ -252,7 +252,7 @@ return [
              * which is the recommended value in production environments
              */
             //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
-            
+
             'url' => env('DATABASE_URL', null),
         ],
 
