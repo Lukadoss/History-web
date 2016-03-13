@@ -3,9 +3,9 @@
 _Webový portál pro sběr kulturních a historických artefaktů_
 
 Tým:  
-Lukašík Petr - šéf/programátor
-Šedivý Jan - designer/programátor
-Palcút Jan - analytik/PR/správce databáze
+Lukašík Petr - šéf/programátor  
+Šedivý Jan - designer/programátor  
+Palcút Jan - analytik/PR/správce databáze  
 
 ***
 
