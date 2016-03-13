@@ -1,5 +1,36 @@
 # History web pro ZSWI
 
-Webík pro artefakty a další historické věci z okolí Plzně a tak.. děláme to my Kulišáci
+_Webový portál pro sběr kulturních a historických artefaktů_
 
-Učíme se commit s Péťou
+Tým:  
+Lukašík Petr - šéf/programátor  
+Šedivý Jan - designer/programátor  
+Palcút Jan - analytik/PR/správce databáze  
+
+***
+
+**1.Týden**
+
+Petr Lukašík: 
+Výběr uložiště, webhostingu, serveru (3h)
+
+Jan Šedivý:
+Grafika webu (6h)
+
+Jan Palcút: 
+Analýza hlavních komponentů (3h)
+
+***
+
+**2.Týden**
+
+Petr Lukašík: 
+Zajištění a pochopení fungování githubu a gitu. Naučení frameworku CakePHP a vybrání komponentů využitelné v projektu. (5h)
+
+Jan Šedivý:
+Hrubá implementace grafických návrhů. Jejich modifikace a poslední úpravy. Dokončování finálního vzhledu webu. (6h)
+
+Jan Palcút: 
+Návrh databáze, ERA diagram (5h)
+
+***

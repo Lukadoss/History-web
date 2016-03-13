@@ -24,15 +24,18 @@
     </title>
 
     <!-- Bootstrap v4 alpha init (http://v4-alpha.getbootstrap.com/) -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+          integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
     <!-- Bootstrap slider plugin init (https://github.com/seiyria/bootstrap-slider) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.0.16/css/bootstrap-slider.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.0.16/bootstrap-slider.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.3/css/bootstrap-slider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/6.1.3/bootstrap-slider.min.js"></script>
 
+    <!-- Font Awesome icons init (http://fontawesome.io/get-started/) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <?= $this->Html->meta('icon') ?>
 
@@ -44,21 +47,49 @@
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-full">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <span class="navbar-brand">KULIŠÁCI  alpha v0.1</span>
-            </div>
+<div class="jumbotron hidden-sm-down">
+    <?php echo $this->Html->image('logo2.png', ['alt' => 'Logo']); ?>
+    <hr class="m-y-0">
+</div>
+<nav class="navbar navbar-default navbar-full">
+    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+        &#9776;
+    </button>
+    <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+        <div class="container nav-center">
             <ul class="nav navbar-nav" style="box-sizing: border-box;">
-                <li><a href="#">INFO</a></li>
-                <li><a href="#">INTERAKTIVNÍ MAPA</a></li>
+                <li class="nav-item">
+                    <?php echo $this->Html->link(__('INFO'), [
+                        'controller' => 'Info',
+                    ], array('class' => 'nav-link')) ?></li>
+                <li class="nav-item">
+                    <?php echo $this->Html->link(__('INTERAKTIVNÍ MAPA'), [
+                        'controller' => 'Mapa',
+                    ], array('class' => 'nav-link')) ?></li>
+                <li class="nav-item">
+                    <?php echo $this->Html->link(__('NOVÝ PŘÍSPĚVEK'), [
+                        'controller' => 'Prispevek',
+                        'action' => 'novy'
+                    ], array('class' => 'nav-link')) ?></li>
+            </ul>
+            <ul class="nav navbar-nav pull-xs-right">
+                <li class="nav-item"><?php echo $this->Html->link(__($this->Html->tag('i', array('class' => 'fa fa-user')), 'PŘIHLÁŠENÍ'), [
+                        'controller' => 'Prispevek',
+                        'action' => 'novy'
+                    ], array('class' => 'nav-link')) ?></li>
             </ul>
         </div>
-    </nav>
-    <div class="container div-content">
-        <?= $this->fetch('content') ?>
     </div>
-    <footer>
-    </footer>
+</nav>
+<div class="container div-content">
+    <?= $this->fetch('content') ?>
+</div>
+<footer>
+</footer>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"
+        integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7"
+        crossorigin="anonymous"></script>
+
 </body>
 </html>
