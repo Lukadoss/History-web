@@ -100,7 +100,7 @@
     <h4 class="card-title">Legenda</h4>
     <p class="card-text">tohle dělá tohle<br>
         tohle dělá tamto<br>
-        a tohle dělá věci
+        a tohle dělá drsný drsný věci
     </p>
 
 </div>
