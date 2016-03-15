@@ -385,7 +385,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458045493389</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Pochopení že commit v PHPstormu se dává jen do changelistu a z toho se to musí až pushnout do githubu.. demence ale chytrý. #Jsemblbej">
+      <created>1458045575664</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1458045575664</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
