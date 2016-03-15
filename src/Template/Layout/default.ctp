@@ -48,7 +48,9 @@
 </head>
 <body>
 <div class="jumbotron hidden-sm-down">
-    <?php echo $this->Html->image('logo2.png', ['alt' => 'Logo']); ?>
+    <?php echo $this->Html->link($this->Html->image('logo2.png', ['alt' => 'Logo']), [
+        'controller' => 'Info',
+    ], array('escape' => false)) ?>
     <hr class="m-y-0">
 </div>
 <nav class="navbar navbar-default navbar-full">
@@ -73,10 +75,10 @@
                     ], array('class' => 'nav-link')) ?></li>
             </ul>
             <ul class="nav navbar-nav pull-xs-right">
-                <li class="nav-item"><?php echo $this->Html->link(__($this->Html->tag('i', array('class' => 'fa fa-user')), 'PŘIHLÁŠENÍ'), [
+                <li class="nav-item nav-login"><?php echo $this->Html->link(__('<i class="fa fa-user"> </i> PŘIHLÁŠENÍ'), [
                         'controller' => 'Prispevek',
                         'action' => 'novy'
-                    ], array('class' => 'nav-link')) ?></li>
+                    ], array('class' => 'nav-link nav-login', 'escape' => false)) ?></li>
             </ul>
         </div>
     </div>

@@ -177,6 +177,12 @@ body {
 .nav-center {
     margin: auto;
     max-width: 1100px;
+    padding-left: 0;
+}
+
+.nav-login {
+    float: right;
+    margin-right: 0 !important;
 }
 
 /**
@@ -204,4 +210,15 @@ body {
 
 .slider-track {
     background: lightgray;
+}
+
+/**
+ * Form
+ */
+
+.form-article-info {
+    margin-right: 0.9375rem;
+    margin-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
 }
