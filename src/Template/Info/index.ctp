@@ -27,7 +27,7 @@
         volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam bibendum elit eget erat. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Nulla accumsan, elit sit
         amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Proin mattis lacinia justo. Pellentesque ipsum. Suspendisse nisl. Proin mattis lacinia justo.<br><br>
 
-        Už to jedeee
+        Už to jedeeeKAREL
     </p>
 </div>
 </body>
