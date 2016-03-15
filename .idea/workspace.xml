@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f77ee8a-7dc7-4d9d-9eea-51a94d6233cc" name="Default" comment="Whole update">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations_default_en__u_s" afterPath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations_default_en__u_s" />
+    <list default="true" id="6f77ee8a-7dc7-4d9d-9eea-51a94d6233cc" name="Default" comment="Pochopení že commit v PHPstormu se dává jen do changelistu a z toho se to musí až pushnout do githubu.. demence ale chytrý. #Jsemblbej">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Resources/bin/hiddeninput.exe" afterPath="$PROJECT_DIR$/vendor/symfony/console/Resources/bin/hiddeninput.exe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/error.log" afterPath="$PROJECT_DIR$/logs/error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Layout/default.ctp" afterPath="$PROJECT_DIR$/src/Template/Layout/default.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Pages/home.ctp" afterPath="$PROJECT_DIR$/src/Template/Pages/home.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Prispevek/novy.ctp" afterPath="$PROJECT_DIR$/src/Template/Prispevek/novy.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webroot/css/addt.css" afterPath="$PROJECT_DIR$/webroot/css/addt.css" />
     </list>
     <ignored path="history.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,8 +40,8 @@
       <file leaf-file-name="index.ctp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Template/Info/index.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6318584">
-              <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.48141593">
+              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -385,7 +379,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458045404738</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Pochopení že commit v PHPstormu se dává jen do changelistu a z toho se to musí až pushnout do githubu.. demence ale chytrý. #Jsemblbej">
+      <created>1458045493389</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1458045493389</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -435,7 +435,8 @@
     <MESSAGE value="Whole update" />
     <MESSAGE value="Update readme" />
     <MESSAGE value="Info update/3513242. test commitu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Info update/3513242. test commitu" />
+    <MESSAGE value="Pochopení že commit v PHPstormu se dává jen do changelistu a z toho se to musí až pushnout do githubu.. demence ale chytrý. #Jsemblbej" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pochopení že commit v PHPstormu se dává jen do changelistu a z toho se to musí až pushnout do githubu.. demence ale chytrý. #Jsemblbej" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -618,8 +619,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Info/index.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6318584">
-          <caret line="21" column="56" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.48141593">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
           <folding />
         </state>
       </provider>
