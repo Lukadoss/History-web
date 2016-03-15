@@ -1,4 +1,4 @@
- # History web pro ZSWI
+ #History web pro ZSWI
   
  _Webový portál pro sběr kulturních a historických artefaktů_
   
@@ -11,7 +11,7 @@
 
  **1.Týden**
   
-  Petr Lukašík: 
+  Petr Lukašík:
   Výběr uložiště, webhostingu, serveru (3h)
 
   Jan Šedivý:
@@ -34,3 +34,14 @@
  Návrh databáze, ERA diagram (5h)
 
  ***
+
+ **3.Týden**
+
+ Petr Lukašík:
+ Programování v cakePHP a zkouška upravení/použití javascriptu (login, slider a další komponenty). Pokračování poznávání CakePHP. (5h)
+
+ Jan Šedivý:
+ Pokračování v ladění a vylepšování grafiky webu. Porozumění a práce s CakePHP přidávání příspěvků. (5h)
+
+ Jan Palcút:
+ Práce s třídou “model” v mvc architektuře. Vytváření dotazů, posílání a získávání dat z databáze. (4h)
