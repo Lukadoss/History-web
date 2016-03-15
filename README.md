@@ -37,11 +37,14 @@
 
  **3.Týden**
 
- Petr Lukašík:
- Programování v cakePHP a zkouška upravení/použití javascriptu (login, slider a další komponenty). Pokračování poznávání CakePHP. (5h)
+ 3.Týden
 
- Jan Šedivý:
- Pokračování v ladění a vylepšování grafiky webu. Porozumění a práce s CakePHP přidávání příspěvků. (5h)
+Petr Lukašík:  
+Programování v CakePHP a zkouška upravení/použití javascriptu (login, slider a další komponenty). Pokračování v poznávání CakePHP. (5h)
 
- Jan Palcút:
- Práce s třídou “model” v mvc architektuře. Vytváření dotazů, posílání a získávání dat z databáze. (4h)
+Jan Šedivý:  
+Pokračování v ladění a vylepšování grafiky webu a v realizaci navržených vzorů. (5h) 
+
+Jan Palcút:  
+Práce s třídou “model” v mvc architektuře. Vytváření dotazů, posílání a získávání dat z databáze. (4h)
+
