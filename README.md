@@ -24,7 +24,7 @@
   
  **2.Týden**
   
- Petr Lukašík:
+ Petr Lukašík:  
  Zajištění a pochopení fungování githubu a gitu. Naučení frameworku CakePHP a vybrání komponentů využitelné v projektu. (5h)
 
  Jan Šedivý:
