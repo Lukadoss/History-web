@@ -15,29 +15,77 @@
     <h4>Přidání nového příspěvku</h4>
     <hr>
     <form role="form" action="" method="POST" enctype="multipart/form-data">
-        <div class="form-group">
-            <label>Název článku:</label>
+        <div>
+            <div class="col-md-6">
+                <label for="jmeno">Jméno</label>
+                <input type="text" class="form-control" required id="jmeno" name="Forename">
+            </div>
+            <div class="col-md-6">
+                <label for="prijmeni">Příjmení</label>
+                <input type="text" class="form-control" required id="prijmeni" name="Surname">
+            </div>
+        </div>
+        <div class="form-group col-md-12">
+            <label>Email</label>
+            <input type="text" class="form-control" required name="Mail">
+        </div>
+        <div class="form-group col-md-12 checkbox">
+            <label class="c-input c-checkbox">
+                <input type="checkbox" checked>
+                <span class="c-indicator"></span>
+                Zaregistrovat
+            </label>
+        </div>
+        <hr>
+        <div class="form-group col-md-12">
+            <label>Název příspěvku:</label>
             <input type="text" class="form-control" required name="Header">
         </div>
-        <div class="form-group">
-            <label>Obsah:</label>
-            <textarea type="text" rows="15" class="form-control" required name="Text"></textarea>
+        <div class="form-group col-md-12">
+            <label>Krátký popis (nepovinný):</label>
+            <textarea type="text" rows="5" class="form-control" required name="Text"></textarea>
         </div>
-
-        <label class="control-label">Soubory</label>
-        <input id="input-24" name="input24[]" type="file" multiple class="file-loading">
-        <script>
-            $(document).on('ready', function () {
-                $("#input-24").fileinput({
-                    overwriteInitial: false,
-                    maxFileSize: 100000,
-                    previewFileType: 'any'
+        <div class="form-group col-md-12">
+            <label class="control-label">Soubory</label>
+            <input id="input-24" name="input24[]" type="file" multiple class="file-loading">
+            <script>
+                $(document).on('ready', function () {
+                    $("#input-24").fileinput({
+                        overwriteInitial: false,
+                        maxFileSize: 100000,
+                        previewFileType: 'any'
+                    });
                 });
-            });
-        </script>
+            </script>
+        </div>
+        <hr>
+        <div class="card-map" id="map">
+            <script>
+                var map;
+                function initMap() {
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        center: {lat: 48.9622271, lng: 14.5141815},
+                        zoom: 8
+                    });
 
+                    var contentString = '<h6>testík</h6><br>' + '<img src="http://data.filek.cz/cat.gif" width="100px">';
+
+                    var marker = new google.maps.Marker({
+                        position: {lat: 48.9622271, lng: 14.5141815},
+                        map: map,
+                        draggable: true,
+                        title: 'Místo události'
+                    });
+
+                    infowindow.open(map);
+                }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcDBMIqB9QnfD3wks9zVI2WUSHLnbU9so&callback=initMap"
+                    async defer></script>
+        </div>
         <hr>
         <button type="submit" name="submit-article" class="btn btn-primary">Přidat článek</button>
+
     </form>
 </div>
 </body>
