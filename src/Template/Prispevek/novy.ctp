@@ -68,16 +68,12 @@
                         zoom: 8
                     });
 
-                    var contentString = '<h6>testík</h6><br>' + '<img src="http://data.filek.cz/cat.gif" width="100px">';
-
                     var marker = new google.maps.Marker({
                         position: {lat: 48.9622271, lng: 14.5141815},
                         map: map,
                         draggable: true,
                         title: 'Místo události'
                     });
-
-                    infowindow.open(map);
                 }
             </script>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcDBMIqB9QnfD3wks9zVI2WUSHLnbU9so&callback=initMap"
