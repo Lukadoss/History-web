@@ -21,18 +21,103 @@
         var map;
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 48.9622271, lng: 14.5141815},
+                center: {lat: 49.406620, lng: 13.905871},
                 zoom: 8
             });
 
-            var contentString = '<h6>testík</h6><br>' + '<img src="http://data.filek.cz/cat.gif" width="100px">';
 
-            var infowindow = new google.maps.InfoWindow({
-                content: contentString,
-                position: {lat: 48.9622271, lng: 14.5141815}
+            var centerControlDiv = document.createElement('div');
+            var centerControl = new CenterControl(centerControlDiv, map);
+
+            centerControlDiv.index = 1;
+            map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(centerControlDiv);
+
+            var text1content = '<h6>test textového příspěvku</h6><br>' + '<img src="http://data.filek.cz/cat.gif" width="100px">';
+            var text1infowindow = new google.maps.InfoWindow({
+                content: text1content
+            });
+            var audio1content = '<h6>test audio příspěvku</h6><br>' + '<img src="http://data.filek.cz/cat.gif" width="100px">';
+            var audio1infowindow = new google.maps.InfoWindow({
+                content: audio1content
+            });
+            var video1content = '<h6>test video příspěvku</h6><br>' + '<img src="http://data.filek.cz/cat.gif" width="100px">';
+            var video1infowindow = new google.maps.InfoWindow({
+                content: video1content
             });
 
-            infowindow.open(map);
+            var textmarker = 'e60000';
+            var audiomarker = '0066ff';
+            var videomarker = '008000';
+
+            var textmarker1 = new google.maps.Marker({
+                position: {lat: 48.9622271, lng: 14.5141815},
+                map: map,
+                icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + textmarker
+            });
+
+            textmarker1.addListener('click', function () {
+                video1infowindow.close(map);
+                audio1infowindow.close(map);
+                text1infowindow.open(map, textmarker1);
+            });
+
+            var audiomarker1 = new google.maps.Marker({
+                position: {lat: 49.7188805, lng: 13.3593384},
+                map: map,
+                icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + audiomarker
+            });
+
+            audiomarker1.addListener('click', function () {
+                audio1infowindow.open(map, audiomarker1);
+                video1infowindow.close(map);
+                text1infowindow.close(map);
+            });
+
+            var videomarker1 = new google.maps.Marker({
+                position: {lat: 49.420338, lng: 13.878407},
+                map: map,
+                icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + videomarker
+            });
+
+            videomarker1.addListener('click', function () {
+                video1infowindow.open(map, videomarker1);
+                audio1infowindow.close(map);
+                text1infowindow.close(map);
+            });
+
+            function CenterControl(controlDiv, map) {
+
+                // Set CSS for the control border.
+                var controlUI = document.createElement('div');
+                controlUI.style.backgroundColor = '#fff';
+                controlUI.style.border = '2px solid #fff';
+                controlUI.style.borderRadius = '3px';
+                controlUI.style.boxShadow = '0 1px 3px rgba(0,0,0,.3)';
+                controlUI.style.cursor = 'pointer';
+                controlUI.style.marginBottom = '22px';
+                controlUI.style.textAlign = 'center';
+                controlUI.title = 'Ovládání animací';
+                controlDiv.appendChild(controlUI);
+
+                // Set CSS for the control interior.
+                var controlText = document.createElement('div');
+                controlText.style.color = 'rgb(25,25,25)';
+                controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+                controlText.style.fontSize = '16px';
+                controlText.style.lineHeight = '38px';
+                controlText.style.paddingLeft = '5px';
+                controlText.style.paddingRight = '5px';
+                controlText.innerHTML = '<span id="play-pause-btn" style="margin-right: 1rem"><?= $this->html->image('play-pause-btn.png', array('style' => 'height:1.5rem'), ['alt' => 'Přehrát/Pozastavit']) ?></span>' +
+                    '<span id="stop-btn"><?= $this->html->image('stop-btn.png', array('style' => 'height:1.5rem'), ['alt' => 'Přehrát/Pozastavit']) ?></span>';
+                controlUI.appendChild(controlText);
+
+                // Setup the click event listeners: simply set the map to Chicago.
+                controlUI.addEventListener('click', function () {
+                    map.setCenter(chicago);
+                });
+
+            }
+
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcDBMIqB9QnfD3wks9zVI2WUSHLnbU9so&callback=initMap"
@@ -98,11 +183,22 @@
 </div>
 <div class="card card-block">
     <h4 class="card-title">Legenda</h4>
-    <p class="card-text">tohle dělá tohle<br>
-        tohle dělá tamto<br>
-        a tohle dělá drsný drsný věci ee
-    </p>
-
+    <div class="row">
+        <div class="col-sm-6">
+            <p><?= $this->Html->image('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|e60000', array('alt' => 'Text marker')); ?>
+                - text / textové soubory</p>
+            <p><?= $this->Html->image('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|0066ff', array('alt' => 'Audio marker')); ?>
+                - audio soubory</p>
+            <p><?= $this->Html->image('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|008000', array('alt' => 'Video marker')); ?>
+                - video soubory</p>
+        </div>
+        <div class="col-sm-6">
+            <p><?= $this->html->image('play-pause-btn.png', array('style' => 'height:1.5rem'), ['alt' => 'Přehrát/Pozastavit']) ?>
+                - tlačítko přehrání/pozastavení animace</p>
+            <p><?= $this->html->image('stop-btn.png', array('style' => 'height:1.5rem'), ['alt' => 'Přehrát/Pozastavit']) ?>
+                - tlačítko vypnutí animace</p>
+        </div>
+    </div>
 </div>
 </body>
 </html>
