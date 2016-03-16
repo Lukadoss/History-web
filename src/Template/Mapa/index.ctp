@@ -61,6 +61,18 @@
                 text1infowindow.open(map, textmarker1);
             });
 
+            var textmarker2 = new google.maps.Marker({
+                position: {lat: 48.8622271, lng: 14.7141815},
+                map: map,
+                icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + textmarker
+            });
+
+            textmarker2.addListener('click', function () {
+                video1infowindow.close(map);
+                audio1infowindow.close(map);
+                text1infowindow.open(map, textmarker2);
+            });
+
             var audiomarker1 = new google.maps.Marker({
                 position: {lat: 49.7188805, lng: 13.3593384},
                 map: map,
