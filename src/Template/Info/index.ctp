@@ -9,7 +9,8 @@
     <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin in tellus sit amet nibh dignissim sagittis. Maecenas aliquet accumsan leo. Vivamus porttitor turpis ac leo.
         Donec iaculis gravida nulla. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Nulla non arcu lacinia neque faucibus fringilla. Nunc dapibus tortor vel mi dapibus
         sollicitudin. Fusce consectetuer risus a nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer in sapien. Temporibus autem quibusdam et
-        aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.<br><br>
+        aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
+        recusandae. Test paralelních commitů<br><br>
 
         Proin pede metus, vulputate nec, fermentum fringilla, vehicula vitae, justo. In sem justo, commodo ut, suscipit at, pharetra vitae, orci. Fusce dui leo, imperdiet in, aliquam sit amet, feugiat
         eu, orci. Fusce consectetuer risus a nunc. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
