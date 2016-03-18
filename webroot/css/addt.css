@@ -228,3 +228,7 @@ body {
         text-align: right;
     }
 }
+
+.btn-remove {
+    margin-bottom: 0;
+}

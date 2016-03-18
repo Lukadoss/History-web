@@ -7,13 +7,13 @@
 
     <?= $this->Html->script('canvas-to-blob.min.js') ?>
     <?= $this->Html->script('fileinput.min.js') ?>
-    <?= $this->Html->script('fileinput_locale_cz.js') ?>
+
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/i18n/cs.js"></script>
 
-
+    <?= $this->Html->script('fileinput_locale_cz.js', array('type' => 'text/javascript')) ?>
 </head>
 <body>
 <div class="card card-block">
@@ -57,8 +57,14 @@
                 $(document).on('ready', function () {
                     $("#input-24").fileinput({
                         overwriteInitial: false,
-                        maxFileSize: 100000,
-                        previewFileType: 'any'
+                        maxFileSize: 300000,
+                        previewFileType: 'any',
+                        'showUpload': false,
+                        language: 'cz',
+                        showCancel: false,
+                        showClose: false,
+                        allowedFileTypes: ['image', 'html', 'text', 'video', 'audio'],
+                        removeClass: 'btn btn-danger btn-remove'
                     });
                 });
             </script>
@@ -126,5 +132,6 @@
 
     </form>
 </div>
+
 </body>
 </html>
