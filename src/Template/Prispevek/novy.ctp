@@ -63,7 +63,7 @@
                 });
             </script>
         </div>
-        <div class="form-group col-md-12 select-box">
+        <div class="form-group col-md-12 select-box" id="district-selector">
             <script type="text/javascript">
                 $(document).ready(function () {
                     $(".js-example-basic-single").select2({
@@ -72,7 +72,7 @@
                 });
             </script>
 
-            <select class="js-example-basic-single form-control" id="district-selector">
+            <select class="js-example-basic-single" onchange="setCenter()">
                 <option value="Plzeň">Plzeň</option>
                 <option value="České Budějovice">České Budějovice</option>
                 <option value="Písek">Písek</option>
@@ -85,10 +85,16 @@
             <script>
                 var map;
                 function initMap() {
-                    geocoder = new google.maps.Geocoder();
+                    var select = document.getElementById('district-selector');
+                    //geocoder = new google.maps.Geocoder();
                     map = new google.maps.Map(document.getElementById('map'), {
                         center: {lat: 48.9622271, lng: 14.5141815},
                         zoom: 8
+                    });
+
+
+                    google.maps.event.addDomListener(select, 'change', function () {
+                        alert('Selected!');
                     });
 
                     /*
@@ -104,6 +110,11 @@
 
                      codeAddress('okres '+'Plzeň-město');
                      */
+                }
+
+                function setCenter() {
+                    map.setCenter({lat: 48.9622271, lng: 14.5141815});
+                    map.setZoom
                 }
             </script>
             <script
