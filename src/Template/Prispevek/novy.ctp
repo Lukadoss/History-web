@@ -114,7 +114,7 @@
 
                 function setCenter() {
                     map.setCenter({lat: 48.9622271, lng: 14.5141815});
-                    map.setZoom
+                    map.setZoom(10);
                 }
             </script>
             <script
