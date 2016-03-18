@@ -64,7 +64,11 @@
                         showCancel: false,
                         showClose: false,
                         allowedFileTypes: ['image', 'html', 'text', 'video', 'audio'],
-                        removeClass: 'btn btn-danger btn-remove'
+                        removeClass: 'btn btn-danger btn-remove',
+                        fileActionSettings: {
+                            removeIcon: '<i class="fa fa-trash-o"></i>',
+                            uploadIcon: '<i class="fa fa-upload"></i>'
+                        }
                     });
                 });
             </script>
@@ -90,6 +94,8 @@
         <div class="card-map" id="map">
             <script>
                 var map;
+                var marker;
+
                 function initMap() {
                     var select = document.getElementById('district-selector');
                     //geocoder = new google.maps.Geocoder();
@@ -97,10 +103,13 @@
                         center: {lat: 48.9622271, lng: 14.5141815},
                         zoom: 8
                     });
-
-
-                    google.maps.event.addDomListener(select, 'change', function () {
-                        alert('Selected!');
+                    /*
+                     google.maps.event.addListener(map, 'click', function(e) {
+                     placeMarker(e.latLng, map);
+                    });
+                     */
+                    google.maps.event.addListener(map, 'click', function (event) {
+                        placeMarker(event.latLng);
                     });
 
                     /*
@@ -116,6 +125,17 @@
 
                      codeAddress('okres '+'Plzeň-město');
                      */
+                }
+
+                function placeMarker(location) {
+                    if (marker) {
+                        marker.setPosition(location);
+                    } else {
+                        marker = new google.maps.Marker({
+                            position: location,
+                            map: map
+                        });
+                    }
                 }
 
                 function setCenter() {
