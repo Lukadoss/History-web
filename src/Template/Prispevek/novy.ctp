@@ -74,10 +74,12 @@
             </script>
         </div>
         <div class="form-group col-md-12 select-box" id="district-selector">
+            <label class="control-label">Okres</label>
             <script type="text/javascript">
                 $(document).ready(function () {
                     $(".js-example-basic-single").select2({
-                        language: "cs"
+                        language: "cs",
+                        width: '100%'
                     });
                 });
             </script>
@@ -103,11 +105,7 @@
                         center: {lat: 48.9622271, lng: 14.5141815},
                         zoom: 8
                     });
-                    /*
-                     google.maps.event.addListener(map, 'click', function(e) {
-                     placeMarker(e.latLng, map);
-                    });
-                     */
+
                     google.maps.event.addListener(map, 'click', function (event) {
                         placeMarker(event.latLng);
                     });
