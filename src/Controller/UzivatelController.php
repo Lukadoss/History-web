@@ -15,4 +15,19 @@ class UzivatelController extends AppController
     {
 
     }
+
+    function logout()
+    {
+
+    }
+
+    function detail()
+    {
+
+    }
+
+    function nastaveni()
+    {
+
+    }
 }
