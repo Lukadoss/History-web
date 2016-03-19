@@ -51,6 +51,10 @@
             <textarea type="text" rows="5" class="form-control" required name="Text"></textarea>
         </div>
         <div class="form-group col-md-12">
+            <label>Datum události:</label>
+            <input type="date" class="form-control" required name="Date">
+        </div>
+        <div class="form-group col-md-12">
             <label class="control-label">Soubory</label>
             <input id="input-24" name="input24[]" type="file" multiple class="file-loading">
             <script>
@@ -63,7 +67,9 @@
                         language: 'cz',
                         showCancel: false,
                         showClose: false,
-                        allowedFileTypes: ['image', 'html', 'text', 'video', 'audio'],
+                        allowedFileExtensions: ['jpg', 'jpeg', 'png', 'gif',
+                            'mp3', 'wav',
+                            'mp4', 'avi', 'wmv'],
                         removeClass: 'btn btn-danger btn-remove',
                         fileActionSettings: {
                             removeIcon: '<i class="fa fa-trash-o"></i>',
