@@ -249,3 +249,7 @@ body {
 .btn-remove {
     margin-bottom: 0;
 }
+
+.table {
+    border: none;
+}
