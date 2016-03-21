@@ -16,9 +16,9 @@ class PrispevekController extends AppController
         $this->set(compact("district"));
     }
 
-    function detail()
+    function detail($prispevek_id)
     {
-
+        $this->set('test', $prispevek_id);
     }
 
     function edit()
