@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-</head>
-<body>
 <div class="card card-block card-map-header">
     <h4 class="card-title text-center">Interaktivní mapa</h4>
     <input id="pick-year" type="text" data-slider-min="1700" data-slider-max="2016" data-slider-step="1" data-slider-value="1810">
@@ -238,5 +232,3 @@
         </div>
     </div>
 </div>
-</body>
-</html>

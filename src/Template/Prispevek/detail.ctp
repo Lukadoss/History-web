@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-</head>
-<body>
 <div class="card card-block">
     <h4 class="card-title">Název příspěvku <?= $test ?></h4>
     <h6 class="text-muted">Autor: Jan Novák</h6>
@@ -35,5 +29,3 @@
         </iframe>
     </div>
 </div>
-</body>
-</html>

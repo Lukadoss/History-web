@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-</head>
-<body>
 <div class="card card-block">
     <h4 class="card-title">Věci o webíku</h4>
     <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin in tellus sit amet nibh dignissim sagittis. Maecenas aliquet accumsan leo. Vivamus porttitor turpis ac leo.
@@ -37,5 +31,3 @@
         amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Proin mattis lacinia justo. Pellentesque ipsum. Suspendisse nisl. Proin mattis lacinia justo.<br><br>
     </p>
 </div>
-</body>
-</html>

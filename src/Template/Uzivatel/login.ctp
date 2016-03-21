@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-</head>
-<body>
 <div class="card card-block">
     <h4 class="card-title text-center">Přihlášení uživatele</h4>
     <hr>
@@ -30,5 +24,3 @@
     <p style="text-align:center">Ještě nemáš účet? <a href="">Zaregistruj se.</a></p>
     <p style="text-align:center"><a href="">Zapomenuté heslo</a></p>
 </div>
-</body>
-</html>
