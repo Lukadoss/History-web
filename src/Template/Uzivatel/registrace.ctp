@@ -7,11 +7,25 @@
             <label class="col-md-5 form-control-label form-login-label" for="email">Email:</label>
             <div class="col-md-3">
                 <input type="email" class="form-control" placeholder="Email" required name="Email"
-                       value="<?php if (isset($_POST['Email'])) echo(htmlspecialchars($_POST['Email'])); ?>"
+                       value=""
                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                 <div class="help-block with-errors" style="margin-bottom:0px;"></div>
             </div>
         </div>
+            <div class="form-group">
+                <label class="col-md-5 form-control-label form-login-label" for="Jmeno">Jméno:</label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" placeholder="Jméno" required name="Jmeno"
+                           value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-5 form-control-label form-login-label" for="Prijmeni">Příjmení:</label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" placeholder="Příjmení" required name="Prijmeni"
+                           value="">
+                </div>
+            </div>
         <div class="form-group has-feedback">
             <label class="col-md-5 form-control-label form-login-label" for="pwd">Heslo:</label>
             <div class="col-md-3">
