@@ -91,11 +91,11 @@
             </script>
 
             <select class="js-example-basic-single" onchange="setCenter()">
-                <option value="Plzeň">Plzeň</option>
-                <option value="České Budějovice">České Budějovice</option>
-                <option value="Písek">Písek</option>
-                <option value="Vidlákov">Vidlákov</option>
-                <option value="Loučovice">Loučovice</option>
+                <?php foreach ($district as $dist) {
+                    ?>
+                    <option value="<?= $dist->id ?>"> <?= $dist->name ?></option> <?php
+                } ?>
+
             </select>
         </div>
         <hr>

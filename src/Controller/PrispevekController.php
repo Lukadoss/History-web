@@ -12,7 +12,8 @@ class PrispevekController extends AppController
 {
     function novy()
     {
-
+        $district = $this->Prispevek->find('all');
+        $this->set(compact("district"));
     }
 
     function detail()
