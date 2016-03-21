@@ -13,6 +13,6 @@ class AdministraceController extends AppController
 {
     function index()
     {
-
+        //s
     }
 }
