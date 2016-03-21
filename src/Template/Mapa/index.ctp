@@ -214,7 +214,7 @@
             5x
         </label>
         <hr>
-        <a href="#" class="btn btn-primary">Animuj ty čubo!!!</a>
+        <a href="#" class="btn btn-primary">Uložit nastavení</a>
     </div>
 </div>
 <div class="card card-block">
