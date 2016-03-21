@@ -31,7 +31,7 @@
             height="100%"
             frameborder="0" style="border:0"
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDcDBMIqB9QnfD3wks9zVI2WUSHLnbU9so
-    &q=49.7247069,13.3588663&zoom=12">
+    &q=49.7188805,13.3593384&zoom=12">
         </iframe>
     </div>
 </div>

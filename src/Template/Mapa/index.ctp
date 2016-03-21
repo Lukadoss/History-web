@@ -36,7 +36,11 @@
             var text1infowindow = new google.maps.InfoWindow({
                 content: text1content
             });
-            var audio1content = '<h6>test audio příspěvku</h6><br>' + '<span class="text-muted">typ: audio<br>souborů: 1</span>';
+            var audio1content = '<?php echo $this->Html->link(__('<h6>test audio příspěvku</h6><br>'), [
+                    'controller' => 'Prispevek',
+                    'action' => 'detail',
+                    10
+                ], array('target' => 'blank', 'escape' => false)) ?>' + '<span class="text-muted">typ: audio<br>souborů: 1</span>';
             var audio1infowindow = new google.maps.InfoWindow({
                 content: audio1content
             });
@@ -210,7 +214,7 @@
             5x
         </label>
         <hr>
-        <a href="#" class="btn btn-primary">Uložit nastavení animace</a>
+        <a href="#" class="btn btn-primary">Animuj ty čubo!!!</a>
     </div>
 </div>
 <div class="card card-block">
