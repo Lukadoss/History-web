@@ -17,7 +17,7 @@
 </head>
 <body>
 <div class="card card-block">
-    <h4>Přidání nového příspěvku</h4>
+    <h4 class="text-center">Přidání nového příspěvku</h4>
     <hr>
     <form role="form" action="" method="POST" enctype="multipart/form-data">
         <div>

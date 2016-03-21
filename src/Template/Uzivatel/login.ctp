@@ -5,7 +5,7 @@
 </head>
 <body>
 <div class="card card-block">
-    <h4 class="card-title">Přihlášení uživatele</h4>
+    <h4 class="card-title text-center">Přihlášení uživatele</h4>
     <hr>
     <form class="form-horizontal" role="form" action="" method="post">
         <div class="form-group">
