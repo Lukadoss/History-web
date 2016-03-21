@@ -5,7 +5,7 @@
 </head>
 <body>
 <div class="card card-block card-map-header">
-    <h4 class="card-title">Interaktivní mapa</h4>
+    <h4 class="card-title text-center">Interaktivní mapa</h4>
     <input id="pick-year" type="text" data-slider-min="1700" data-slider-max="2016" data-slider-step="1" data-slider-value="1810">
     <span id="pick-year-val">1810</span>
 
@@ -40,7 +40,7 @@
                     'controller' => 'Prispevek',
                     'action' => 'detail',
                     10
-                ], array('target' => 'blank', 'escape' => false)) ?>' + '<span class="text-muted">typ: audio<br>souborů: 1</span>';
+                ], array('target' => '_blank', 'escape' => false)) ?>' + '<span class="text-muted">typ: audio<br>souborů: 1</span>';
             var audio1infowindow = new google.maps.InfoWindow({
                 content: audio1content
             });
@@ -218,7 +218,7 @@
     </div>
 </div>
 <div class="card card-block">
-    <h4 class="card-title">Legenda</h4>
+    <h4 class="card-title text-center">Legenda</h4>
     <div class="row">
         <div class="col-sm-6">
             <p><?= $this->Html->image('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|e60000', array('alt' => 'Text marker')); ?>
