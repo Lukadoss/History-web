@@ -30,4 +30,9 @@ class UzivatelController extends AppController
     {
 
     }
+
+    function registrace()
+    {
+
+    }
 }
