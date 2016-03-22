@@ -15,8 +15,8 @@ class UzivatelController extends AppController
 
     public function beforeFilter(Event $event)
     {
-        //parent::beforeFilter($event);
-        //$this->Auth->allow('add');
+        parent::beforeFilter($event);
+        $this->Auth->allow('add', 'logout');
     }
 
     public function index()
@@ -67,12 +67,17 @@ class UzivatelController extends AppController
 
     }
 
-    function nastaveni()
+    function settings()
     {
 
     }
 
-    function registrace()
+    function registration()
+    {
+
+    }
+
+    function lostPassword()
     {
 
     }
