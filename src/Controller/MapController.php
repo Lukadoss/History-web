@@ -8,12 +8,12 @@
 
 namespace App\Controller;
 
-class MapaController extends AppController
+class MapController extends AppController
 {
 
     public function index()
     {
-        //return $this->redirect(['controller' => 'Prispevek', 'action' => 'novy']);
+        //return $this->redirect(['controller' => 'Article', 'action' => 'novy']);
     }
 
     public function testnext()

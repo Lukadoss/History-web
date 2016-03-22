@@ -10,7 +10,7 @@ namespace App\Controller;
 
 use Cake\Event\Event;
 
-class UzivatelController extends AppController
+class UserController extends AppController
 {
 
     public function beforeFilter(Event $event)
@@ -21,7 +21,7 @@ class UzivatelController extends AppController
 
     public function index()
     {
-        $this->set('users', $this->Uzivatel->find('all'));
+        $this->set('users', $this->User->find('all'));
     }
 
     public function view($user_id)

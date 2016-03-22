@@ -22,8 +22,8 @@
     </form>
     <hr>
     <p style="text-align:center">Ještě nemáš účet? <?php echo $this->Html->link(__('Zaregistruj se.'), [
-            'controller' => 'Uzivatel',
-            'action' => 'registrace'
+            'controller' => 'User',
+            'action' => 'registration'
         ]) ?></p>
     <p style="text-align:center"><a href="">Zapomenuté heslo</a></p>
 </div>

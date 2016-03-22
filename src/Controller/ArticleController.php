@@ -8,11 +8,11 @@
 
 namespace App\Controller;
 
-class PrispevekController extends AppController
+class ArticleController extends AppController
 {
-    function newArticle()
+    function newarticle()
     {
-        $district = $this->Prispevek->find('all');
+        $district = $this->Article->find('all');
         $this->set(compact("district"));
     }
 
