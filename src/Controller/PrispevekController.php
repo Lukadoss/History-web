@@ -10,7 +10,7 @@ namespace App\Controller;
 
 class PrispevekController extends AppController
 {
-    function novy()
+    function newArticle()
     {
         $district = $this->Prispevek->find('all');
         $this->set(compact("district"));
