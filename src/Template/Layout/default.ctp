@@ -54,10 +54,11 @@
     <hr class="m-y-0">
 </div>
 <nav class="navbar navbar-default navbar-full">
-    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
-        &#9776;
+    <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2"
+            style="background: #3a84bd; margin-bottom: 0">
+        <i class="fa fa-bars"></i>
     </button>
-    <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+    <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar2">
         <div class="container nav-center">
             <ul class="nav navbar-nav" style="box-sizing: border-box;">
                 <li class="nav-item">
@@ -74,7 +75,7 @@
                         'action' => 'novy'
                     ], array('class' => 'nav-link')) ?></li>
             </ul>
-            <ul class="nav navbar-nav pull-xs-right">
+            <ul class="nav navbar-nav pull-md-right">
                 <li class="nav-item nav-login"><?php echo $this->Html->link(__('<i class="fa fa-user"> </i> PŘIHLÁŠENÍ'), [
                         'controller' => 'Uzivatel',
                         'action' => 'login'

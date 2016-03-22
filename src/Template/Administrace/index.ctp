@@ -4,64 +4,64 @@
     <table class="table table-hover">
         <thead class="thead-inverse">
         <tr>
-            <th>Název příspěvku</th>
-            <th>Autor</th>
-            <th>Typ příspěvku</th>
-            <th>Možnosti</th>
+            <th class="col-sm-4">Název</th>
+            <th class="col-sm-3">Autor</th>
+            <th class="col-sm-2">Typ</th>
+            <th class="col-sm-3">Možnosti</th>
         </tr>
         </thead>
         <tbody>
         <tr>
-            <td><?php echo $this->Html->link(__('Audio příspěvek'), [
+            <td class="col-sm-4"><?php echo $this->Html->link(__('Audio příspěvek'), [
                     'controller' => 'Prispevek',
                     'action' => 'detail',
                     5
                 ]) ?></td>
-            <td>Otto</td>
-            <td>Audio</td>
-            <td><?php echo $this->Html->link(__('<i class="fa fa-check"></i> Přijmout'), [
+            <td class="col-sm-3">Otto</td>
+            <td class="col-sm-2">Audio</td>
+            <td class="col-sm-3"><?php echo $this->Html->link(__('<i class="fa fa-check"></i> <span class="hidden-xs-down"> Přijmout</span>'), [
                     'controller' => 'Info',
                 ], array('class' => 'label label-pill label-success', 'escape' => false)) ?>
-                <?php echo $this->Html->link(__('<i class="fa fa-pencil-square-o"></i> Editovat'), [
+                <?php echo $this->Html->link(__('<i class="fa fa-pencil-square-o"></i> <span class="hidden-xs-down"> Editovat</span>'), [
                     'controller' => 'Info',
                 ], array('class' => 'label label-pill label-primary', 'escape' => false)) ?>
-                <?php echo $this->Html->link(__('<i class="fa fa-times"></i> Smazat'), [
+                <?php echo $this->Html->link(__('<i class="fa fa-times"></i> <span class="hidden-xs-down"> Smazat</span>'), [
                     'controller' => 'Info',
                 ], array('class' => 'label label-pill label-danger', 'escape' => false)) ?>
         </tr>
         <tr>
-            <td><?php echo $this->Html->link(__('Další příspěvek'), [
+            <td class="col-sm-4"><?php echo $this->Html->link(__('Další příspěvek'), [
                     'controller' => 'Prispevek',
                     'action' => 'detail',
                     5
                 ]) ?></td>
-            <td>Thornton</td>
-            <td>Text</td>
-            <td><?php echo $this->Html->link(__('<i class="fa fa-check"></i> Přijmout'), [
+            <td class="col-sm-3">Thornton</td>
+            <td class="col-sm-2">Text</td>
+            <td class="col-sm-3"><?php echo $this->Html->link(__('<i class="fa fa-check"></i> <span class="hidden-xs-down"> Přijmout</span>'), [
                     'controller' => 'Info',
                 ], array('class' => 'label label-pill label-success', 'escape' => false)) ?>
-                <?php echo $this->Html->link(__('<i class="fa fa-pencil-square-o"></i> Editovat'), [
+                <?php echo $this->Html->link(__('<i class="fa fa-pencil-square-o"></i> <span class="hidden-xs-down"> Editovat</span>'), [
                     'controller' => 'Info',
                 ], array('class' => 'label label-pill label-primary', 'escape' => false)) ?>
-                <?php echo $this->Html->link(__('<i class="fa fa-times"></i> Smazat'), [
+                <?php echo $this->Html->link(__('<i class="fa fa-times"></i> <span class="hidden-xs-down"> Smazat</span>'), [
                     'controller' => 'Info',
                 ], array('class' => 'label label-pill label-danger', 'escape' => false)) ?>
         </tr>
         <tr>
-            <td><?php echo $this->Html->link(__('Poslední příspěvek'), [
+            <td class="col-sm-4"><?php echo $this->Html->link(__('Poslední příspěvek'), [
                     'controller' => 'Prispevek',
                     'action' => 'detail',
                     5
                 ]) ?></td>
-            <td>Larry the Bird</td>
-            <td>Obrázek</td>
-            <td><?php echo $this->Html->link(__('<i class="fa fa-check"></i> Přijmout'), [
+            <td class="col-sm-3">Larry the Bird</td>
+            <td class="col-sm-2">Obrázek</td>
+            <td class="col-sm-3"><?php echo $this->Html->link(__('<i class="fa fa-check"></i> <span class="hidden-xs-down"> Přijmout</span>'), [
                     'controller' => 'Info',
                 ], array('class' => 'label label-pill label-success', 'escape' => false)) ?>
-                <?php echo $this->Html->link(__('<i class="fa fa-pencil-square-o"></i> Editovat'), [
+                <?php echo $this->Html->link(__('<i class="fa fa-pencil-square-o"></i> <span class="hidden-xs-down"> Editovat</span>'), [
                     'controller' => 'Info',
                 ], array('class' => 'label label-pill label-primary', 'escape' => false)) ?>
-                <?php echo $this->Html->link(__('<i class="fa fa-times"></i> Smazat'), [
+                <?php echo $this->Html->link(__('<i class="fa fa-times"></i> <span class="hidden-xs-down"> Smazat</span>'), [
                     'controller' => 'Info',
                 ], array('class' => 'label label-pill label-danger', 'escape' => false)) ?>
         </tr>

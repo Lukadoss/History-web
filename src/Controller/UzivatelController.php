@@ -15,8 +15,8 @@ class UzivatelController extends AppController
 
     public function beforeFilter(Event $event)
     {
-        parent::beforeFilter($event);
-        $this->Auth->allow();
+        //parent::beforeFilter($event);
+        //$this->Auth->allow();
     }
 
     public function index()
