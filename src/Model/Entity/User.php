@@ -12,8 +12,6 @@ use Cake\ORM\Entity;
 
 class User extends Entity
 {
-    public $useTable = 'Users';
-    
     protected $_accessible = [
         '*' => true,
         'id' => false
