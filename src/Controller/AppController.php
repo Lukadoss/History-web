@@ -45,7 +45,7 @@ class AppController extends Controller
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
             'loginRedirect' => [
-                'controller' => 'User',
+                'controller' => 'Users',
                 'action' => 'detail'
             ],
             'logoutRedirect' => [
@@ -57,7 +57,7 @@ class AppController extends Controller
                 ]
             ],
             'loginAction' => [
-                'controller' => 'User',
+                'controller' => 'Users',
                 'action' => 'login'
             ]
         ]);

@@ -1,19 +1,19 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Seda
- * Date: 25. 2. 2016
- * Time: 18:27
+ * User: HARD
+ * Date: 21.03.2016
+ * Time: 18:15
  */
 namespace App\Model\Table;
 
 use Cake\ORM\Table;
 
-class ArticleTable extends Table
+class UsersTable extends Table
 {
     public function initialize(array $config)
     {
-        $this->table('district');
+        $this->table('user');
         //$this->addBehavior('Timestamp');
     }
 }

@@ -10,7 +10,7 @@ namespace App\Controller;
 
 use Cake\Event\Event;
 
-class ArticleController extends AppController
+class ArticlesController extends AppController
 {
 
     public function beforeFilter(Event $event)

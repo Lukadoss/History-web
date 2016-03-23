@@ -12,6 +12,8 @@ use Cake\ORM\Entity;
 
 class User extends Entity
 {
+    public $useTable = 'Users';
+    
     protected $_accessible = [
         '*' => true,
         'id' => false
@@ -20,5 +22,11 @@ class User extends Entity
     protected function _setPassword($password)
     {
         return (new DefaultPasswordHasher)->hash($password);
+    }
+
+    protected function _getFullName()
+    {
+        return $this->_properties['forename'] . '  ' .
+        $this->_properties['surname'];
     }
 }

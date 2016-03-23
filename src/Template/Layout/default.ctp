@@ -71,13 +71,14 @@
                     ], array('class' => 'nav-link')) ?></li>
                 <li class="nav-item">
                     <?php echo $this->Html->link(__('NOVÝ PŘÍSPĚVEK'), [
-                        'controller' => 'Article',
+                        'controller' => 'Articles',
                         'action' => 'newArticle'
                     ], array('class' => 'nav-link')) ?></li>
             </ul>
             <ul class="nav navbar-nav pull-md-right">
                 <li class="nav-item nav-login"><?php echo $this->Html->link(__('<i class="fa fa-user"> </i> PŘIHLÁŠENÍ'), [
-                        'controller' => 'User',
+                        'controller' => 'Users',
+                        'action' => 'login'
                     ], array('class' => 'nav-link nav-login', 'escape' => false)) ?></li>
             </ul>
         </div>
