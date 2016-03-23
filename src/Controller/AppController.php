@@ -50,6 +50,15 @@ class AppController extends Controller
             ],
             'logoutRedirect' => [
                 'controller' => 'Info',
+            ],
+            'authenticate' => [
+                'Form' => [
+                    'fields' => ['username' => 'email', 'password' => 'password']
+                ]
+            ],
+            'loginAction' => [
+                'controller' => 'User',
+                'action' => 'login'
             ]
         ]);
     }
@@ -72,6 +81,6 @@ class AppController extends Controller
 
     public function beforeFilter(Event $event)
     {
-        $this->Auth->allow(['index', 'view', 'detail', 'registration', 'newArticle']);
+        $this->Auth->allow(['index']);
     }
 }
