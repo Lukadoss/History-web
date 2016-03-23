@@ -26,18 +26,18 @@ class UserController extends AppController
 
     public function view($user_id)
     {
-        $user = $this->Uzivatel->get($user_id);
+        $user = $this->User->get($user_id);
         $this->set(compact('user'));
     }
 
-    public function add()
+    function registration()
     {
-        $user = $this->Uzivatel->newEntity();
+        $user = $this->User->newEntity($this->request->data);
         if ($this->request->is('post')) {
-            $user = $this->Uzivatel->patchEntity($user, $this->request->data);
-            if ($this->Uzivatel->save($user)) {
+            $user = $this->User->patchEntity($user, $this->request->data);
+            if ($this->User->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
-                return $this->redirect(['action' => 'add']);
+                return $this->redirect($this->Auth->redirectUrl());
             }
             $this->Flash->error(__('Unable to add the user.'));
         }
@@ -68,11 +68,6 @@ class UserController extends AppController
     }
 
     function settings()
-    {
-
-    }
-
-    function registration()
     {
 
     }
