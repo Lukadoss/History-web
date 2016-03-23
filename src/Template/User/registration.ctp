@@ -6,7 +6,7 @@
         <div class="form-group">
             <label class="col-md-5 form-control-label form-login-label" for="email">Email:</label>
             <div class="col-md-3">
-                <input type="email" class="form-control" placeholder="Email" required name="Email"
+                <input type="email" class="form-control" placeholder="Email" required name="email"
                        value=""
                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
                 <div class="help-block with-errors" style="margin-bottom:0px;"></div>
@@ -15,27 +15,26 @@
             <div class="form-group">
                 <label class="col-md-5 form-control-label form-login-label" for="Jmeno">Jméno:</label>
                 <div class="col-md-3">
-                    <input type="text" class="form-control" placeholder="Jméno" required name="Jmeno"
+                    <input type="text" class="form-control" placeholder="Jméno" required name="forename"
                            value="">
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-md-5 form-control-label form-login-label" for="Prijmeni">Příjmení:</label>
                 <div class="col-md-3">
-                    <input type="text" class="form-control" placeholder="Příjmení" required name="Prijmeni"
+                    <input type="text" class="form-control" placeholder="Příjmení" required name="surname"
                            value="">
                 </div>
             </div>
         <div class="form-group has-feedback">
             <label class="col-md-5 form-control-label form-login-label" for="pwd">Heslo:</label>
             <div class="col-md-3">
-                <input type="password" class="form-control" placeholder="Heslo" required name="Heslo"
+                <input type="password" class="form-control" placeholder="Heslo" required name="password"
                        data-minlength="6" id="inputPassword">
-                <div class="help-block with-errors" style="margin-bottom:0px;"></div>
             </div>
             <label class="col-md-5 form-control-label form-login-label" for="pwd"></label>
             <div class="col-md-3" style="margin-top:15px">
-                <input type="password" class="form-control" placeholder="Heslo znovu" required name="HesloZnovu"
+                <input type="password" class="form-control" placeholder="Heslo znovu" required name="passwordAgain"
                        id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Hesla se neshodují">
                 <div class="help-block with-errors" style="margin-bottom:0px;"></div>
             </div>
