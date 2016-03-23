@@ -78,7 +78,6 @@
             <ul class="nav navbar-nav pull-md-right">
                 <li class="nav-item nav-login"><?php echo $this->Html->link(__('<i class="fa fa-user"> </i> PŘIHLÁŠENÍ'), [
                         'controller' => 'User',
-                        'action' => 'index'
                     ], array('class' => 'nav-link nav-login', 'escape' => false)) ?></li>
             </ul>
         </div>
