@@ -67,18 +67,18 @@
                     ], array('class' => 'nav-link')) ?></li>
                 <li class="nav-item">
                     <?php echo $this->Html->link(__('INTERAKTIVNÍ MAPA'), [
-                        'controller' => 'Mapa',
+                        'controller' => 'Map',
                     ], array('class' => 'nav-link')) ?></li>
                 <li class="nav-item">
                     <?php echo $this->Html->link(__('NOVÝ PŘÍSPĚVEK'), [
-                        'controller' => 'Prispevek',
-                        'action' => 'novy'
+                        'controller' => 'Article',
+                        'action' => 'newArticle'
                     ], array('class' => 'nav-link')) ?></li>
             </ul>
             <ul class="nav navbar-nav pull-md-right">
                 <li class="nav-item nav-login"><?php echo $this->Html->link(__('<i class="fa fa-user"> </i> PŘIHLÁŠENÍ'), [
-                        'controller' => 'Uzivatel',
-                        'action' => 'login'
+                        'controller' => 'User',
+                        'action' => 'index'
                     ], array('class' => 'nav-link nav-login', 'escape' => false)) ?></li>
             </ul>
         </div>

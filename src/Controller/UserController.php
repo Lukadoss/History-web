@@ -10,34 +10,34 @@ namespace App\Controller;
 
 use Cake\Event\Event;
 
-class UzivatelController extends AppController
+class UserController extends AppController
 {
 
     public function beforeFilter(Event $event)
     {
-        //parent::beforeFilter($event);
-        //$this->Auth->allow();
+        parent::beforeFilter($event);;
+        $this->Auth->allow('add', 'logout');
     }
 
     public function index()
     {
-        $this->set('users', $this->Uzivatel->find('all'));
+        $this->set('users', $this->User->find('all'));
     }
 
     public function view($user_id)
     {
-        $user = $this->Uzivatel->get($user_id);
+        $user = $this->User->get($user_id);
         $this->set(compact('user'));
     }
 
-    public function add()
+    function registration()
     {
-        $user = $this->Uzivatel->newEntity();
+        $user = $this->User->newEntity($this->request->data);
         if ($this->request->is('post')) {
-            $user = $this->Uzivatel->patchEntity($user, $this->request->data);
-            if ($this->Uzivatel->save($user)) {
+            $user = $this->User->patchEntity($user, $this->request->data);
+            if ($this->User->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
-                return $this->redirect(['action' => 'add']);
+                return $this->redirect($this->Auth->redirectUrl());
             }
             $this->Flash->error(__('Unable to add the user.'));
         }
@@ -67,12 +67,12 @@ class UzivatelController extends AppController
 
     }
 
-    function nastaveni()
+    function settings()
     {
 
     }
 
-    function registrace()
+    function lostPassword()
     {
 
     }

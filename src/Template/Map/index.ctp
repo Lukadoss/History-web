@@ -32,7 +32,7 @@
                 content: text1content
             });
             var audio1content = '<?php echo $this->Html->link(__('<h6>test audio příspěvku</h6><br>'), [
-                    'controller' => 'Prispevek',
+                    'controller' => 'Article',
                     'action' => 'detail',
                     10
                 ], array('target' => '_blank', 'escape' => false)) ?>' + '<span class="text-muted">typ: audio<br>souborů: 1</span>';

@@ -9,7 +9,7 @@
 namespace App\Controller;
 
 
-class AdministraceController extends AppController
+class AdministrationController extends AppController
 {
     function index()
     {
