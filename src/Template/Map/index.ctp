@@ -1,5 +1,6 @@
 <div class="card card-block card-map-header">
     <h4 class="card-title text-center">Interaktivní mapa</h4>
+    <hr>
     <input id="pick-year" type="text" data-slider-min="1700" data-slider-max="2016" data-slider-step="1" data-slider-value="1810">
     <span id="pick-year-val">1810</span>
 
@@ -154,12 +155,24 @@
             async defer></script>
 </div>
 <div class="card card-block card-map-footer">
-    <div class="text-center">
+    <div class="collapse" id="filterOptions">
+        filtry
+    </div>
+    <div class="row">
+        <div class="col-xs-6 text-left">
+            <button class="btn btn-primary btn-middle" type="button" data-toggle="collapse" data-target="#filterOptions"
+                    aria-expanded="false" aria-controls="collapseExample">
+                <i class="fa fa-filter"> </i> <span class="hidden-xs-down">Nastavení filtrů</span>
+            </button>
+        </div>
+        <div class="col-xs-6 text-right">
         <button class="btn btn-primary btn-middle" type="button" data-toggle="collapse" data-target="#animationOptions" aria-expanded="false" aria-controls="collapseExample">
-            Možnosti animace
+            <i class="fa fa-cog"> </i> <span class="hidden-xs-down">Možnosti animace</span>
         </button>
     </div>
+    </div>
     <div class="collapse" id="animationOptions">
+        <hr>
         <h5>Zobrazované časové období</h5>
         <div class="select-year">
 

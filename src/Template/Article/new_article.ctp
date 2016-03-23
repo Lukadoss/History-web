@@ -48,15 +48,22 @@
         </div>
         <div class="form-group col-md-12">
             <label>Krátký popis (nepovinný):</label>
-            <textarea type="text" rows="5" class="form-control" required name="Text"></textarea>
+            <textarea type="text" rows="5" class="form-control" name="Text"></textarea>
         </div>
-        <div class="form-group col-md-12">
-            <label>Datum události:</label>
-            <input type="date" class="form-control" required name="Date">
+        <div class="form-group">
+
+            <div class="col-md-6">
+                <label>Datum události od:</label>
+                <input type="date" class="form-control" required name="DateFrom">
+            </div>
+            <div class="col-md-6">
+                <label>Datum do:</label>
+                <input type="date" class="form-control" name="DateTo">
+            </div>
         </div>
         <div class="form-group col-md-12">
             <label class="control-label">Soubory</label>
-            <input id="input-24" name="input24[]" type="file" multiple class="file-loading">
+            <input id="input-24" name="input24[]" type="file" multiple required class="file-loading">
             <script>
                 $(document).on('ready', function () {
                     $("#input-24").fileinput({

@@ -13,7 +13,7 @@
         <tbody>
         <tr>
             <td><?php echo $this->Html->link(__('Audio příspěvek'), [
-                    'controller' => 'Article',
+                    'controller' => 'Prispevek',
                     'action' => 'detail',
                     5
                 ]) ?></td>
@@ -31,7 +31,7 @@
         </tr>
         <tr>
             <td><?php echo $this->Html->link(__('Další příspěvek'), [
-                    'controller' => 'Article',
+                    'controller' => 'Prispevek',
                     'action' => 'detail',
                     5
                 ]) ?></td>
@@ -49,7 +49,7 @@
         </tr>
         <tr>
             <td><?php echo $this->Html->link(__('Poslední příspěvek'), [
-                    'controller' => 'Article',
+                    'controller' => 'Prispevek',
                     'action' => 'detail',
                     5
                 ]) ?></td>
