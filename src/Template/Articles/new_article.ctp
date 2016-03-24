@@ -102,7 +102,7 @@
                 <option></option>
                 <?php foreach ($district as $dist) {
                     ?>
-                    <option value="<?= $dist->id ?>"> <?= $dist->municipality ?>, <span class="text-primary">okres <?= $dist->district ?>, <?= $dist->region ?></span> </option> <?php
+                    <option value="<?= $dist->id ?>"> <?= $dist->municipality ?>, <span class="text-muted"><i class="fa fa-user"> </i>okres <?= $dist->district ?>, <?= $dist->region ?></span> </option> <?php
                 } ?>
 
             </select>

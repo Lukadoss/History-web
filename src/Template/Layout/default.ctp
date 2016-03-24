@@ -51,8 +51,10 @@
     <?php echo $this->Html->link($this->Html->image('logo2.png', ['alt' => 'Logo']), [
         'controller' => 'Info',
     ], array('escape' => false)) ?>
+
     <hr class="m-y-0">
 </div>
+<?php $loguser = $this->request->session()->read('Auth.User'); ?>
 <nav class="navbar navbar-default navbar-full">
     <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2"
             style="background: #3a84bd; margin-bottom: 0">
@@ -74,18 +76,38 @@
                         'controller' => 'Articles',
                         'action' => 'newArticle'
                     ], array('class' => 'nav-link')) ?></li>
-            </ul>
-            <ul class="nav navbar-nav pull-right">
-                <li class="nav-item nav-login"><?php echo $this->Html->link(__('ODHLASIT'), [
-                        'controller' => 'Users',
-                        'action' => 'logout'
-                    ], array('class' => 'nav-link nav-login', 'escape' => false)) ?></li>
+                <?php if($loguser && ($this->request->session()->read('Auth.User.isadmin'))) { ?>
+                <li class="nav-item">
+                    <?php echo $this->Html->link(__('ADMINISTRACE'), [
+                        'controller' => 'Administration',
+                    ], array('class' => 'nav-link')) ?></li>
+                <?php } ?>
             </ul>
             <ul class="nav navbar-nav pull-md-right">
-                <li class="nav-item nav-login"><?php echo $this->Html->link(__('<i class="fa fa-user"> </i> PŘIHLÁŠENÍ'), [
-                        'controller' => 'Users',
-                        'action' => 'login'
-                    ], array('class' => 'nav-link nav-login', 'escape' => false)) ?></li>
+
+                <?php
+                if(!$loguser) { ?>
+                    <li class="nav-item nav-login"><?php echo $this->Html->link(__('<i class="fa fa-sign-in"> </i> PŘIHLÁŠENÍ'), [
+                            'controller' => 'Users',
+                            'action' => 'login'
+                        ], array('class' => 'nav-link nav-login', 'escape' => false)) ?></li>
+                    <li class="nav-item nav-login"><?php echo $this->Html->link(__('<i class="fa fa-user-plus"> </i> REGISTRACE'), [
+                            'controller' => 'Users',
+                            'action' => 'registration'
+                        ], array('class' => 'nav-link nav-login', 'escape' => false)) ?></li>
+                <?php }
+                else { ?>
+                    <li class="nav-item nav-login"><?php echo $this->Html->link(__('<i class="fa fa-user"> </i> <span class="text-uppercase"> '.$loguser['forename'].' '.$loguser['surname']."</span>"), [
+                            'controller' => 'Users',
+                            'action' => 'detail'
+                            //$this->Auth->user('id')
+                        ], array('class' => 'nav-link nav-login', 'escape' => false)) ?></li>
+                    <li class="nav-item nav-login"><?php echo $this->Html->link(__('<i class="fa fa-sign-out"> </i> ODHLÁSIT'), [
+                            'controller' => 'Users',
+                            'action' => 'logout'
+                        ], array('class' => 'nav-link nav-login', 'escape' => false)) ?></li>
+                <?php }?>
+
             </ul>
 
         </div>
