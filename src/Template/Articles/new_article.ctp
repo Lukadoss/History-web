@@ -87,20 +87,22 @@
             </script>
         </div>
         <div class="form-group col-md-12 select-box" id="district-selector">
-            <label class="control-label">Okres</label>
+            <label class="control-label">Obec:</label>
             <script type="text/javascript">
                 $(document).ready(function () {
                     $(".js-example-basic-single").select2({
                         language: "cs",
-                        width: '100%'
+                        width: '100%',
+                        placeholder: "Vyberte obec"
                     });
                 });
             </script>
 
-            <select class="js-example-basic-single" onchange="setCenter()">
+            <select class="js-example-basic-single" id="selector" onChange="setCenter()">
+                <option></option>
                 <?php foreach ($district as $dist) {
                     ?>
-                    <option value="<?= $dist->id ?>"> <?= $dist->name ?></option> <?php
+                    <option value="<?= $dist->id ?>"> <?= $dist->municipality ?>, <span class="text-primary">okres <?= $dist->district ?>, <?= $dist->region ?></span> </option> <?php
                 } ?>
 
             </select>
@@ -113,7 +115,7 @@
 
                 function initMap() {
                     var select = document.getElementById('district-selector');
-                    //geocoder = new google.maps.Geocoder();
+                    geocoder = new google.maps.Geocoder();
                     map = new google.maps.Map(document.getElementById('map'), {
                         center: {lat: 48.9622271, lng: 14.5141815},
                         zoom: 8
@@ -122,20 +124,16 @@
                     google.maps.event.addListener(map, 'click', function (event) {
                         placeMarker(event.latLng);
                     });
+                }
 
-                    /*
-                     function codeAddress(address) {
-                     geocoder.geocode({'address': address}, function (results, status) {
-                     if (status == google.maps.GeocoderStatus.OK) {
-                     map.setCenter(results[0].geometry.location);
-                     map.fitBounds(results[0].geometry.viewport);
-                     }
-
-                     });
-                     }
-
-                     codeAddress('okres '+'Plzeň-město');
-                     */
+                function codeAddress(address) {
+                    geocoder.geocode({'address': address}, function (results, status) {
+                        if (status == google.maps.GeocoderStatus.OK) {
+                            map.setCenter(results[0].geometry.location);
+                            map.fitBounds(results[0].geometry.viewport);
+                            placeMarker(results[0].geometry.location);
+                        }
+                    });
                 }
 
                 function placeMarker(location) {
@@ -151,8 +149,8 @@
                 }
 
                 function setCenter() {
-                    map.setCenter({lat: 48.9622271, lng: 14.5141815});
-                    map.setZoom(10);
+                    var elt = document.getElementById('selector');
+                    codeAddress(elt.options[elt.selectedIndex].text);
                 }
             </script>
             <script
