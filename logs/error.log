@@ -7182,3 +7182,900 @@ Stack Trace:
 #2 {main}
 
 
+2016-03-24 16:13:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-24 16:17:32 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-24 16:18:01 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-24 16:22:27 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'd15579_lisaci.user' doesn't exist
+Request URL: /historyweb/users/registration
+Referer URL: http://localhost/historyweb/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'user', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('user', Array)
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('user')
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\ORM\Marshaller.php(116): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\ORM\Table.php(1996): Cake\ORM\Marshaller->one(Array, Array)
+#5 C:\xampp\htdocs\historyweb\src\Controller\UsersController.php(30): Cake\ORM\Table->newEntity(Array)
+#6 [internal function]: App\Controller\UsersController->registration()
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#10 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#11 {main}
+
+
+2016-03-24 16:26:17 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-24 16:35:07 Warning: Warning (4096): Argument 1 passed to Cake\Network\Request::session() must be an instance of Cake\Network\Session, string given, called in C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp on line 80 and defined in [C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Network\Request.php, line 509]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\Network\Request::session() - CORE\src\Network\Request.php, line 509
+include - APP/Template\Layout\default.ctp, line 80
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 634
+Cake\View\View::render() - CORE\src\View\View.php, line 593
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 16:35:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-24 16:36:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-24 16:42:45 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-24 16:45:09 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 80]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-24 16:45:10 Error: [Cake\Error\FatalErrorException] syntax error, unexpected ')'
+Request URL: /historyweb/articles/new-article
+Referer URL: http://localhost/historyweb/articles/new-article
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 80)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-24 16:45:17 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/articles/new-article
+Referer URL: http://localhost/historyweb/articles/new-article
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:46:10 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/articles/new-article
+Referer URL: http://localhost/historyweb/articles/new-article
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:46:12 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:10 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:12 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:13 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:14 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:16 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:16 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:16 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:17 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:17 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:17 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:17 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:17 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:18 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:18 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:18 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:18 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:19 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:19 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:22 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:50:23 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:51:41 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:51:43 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:51:44 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:51:44 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:51:44 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:51:45 Error: [Cake\View\Exception\MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => NULL,
+)
+Request URL: /historyweb/
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\View\HelperRegistry->_throwMissingClassError('Auth', NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\HelperRegistry.php(66): Cake\Core\ObjectRegistry->load('Auth')
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(889): Cake\View\HelperRegistry->__isset('Auth')
+#3 C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp(94): Cake\View\View->__get('Auth')
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(634): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\View.php(593): Cake\View\View->renderLayout('', 'default')
+#8 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#9 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\InfoController))
+#11 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-03-24 16:58:33 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'honza.seeda@gmail.com' for key 'email'
+Request URL: /historyweb/users/registration
+Referer URL: http://localhost/historyweb/users/registration
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\ORM\Table.php(1558): Cake\Database\Query->execute()
+#4 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\ORM\Table.php(1474): Cake\ORM\Table->_insert(Object(App\Model\Entity\User), Array)
+#5 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\ORM\Table.php(1405): Cake\ORM\Table->_processSave(Object(App\Model\Entity\User), Object(ArrayObject))
+#6 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#7 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\ORM\Table.php(1406): Cake\Database\Connection->transactional(Object(Closure))
+#8 C:\xampp\htdocs\historyweb\src\Controller\UsersController.php(33): Cake\ORM\Table->save(Object(App\Model\Entity\User))
+#9 [internal function]: App\Controller\UsersController->registration()
+#10 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#12 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#13 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2016-03-24 17:00:14 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-24 17:23:06 Error: Fatal Error (4): syntax error, unexpected '?>' in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 55]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-24 17:23:06 Error: [Cake\Error\FatalErrorException] syntax error, unexpected '?>'
+Request URL: /historyweb/users/detail/5
+Referer URL: http://localhost/historyweb/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 55)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-24 19:06:50 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-24 20:07:37 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-24 20:10:15 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-24 21:43:08 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /historyweb/img/loading.gif
+Referer URL: http://localhost/historyweb/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\historyweb\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+

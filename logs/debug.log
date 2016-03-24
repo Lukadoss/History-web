@@ -1160,3 +1160,188 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2016-03-24 16:34:31 Notice: Deprecated (16384): SessionHelper has been deprecated. Use request->session() instead. in [C:\xampp\htdocs\historyweb\vendor\cakephp\cakephp\src\View\Helper\SessionHelper.php, line 39]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\View\Helper\SessionHelper::__construct() - CORE\src\View\Helper\SessionHelper.php, line 39
+Cake\View\HelperRegistry::_create() - CORE\src\View\HelperRegistry.php, line 142
+Cake\Core\ObjectRegistry::load() - CORE\src\Core\ObjectRegistry.php, line 93
+Cake\View\HelperRegistry::__isset() - CORE\src\View\HelperRegistry.php, line 66
+Cake\View\View::__get() - CORE\src\View\View.php, line 889
+include - APP/Template\Layout\default.ctp, line 80
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 634
+Cake\View\View::render() - CORE\src\View\View.php, line 593
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 17:11:08 Notice: Notice (8): Undefined index: hasRights in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 78]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Layout\default.ctp, line 78
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 634
+Cake\View\View::render() - CORE\src\View\View.php, line 593
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 17:12:08 Notice: Notice (8): Undefined index: hasrights in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 78]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Layout\default.ctp, line 78
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 634
+Cake\View\View::render() - CORE\src\View\View.php, line 593
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 17:12:24 Notice: Notice (8): Undefined index: hasrights in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 78]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Layout\default.ctp, line 78
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 634
+Cake\View\View::render() - CORE\src\View\View.php, line 593
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 17:13:51 Notice: Notice (8): Undefined index: isadmin in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 78]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Layout\default.ctp, line 78
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 634
+Cake\View\View::render() - CORE\src\View\View.php, line 593
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 17:15:15 Notice: Notice (8): Undefined index: isadmin in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 78]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Layout\default.ctp, line 78
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 634
+Cake\View\View::render() - CORE\src\View\View.php, line 593
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 17:17:06 Notice: Notice (8): Undefined index: isadmin in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 99]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Layout\default.ctp, line 99
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 634
+Cake\View\View::render() - CORE\src\View\View.php, line 593
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 17:17:09 Notice: Notice (8): Undefined index: isadmin in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 99]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Layout\default.ctp, line 99
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 634
+Cake\View\View::render() - CORE\src\View\View.php, line 593
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 17:18:37 Notice: Notice (8): Undefined index: isadmin in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 99]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Layout\default.ctp, line 99
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 634
+Cake\View\View::render() - CORE\src\View\View.php, line 593
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 17:22:21 Notice: Notice (8): Array to string conversion in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 55]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Layout\default.ctp, line 55
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 634
+Cake\View\View::render() - CORE\src\View\View.php, line 593
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 22:05:05 Notice: Notice (8): Undefined variable: loguser in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 80]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Layout\default.ctp, line 80
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 634
+Cake\View\View::render() - CORE\src\View\View.php, line 593
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 22:05:05 Notice: Notice (8): Undefined variable: loguser in [C:\xampp\htdocs\historyweb\src\Template\Layout\default.ctp, line 91]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Layout\default.ctp, line 91
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::renderLayout() - CORE\src\View\View.php, line 634
+Cake\View\View::render() - CORE\src\View\View.php, line 593
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
