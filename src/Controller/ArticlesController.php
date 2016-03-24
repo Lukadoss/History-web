@@ -17,6 +17,7 @@ class ArticlesController extends AppController
     {
         parent::beforeFilter($event);
         $this->Auth->allow('detail');
+        //$this->Auth->allow('newarticle');
     }
 
     function newarticle()
