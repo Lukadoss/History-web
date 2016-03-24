@@ -16,7 +16,7 @@ class UsersController extends AppController
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);;
-        $this->Auth->allow('registration', 'logout', 'detail');
+        $this->Auth->allow('registration', 'logout');
     }
 
     public function index()
@@ -57,10 +57,16 @@ class UsersController extends AppController
     }
 
 
-    function detail($user_id)
+    function detail($user_id = null)
     {
-        $user = $this->Users->get($user_id);
-        $this->set(compact('user'));
+        if($user_id == null){
+            $user = $this->Users->get($this->Auth->user('user_id'));
+            $this->set(compact('user'));
+        }
+        else{
+            $user = $this->Users->get($user_id);
+            $this->set(compact('user'));
+        }
     }
 
     function settings()

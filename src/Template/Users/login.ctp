@@ -16,7 +16,7 @@
         </div>
         <div class="form-group">
             <div class="col-sm-offset-5 col-sm-3">
-                <button type="submit" name="login" class="btn btn-primary" value="login">Přihlásit</button>
+                <button type="submit" name="submit-login" class="btn btn-primary" value="submit">Přihlásit</button>
             </div>
         </div>
     </form>
