@@ -60,6 +60,7 @@
             style="background: #3a84bd; margin-bottom: 0">
         <i class="fa fa-bars"></i>
     </button>
+    <?php echo $this->Html->image('logo2-nav.png', ['alt' => 'Logo-navbar', 'class' => 'hidden-md-up pull-right']) ?>
     <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar2">
         <div class="container nav-center">
             <ul class="nav navbar-nav" style="box-sizing: border-box;">
@@ -68,7 +69,7 @@
                         'controller' => 'Info',
                     ], array('class' => 'nav-link')) ?></li>
                 <li class="nav-item">
-                    <?php echo $this->Html->link(__('INTERAKTIVNÍ MAPA'), [
+                    <?php echo $this->Html->link(__('MAPA'), [
                         'controller' => 'Map',
                     ], array('class' => 'nav-link')) ?></li>
                 <li class="nav-item">
@@ -82,6 +83,7 @@
                         'controller' => 'Administration',
                     ], array('class' => 'nav-link')) ?></li>
                 <?php } ?>
+                <li class="divider"><hr></li>
             </ul>
             <ul class="nav navbar-nav pull-md-right">
 

@@ -5,22 +5,6 @@ body {
     background: linear-gradient(to right, #1b2838 0%, #00284d 50%, #1b2838 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
-.card-map {
-    height: 35rem;
-    padding: 0rem;
-}
-
-.card-map-header {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-bottom: 0;
-}
-
-.card-map-footer {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-
 .div-content {
     max-width: 1100px;
     width: 100%;
@@ -52,8 +36,24 @@ body {
     margin-bottom: 0;
 }
 
+.btn-remove {
+    margin-bottom: 0;
+}
+
+.table {
+    border: none;
+}
+
+.map-filter {
+    height: 3rem;
+    padding: 0.1rem;
+    background-clip: content-box;
+    line-height: 3rem;
+}
+
+
 /**
- * Bootstrap nav bar
+ * Custom colored Bootstrap nav bar
  */
 
 .navbar-default {
@@ -78,7 +78,7 @@ body {
 
 .navbar-default .navbar-nav > li > a {
     color: #3a84bd;
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -157,6 +157,10 @@ body {
 }
 
 @media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li.nav-item {
+        margin-left: 5rem;
+    }
+
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
         color: #3a84bd;
     }
@@ -174,24 +178,67 @@ body {
     }
 }
 
+.navbar-nav .nav-item {
+    float: none;
+}
+.navbar-divider,
+.navbar-nav .nav-item+.nav-item,
+.navbar-nav .nav-link + .nav-link {
+    margin-left: 0;
+}
+@media (min-width: 768px) {
+    .navbar-nav .nav-item {
+        float: left;
+    }
+    .navbar-divider,
+    .navbar-nav .nav-item + .nav-item,
+    .navbar-nav .nav-link + .nav-link {
+        margin-left: 1rem;
+    }
+
+    .divider {
+        display: none;
+    }
+}
+
 .nav-center {
     margin: auto;
     max-width: 1100px;
     padding-left: 0;
 }
 
-.nav-login {
-    float: right;
-    margin-right: 0 !important;
+@media (min-width: 768px) {
+    .nav-login {
+        float: right;
+        margin-right: 0 !important;
+    }
 }
 
+
 /**
- * Google maps api
+ * Google maps api, map container
  */
 
 #map {
     height: 35rem;
 }
+
+.card-map {
+    height: 35rem;
+    padding: 0rem;
+}
+
+.card-map-header {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+}
+
+.card-map-footer {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
 
 /**
  * Bootstrap slider plugin
@@ -212,6 +259,7 @@ body {
     background: lightgray;
 }
 
+
 /**
  * Form
  */
@@ -228,6 +276,11 @@ body {
         text-align: right;
     }
 }
+
+
+/**
+ * Bootstrap select plugin
+ */
 
 .select2-selection {
     height: 2.3125rem !important;
@@ -246,10 +299,20 @@ body {
 
 }
 
-.btn-remove {
-    margin-bottom: 0;
+
+/**
+ * Bootstrap style for custom checkboxes
+ */
+
+.c-input > input:checked ~ .c-indicator {
+    background-color: #555;
 }
 
-.table {
-    border: none;
+.c-input > input:focus ~ .c-indicator {
+    -webkit-box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #555;
+    box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #555;
+}
+
+.c-input > input:active ~ .c-indicator {
+    background-color: #566;
 }

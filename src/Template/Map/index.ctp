@@ -1,7 +1,8 @@
 <div class="card card-block card-map-header">
     <h4 class="card-title text-center">Interaktivní mapa</h4>
     <hr>
-    <input id="pick-year" type="text" data-slider-min="1700" data-slider-max="2016" data-slider-step="1" data-slider-value="1810">
+    <input id="pick-year" type="text" data-slider-min="1700" data-slider-max="2016" data-slider-step="1"
+           data-slider-value="1810">
     <span id="pick-year-val">1810</span>
 
     <script>
@@ -48,10 +49,10 @@
                 content: image1content
             });
 
-            var textmarker = 'e60000';
-            var audiomarker = '0066ff';
-            var videomarker = '008000';
-            var imagemarker = 'ffff4d';
+            var textmarker = 'd9534f';
+            var audiomarker = '0275d8';
+            var videomarker = '5cb85c';
+            var imagemarker = 'f0ad4e';
 
             var textmarker1 = new google.maps.Marker({
                 position: {lat: 48.9622271, lng: 14.5141815},
@@ -156,7 +157,41 @@
 </div>
 <div class="card card-block card-map-footer">
     <div class="collapse" id="filterOptions">
-        filtry
+        <div class="row p-b-1">
+        <h5>Filtry zobrazení:</h5>
+        <div class="bg-primary map-filter col-md-3"><span class="p-x-1"><i class="fa fa-music"> </i> Audio</span>
+            <span class="p-x-1 pull-right">
+                <label class="c-input c-checkbox">
+                    <input type="checkbox" id="filter-audio" checked>
+                    <span class="c-indicator"></span>
+                </label>
+            </span>
+        </div>
+        <div class="bg-success map-filter col-md-3"><span class="p-x-1"><i class="fa fa-film"> </i> Video</span>
+            <span class="p-x-1 pull-right">
+                <label class="c-input c-checkbox">
+                    <input type="checkbox" id="filter-video" checked>
+                    <span class="c-indicator"></span>
+                </label>
+            </span>
+        </div>
+        <div class="bg-warning map-filter col-md-3"><span class="p-x-1"><i class="fa fa-picture-o"> </i> Foto</span>
+            <span class="p-x-1 pull-right">
+                <label class="c-input c-checkbox">
+                    <input type="checkbox" id="filter-foto" checked>
+                    <span class="c-indicator"></span>
+                </label>
+            </span>
+        </div>
+        <div class="bg-danger map-filter col-md-3"><span class="p-x-1"><i class="fa fa-quote-right"> </i> Text</span>
+            <span class="p-x-1 pull-right">
+                <label class="c-input c-checkbox">
+                    <input type="checkbox" id="filter-text" checked>
+                    <span class="c-indicator"></span>
+                </label>
+            </span>
+        </div>
+        </div>
     </div>
     <div class="row">
         <div class="col-xs-6 text-left">
@@ -166,10 +201,11 @@
             </button>
         </div>
         <div class="col-xs-6 text-right">
-        <button class="btn btn-primary btn-middle" type="button" data-toggle="collapse" data-target="#animationOptions" aria-expanded="false" aria-controls="collapseExample">
-            <i class="fa fa-cog"> </i> <span class="hidden-xs-down">Možnosti animace</span>
-        </button>
-    </div>
+            <button class="btn btn-primary btn-middle" type="button" data-toggle="collapse"
+                    data-target="#animationOptions" aria-expanded="false" aria-controls="collapseExample">
+                <i class="fa fa-cog"> </i> <span class="hidden-xs-down">Možnosti animace</span>
+            </button>
+        </div>
     </div>
     <div class="collapse" id="animationOptions">
         <hr>
@@ -177,17 +213,20 @@
         <div class="select-year">
 
             <div class="col-xs-12" style="padding-left: 0; padding-right: 0">
-                <input id="slider-year" type="text" class="slider slider-horizontal span2" value="" data-slider-min="1700" data-slider-max="2016"
+                <input id="slider-year" type="text" class="slider slider-horizontal span2" value=""
+                       data-slider-min="1700" data-slider-max="2016"
                        data-slider-step="1" data-slider-value="[1810,1920]" style="width: 100%"/>
             </div>
             <div class="col-xs-6" style="padding-left: 0">
                 <div class="col-xs-3" style="padding-left: 0">
-                    <input class="form-control" style="min-width: 4rem" type="text" id="slider-year-val-min" value="1810"/>
+                    <input class="form-control" style="min-width: 4rem" type="text" id="slider-year-val-min"
+                           value="1810"/>
                 </div>
             </div>
             <div class="col-xs-6" style="text-align: right; padding-right: 0">
                 <div class="col-xs-3" style="float: right; padding-right: 0">
-                    <input class="form-control" style="text-align: right; min-width: 4rem; float: right" type="text" id="slider-year-val-max" value="1920"/>
+                    <input class="form-control" style="text-align: right; min-width: 4rem; float: right" type="text"
+                           id="slider-year-val-max" value="1920"/>
                 </div>
             </div>
             <script>
@@ -228,13 +267,13 @@
     <h4 class="card-title text-center">Legenda</h4>
     <div class="row">
         <div class="col-sm-6">
-            <p><?= $this->Html->image('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|e60000', array('alt' => 'Text marker')); ?>
+            <p><?= $this->Html->image('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|d9534f', array('alt' => 'Text marker')); ?>
                 - text / textové soubory</p>
-            <p><?= $this->Html->image('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|ffff4d', array('alt' => 'Image marker')); ?>
+            <p><?= $this->Html->image('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|f0ad4e', array('alt' => 'Image marker')); ?>
                 - obrazové soubory</p>
-            <p><?= $this->Html->image('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|0066ff', array('alt' => 'Audio marker')); ?>
+            <p><?= $this->Html->image('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|0275d8', array('alt' => 'Audio marker')); ?>
                 - audio soubory</p>
-            <p><?= $this->Html->image('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|008000', array('alt' => 'Video marker')); ?>
+            <p><?= $this->Html->image('http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|5cb85c', array('alt' => 'Video marker')); ?>
                 - video soubory</p>
         </div>
         <div class="col-sm-6">
