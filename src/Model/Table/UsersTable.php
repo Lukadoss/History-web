@@ -8,6 +8,7 @@
 namespace App\Model\Table;
 
 use Cake\ORM\Table;
+use Cake\Validation\Validator;
 
 class UsersTable extends Table
 {
@@ -15,5 +16,14 @@ class UsersTable extends Table
     {
         $this->table('user');
         //$this->addBehavior('Timestamp');
+    }
+
+    public function validationDefault(Validator $validator)
+    {
+        $validator
+            ->notEmpty('email', 'A username is required')
+            ->notEmpty('password', 'A password is required');
+
+        return $validator;
     }
 }

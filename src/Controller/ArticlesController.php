@@ -21,7 +21,7 @@ class ArticlesController extends AppController
 
     function newarticle()
     {
-        $district = $this->Article->find('all');
+        $district = $this->Articles->find('all');
         $this->set(compact("district"));
     }
 
