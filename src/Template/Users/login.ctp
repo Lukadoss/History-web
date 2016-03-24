@@ -1,6 +1,7 @@
 <div class="card card-block">
     <h4 class="card-title text-center">Přihlášení uživatele</h4>
     <hr>
+        <?= $this->Flash->render(); ?>
     <form class="form-horizontal" role="form" action="" method="POST">
         <div class="form-group">
             <label class="col-md-5 form-control-label form-login-label" for="email">Email:</label>
@@ -21,7 +22,6 @@
         </div>
     </form>
     <hr>
-    <?= $this->Flash->render() ; ?>
     <p style="text-align:center">Ještě nemáš účet? <?php echo $this->Html->link(__('Zaregistruj se.'), [
             'controller' => 'Users',
             'action' => 'registration'

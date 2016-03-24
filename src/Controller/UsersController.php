@@ -33,7 +33,7 @@ class UsersController extends AppController
             $user = $this->Users->patchEntity($user, $this->request->data);
             if ($this->Users->save($user)) {
                 $this->Auth->setUser($user->toArray());
-                $this->Flash->success(__('The user has been saved.'));
+                $this->Flash->success(__('<strong>Registrace byla úspěšná!</strong> Nyní se můžete přihlásit.'));
                 return $this->redirect(['action' => 'detail', $this->Auth->user('user_id')]);
             }
             $this->Flash->error(__('Unable to add the user.'));
@@ -48,7 +48,7 @@ class UsersController extends AppController
                 $this->Auth->setUser($user);
                 return $this->redirect($this->Auth->redirectUrl());
             }
-            $this->Flash->error(__('Invalid username or password, try again'));
+            $this->Flash->error(__('<strong>Přihlášení neproběhlo v pořádku!</strong> Chybný email nebo heslo.'));
         }
     }
 
