@@ -8,11 +8,21 @@
 
 namespace App\Controller;
 
-class ArticleController extends AppController
+use Cake\Event\Event;
+
+class ArticlesController extends AppController
 {
+
+    public function beforeFilter(Event $event)
+    {
+        parent::beforeFilter($event);
+        $this->Auth->allow('detail');
+        //$this->Auth->allow('newarticle');
+    }
+
     function newarticle()
     {
-        $district = $this->Article->find('all');
+        $district = $this->Articles->find('all');
         $this->set(compact("district"));
     }
 

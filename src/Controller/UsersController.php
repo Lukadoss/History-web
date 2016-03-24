@@ -10,32 +10,28 @@ namespace App\Controller;
 
 use Cake\Event\Event;
 
-class UserController extends AppController
+class UsersController extends AppController
 {
 
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);;
-        $this->Auth->allow('add', 'logout');
+        $this->Auth->allow('registration', 'logout');
     }
 
     public function index()
     {
-        $this->set('users', $this->User->find('all'));
-    }
-
-    public function view($user_id)
-    {
-        $user = $this->User->get($user_id);
-        $this->set(compact('user'));
+        $this->set('users', $this->Users->find('all'));
+        $this->setAction('login');
     }
 
     function registration()
     {
-        $user = $this->User->newEntity($this->request->data);
+        $user = $this->Users->newEntity($this->request->data);
         if ($this->request->is('post')) {
-            $user = $this->User->patchEntity($user, $this->request->data);
-            if ($this->User->save($user)) {
+            $user = $this->Users->patchEntity($user, $this->request->data);
+            if ($this->Users->save($user)) {
+                $this->Auth->setUser($user->toArray());
                 $this->Flash->success(__('The user has been saved.'));
                 return $this->redirect($this->Auth->redirectUrl());
             }
@@ -44,8 +40,7 @@ class UserController extends AppController
         $this->set('user', $user);
     }
 
-    public function login()
-    {
+    public function login(){
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
             if ($user) {
@@ -62,9 +57,10 @@ class UserController extends AppController
     }
 
 
-    function detail()
+    function detail($user_id)
     {
-
+        $user = $this->Users->get($user_id);
+        $this->set(compact('user'));
     }
 
     function settings()

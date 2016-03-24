@@ -71,16 +71,23 @@
                     ], array('class' => 'nav-link')) ?></li>
                 <li class="nav-item">
                     <?php echo $this->Html->link(__('NOVÝ PŘÍSPĚVEK'), [
-                        'controller' => 'Article',
+                        'controller' => 'Articles',
                         'action' => 'newArticle'
                     ], array('class' => 'nav-link')) ?></li>
             </ul>
-            <ul class="nav navbar-nav pull-md-right">
-                <li class="nav-item nav-login"><?php echo $this->Html->link(__('<i class="fa fa-user"> </i> PŘIHLÁŠENÍ'), [
-                        'controller' => 'User',
-                        'action' => 'index'
+            <ul class="nav navbar-nav pull-right">
+                <li class="nav-item nav-login"><?php echo $this->Html->link(__('ODHLASIT'), [
+                        'controller' => 'Users',
+                        'action' => 'logout'
                     ], array('class' => 'nav-link nav-login', 'escape' => false)) ?></li>
             </ul>
+            <ul class="nav navbar-nav pull-md-right">
+                <li class="nav-item nav-login"><?php echo $this->Html->link(__('<i class="fa fa-user"> </i> PŘIHLÁŠENÍ'), [
+                        'controller' => 'Users',
+                        'action' => 'login'
+                    ], array('class' => 'nav-link nav-login', 'escape' => false)) ?></li>
+            </ul>
+
         </div>
     </div>
 </nav>
