@@ -21,9 +21,7 @@
         </div>
     </form>
     <hr>
-    <?= $this->Flash->render() ;
-    print_r($this->request->data);
-    ?>
+    <?= $this->Flash->render() ; ?>
     <p style="text-align:center">Ještě nemáš účet? <?php echo $this->Html->link(__('Zaregistruj se.'), [
             'controller' => 'Users',
             'action' => 'registration'
