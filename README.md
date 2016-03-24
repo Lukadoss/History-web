@@ -4,8 +4,8 @@
   
   Tým:  
   Lukašík Petr - šéf/programátor    
-  Šedivý Jan - designer/programátor 
-  Palcút Jan - analytik/PR/správce databáze 
+  Šedivý Jan - designer/programátor     
+  Palcút Jan - analytik/PR/správce databáze     
 
  ***
 
@@ -53,7 +53,7 @@
 Petr Lukašík:   
 Zpracování loginu a registrace, javascript pro slider, přidávání příspěvků (8h) 
 
-Jan Šedivý: 
+Jan Šedivý:     
 Profilová šablona pro uživatele, uživatelská nastavení, formulář pro obnovení hesla, přidávání příspěvků (10h)  
 
 Jan Palcút:     
