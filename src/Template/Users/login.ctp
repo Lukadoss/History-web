@@ -5,7 +5,7 @@
         <div class="form-group">
             <label class="col-md-5 form-control-label form-login-label" for="email">Email:</label>
             <div class="col-md-3">
-                <input type="text" class="form-control" name="email" id="email" placeholder="Email" required>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
             </div>
         </div>
         <div class="form-group">
@@ -26,5 +26,8 @@
             'controller' => 'Users',
             'action' => 'registration'
         ]) ?></p>
-    <p style="text-align:center"><a href="">Zapomenuté heslo</a></p>
+    <p style="text-align:center"><?php echo $this->Html->link(__('Zapomenuté heslo.'), [
+            'controller' => 'Users',
+            'action' => 'lostpassword'
+        ]) ?></a></p>
 </div>

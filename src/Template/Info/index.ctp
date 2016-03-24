@@ -1,5 +1,6 @@
 <div class="card card-block">
-    <h4 class="card-title">Věci o webíku</h4>
+    <h4 class="card-title text-center">Věci o webíku</h4>
+    <hr>
     <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin in tellus sit amet nibh dignissim sagittis. Maecenas aliquet accumsan leo. Vivamus porttitor turpis ac leo.
         Donec iaculis gravida nulla. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Nulla non arcu lacinia neque faucibus fringilla. Nunc dapibus tortor vel mi dapibus
         sollicitudin. Fusce consectetuer risus a nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer in sapien. Temporibus autem quibusdam et

@@ -17,6 +17,7 @@ class UsersController extends AppController
     {
         parent::beforeFilter($event);;
         $this->Auth->allow('registration', 'logout');
+        $this->Auth->allow('lostpassword');
     }
 
     public function index()
@@ -74,7 +75,7 @@ class UsersController extends AppController
 
     }
 
-    function lostPassword()
+    function lostpassword()
     {
 
     }
