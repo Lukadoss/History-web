@@ -33,7 +33,7 @@ class UsersController extends AppController
             if ($this->Users->save($user)) {
                 $this->Auth->setUser($user->toArray());
                 $this->Flash->success(__('The user has been saved.'));
-                return $this->redirect($this->Auth->redirectUrl());
+                return $this->redirect(['action' => 'detail', $this->Auth->user('user_id')]);
             }
             $this->Flash->error(__('Unable to add the user.'));
         }
@@ -57,10 +57,9 @@ class UsersController extends AppController
     }
 
 
-    function detail()
+    function detail($user_id)
     {
-        //$this->Auth->isAuthorized(); TODO: dodelat authorizaci
-        $user = $this->Users->get($this->Auth->user('user_id'));
+        $user = $this->Users->get($user_id);
         $this->set(compact('user'));
     }
 
