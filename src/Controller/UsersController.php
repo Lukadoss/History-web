@@ -16,7 +16,7 @@ class UsersController extends AppController
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);;
-        $this->Auth->allow('registration', 'logout', 'detail');
+        $this->Auth->allow('registration', 'logout');
     }
 
     public function index()
@@ -33,7 +33,7 @@ class UsersController extends AppController
             if ($this->Users->save($user)) {
                 $this->Auth->setUser($user->toArray());
                 $this->Flash->success(__('The user has been saved.'));
-                return $this->redirect($this->Auth->redirectUrl());
+                return $this->redirect(['action' => 'detail', $this->Auth->user('user_id')]);
             }
             $this->Flash->error(__('Unable to add the user.'));
         }
@@ -57,11 +57,16 @@ class UsersController extends AppController
     }
 
 
-    function detail()
+    function detail($user_id = null)
     {
-        //$this->Auth->isAuthorized(); TODO: dodelat authorizaci
-        $user = $this->Users->get($this->Auth->user('user_id'));
-        $this->set(compact('user'));
+        if($user_id == null){
+            $user = $this->Users->get($this->Auth->user('user_id'));
+            $this->set(compact('user'));
+        }
+        else{
+            $user = $this->Users->get($user_id);
+            $this->set(compact('user'));
+        }
     }
 
     function settings()

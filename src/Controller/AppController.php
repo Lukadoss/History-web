@@ -46,12 +46,11 @@ class AppController extends Controller
         $this->loadComponent('Auth', [
             'authenticate' => [
                 'Form' => [
-                    'fields' => ['username' => 'email']
+                    'fields' => ['username' => 'email', 'password' => 'password']
                 ]
             ],
             'loginRedirect' => [
-                'controller' => 'Users',
-                'action' => 'detail'
+                'controller' => 'Map',
             ],
             'logoutRedirect' => [
                 'controller' => 'Info',

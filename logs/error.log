@@ -6301,3 +6301,884 @@ Stack Trace:
 #1 {main}
 
 
+2016-03-24 00:33:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-24 00:33:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-24 00:50:05 Error: Fatal Error (1): Call to a member function lastQuery() on boolean in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 46]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-24 00:50:05 Error: [Cake\Error\FatalErrorException] Call to a member function lastQuery() on boolean
+Request URL: /History-web/users/login
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 46)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-24 00:50:31 Error: Fatal Error (1): Call to undefined method App\Controller\UsersController::element() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 46]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-24 00:50:31 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\UsersController::element()
+Request URL: /History-web/users/login
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 46)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-24 00:50:38 Error: Fatal Error (1): Call to undefined method App\Controller\UsersController::element() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 46]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-24 00:50:38 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\UsersController::element()
+Request URL: /History-web/users/login
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 46)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-24 00:51:39 Error: [BadMethodCallException] Unknown method "getDataSource"
+Request URL: /History-web/users/login
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(46): Cake\ORM\Table->__call('getDataSource', Array)
+#1 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(46): App\Model\Table\UsersTable->getDataSource()
+#2 [internal function]: App\Controller\UsersController->login()
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-03-24 00:57:49 Error: Fatal Error (1): Call to undefined method App\Controller\UsersController::element() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 46]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-24 00:57:49 Error: [Cake\Error\FatalErrorException] Call to undefined method App\Controller\UsersController::element()
+Request URL: /History-web/users/login
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 46)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-24 10:06:05 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:06:06 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail
+Referer URL: http://localhost/History-web/users/registration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(62): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 10:06:50 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:06:51 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail
+Referer URL: http://localhost/History-web/users/registration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(62): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 10:09:14 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:09:14 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail
+Referer URL: http://localhost/History-web/users/registration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(62): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 10:09:23 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-24 10:09:36 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:09:36 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail
+Referer URL: http://localhost/History-web/users/registration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(62): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 10:17:19 Error: Fatal Error (1): Call to a member function user() on boolean in [C:\xampp\htdocs\History-web\src\Controller\AppController.php, line 54]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-24 10:17:19 Error: [Cake\Error\FatalErrorException] Call to a member function user() on boolean
+Request URL: /History-web/users/registration
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 54)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-24 10:17:29 Error: Fatal Error (1): Call to a member function user() on boolean in [C:\xampp\htdocs\History-web\src\Controller\AppController.php, line 54]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-24 10:17:29 Error: [Cake\Error\FatalErrorException] Call to a member function user() on boolean
+Request URL: /History-web/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 54)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-24 10:17:42 Error: Fatal Error (1): Call to a member function user() on boolean in [C:\xampp\htdocs\History-web\src\Controller\AppController.php, line 54]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-24 10:17:42 Error: [Cake\Error\FatalErrorException] Call to a member function user() on boolean
+Request URL: /History-web/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 54)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-24 10:20:07 Warning: Warning (2): array_merge(): Argument #2 is not an array in [C:\xampp\htdocs\History-web\src\Controller\AppController.php, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+array_merge - [internal], line ??
+App\Controller\AppController::initialize() - APP/Controller\AppController.php, line 61
+Cake\Controller\Controller::__construct() - CORE\src\Controller\Controller.php, line 262
+ReflectionClass::newInstance() - [internal], line ??
+Cake\Routing\Filter\ControllerFactoryFilter::_getController() - CORE\src\Routing\Filter\ControllerFactoryFilter.php, line 100
+Cake\Routing\Filter\ControllerFactoryFilter::beforeDispatch() - CORE\src\Routing\Filter\ControllerFactoryFilter.php, line 51
+Cake\Routing\DispatcherFilter::handle() - CORE\src\Routing\DispatcherFilter.php, line 145
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 390
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Routing\Dispatcher::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 62
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:20:09 Warning: Warning (2): array_merge(): Argument #2 is not an array in [C:\xampp\htdocs\History-web\src\Controller\AppController.php, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+array_merge - [internal], line ??
+App\Controller\AppController::initialize() - APP/Controller\AppController.php, line 61
+Cake\Controller\Controller::__construct() - CORE\src\Controller\Controller.php, line 262
+ReflectionClass::newInstance() - [internal], line ??
+Cake\Routing\Filter\ControllerFactoryFilter::_getController() - CORE\src\Routing\Filter\ControllerFactoryFilter.php, line 100
+Cake\Routing\Filter\ControllerFactoryFilter::beforeDispatch() - CORE\src\Routing\Filter\ControllerFactoryFilter.php, line 51
+Cake\Routing\DispatcherFilter::handle() - CORE\src\Routing\DispatcherFilter.php, line 145
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 390
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Routing\Dispatcher::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 62
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:20:26 Warning: Warning (2): array_merge(): Argument #2 is not an array in [C:\xampp\htdocs\History-web\src\Controller\AppController.php, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+array_merge - [internal], line ??
+App\Controller\AppController::initialize() - APP/Controller\AppController.php, line 61
+Cake\Controller\Controller::__construct() - CORE\src\Controller\Controller.php, line 262
+ReflectionClass::newInstance() - [internal], line ??
+Cake\Routing\Filter\ControllerFactoryFilter::_getController() - CORE\src\Routing\Filter\ControllerFactoryFilter.php, line 100
+Cake\Routing\Filter\ControllerFactoryFilter::beforeDispatch() - CORE\src\Routing\Filter\ControllerFactoryFilter.php, line 51
+Cake\Routing\DispatcherFilter::handle() - CORE\src\Routing\DispatcherFilter.php, line 145
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 390
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Routing\Dispatcher::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 62
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:20:55 Warning: Warning (2): array_merge(): Argument #2 is not an array in [C:\xampp\htdocs\History-web\src\Controller\AppController.php, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+array_merge - [internal], line ??
+App\Controller\AppController::initialize() - APP/Controller\AppController.php, line 61
+Cake\Controller\Controller::__construct() - CORE\src\Controller\Controller.php, line 262
+ReflectionClass::newInstance() - [internal], line ??
+Cake\Routing\Filter\ControllerFactoryFilter::_getController() - CORE\src\Routing\Filter\ControllerFactoryFilter.php, line 100
+Cake\Routing\Filter\ControllerFactoryFilter::beforeDispatch() - CORE\src\Routing\Filter\ControllerFactoryFilter.php, line 51
+Cake\Routing\DispatcherFilter::handle() - CORE\src\Routing\DispatcherFilter.php, line 145
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 390
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Routing\Dispatcher::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 62
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:22:52 Error: Fatal Error (1): Call to a member function user() on boolean in [C:\xampp\htdocs\History-web\src\Controller\AppController.php, line 55]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-24 10:22:52 Error: [Cake\Error\FatalErrorException] Call to a member function user() on boolean
+Request URL: /History-web/users/login
+Referer URL: http://localhost/History-web/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 55)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-24 10:24:55 Warning: Warning (4096): Argument 1 passed to Cake\Controller\Component\AuthComponent::setUser() must be of the type array, object given, called in C:\xampp\htdocs\History-web\src\Controller\UsersController.php on line 34 and defined in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php, line 629]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\Controller\Component\AuthComponent::setUser() - CORE\src\Controller\Component\AuthComponent.php, line 629
+App\Controller\UsersController::registration() - APP/Controller\UsersController.php, line 34
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:24:55 Warning: Warning (4096): Argument 1 passed to Cake\Auth\Storage\SessionStorage::write() must be of the type array, object given, called in C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Component\AuthComponent.php on line 631 and defined in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Auth\Storage\SessionStorage.php, line 97]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\Auth\Storage\SessionStorage::write() - CORE\src\Auth\Storage\SessionStorage.php, line 97
+Cake\Controller\Component\AuthComponent::setUser() - CORE\src\Controller\Component\AuthComponent.php, line 631
+App\Controller\UsersController::registration() - APP/Controller\UsersController.php, line 34
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:24:55 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\Debugger.php:746) in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Network\Session.php, line 573]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+setcookie - [internal], line ??
+Cake\Network\Session::renew() - CORE\src\Network\Session.php, line 573
+Cake\Auth\Storage\SessionStorage::write() - CORE\src\Auth\Storage\SessionStorage.php, line 101
+Cake\Controller\Component\AuthComponent::setUser() - CORE\src\Controller\Component\AuthComponent.php, line 631
+App\Controller\UsersController::registration() - APP/Controller\UsersController.php, line 34
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:26:30 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 61
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:26:30 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail
+Referer URL: http://localhost/History-web/users/registration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(63): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 10:26:51 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 61
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:26:52 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail
+Referer URL: http://localhost/History-web/users/registration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(63): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 10:27:48 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 61
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:28:04 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 61]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 61
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:37:27 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 62]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 62
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:37:34 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 62]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 62
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:37:48 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 62]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 62
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:38:22 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:38:52 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:39:06 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:39:22 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:39:22 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(63): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 10:39:25 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:39:25 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail?Controller=Users
+Referer URL: http://localhost/History-web/users/registration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(63): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 10:39:31 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-24 10:40:25 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:40:26 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail?Controller=Users&user_id=42
+Referer URL: http://localhost/History-web/users/registration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(63): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 10:46:45 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:46:45 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail?Controller=Users&user_id=42
+Referer URL: http://localhost/History-web/users/registration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(63): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 10:47:02 Error: [InvalidArgumentException] Unknown status code
+Request URL: /History-web/users/registration
+Referer URL: http://localhost/History-web/users/registration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(534): Cake\Network\Response->statusCode(43)
+#1 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(36): Cake\Controller\Controller->redirect('/users/detail', 43)
+#2 [internal function]: App\Controller\UsersController->registration()
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-03-24 10:51:08 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:51:08 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(62): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 10:51:33 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:51:33 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(62): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 10:51:41 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:51:41 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(62): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 10:52:09 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-03-24 10:53:20 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:53:50 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:54:05 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 10:54:12 Warning: Warning (2): Missing argument 1 for App\Controller\UsersController::detail() in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 60]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::detail() - APP/Controller\UsersController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-03-24 11:14:58 Error: Fatal Error (1): Call to a member function toArray() on boolean in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 46]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-03-24 11:14:58 Error: [Cake\Error\FatalErrorException] Call to a member function toArray() on boolean
+Request URL: /History-web/users/login
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 46)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-03-24 11:27:29 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(65): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 11:27:57 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(65): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 11:28:00 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(65): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 11:28:01 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(65): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 11:28:01 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(65): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 11:28:27 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users/detail
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(66): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#5 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#6 {main}
+
+
+2016-03-24 11:28:56 Error: [LogicException] Controller action can only return an instance of Response
+Request URL: /History-web/users/detail
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#1 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 {main}
+
+

@@ -16,14 +16,12 @@
         </div>
         <div class="form-group">
             <div class="col-sm-offset-5 col-sm-3">
-                <button type="submit" name="login" class="btn btn-primary" value="login">Přihlásit</button>
+                <button type="submit" name="submit-login" class="btn btn-primary" value="submit">Přihlásit</button>
             </div>
         </div>
     </form>
     <hr>
-    <?= $this->Flash->render() ;
-    print_r($this->request->data);
-    ?>
+    <?= $this->Flash->render() ; ?>
     <p style="text-align:center">Ještě nemáš účet? <?php echo $this->Html->link(__('Zaregistruj se.'), [
             'controller' => 'Users',
             'action' => 'registration'
