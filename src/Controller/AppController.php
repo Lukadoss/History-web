@@ -50,8 +50,7 @@ class AppController extends Controller
                 ]
             ],
             'loginRedirect' => [
-                'controller' => 'Users',
-                'action' => 'login'
+                'controller' => 'Map',
             ],
             'logoutRedirect' => [
                 'controller' => 'Info',

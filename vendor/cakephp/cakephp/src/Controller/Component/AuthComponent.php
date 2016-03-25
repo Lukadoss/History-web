@@ -767,7 +767,6 @@ class AuthComponent extends Component
         }
         foreach ($this->_authenticateObjects as $auth) {
             $result = $auth->authenticate($this->request, $this->response);
-            debug(is_array($result));
             if (!empty($result) && is_array($result)) {
                 $this->_authenticationProvider = $auth;
                 $event = $this->dispatchEvent('Auth.afterIdentify', [$result, $auth]);
