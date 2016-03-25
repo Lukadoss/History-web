@@ -31,7 +31,9 @@ class ArticlesController extends AppController
 
     function detail($prispevek_id)
     {
-        $this->set('test', $prispevek_id);
+        $this->loadModel('Sources');
+        $source = $this->Sources->get($prispevek_id);
+        $this->set(compact('source'));
     }
 
     function edit()
