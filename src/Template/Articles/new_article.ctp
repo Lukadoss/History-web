@@ -20,6 +20,7 @@
     <h4 class="text-center">Přidání nového příspěvku</h4>
     <hr>
     <form role="form" action="" method="POST" enctype="multipart/form-data">
+        <?php if(!$this->request->session()->read('Auth.User')){ ?>
         <div>
             <div class="col-md-6">
                 <label for="jmeno">Jméno</label>
@@ -42,6 +43,7 @@
             </label>
         </div>
         <hr>
+        <?php } ?>
         <div class="form-group col-md-12">
             <label>Název příspěvku:</label>
             <input type="text" class="form-control" required name="Header">
@@ -86,6 +88,7 @@
                 });
             </script>
         </div>
+        <hr>
         <div class="form-group col-md-12 select-box" id="district-selector">
             <label class="control-label">Obec:</label>
             <script type="text/javascript">
@@ -107,14 +110,13 @@
 
             </select>
         </div>
-        <hr>
-        <div class="card-map" id="map">
+        <div class="clearfix"></div>
+        <div class="card-map m-x-1" id="map">
             <script>
                 var map;
                 var marker;
 
                 function initMap() {
-                    var select = document.getElementById('district-selector');
                     geocoder = new google.maps.Geocoder();
                     map = new google.maps.Map(document.getElementById('map'), {
                         center: {lat: 48.9622271, lng: 14.5141815},
@@ -146,6 +148,8 @@
                             draggable: true
                         });
                     }
+                    document.getElementById('lat').value = location.lat();
+                    document.getElementById('lng').value = location.lng();
                 }
 
                 function setCenter() {
@@ -157,6 +161,8 @@
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcDBMIqB9QnfD3wks9zVI2WUSHLnbU9so&callback=initMap"
                 async defer></script>
         </div>
+        <input type="text" name="lat" id="lat" hidden>
+        <input type="text" name="lng" id="lng" hidden>
         <hr>
         <button type="submit" name="submit-article" class="btn btn-primary">Přidat článek</button>
 
