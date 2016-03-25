@@ -33,7 +33,23 @@ class ArticlesController extends AppController
     {
         $this->loadModel('Sources');
         $source = $this->Sources->get($prispevek_id);
+        if(isset($source->user_id)) $articleAuthor = $this->Sources->Users->get($source->user_id);
         $this->set(compact('source'));
+        $this->set(compact('articleAuthor'));
+    }
+
+    public function add()
+    {
+        $article = $this->Articles->newEntity();
+        if ($this->request->is('post')) {
+            $article = $this->Articles->patchEntity($article, $this->request->data);
+            if ($this->Articles->save($article)) {
+                $this->Flash->success(__('Your article has been saved.'));
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('Unable to add your article.'));
+        }
+        $this->set('article', $article);
     }
 
     function edit()

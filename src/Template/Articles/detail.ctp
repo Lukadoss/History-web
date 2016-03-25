@@ -2,7 +2,7 @@
     <h4 class="card-title col-xs-9">
         <span class=""><?= $source->name ?></span>
     </h4>
-    <h6 class="col-xs-3 text-muted text-right">Autor: <?php if($source->user_id) echo $source->user_id;
+    <h6 class="col-xs-3 text-muted text-right">Autor: <?php if($source->user_id) echo $articleAuthor->forename . " " . $articleAuthor->surname;
         else{
             echo $source->forename . " " . $source->surname;
         }?>

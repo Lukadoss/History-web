@@ -15,6 +15,9 @@ class UsersTable extends Table
     public function initialize(array $config)
     {
         $this->table('user');
+        $this->hasMany('Sources', [
+            'foreignKey' => 'user_id'
+        ]);
         //$this->addBehavior('Timestamp');
     }
 

@@ -15,5 +15,10 @@ class SourcesTable extends Table
     public function initialize(array $config)
     {
         $this->table('source');
+        $this->belongsTo('Users');
+        $this->belongsTo('Users', [
+            'foreignKey' => 'user_id',
+            'joinType' => 'INNER'
+        ]);
     }
 }
