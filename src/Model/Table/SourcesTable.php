@@ -2,17 +2,18 @@
 /**
  * Created by PhpStorm.
  * User: Seda
- * Date: 25. 2. 2016
- * Time: 18:27
+ * Date: 25. 3. 2016
+ * Time: 18:32
  */
+
 namespace App\Model\Table;
 
 use Cake\ORM\Table;
 
-class ArticlesTable extends Table
+class SourcesTable extends Table
 {
     public function initialize(array $config)
     {
-        $this->table('district');
+        $this->table('source');
     }
 }

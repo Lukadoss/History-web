@@ -22,8 +22,11 @@ class ArticlesController extends AppController
 
     function newarticle()
     {
-        $district = $this->Articles->find('all');
+        $this->loadModel('Districts');
+        $district = $this->Districts->find('all');
         $this->set(compact("district"));
+        //---
+        $this->loadModel('Sources');
     }
 
     function detail($prispevek_id)
