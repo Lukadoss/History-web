@@ -27,6 +27,16 @@ class ArticlesController extends AppController
         $this->set(compact("district"));
         //---
         $this->loadModel('Sources');
+        $source = $this->Sources->newEntity();
+        if ($this->request->is('post')) {
+            $source = $this->Sources->patchEntity($source, $this->request->data);
+            if ($this->Sources->save($source)) {
+                $this->Flash->success(__('<strong>Příspěvek byl úspěšně nahrán!</strong> Počkejte, prosím, na jeho schválení.'));
+                return $this->redirect(['action' => 'new_article']);
+            }
+            $this->Flash->error(__('<strong>Příspěvek se nepodařilo nahrát!</strong>'));
+        }
+        $this->set('source', $source);
     }
 
     function detail($prispevek_id)
@@ -40,16 +50,7 @@ class ArticlesController extends AppController
 
     public function add()
     {
-        $article = $this->Articles->newEntity();
-        if ($this->request->is('post')) {
-            $article = $this->Articles->patchEntity($article, $this->request->data);
-            if ($this->Articles->save($article)) {
-                $this->Flash->success(__('Your article has been saved.'));
-                return $this->redirect(['action' => 'index']);
-            }
-            $this->Flash->error(__('Unable to add your article.'));
-        }
-        $this->set('article', $article);
+        $this->loadModel('Sources');
     }
 
     function edit()

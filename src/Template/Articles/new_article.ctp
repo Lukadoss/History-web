@@ -19,25 +19,27 @@
 <div class="card card-block">
     <h4 class="text-center">Přidání nového příspěvku</h4>
     <hr>
-    <form role="form" action="" method="POST" enctype="multipart/form-data">
+    <?= $this->Flash->render(); ?>
+    <?php
+    echo $this->Form->create($source, ['type' => 'file']); ?>
         <?php if(!$this->request->session()->read('Auth.User')){ ?>
         <div>
             <div class="col-md-6">
                 <label for="jmeno">Jméno</label>
-                <input type="text" class="form-control" required id="jmeno" name="Forename">
+                <input type="text" class="form-control" required id="jmeno" name="forename">
             </div>
             <div class="col-md-6">
                 <label for="prijmeni">Příjmení</label>
-                <input type="text" class="form-control" required id="prijmeni" name="Surname">
+                <input type="text" class="form-control" required id="prijmeni" name="surname">
             </div>
         </div>
         <div class="form-group col-md-12">
             <label>Email</label>
-            <input type="text" class="form-control" required name="Mail">
+            <input type="text" class="form-control" required name="email">
         </div>
         <div class="form-group col-md-12 checkbox">
             <label class="c-input c-checkbox">
-                <input type="checkbox" checked>
+                <input type="checkbox" name="register" checked>
                 <span class="c-indicator"></span>
                 Zaregistrovat
             </label>
@@ -46,29 +48,29 @@
         <?php } ?>
         <div class="form-group col-md-12">
             <label>Název příspěvku:</label>
-            <input type="text" class="form-control" required name="Header">
+            <input type="text" class="form-control" required name="name">
         </div>
         <div class="form-group col-md-12">
             <label>Krátký popis (nepovinný):</label>
-            <textarea type="text" rows="5" class="form-control" name="Text"></textarea>
+            <textarea type="text" rows="5" class="form-control" name="text"></textarea>
         </div>
         <div class="form-group">
 
             <div class="col-md-6">
                 <label>Datum události od:</label>
-                <input type="date" class="form-control" required name="DateFrom">
+                <input type="date" class="form-control" required name="date_from">
             </div>
             <div class="col-md-6">
                 <label>Datum do:</label>
-                <input type="date" class="form-control" name="DateTo">
+                <input type="date" class="form-control" name="date_to">
             </div>
         </div>
         <div class="form-group col-md-12">
             <label class="control-label">Soubory</label>
-            <input id="input-24" name="input24[]" type="file" multiple required class="file-loading">
+            <input id="file_input" name="file_input" type="file" multiple class="file-loading">
             <script>
                 $(document).on('ready', function () {
-                    $("#input-24").fileinput({
+                    $("#file_input").fileinput({
                         overwriteInitial: false,
                         maxFileSize: 300000,
                         previewFileType: 'any',
@@ -89,7 +91,7 @@
             </script>
         </div>
         <hr>
-        <div class="form-group col-md-12 select-box" id="district-selector">
+        <div class="form-group col-md-12 select-box" id="district-selector" name="district">
             <label class="control-label">Obec:</label>
             <script type="text/javascript">
                 $(document).ready(function () {
@@ -101,7 +103,7 @@
                 });
             </script>
 
-            <select class="js-example-basic-single" id="selector" onChange="setCenter()">
+            <select class="js-example-basic-single" id="district_id" name="district_id" onChange="setCenter()">
                 <option></option>
                 <?php foreach ($district as $dist) {
                     ?>
@@ -153,7 +155,7 @@
                 }
 
                 function setCenter() {
-                    var elt = document.getElementById('selector');
+                    var elt = document.getElementById('district_id');
                     codeAddress(elt.options[elt.selectedIndex].text);
                 }
             </script>
@@ -165,8 +167,8 @@
         <input type="text" name="lng" id="lng" hidden>
         <hr>
         <button type="submit" name="submit-article" class="btn btn-primary">Přidat článek</button>
-
-    </form>
+    <?php echo $this->Form->end();
+    ?>
 </div>
 
 </body>
