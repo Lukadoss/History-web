@@ -5,6 +5,18 @@ body {
     background: linear-gradient(to right, #1b2838 0%, #00284d 50%, #1b2838 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
+.card-header {
+    background: #3a84bd;
+    color: white;
+    margin: -1px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+}
+
 .div-content {
     max-width: 1100px;
     width: 100%;
@@ -29,11 +41,6 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
     border-radius: 0;
-}
-
-.m-y-2 {
-    margin-top: 24px;
-    margin-bottom: 0;
 }
 
 .btn-remove {
@@ -228,18 +235,6 @@ body {
     padding: 0rem;
 }
 
-.card-map-header {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-bottom: 0;
-}
-
-.card-map-footer {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-
-
 /**
  * Bootstrap slider plugin
  */
@@ -252,7 +247,7 @@ body {
 }
 
 .slider-selection {
-    background: #3a84bd;
+    background: #555;
 }
 
 .slider-track {
