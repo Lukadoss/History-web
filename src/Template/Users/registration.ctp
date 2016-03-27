@@ -1,6 +1,7 @@
 <div class="card card-block">
     <h4 class="card-title text-center">Registrace nového uživatele</h4>
     <hr>
+    <?php echo $this->Flash->render(); ?>
     <?php echo $this->Form->create($user); ?>
     <form action="" class="form-horizontal" role="form" method="POST" data-toggle="validator">
         <div class="row">
@@ -41,10 +42,7 @@
                     <?php echo $this->Form->button('Registrovat', ['class' => 'btn btn-primary']); ?>
                 </div>
             </div>
-        <?php
-            echo $this->Form->end();
-            echo $this->Flash->render();
-        ?>
+        <?php echo $this->Form->end(); ?>
         </div>
     </form>
 </div>
