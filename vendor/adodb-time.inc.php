@@ -1061,10 +1061,6 @@ function adodb_date2($fmt, $d=false, $is_gmt=false)
 	return adodb_date($fmt,$d,$is_gmt);
 }
 
-if (isset($_POST['callAdodbDate'])) {
-	$result = adodb_date("d. m. Y", $_POST['callAdodbDate']);
-	echo $result;
-}
 /**
 	Return formatted date based on timestamp $d
 */

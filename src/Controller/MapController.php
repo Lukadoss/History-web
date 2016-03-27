@@ -8,12 +8,19 @@
 
 namespace App\Controller;
 
+use Cake\Event\Event;
+
 class MapController extends AppController
 {
 
     public function index()
     {
         require_once(ROOT . DS . 'vendor' . DS  . 'adodb-time.inc.php');
+
+        if (isset($_GET['float'])) {
+            echo adodb_date("d. m. Y", $_GET['float']);
+            die();
+        }
         //return $this->redirect(['controller' => 'Article', 'action' => 'novy']);
     }
 

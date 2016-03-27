@@ -1,14 +1,23 @@
 <div class="card card-block card-map-header">
     <h4 class="card-title text-center">Interaktivní mapa</h4>
     <hr>
-    <input id="pick-year" type="text" data-slider-min="<?= adodb_mktime(0,0,0, 1, 1, 1720) ?>" data-slider-max="<?= adodb_mktime(0,0,0, 12, 31, 2015) ?>" data-slider-step="86400"
+    <input id="pick-year" type="text" data-slider-min="<?= adodb_mktime(0,0,0, 1, 1, 1920) ?>" data-slider-max="<?= adodb_mktime(0,0,0, 12, 31, 2015) ?>" data-slider-step="86400"
            data-slider-value="<?= adodb_mktime(0,0,0, 10, 5, 1968) ?>">
-    <span id="pick-year-val">5. 10. 1968</span>
+    <span id="pick-year-val" onchange="convert(this.textContent)">5. 10. 1968</span>
     <script>
         $("#pick-year").slider();
         $("#pick-year").on("slide", function (slideEvt) {
-            $("#pick-year-val").text(slideEvt.value);
+            $.ajax({
+                url: 'map',
+                type: 'get',
+                data: { "float": slideEvt.value},
+                success: function(response) { $("#pick-year-val").text(response); }
+            });
         });
+
+        function convert($float){
+            alert($float);
+        }
     </script>
 </div>
 <div class="card-map" id="map">
