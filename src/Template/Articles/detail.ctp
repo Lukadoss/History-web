@@ -1,18 +1,19 @@
 <div class="card card-block">
-    <h4 class="card-title">Název příspěvku <?= $test ?></h4>
-    <h6 class="text-muted">Autor: Jan Novák</h6>
+    <h4 class="card-title col-xs-9">
+        <span class=""><?= $source->name ?></span>
+    </h4>
+    <h6 class="col-xs-3 text-muted text-right">Autor: <?php if($source->user_id) echo $articleAuthor->forename . " " . $articleAuthor->surname;
+        else{
+            echo $source->forename . " " . $source->surname;
+        }?>
+    </h6>
+    <h5 class="col-xs-12">Datum: <?= date_format($source->date_from, 'd. m. Y'); if(isset($source->date_to)) echo " - " . date_format($source->date_to, 'd. m. Y');; ?>, typ příspěvku: <?= $source->type ?></h5>
     <hr>
-    <p>Krátký popis příspěvku. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin in tellus sit amet nibh
-        dignissim sagittis. Maecenas aliquet accumsan leo. Vivamus porttitor turpis ac leo.
-        Donec iaculis gravida nulla. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Nulla non arcu
-        lacinia neque faucibus fringilla. Nunc dapibus tortor vel mi dapibus
-        sollicitudin. Fusce consectetuer risus a nunc. Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas. Integer in sapien. Temporibus autem quibusdam et
-        aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non
-        recusandae.</p>
+    <p><?= $source->text ?></p>
 
 </div>
 <div class="card card-block">
+    <h5>Související soubory:</h5>
     tady budou obrázky, video, audio...
 </div>
 <div class="card">
@@ -25,7 +26,7 @@
             height="100%"
             frameborder="0" style="border:0"
             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDcDBMIqB9QnfD3wks9zVI2WUSHLnbU9so
-    &q=49.7188805,13.3593384&zoom=12">
+    &q=<?= $source->lat; ?>,<?= $source->lng; ?>&zoom=12">
         </iframe>
     </div>
 </div>

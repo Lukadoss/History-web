@@ -14,5 +14,9 @@ class DistrictsTable extends Table
     public function initialize(array $config)
     {
         $this->table('district');
+        $this->belongsToMany('Sources', [
+            'foreignKey' => 'district_id',
+            'joinType' => 'INNER'
+        ]);
     }
 }
