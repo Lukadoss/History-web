@@ -28,15 +28,19 @@ class UsersController extends AppController
 
     function registration()
     {
-        $user = $this->Users->newEntity($this->request->data);
+        $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
-            $user = $this->Users->patchEntity($user, $this->request->data);
-            if ($this->Users->save($user)) {
-                $this->Auth->setUser($user->toArray());
-                $this->Flash->success(__('<strong>Registrace byla úspěšná!</strong> Nyní se můžete přihlásit.'));
-                return $this->redirect(['action' => 'detail', $this->Auth->user('user_id')]);
+            $query = $this->Users->find()->where(['email' => $this->request->data['email']])->first();
+            if($query == null){
+                $user = $this->Users->patchEntity($user, $this->request->data);
+                if ($this->Users->save($user)) {
+                    $this->Auth->setUser($user->toArray());
+                    $this->Flash->success(__('<strong>Registrace byla úspěšná!</strong>'));
+                    return $this->redirect(['action' => 'detail', $this->Auth->user('user_id')]);
+                }
+                $this->Flash->error(__('<strong>Registrace se nepovedla!</strong> Zkuste to znovu'));
             }
-            $this->Flash->error(__('Unable to add the user.'));
+            $this->Flash->error(__('<strong>Tento email již existuje!</strong>'));
         }
         $this->set('user', $user);
     }
