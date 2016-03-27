@@ -2,28 +2,42 @@
     <div class="card-header">Interaktivní mapa
     </div>
     <div class="card-block">
+        <div class="col-md-2"><span style="line-height: 2rem; text-align: center; min-width: 130px">Zobrazené období</span></div>
+        <div class="col-md-8">
         <input id="pick-year" type="text" data-slider-min="<?= adodb_mktime(0, 0, 0, 1, 1, 1920) ?>"
                data-slider-max="<?= adodb_mktime(0, 0, 0, 12, 31, 2015) ?>" data-slider-step="86400"
                data-slider-value="<?= adodb_mktime(0, 0, 0, 10, 5, 1968) ?>">
-        <span id="pick-year-val" onchange="convert(this.textContent)">5. 10. 1968</span>
+        </div>
+        <div class="col-md-2" style="padding-left: 0">
+        <input type="date" value="1968-10-05" id="pick-year-val">
+        </div>
+        <div class="clearfix"></div>
         <script>
+            var delay = ( function() {
+                var timer = 0;
+                return function(callback, ms) {
+                    clearTimeout (timer);
+                    timer = setTimeout(callback, ms);
+                };
+            })();
+
             $("#pick-year").slider();
             $("#pick-year").on("slide", function (slideEvt) {
-                $.ajax({
-                    url: 'map',
-                    type: 'get',
-                    data: {"float": slideEvt.value},
-                    success: function (response) {
-                        $("#pick-year-val").text(response);
-                    }
-                });
-            });
+                delay(function(){
+                    $.ajax({
+                        url: 'map',
+                        type: 'get',
+                        data: {"float": slideEvt.value},
+                        success: function (response) {
+                            $("#pick-year-val").val(response);
+                        }
+                    });
+                }, 100 );
 
-            function convert($float) {
-                alert($float);
-            }
+            });
         </script>
     </div>
+    <?= $this->Html->script('markerclusterer.js', array('type' => 'text/javascript')) ?>
     <div class="card-block card-map" id="map">
         <script>
             var map;
@@ -33,6 +47,8 @@
                     zoom: 8
                 });
 
+                var mcOptions = {gridSize: 50, maxZoom: 15};
+                var mc = new MarkerClusterer(map, [], mcOptions);
 
                 var centerControlDiv = document.createElement('div');
                 var centerControl = new CenterControl(centerControlDiv, map);

@@ -18,14 +18,9 @@ class MapController extends AppController
         require_once(ROOT . DS . 'vendor' . DS  . 'adodb-time.inc.php');
 
         if (isset($_GET['float'])) {
-            echo adodb_date("d. m. Y", $_GET['float']);
+            echo adodb_date("Y-m-d", $_GET['float']);
             die();
         }
         //return $this->redirect(['controller' => 'Article', 'action' => 'novy']);
-    }
-
-    public function testnext()
-    {
-
     }
 }
