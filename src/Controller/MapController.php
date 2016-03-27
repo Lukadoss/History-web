@@ -13,6 +13,7 @@ class MapController extends AppController
 
     public function index()
     {
+        require_once(ROOT . DS . 'vendor' . DS  . 'adodb-time.inc.php');
         //return $this->redirect(['controller' => 'Article', 'action' => 'novy']);
     }
 

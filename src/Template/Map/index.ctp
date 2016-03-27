@@ -1,10 +1,9 @@
 <div class="card card-block card-map-header">
     <h4 class="card-title text-center">Interaktivní mapa</h4>
     <hr>
-    <input id="pick-year" type="text" data-slider-min="1700" data-slider-max="2016" data-slider-step="1"
-           data-slider-value="1810">
-    <span id="pick-year-val">1810</span>
-
+    <input id="pick-year" type="text" data-slider-min="<?= adodb_mktime(0,0,0, 1, 1, 1720) ?>" data-slider-max="<?= adodb_mktime(0,0,0, 12, 31, 2015) ?>" data-slider-step="86400"
+           data-slider-value="<?= adodb_mktime(0,0,0, 10, 5, 1968) ?>">
+    <span id="pick-year-val">5. 10. 1968</span>
     <script>
         $("#pick-year").slider();
         $("#pick-year").on("slide", function (slideEvt) {
