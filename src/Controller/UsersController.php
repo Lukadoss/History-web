@@ -30,17 +30,25 @@ class UsersController extends AppController
     {
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
-            $query = $this->Users->find()->where(['email' => $this->request->data['email']])->first();
-            if($query == null){
-                $user = $this->Users->patchEntity($user, $this->request->data);
+            $user = $this->Users->patchEntity($user, $this->request->data);
+            if($user->errors()){
+                $errors = $user->errors();
+                foreach ($errors as $error){
+                    foreach ($error as $err) {
+                        $this->Flash->error(__($err));
+                    }
+                }
+            }
+            else {
+                if ($this->request->data('forename') == null) {
+                    $user['forename'] = 'Uživatel';
+                }
                 if ($this->Users->save($user)) {
                     $this->Auth->setUser($user->toArray());
                     $this->Flash->success(__('<strong>Registrace byla úspěšná!</strong>'));
                     return $this->redirect(['action' => 'detail', $this->Auth->user('user_id')]);
                 }
-                $this->Flash->error(__('<strong>Registrace se nepovedla!</strong> Zkuste to znovu'));
             }
-            $this->Flash->error(__('<strong>Tento email již existuje!</strong>'));
         }
         $this->set('user', $user);
     }
