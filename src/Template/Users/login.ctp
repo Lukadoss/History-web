@@ -1,28 +1,28 @@
 <div class="card">
-    <div class="card-header">Přihlášení uživatele
-    </div>
+    <div class="card-header">Přihlášení uživatele</div>
     <div class="card-block">
-        <?= $this->Flash->render(); ?>
-        <form class="form-horizontal" role="form" action="" method="POST">
+        <?php echo $this->Flash->render(); ?>
+        <?php echo $this->Form->create(); ?>
+        <div class="row">
             <div class="form-group">
-                <label class="col-md-5 form-control-label form-login-label" for="email">Email:</label>
+                    <label class="col-md-5 form-control-label form-login-label" for="email">Email:</label>
                 <div class="col-md-3">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                    <?php echo $this->Form->email('email', array('placeholder'=>'Email', 'id'=>'email')); ?>
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-md-5 form-control-label form-login-label" for="password">Heslo:</label>
+                    <label class="col-md-5 form-control-label form-login-label" for="pwd">Heslo:</label>
                 <div class="col-md-3">
-                    <input type="password" class="form-control" name="password" id="password" placeholder="Heslo"
-                           required>
+                    <?php echo $this->Form->password('password', array('placeholder'=>'Heslo', 'id'=>'pwd')); ?>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-5 col-sm-3">
-                    <button type="submit" name="submit-login" class="btn btn-primary" value="submit">Přihlásit</button>
+                    <?php echo $this->Form->button('Přihlásit', ['class' => 'btn btn-primary']); ?>
                 </div>
             </div>
-        </form>
+            <?php echo $this->Form->end(); ?>
+        </div>
         <hr>
         <p style="text-align:center">Ještě nemáš účet? <?php echo $this->Html->link(__('Zaregistruj se.'), [
                 'controller' => 'Users',
