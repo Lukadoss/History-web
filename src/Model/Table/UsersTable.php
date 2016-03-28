@@ -24,8 +24,39 @@ class UsersTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->notEmpty('email', 'A username is required')
-            ->notEmpty('password', 'A password is required');
+            ->requirePresence('email')
+            ->notEmpty('email', 'Zadejte email')
+            ->add('email', 'unique', [
+                'rule' => 'validateUnique',
+                'provider' => 'table',
+                'message' => 'Email je již používán'
+            ])
+            ->add('email', 'valid', [
+                'rule' => 'email',
+                'message' => 'Email není ve správném fomátu',
+            ])
+            ->requirePresence('password')
+            ->notEmpty('password', 'Zadejte heslo')
+            ->add('password', 'length', [
+                'rule'=>['minLength', 5],
+                'message' => 'Délka hesla musí být větší než 5 znaků'
+            ])
+            ->requirePresence('pass')
+            ->notEmpty('pass', 'Zopakujte heslo')
+            ->add('pass', 'no-misspelling', [
+                'rule'=>['compareWith', 'password'],
+                'message' => 'Hesla se neshodují'
+            ])
+            ->allowEmpty('forename')
+            ->add('forename', 'length', [
+                'rule'=>['maxLength', 20],
+                'message' => 'Příliš dlouhé jméno'
+            ])
+            ->allowEmpty('surname')
+            ->add('surname', 'length', [
+                'rule'=>['maxLength', 20],
+                'message' => 'Příliš dlouhé příjmení'
+            ]);
 
         return $validator;
     }
