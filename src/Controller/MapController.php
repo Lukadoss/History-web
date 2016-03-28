@@ -18,8 +18,17 @@ class MapController extends AppController
         require_once(ROOT . DS . 'vendor' . DS  . 'adodb-time.inc.php');
 
         if (isset($_GET['float'])) {
-            echo adodb_date("Y-m-d", $_GET['float']);
-            die();
+            if (isset($_GET['funct'])){
+                if($_GET['funct'] == 'mktime'){
+                    $date_arr = explode('-', $_GET['float']);
+                    echo adodb_mktime(0,0,0, $date_arr[1], $date_arr[2], $date_arr[0]);
+                    die();
+                }
+            }
+            else {
+                echo adodb_date("Y-m-d", $_GET['float']);
+                die();
+            }
         }
         //return $this->redirect(['controller' => 'Article', 'action' => 'novy']);
     }

@@ -9,7 +9,8 @@
                data-slider-value="<?= adodb_mktime(0, 0, 0, 10, 5, 1968) ?>">
         </div>
         <div class="col-md-2" style="padding-left: 0">
-        <input type="date" value="1968-10-05" id="pick-year-val">
+        <input type="date" value="1968-10-05" id="pick-year-val" min="1920-01-01" max="2015-12-31">
+            <span id="kek"></span>
         </div>
         <div class="clearfix"></div>
         <script>
@@ -22,19 +23,32 @@
             })();
 
             $("#pick-year").slider();
-            $("#pick-year").on("slide", function (slideEvt) {
+            $("#pick-year").on("change", function (slideEvt) {
                 delay(function(){
                     $.ajax({
                         url: 'map',
                         type: 'get',
-                        data: {"float": slideEvt.value},
+                        data: {"float": slideEvt.value.newValue},
                         success: function (response) {
                             $("#pick-year-val").val(response);
                         }
                     });
-                }, 100 );
-
+                }, 50 );
             });
+
+            $("#pick-year-val").on("change", function() {
+                delay(function(){
+                $.ajax({
+                    url: 'map',
+                    type: 'get',
+                    dataType: "text",
+                    data: {"float": $("#pick-year-val").val(), "funct": 'mktime'},
+                    success: function (converted) {
+                        $("#pick-year").slider().slider("setValue", parseInt(converted));
+                    }
+                });
+                }, 500 );
+            })
         </script>
     </div>
     <?= $this->Html->script('markerclusterer.js', array('type' => 'text/javascript')) ?>
