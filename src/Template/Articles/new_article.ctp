@@ -16,35 +16,36 @@
     <?= $this->Html->script('fileinput_locale_cz.js', array('type' => 'text/javascript')) ?>
 </head>
 <body>
-<div class="card card-block">
-    <h4 class="text-center">Přidání nového příspěvku</h4>
-    <hr>
-    <?= $this->Flash->render(); ?>
-    <?php
-    echo $this->Form->create($source, ['type' => 'file']); ?>
-        <?php if(!$this->request->session()->read('Auth.User')){ ?>
-        <div>
-            <div class="col-md-6">
-                <label for="jmeno">Jméno</label>
-                <input type="text" class="form-control" required id="jmeno" name="forename">
+<div class="card">
+    <div class="card-header">Přidání nového příspěvku
+    </div>
+    <div class="card-block">
+        <?= $this->Flash->render(); ?>
+        <?php
+        echo $this->Form->create($source, ['type' => 'file']); ?>
+        <?php if (!$this->request->session()->read('Auth.User')) { ?>
+            <div>
+                <div class="col-md-6">
+                    <label for="jmeno">Jméno</label>
+                    <input type="text" class="form-control" required id="jmeno" name="forename">
+                </div>
+                <div class="col-md-6">
+                    <label for="prijmeni">Příjmení</label>
+                    <input type="text" class="form-control" required id="prijmeni" name="surname">
+                </div>
             </div>
-            <div class="col-md-6">
-                <label for="prijmeni">Příjmení</label>
-                <input type="text" class="form-control" required id="prijmeni" name="surname">
+            <div class="form-group col-md-12">
+                <label>Email</label>
+                <input type="text" class="form-control" required name="email">
             </div>
-        </div>
-        <div class="form-group col-md-12">
-            <label>Email</label>
-            <input type="text" class="form-control" required name="email">
-        </div>
-        <div class="form-group col-md-12 checkbox">
-            <label class="c-input c-checkbox">
-                <input type="checkbox" name="register" checked>
-                <span class="c-indicator"></span>
-                Zaregistrovat
-            </label>
-        </div>
-        <hr>
+            <div class="form-group col-md-12 checkbox">
+                <label class="c-input c-checkbox">
+                    <input type="checkbox" name="register" checked>
+                    <span class="c-indicator"></span>
+                    Zaregistrovat
+                </label>
+            </div>
+            <hr>
         <?php } ?>
         <div class="form-group col-md-12">
             <label>Název příspěvku:</label>
@@ -107,7 +108,9 @@
                 <option></option>
                 <?php foreach ($district as $dist) {
                     ?>
-                    <option value="<?= $dist->id ?>"> <?= $dist->municipality ?>, <span class="text-muted"><i class="fa fa-user"> </i>okres <?= $dist->district ?>, <?= $dist->region ?></span> </option> <?php
+                    <option value="<?= $dist->id ?>"> <?= $dist->municipality ?>, <span class="text-muted"><i
+                                class="fa fa-user"> </i>okres <?= $dist->district ?>, <?= $dist->region ?></span>
+                    </option> <?php
                 } ?>
 
             </select>
@@ -167,9 +170,9 @@
         <input type="text" name="lng" id="lng" hidden>
         <hr>
         <button type="submit" name="submit-article" class="btn btn-primary">Přidat článek</button>
-    <?php echo $this->Form->end();
-    ?>
+        <?php echo $this->Form->end();
+        ?>
+    </div>
 </div>
-
 </body>
 </html>
