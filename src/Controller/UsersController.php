@@ -9,6 +9,7 @@
 namespace App\Controller;
 
 use Cake\Event\Event;
+use Cake\Validation\Validator;
 
 class UsersController extends AppController
 {
@@ -26,8 +27,7 @@ class UsersController extends AppController
         $this->setAction('login');
     }
 
-    function registration()
-    {
+    function registration(){
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->data);
@@ -84,11 +84,29 @@ class UsersController extends AppController
 
     function settings()
     {
-
+        //TODO: edititace nastavení
     }
 
     function lostpassword()
     {
+        $validator = new Validator();
+        $validator
+            ->add('email', 'valid', [
+                'rule' => 'email',
+                'message' => 'Email není ve správném fomátu',
+            ]);
 
+        $errors = $validator->errors($this->request->data());
+
+        if(!empty($errors)){
+            foreach ($errors as $error){
+                foreach ($error as $err) {
+                    $this->Flash->error(__($err));
+                }
+            }
+            return $this->redirect(['action' => 'lostpassword']);
+        }else{
+            //TODO: heslo resend logika
+        }
     }
 }
