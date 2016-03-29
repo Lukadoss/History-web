@@ -27,16 +27,16 @@
             <div>
                 <div class="col-md-6">
                     <label for="jmeno">Jméno</label>
-                    <input type="text" class="form-control" required id="jmeno" name="forename">
+                    <?php echo $this->Form->text('forename', array('id'=>'jmeno')); ?>
                 </div>
                 <div class="col-md-6">
                     <label for="prijmeni">Příjmení</label>
-                    <input type="text" class="form-control" required id="prijmeni" name="surname">
+                    <?php echo $this->Form->text('surname', array('id'=>'prijmeni')); ?>
                 </div>
             </div>
             <div class="form-group col-md-12">
-                <label>Email</label>
-                <input type="text" class="form-control" required name="email">
+                <label for="email">Email</label>
+                <?php echo $this->Form->email('email', array('id'=>'email')); ?>
             </div>
             <div class="form-group col-md-12 checkbox">
                 <label class="c-input c-checkbox">
@@ -49,20 +49,21 @@
         <?php } ?>
         <div class="form-group col-md-12">
             <label>Název příspěvku:</label>
-            <input type="text" class="form-control" required name="name">
+            <?php echo $this->Form->text('name', array('id'=>'name')); ?>
         </div>
         <div class="form-group col-md-12">
             <label>Krátký popis (nepovinný):</label>
-            <textarea type="text" rows="5" class="form-control" name="text"></textarea>
+            <?php echo $this->Form->textArea('name', array('class'=>'form-control', 'id'=>'name')); ?>
         </div>
         <div class="form-group">
-
             <div class="col-md-6">
                 <label>Datum události od:</label>
+                <?php echo $this->Form->text('name', array('id'=>'name')); ?>
                 <input type="date" class="form-control" required name="date_from">
             </div>
             <div class="col-md-6">
                 <label>Datum do:</label>
+                <?php echo $this->Form->text('name', array('id'=>'name')); ?>
                 <input type="date" class="form-control" name="date_to">
             </div>
         </div>
@@ -169,7 +170,7 @@
         <input type="text" name="lat" id="lat" hidden>
         <input type="text" name="lng" id="lng" hidden>
         <hr>
-        <button type="submit" name="submit-article" class="btn btn-primary">Přidat článek</button>
+        <?php echo $this->Form->button('Přidat článek', ['class' => 'btn btn-primary']); ?>
         <?php echo $this->Form->end();
         ?>
     </div>
