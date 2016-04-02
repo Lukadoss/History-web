@@ -1,1 +1,2 @@
-<div class="message success" onclick="this.classList.add('hidden')"><?= h($message) ?></div>
+<div class="alert alert-success text-center" onclick="this.classList.add('hidden')"><?= $message ?></div>
+<!-- h($message) for msg escaping -->

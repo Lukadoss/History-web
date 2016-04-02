@@ -51,13 +51,17 @@
     <?php echo $this->Html->link($this->Html->image('logo2.png', ['alt' => 'Logo']), [
         'controller' => 'Info',
     ], array('escape' => false)) ?>
+
     <hr class="m-y-0">
 </div>
+<?php $loguser = $this->request->session()->read('Auth.User'); ?>
 <nav class="navbar navbar-default navbar-full">
-    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
-        &#9776;
+    <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2"
+            style="background: #3a84bd; margin-bottom: 0">
+        <i class="fa fa-bars"></i>
     </button>
-    <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
+    <?php echo $this->Html->image('logo2-nav.png', ['alt' => 'Logo-navbar', 'class' => 'hidden-md-up pull-right']) ?>
+    <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar2">
         <div class="container nav-center">
             <ul class="nav navbar-nav" style="box-sizing: border-box;">
                 <li class="nav-item">
@@ -65,21 +69,49 @@
                         'controller' => 'Info',
                     ], array('class' => 'nav-link')) ?></li>
                 <li class="nav-item">
-                    <?php echo $this->Html->link(__('INTERAKTIVNÍ MAPA'), [
-                        'controller' => 'Mapa',
+                    <?php echo $this->Html->link(__('MAPA'), [
+                        'controller' => 'Map',
                     ], array('class' => 'nav-link')) ?></li>
                 <li class="nav-item">
                     <?php echo $this->Html->link(__('NOVÝ PŘÍSPĚVEK'), [
-                        'controller' => 'Prispevek',
-                        'action' => 'novy'
+                        'controller' => 'Articles',
+                        'action' => 'newArticle'
                     ], array('class' => 'nav-link')) ?></li>
+                <?php if($loguser && ($this->request->session()->read('Auth.User.isadmin'))) { ?>
+                <li class="nav-item">
+                    <?php echo $this->Html->link(__('ADMINISTRACE'), [
+                        'controller' => 'Administration',
+                    ], array('class' => 'nav-link')) ?></li>
+                <?php } ?>
+                <li class="divider"><hr></li>
             </ul>
-            <ul class="nav navbar-nav pull-xs-right">
-                <li class="nav-item nav-login"><?php echo $this->Html->link(__('<i class="fa fa-user"> </i> PŘIHLÁŠENÍ'), [
-                        'controller' => 'Uzivatel',
-                        'action' => 'login'
-                    ], array('class' => 'nav-link nav-login', 'escape' => false)) ?></li>
+            <ul class="nav navbar-nav pull-md-right">
+
+                <?php
+                if(!$loguser) { ?>
+                    <li class="nav-item nav-login"><?php echo $this->Html->link(__('<i class="fa fa-sign-in"> </i> PŘIHLÁŠENÍ'), [
+                            'controller' => 'Users',
+                            'action' => 'login'
+                        ], array('class' => 'nav-link nav-login', 'escape' => false)) ?></li>
+                    <li class="nav-item nav-login"><?php echo $this->Html->link(__('<i class="fa fa-user-plus"> </i> REGISTRACE'), [
+                            'controller' => 'Users',
+                            'action' => 'registration'
+                        ], array('class' => 'nav-link nav-login', 'escape' => false)) ?></li>
+                <?php }
+                else { ?>
+                    <li class="nav-item nav-login"><?php echo $this->Html->link(__('<i class="fa fa-user"> </i> <span class="text-uppercase"> '.$loguser['forename'].' '.$loguser['surname']."</span>"), [
+                            'controller' => 'Users',
+                            'action' => 'detail'
+                            //$this->Auth->user('id')
+                        ], array('class' => 'nav-link nav-login', 'escape' => false)) ?></li>
+                    <li class="nav-item nav-login"><?php echo $this->Html->link(__('<i class="fa fa-sign-out"> </i> ODHLÁSIT'), [
+                            'controller' => 'Users',
+                            'action' => 'logout'
+                        ], array('class' => 'nav-link nav-login', 'escape' => false)) ?></li>
+                <?php }?>
+
             </ul>
+
         </div>
     </div>
 </nav>
