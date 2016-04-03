@@ -53,17 +53,15 @@
         </div>
         <div class="form-group col-md-12">
             <label>Krátký popis (nepovinný):</label>
-            <?php echo $this->Form->textArea('name', array('class'=>'form-control', 'id'=>'name')); ?>
+            <?php echo $this->Form->textArea('text', array('class'=>'form-control', 'id'=>'text')); ?>
         </div>
         <div class="form-group">
             <div class="col-md-6">
                 <label>Datum události od:</label>
-                <?php echo $this->Form->text('name', array('id'=>'name')); ?>
                 <input type="date" class="form-control" required name="date_from">
             </div>
             <div class="col-md-6">
                 <label>Datum do:</label>
-                <?php echo $this->Form->text('name', array('id'=>'name')); ?>
                 <input type="date" class="form-control" name="date_to">
             </div>
         </div>
