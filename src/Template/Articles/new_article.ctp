@@ -58,11 +58,11 @@
         <div class="form-group">
             <div class="col-md-6">
                 <label>Datum události od:</label>
-                <input type="date" class="form-control" required name="date_from">
+                <input type="date" class="form-control" required name="date_from" id="date_from">
             </div>
             <div class="col-md-6">
                 <label>Datum do:</label>
-                <input type="date" class="form-control" name="date_to">
+                <input type="date" class="form-control" name="date_to" id="date_to">
             </div>
         </div>
         <div class="form-group col-md-12">
@@ -165,8 +165,8 @@
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcDBMIqB9QnfD3wks9zVI2WUSHLnbU9so&callback=initMap"
                 async defer></script>
         </div>
-        <input type="text" name="lat" id="lat" hidden>
-        <input type="text" name="lng" id="lng" hidden>
+        <input type="text" name="lat" id="lat" hidden required>
+        <input type="text" name="lng" id="lng" hidden required>
         <hr>
         <?php echo $this->Form->button('Přidat článek', ['class' => 'btn btn-primary']); ?>
         <?php echo $this->Form->end();
