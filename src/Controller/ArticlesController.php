@@ -29,7 +29,10 @@ class ArticlesController extends AppController
         $this->loadModel('Sources');
         $source = $this->Sources->newEntity();
         if ($this->request->is('post')) {
+            $user_id = $this->Auth->user('user_id');
+
             $source = $this->Sources->patchEntity($source, $this->request->data);
+            $source->user_id = $user_id;
             if ($this->Sources->save($source)) {
                 $this->Flash->success(__('<strong>Příspěvek byl úspěšně nahrán!</strong> Počkejte, prosím, na jeho schválení.'));
                 return $this->redirect(['action' => 'new_article']);
