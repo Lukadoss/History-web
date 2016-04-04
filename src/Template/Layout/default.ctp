@@ -37,6 +37,9 @@
     <!-- Font Awesome icons init (http://fontawesome.io/get-started/) -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+    <!-- Google captcha -->
+    <script src='https://www.google.com/recaptcha/api.js?hl=cs'></script>
+
     <?= $this->Html->meta('icon') ?>
 
     <?= $this->Html->css('base.css') ?>

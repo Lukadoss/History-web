@@ -36,6 +36,13 @@
             </div>
 
             <div class="form-group">
+                <label class="col-md-5 form-control-label form-login-label" for="captcha"></label>
+                <div class="col-md-3">
+                    <div class="g-recaptcha" data-sitekey="6LdMihwTAAAAABHyUIcfago1qMOTWkT4dL7XP_Bx"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
                 <div class="col-md-offset-5 col-md-3">
                     <?php echo $this->Form->button('Registrovat', ['class' => 'btn btn-primary']); ?>
                 </div>
