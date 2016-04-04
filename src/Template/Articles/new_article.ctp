@@ -168,6 +168,7 @@
         <input type="text" name="lat" id="lat" hidden required>
         <input type="text" name="lng" id="lng" hidden required>
         <hr>
+        <div class="g-recaptcha" style="margin-bottom: 15px;" data-sitekey="6LdMihwTAAAAABHyUIcfago1qMOTWkT4dL7XP_Bx"></div>
         <?php echo $this->Form->button('Přidat článek', ['class' => 'btn btn-primary']); ?>
         <?php echo $this->Form->end();
         ?>

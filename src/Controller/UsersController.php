@@ -11,14 +11,15 @@ namespace App\Controller;
 use Cake\Event\Event;
 use Cake\Validation\Validator;
 
+require_once "components/recaptchalib.php";
+
 class UsersController extends AppController
 {
 
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);;
-        $this->Auth->allow('registration', 'logout');
-        $this->Auth->allow('lostpassword');
+        $this->Auth->allow('registration', 'logout', 'lostpassword');
     }
 
     public function index()
@@ -31,7 +32,10 @@ class UsersController extends AppController
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->data);
-            if($user->errors()){
+            $secret = "6LdMihwTAAAAAMwgcps-oICkyK436ACqKcAemD5F";
+            $recaptcha = new \ReCaptcha($secret);
+            $response = $recaptcha->verifyResponse($_SERVER['REMOTE_ADDR'], $this->request->data(['g-recaptcha-response']));
+            if($user->errors() && $response->errorCodes && $response != null){
                 $errors = $user->errors();
                 foreach ($errors as $error){
                     foreach ($error as $err) {
@@ -51,6 +55,17 @@ class UsersController extends AppController
             }
         }
         $this->set('user', $user);
+    }
+
+    function httpPost($url, $data)
+    {
+        $curl = curl_init($url);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($data));
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($curl);
+        curl_close($curl);
+        return $response;
     }
 
     public function login(){
