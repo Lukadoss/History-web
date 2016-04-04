@@ -32,8 +32,7 @@ class ArticlesController extends AppController
             $secret = "6LdMihwTAAAAAMwgcps-oICkyK436ACqKcAemD5F";
             $recaptcha = new \ReCaptcha($secret);
             $response = $recaptcha->verifyResponse($_SERVER['REMOTE_ADDR'], $this->request->data(['g-recaptcha-response']));
-            if ($response->success) {
-                $source = $this->Sources->patchEntity($source, $this->request->data);
+            if ($response->success) { $source = $this->Sources->patchEntity($source, $this->request->data);
                 if ($this->Sources->save($source)) {
                     $this->Flash->success(__('<strong>Příspěvek byl úspěšně nahrán!</strong> Počkejte, prosím, na jeho schválení.'));
                     return $this->redirect(['action' => 'new_article']);
