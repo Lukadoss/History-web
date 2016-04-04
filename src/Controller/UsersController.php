@@ -35,7 +35,7 @@ class UsersController extends AppController
             $secret = "6LdMihwTAAAAAMwgcps-oICkyK436ACqKcAemD5F";
             $recaptcha = new \ReCaptcha($secret);
             $response = $recaptcha->verifyResponse($_SERVER['REMOTE_ADDR'], $this->request->data(['g-recaptcha-response']));
-            if($user->errors() & $response->errorCodes){
+            if($user->errors() && $response->errorCodes && $response != null){
                 $errors = $user->errors();
                 foreach ($errors as $error){
                     foreach ($error as $err) {
