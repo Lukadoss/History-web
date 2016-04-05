@@ -10,16 +10,16 @@ namespace App\Controller;
 
 use Cake\Event\Event;
 use Cake\Validation\Validator;
+use Cake\Mailer\Email;
 
 require_once "components/recaptchalib.php";
 
 class UsersController extends AppController
 {
-
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);;
-        $this->Auth->allow('registration', 'logout', 'lostpassword');
+        $this->Auth->allow(['registration', 'logout', 'lostpassword']);
     }
 
     public function index()
@@ -104,24 +104,44 @@ class UsersController extends AppController
 
     function lostpassword()
     {
-        $validator = new Validator();
-        $validator
-            ->add('email', 'valid', [
-                'rule' => 'email',
-                'message' => 'Email není ve správném fomátu',
-            ]);
+        if ($this->request->is('post')) {
+            $validator = new Validator();
+            $validator
+                ->add('email', 'valid', [
+                    'rule' => 'email',
+                    'message' => 'Email není ve správném fomátu',
+                ])
+                ->notEmpty('email', 'Zadejte email');
 
-        $errors = $validator->errors($this->request->data());
+            $errors = $validator->errors($this->request->data());
 
-        if(!empty($errors)){
-            foreach ($errors as $error){
-                foreach ($error as $err) {
-                    $this->Flash->error(__($err));
+            if (!empty($errors)) {
+                foreach ($errors as $error) {
+                    foreach ($error as $err) {
+                        $this->Flash->error(__($err));
+                    }
                 }
+                return $this->redirect(['action' => 'lostpassword']);
+            } else {
+                $user = $this->Users->find('all')
+                ->where(['email'=>$this->request->data('email')])
+                ->first();
+                if($user){
+                    $email = new Email();
+
+                    $email->viewVars(['url' => 'http://localhost/History-web/info']);
+
+                    $email->template('reset')
+                        ->emailFormat('html')
+                        ->subject('Změna hesla')
+                        ->to($this->request->data('email'))
+                        ->send();
+
+                    $this->Flash->success('Odkaz na reset hesla byl úspěšně poslán na Váš email');
+                    return $this->redirect(['action' => 'lostpassword']);
+                }
+                $this->Flash->error('Zadaný email neexistuje');
             }
-            return $this->redirect(['action' => 'lostpassword']);
-        }else{
-            //TODO: heslo resend logika
         }
     }
 }

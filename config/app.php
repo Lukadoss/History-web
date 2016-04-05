@@ -201,7 +201,7 @@ return [
     'Email' => [
         'default' => [
             'transport' => 'default',
-            'from' => ['Kulisaci' => 'History web'],
+            'from' => ['kulisackyweb@gmail.com' => 'History web'],
             //'charset' => 'utf-8',
             //'headerCharset' => 'utf-8',
         ],

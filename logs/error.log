@@ -12451,3 +12451,22 @@ Stack Trace:
 #1 {main}
 
 
+2016-04-05 01:15:06 Error: [InvalidArgumentException] Invalid email: "Kulisaci"
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/lostpassword
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Mailer\Email.php(614): Cake\Mailer\Email->_validateEmail('Kulisaci')
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Mailer\Email.php(654): Cake\Mailer\Email->_setEmail('_from', Array, NULL)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Mailer\Email.php(382): Cake\Mailer\Email->_setEmailSingle('_from', Array, NULL, 'From requires o...')
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Mailer\Email.php(1398): Cake\Mailer\Email->from(Array)
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Mailer\Email.php(1271): Cake\Mailer\Email->_applyConfig(Array)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Mailer\Email.php(351): Cake\Mailer\Email->profile(Array)
+#6 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(130): Cake\Mailer\Email->__construct()
+#7 [internal function]: App\Controller\UsersController->lostpassword()
+#8 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#11 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
