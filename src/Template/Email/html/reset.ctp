@@ -13,18 +13,9 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 ?>
-<?php
-$content = explode("\n", $content);
 
-foreach ($content as $line):
-    echo '<p> ' . $line . "</p>\n";
-endforeach;
-?>
+<p>Byla nám zaslána žádost o změnu hesla. Pro nové heslo klikněte na link dole</p><br/>
 
-<p>Click on the link below to Reset Your Password </p><br/>
+<a href="<?php echo $url; ?>"><?php echo $url; ?></a><br/><br/>
 
-<a href="<?php echo $ms; ?>">Click here to Reset Your Password</a><br/>
-
-<pre>or Visit this Link</pre><br/>
-
-<p><a href="<?php echo $ms; ?>"><?php echo $ms; ?></a></p>
+<p>Pokud jste si změnu hesla nevyžádali obraťte se na admina stránky</p>
