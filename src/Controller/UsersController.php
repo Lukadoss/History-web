@@ -11,6 +11,8 @@ namespace App\Controller;
 use Cake\Event\Event;
 use Cake\Validation\Validator;
 use Cake\Mailer\Email;
+use Cake\Utility\Security;
+use Cake\Routing\Router;
 
 require_once "components/recaptchalib.php";
 
@@ -19,7 +21,7 @@ class UsersController extends AppController
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);;
-        $this->Auth->allow(['registration', 'logout', 'lostpassword']);
+        $this->Auth->allow(['registration', 'logout', 'lostpassword', 'reset']);
     }
 
     public function index()
@@ -55,17 +57,6 @@ class UsersController extends AppController
             }
         }
         $this->set('user', $user);
-    }
-
-    function httpPost($url, $data)
-    {
-        $curl = curl_init($url);
-        curl_setopt($curl, CURLOPT_POST, true);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($data));
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        $response = curl_exec($curl);
-        curl_close($curl);
-        return $response;
     }
 
     public function login(){
@@ -128,8 +119,10 @@ class UsersController extends AppController
                 ->first();
                 if($user){
                     $email = new Email();
-
-                    $email->viewVars(['url' => 'http://localhost/History-web/info']);
+                    $key = Security::hash($user['email'],'sha1',true);
+                    $hash = sha1($user['password'].rand(0,100));
+                    $url = Router::url( array('controller'=>'users','action'=>'reset'), true ).'/'.$key.'#'.$hash;
+                    $email->viewVars(['url' => $url]);
 
                     $email->template('reset')
                         ->emailFormat('html')
@@ -142,6 +135,44 @@ class UsersController extends AppController
                 }
                 $this->Flash->error('Zadaný email neexistuje');
             }
+        }
+    }
+
+    function reset($token=null){
+        //$this->layout="Login";
+        $this->Users->recursive=-1;
+        if(!empty($token)){
+            $u=$this->Users->findBytokenhash($token);
+            debug($token);
+//            if($u){
+//                $this->Users->id=$u['User']['id'];
+//                if(!empty($this->data)){
+//                    $this->User->data=$this->data;
+//                    $this->User->data['User']['username']=$u['User']['username'];
+//                    $new_hash=sha1($u['User']['username'].rand(0,100));//created token
+//                    $this->User->data['User']['tokenhash']=$new_hash;
+//                    if($this->User->validates(array('fieldList'=>array('password','password_confirm')))){
+//                        if($this->User->save($this->User->data))
+//                        {
+//                            $this->Session->setFlash('Password Has been Updated');
+//                            $this->redirect(array('controller'=>'users','action'=>'login'));
+//                        }
+//
+//                    }
+//                    else{
+//
+//                        $this->set('errors',$this->User->invalidFields());
+//                    }
+//                }
+//            }
+//            else
+//            {
+//                $this->Session->setFlash('Token Corrupted,,Please Retry.the reset link work only for once.');
+//            }
+        }
+
+        else{
+            $this->redirect('/');
         }
     }
 }
