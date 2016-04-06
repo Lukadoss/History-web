@@ -9,10 +9,6 @@
 namespace App\Controller;
 
 use Cake\Event\Event;
-use Cake\Validation\Validator;
-use Cake\Mailer\Email;
-use Cake\Utility\Security;
-use Cake\Routing\Router;
 
 require_once "components/recaptchalib.php";
 
@@ -91,88 +87,5 @@ class UsersController extends AppController
     function settings()
     {
         //TODO: edititace nastavení
-    }
-
-    function lostpassword()
-    {
-        if ($this->request->is('post')) {
-            $validator = new Validator();
-            $validator
-                ->add('email', 'valid', [
-                    'rule' => 'email',
-                    'message' => 'Email není ve správném fomátu',
-                ])
-                ->notEmpty('email', 'Zadejte email');
-
-            $errors = $validator->errors($this->request->data());
-
-            if (!empty($errors)) {
-                foreach ($errors as $error) {
-                    foreach ($error as $err) {
-                        $this->Flash->error(__($err));
-                    }
-                }
-                return $this->redirect(['action' => 'lostpassword']);
-            } else {
-                $user = $this->Users->find('all')
-                ->where(['email'=>$this->request->data('email')])
-                ->first();
-                if($user){
-                    $email = new Email();
-                    $key = Security::hash($user['email'],'sha1',true);
-                    $hash = sha1($user['password'].rand(0,100));
-                    $url = Router::url( array('controller'=>'users','action'=>'reset'), true ).'/'.$key.'#'.$hash;
-                    $email->viewVars(['url' => $url]);
-
-                    $email->template('reset')
-                        ->emailFormat('html')
-                        ->subject('Změna hesla')
-                        ->to($this->request->data('email'))
-                        ->send();
-
-                    $this->Flash->success('Odkaz na reset hesla byl úspěšně poslán na Váš email');
-                    return $this->redirect(['action' => 'lostpassword']);
-                }
-                $this->Flash->error('Zadaný email neexistuje');
-            }
-        }
-    }
-
-    function reset($token=null){
-        //$this->layout="Login";
-        $this->Users->recursive=-1;
-        if(!empty($token)){
-            $u=$this->Users->findBytokenhash($token);
-            debug($token);
-//            if($u){
-//                $this->Users->id=$u['User']['id'];
-//                if(!empty($this->data)){
-//                    $this->User->data=$this->data;
-//                    $this->User->data['User']['username']=$u['User']['username'];
-//                    $new_hash=sha1($u['User']['username'].rand(0,100));//created token
-//                    $this->User->data['User']['tokenhash']=$new_hash;
-//                    if($this->User->validates(array('fieldList'=>array('password','password_confirm')))){
-//                        if($this->User->save($this->User->data))
-//                        {
-//                            $this->Session->setFlash('Password Has been Updated');
-//                            $this->redirect(array('controller'=>'users','action'=>'login'));
-//                        }
-//
-//                    }
-//                    else{
-//
-//                        $this->set('errors',$this->User->invalidFields());
-//                    }
-//                }
-//            }
-//            else
-//            {
-//                $this->Session->setFlash('Token Corrupted,,Please Retry.the reset link work only for once.');
-//            }
-        }
-
-        else{
-            $this->redirect('/');
-        }
     }
 }
