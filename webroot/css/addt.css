@@ -58,7 +58,11 @@ body {
     line-height: 3rem;
 }
 
-
+@media (max-width: 767px) {
+    .device-text-align{
+        text-align: center;
+    }
+}
 /**
  * Custom colored Bootstrap nav bar
  */

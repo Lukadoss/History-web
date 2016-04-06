@@ -12451,3 +12451,672 @@ Stack Trace:
 #1 {main}
 
 
+2016-04-05 01:15:06 Error: [InvalidArgumentException] Invalid email: "Kulisaci"
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/lostpassword
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Mailer\Email.php(614): Cake\Mailer\Email->_validateEmail('Kulisaci')
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Mailer\Email.php(654): Cake\Mailer\Email->_setEmail('_from', Array, NULL)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Mailer\Email.php(382): Cake\Mailer\Email->_setEmailSingle('_from', Array, NULL, 'From requires o...')
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Mailer\Email.php(1398): Cake\Mailer\Email->from(Array)
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Mailer\Email.php(1271): Cake\Mailer\Email->_applyConfig(Array)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Mailer\Email.php(351): Cake\Mailer\Email->profile(Array)
+#6 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(130): Cake\Mailer\Email->__construct()
+#7 [internal function]: App\Controller\UsersController->lostpassword()
+#8 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#11 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-04-05 01:31:49 Error: Fatal Error (1): Class 'App\Controller\Router' not found in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 124]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-05 01:31:49 Error: [Cake\Error\FatalErrorException] Class 'App\Controller\Router' not found
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/lostpassword
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Class 'App\\Cont...', 'C:\\xampp\\htdocs...', 124)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-05 01:45:58 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::reset() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'reset',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /History-web/users/reset/32218e61f3c045684d14f1afaa902e6dd301bc89
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-04-05 01:47:50 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/js/markerclusterer.js
+Referer URL: http://localhost/History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-05 01:47:54 Warning: Warning (2): Creating default object from empty value in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 143]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::reset() - APP/Controller\UsersController.php, line 143
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-05 01:47:54 Error: Fatal Error (1): Cannot use object of type Cake\ORM\Query as array in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 147]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-05 01:47:54 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\Query as array
+Request URL: /History-web/users/reset/32218e61f3c045684d14f1afaa902e6dd301bc89
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'C:\\xampp\\htdocs...', 147)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-05 01:48:09 Error: Fatal Error (1): Cannot use object of type Cake\ORM\Query as array in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 147]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-05 01:48:09 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\Query as array
+Request URL: /History-web/users/reset/32218e61f3c045684d14f1afaa902e6dd301bc89
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'C:\\xampp\\htdocs...', 147)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-05 01:49:15 Error: [Cake\View\Exception\MissingTemplateException] Template file "Users\reset.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\reset.ctp',
+)
+Request URL: /History-web/users/reset/32218e61f3c045684d14f1afaa902e6dd301bc89
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(585): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#4 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-04-05 02:05:56 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-05 02:05:58 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/js/markerclusterer.js
+Referer URL: http://localhost/History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-05 11:32:28 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/js/markerclusterer.js
+Referer URL: http://localhost/History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-05 12:08:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/js/markerclusterer.js
+Referer URL: http://localhost/History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-05 12:10:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-05 12:11:20 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/js/markerclusterer.js
+Referer URL: http://localhost/History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-05 15:07:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/js/markerclusterer.js
+Referer URL: http://localhost/History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-05 15:07:07 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-05 21:46:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-05 22:29:01 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-05 22:29:02 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/js/markerclusterer.js
+Referer URL: http://localhost/History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 00:16:18 Error: Fatal Error (1): Call to a member function newEntity() on boolean in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 127]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-06 00:16:18 Error: [Cake\Error\FatalErrorException] Call to a member function newEntity() on boolean
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/lostpassword
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 127)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-06 00:17:07 Error: Fatal Error (1): Call to a member function newEntity() on boolean in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 127]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-06 00:17:07 Error: [Cake\Error\FatalErrorException] Call to a member function newEntity() on boolean
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/lostpassword
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 127)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-06 00:17:22 Error: Fatal Error (1): Call to a member function newEntity() on boolean in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 127]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-06 00:17:22 Error: [Cake\Error\FatalErrorException] Call to a member function newEntity() on boolean
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/lostpassword
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 127)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-06 00:17:29 Error: Fatal Error (1): Call to a member function newEntity() on boolean in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 128]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-06 00:17:29 Error: [Cake\Error\FatalErrorException] Call to a member function newEntity() on boolean
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/lostpassword
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 128)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-06 18:32:42 Error: [Cake\View\Exception\MissingTemplateException] Template file "Users\lostpassword.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\lostpassword.ctp',
+)
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(585): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#4 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-04-06 18:32:51 Error: [Cake\View\Exception\MissingTemplateException] Template file "Users\lostpassword.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\lostpassword.ctp',
+)
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(585): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#4 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-04-06 18:33:34 Error: [Cake\View\Exception\MissingTemplateException] Template file "Users\lostpassword.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users\\lostpassword.ctp',
+)
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(585): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#4 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-04-06 18:33:38 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tickets could not be found.
+Exception Attributes: array (
+  'class' => 'Tickets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/tickets/lostpassword
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:34:35 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tickets could not be found.
+Exception Attributes: array (
+  'class' => 'Tickets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/tickets/lostpassword
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:34:35 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tickets could not be found.
+Exception Attributes: array (
+  'class' => 'Tickets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/tickets/lostpassword
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:34:47 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tickets could not be found.
+Exception Attributes: array (
+  'class' => 'Tickets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/tickets/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:35:16 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tickets could not be found.
+Exception Attributes: array (
+  'class' => 'Tickets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/tickets/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:35:17 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tickets could not be found.
+Exception Attributes: array (
+  'class' => 'Tickets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/tickets/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:35:51 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tickets could not be found.
+Exception Attributes: array (
+  'class' => 'Tickets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/tickets/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:35:52 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tickets could not be found.
+Exception Attributes: array (
+  'class' => 'Tickets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/tickets/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:35:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tickets could not be found.
+Exception Attributes: array (
+  'class' => 'Tickets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/tickets/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:35:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tickets could not be found.
+Exception Attributes: array (
+  'class' => 'Tickets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/tickets/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:35:54 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tickets could not be found.
+Exception Attributes: array (
+  'class' => 'Tickets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/tickets/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:35:54 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tickets could not be found.
+Exception Attributes: array (
+  'class' => 'Tickets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/tickets/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:35:54 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tickets could not be found.
+Exception Attributes: array (
+  'class' => 'Tickets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/tickets/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:35:54 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tickets could not be found.
+Exception Attributes: array (
+  'class' => 'Tickets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/tickets/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:35:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tickets could not be found.
+Exception Attributes: array (
+  'class' => 'Tickets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/tickets/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:35:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tickets could not be found.
+Exception Attributes: array (
+  'class' => 'Tickets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/tickets/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:36:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Tickets could not be found.
+Exception Attributes: array (
+  'class' => 'Tickets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/tickets/lostpassword
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:37:30 Warning: Warning (4096): Argument 1 passed to App\Controller\TicketsController::beforeFilter() must be an instance of App\Controller\Event, instance of Cake\Event\Event given, called in C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Event\EventManager.php on line 386 and defined in [C:\xampp\htdocs\History-web\src\Controller\TicketsController.php, line 13]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\TicketsController::beforeFilter() - APP/Controller\TicketsController.php, line 13
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 491
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-06 18:40:11 Error: [BadMethodCallException] Unknown method "index"
+Request URL: /History-web/tickets/reset
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\TicketsController.php(105): Cake\ORM\Table->__call('index', Array)
+#1 C:\xampp\htdocs\History-web\src\Controller\TicketsController.php(105): Cake\ORM\Table->index()
+#2 [internal function]: App\Controller\TicketsController->reset()
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\TicketsController))
+#6 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-04-06 18:49:02 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-06 18:49:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/js/markerclusterer.js
+Referer URL: http://localhost/History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+

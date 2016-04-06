@@ -9,17 +9,15 @@
 namespace App\Controller;
 
 use Cake\Event\Event;
-use Cake\Validation\Validator;
 
 require_once "components/recaptchalib.php";
 
 class UsersController extends AppController
 {
-
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);;
-        $this->Auth->allow('registration', 'logout', 'lostpassword');
+        $this->Auth->allow(['registration', 'logout', 'lostpassword', 'reset']);
     }
 
     public function index()
@@ -57,17 +55,6 @@ class UsersController extends AppController
         $this->set('user', $user);
     }
 
-    function httpPost($url, $data)
-    {
-        $curl = curl_init($url);
-        curl_setopt($curl, CURLOPT_POST, true);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($data));
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        $response = curl_exec($curl);
-        curl_close($curl);
-        return $response;
-    }
-
     public function login(){
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
@@ -100,28 +87,5 @@ class UsersController extends AppController
     function settings()
     {
         //TODO: edititace nastavení
-    }
-
-    function lostpassword()
-    {
-        $validator = new Validator();
-        $validator
-            ->add('email', 'valid', [
-                'rule' => 'email',
-                'message' => 'Email není ve správném fomátu',
-            ]);
-
-        $errors = $validator->errors($this->request->data());
-
-        if(!empty($errors)){
-            foreach ($errors as $error){
-                foreach ($error as $err) {
-                    $this->Flash->error(__($err));
-                }
-            }
-            return $this->redirect(['action' => 'lostpassword']);
-        }else{
-            //TODO: heslo resend logika
-        }
     }
 }

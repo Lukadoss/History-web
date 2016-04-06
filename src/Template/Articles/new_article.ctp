@@ -27,16 +27,16 @@
             <div>
                 <div class="col-md-6">
                     <label for="jmeno">Jméno</label>
-                    <?php echo $this->Form->text('forename', array('id'=>'jmeno')); ?>
+                    <input type="text" class="form-control" required id="jmeno" name="forename">
                 </div>
                 <div class="col-md-6">
                     <label for="prijmeni">Příjmení</label>
-                    <?php echo $this->Form->text('surname', array('id'=>'prijmeni')); ?>
+                    <input type="text" class="form-control" required id="prijmeni" name="surname">
                 </div>
             </div>
             <div class="form-group col-md-12">
-                <label for="email">Email</label>
-                <?php echo $this->Form->email('email', array('id'=>'email')); ?>
+                <label>Email</label>
+                <input type="text" class="form-control" required name="email">
             </div>
             <div class="form-group col-md-12 checkbox">
                 <label class="c-input c-checkbox">
@@ -49,13 +49,14 @@
         <?php } ?>
         <div class="form-group col-md-12">
             <label>Název příspěvku:</label>
-            <?php echo $this->Form->text('name', array('id'=>'name')); ?>
+            <input type="text" class="form-control" required name="name">
         </div>
         <div class="form-group col-md-12">
             <label>Krátký popis (nepovinný):</label>
-            <?php echo $this->Form->textArea('text', array('class'=>'form-control', 'id'=>'text')); ?>
+            <textarea type="text" rows="5" class="form-control" name="text"></textarea>
         </div>
         <div class="form-group">
+
             <div class="col-md-6">
                 <label>Datum události od:</label>
                 <input type="date" class="form-control" required name="date_from">
@@ -168,8 +169,7 @@
         <input type="text" name="lat" id="lat" hidden>
         <input type="text" name="lng" id="lng" hidden>
         <hr>
-        <div class="g-recaptcha" style="margin-bottom: 15px;" data-sitekey="6LdMihwTAAAAABHyUIcfago1qMOTWkT4dL7XP_Bx"></div>
-        <?php echo $this->Form->button('Přidat článek', ['class' => 'btn btn-primary']); ?>
+        <button type="submit" name="submit-article" class="btn btn-primary">Přidat článek</button>
         <?php echo $this->Form->end();
         ?>
     </div>

@@ -29,7 +29,7 @@
                 'action' => 'registration'
             ]) ?></p>
         <p style="text-align:center"><?php echo $this->Html->link(__('Zapomenuté heslo.'), [
-                'controller' => 'Users',
+                'controller' => 'Tickets',
                 'action' => 'lostpassword'
             ]) ?></a></p>
     </div>
