@@ -183,6 +183,7 @@
         <input type="text" name="lat" id="lat" hidden>
         <input type="text" name="lng" id="lng" hidden>
         <hr>
+        <div class="g-recaptcha" style="margin-bottom: 15px;" data-sitekey="6LdMihwTAAAAABHyUIcfago1qMOTWkT4dL7XP_Bx"></div>
         <button type="submit" name="submit-article" class="btn btn-primary">Přidat článek</button>
         <?php echo $this->Form->end();
         ?>
