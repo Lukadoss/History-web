@@ -315,3 +315,13 @@ body {
 .c-input > input:active ~ .c-indicator {
     background-color: #566;
 }
+
+
+.file-upload-actionbar {
+    height: 2rem;
+    margin-top: 0 !important;
+}
+
+.file-upload-remove-btn {
+    margin: 0;
+}

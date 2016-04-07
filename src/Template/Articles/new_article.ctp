@@ -68,24 +68,38 @@
         </div>
         <div class="form-group col-md-12">
             <label class="control-label">Soubory</label>
-            <input id="file_input" name="file_input" type="file" multiple class="file-loading">
+            <input id="file_input" name="file_input[]" type="file" multiple class="file-loading">
             <script>
                 $(document).on('ready', function () {
                     $("#file_input").fileinput({
+                        uploadUrl: "http://localhost/file-upload-single/1", // server upload action
+                        uploadAsync: false,
+                        dropZoneEnabled: false,
                         overwriteInitial: false,
                         maxFileSize: 300000,
                         previewFileType: 'any',
-                        'showUpload': false,
+                        showUpload: false,
                         language: 'cz',
                         showCancel: false,
                         showClose: false,
+                        initialPreviewShowDelete: true,
                         allowedFileExtensions: ['jpg', 'jpeg', 'png', 'gif',
                             'mp3', 'wav',
                             'mp4', 'avi', 'wmv'],
                         removeClass: 'btn btn-danger btn-remove',
                         fileActionSettings: {
                             removeIcon: '<i class="fa fa-trash-o"></i>',
+                            removeClass: 'btn btn-danger-outline file-upload-remove-btn btn-sm',
                             uploadIcon: '<i class="fa fa-upload"></i>'
+                        },
+                        layoutTemplates: {
+                            actions: '<div class="file-actions file-upload-actionbar">\n' +
+                            '    <div class="file-footer-buttons file-upload-actionbar">\n' +
+                            '        {delete}' +
+                            '    </div>\n' +
+                            '    <div class="file-upload-indicator" tabindex="-1" title="{indicatorTitle}">{indicator}</div>\n' +
+                            '    <div class="clearfix"></div>\n' +
+                            '</div>'
                         }
                     });
                 });
