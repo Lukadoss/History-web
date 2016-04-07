@@ -147,6 +147,7 @@ class UsersController extends AppController
             $ticket = $this->Tickets->find('all')
                 ->where(['hash'=>$token])
                 ->first();
+            debug($ticket);
             if($ticket){
                 if ($this->request->is('post')) {
                     $user = $this->Users->get($ticket->user_id);

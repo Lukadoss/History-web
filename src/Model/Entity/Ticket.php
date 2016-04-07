@@ -12,6 +12,6 @@ use Cake\ORM\Entity;
 class Ticket extends Entity
 {
     protected $_accessible = [
-        '*' => true,
+        '*' => true
     ];
 }

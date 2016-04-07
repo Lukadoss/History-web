@@ -2290,3 +2290,47 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2016-04-07 14:40:13 Notice: Notice (8): Use of undefined constant v - assumed 'v' in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php, line 1989]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\ORM\Table::newEntity() - CORE\src\ORM\Table.php, line 1989
+App\Controller\UsersController::lostpassword() - APP/Controller\UsersController.php, line 121
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 14:40:26 Notice: Notice (8): Use of undefined constant v - assumed 'v' in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\ResultSet.php, line 561]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\ORM\ResultSet::_groupResult() - CORE\src\ORM\ResultSet.php, line 561
+Cake\ORM\ResultSet::_fetchResult() - CORE\src\ORM\ResultSet.php, line 459
+Cake\ORM\ResultSet::valid() - CORE\src\ORM\ResultSet.php, line 268
+Cake\ORM\ResultSet::first() - CORE\src\ORM\ResultSet.php, line 290
+Cake\ORM\Query::first() - CORE\src\Datasource\QueryTrait.php, line 395
+App\Controller\UsersController::reset() - APP/Controller\UsersController.php, line 149
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 14:43:01 Notice: Notice (8): Use of undefined constant v - assumed 'v' in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\ResultSet.php, line 561]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\ORM\ResultSet::_groupResult() - CORE\src\ORM\ResultSet.php, line 561
+Cake\ORM\ResultSet::_fetchResult() - CORE\src\ORM\ResultSet.php, line 459
+Cake\ORM\ResultSet::valid() - CORE\src\ORM\ResultSet.php, line 268
+Cake\ORM\ResultSet::first() - CORE\src\ORM\ResultSet.php, line 290
+Cake\ORM\Query::first() - CORE\src\Datasource\QueryTrait.php, line 395
+App\Controller\UsersController::reset() - APP/Controller\UsersController.php, line 149
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
