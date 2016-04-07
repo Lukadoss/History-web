@@ -10,7 +10,6 @@
         </div>
         <div class="col-md-2" style="padding-left: 0">
         <input type="date" value="1968-10-05" id="pick-year-val" min="1920-01-01" max="2015-12-31">
-            <span id="kek"></span>
         </div>
         <div class="clearfix"></div>
         <script>
@@ -265,15 +264,13 @@
                            data-slider-step="1" data-slider-value="[1810,1920]" style="width: 100%"/>
                 </div>
                 <div class="col-xs-6" style="padding-left: 0">
-                    <div class="col-xs-3" style="padding-left: 0">
-                        <input class="form-control" style="min-width: 4rem" type="text" id="slider-year-val-min"
-                               value="1810"/>
+                    <div style="padding-left: 0">
+                        <input type="date" value="1968-10-05" id="pick-year-val" min="1920-01-01" max="2015-12-31" style="width: 9.5rem">
                     </div>
                 </div>
                 <div class="col-xs-6" style="text-align: right; padding-right: 0">
-                    <div class="col-xs-3" style="float: right; padding-right: 0">
-                        <input class="form-control" style="text-align: right; min-width: 4rem; float: right" type="text"
-                               id="slider-year-val-max" value="1920"/>
+                    <div style="float: right; padding-right: 0">
+                        <input type="date" value="1968-10-05" id="pick-year-val" min="1920-01-01" max="2015-12-31" style="width: 9.5rem">
                     </div>
                 </div>
                 <script>
