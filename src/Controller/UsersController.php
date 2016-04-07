@@ -9,6 +9,9 @@
 namespace App\Controller;
 
 use Cake\Event\Event;
+use Cake\Validation\Validator;
+use Cake\Mailer\Email;
+use Cake\Routing\Router;
 
 require_once "components/recaptchalib.php";
 
@@ -34,12 +37,7 @@ class UsersController extends AppController
             $recaptcha = new \ReCaptcha($secret);
             $response = $recaptcha->verifyResponse($_SERVER['REMOTE_ADDR'], $this->request->data(['g-recaptcha-response']));
             if($user->errors() && $response->errorCodes && $response != null){
-                $errors = $user->errors();
-                foreach ($errors as $error){
-                    foreach ($error as $err) {
-                        $this->Flash->error(__($err));
-                    }
-                }
+                $this->writeErrors($user);
             }
             else {
                 if ($this->request->data('forename') == null) {
@@ -87,5 +85,103 @@ class UsersController extends AppController
     function settings()
     {
         //TODO: edititace nastavení
+    }
+
+    function lostpassword()
+    {
+        if ($this->request->is('post')) {
+            $validator = new Validator();
+            $validator
+                ->add('email', 'valid', [
+                    'rule' => 'email',
+                    'message' => 'Email není ve správném fomátu',
+                ])
+                ->notEmpty('email', 'Zadejte email');
+
+            $errors = $validator->errors($this->request->data);
+
+            if (!empty($errors)) {
+                foreach ($errors as $error) {
+                    foreach ($error as $err) {
+                        $this->Flash->error(__($err));
+                    }
+                }
+                return $this->redirect(['action' => 'lostpassword']);
+            } else {
+                $user = $this->Users->find('all')
+                ->where(['email'=>$this->request->data('email')])
+                ->first();
+                if($user){
+                    $email = new Email();
+                    $hash = sha1(date('dyM').rand(3000000,6666666));
+                    $url = Router::url( array('controller'=>'users','action'=>'reset'), true ).'/'.$hash;
+                    $email->viewVars(['url' => $url]);
+
+                    $this->loadModel('Tickets');
+                    $ticket = $this->Tickets->newEntity();
+                    $ticket->hash = $hash;
+                    $ticket->created = date('Y-m-d H:i:s');
+                    $ticket->expires = date('Y-m-d H:i:s', strtotime('+12 hours'));
+                    $ticket->user_id = $user->user_id;
+
+                    if($this->Tickets->save($ticket)){
+                        $email->template('reset')
+                            ->emailFormat('html')
+                            ->subject('Změna hesla')
+                            ->to($this->request->data('email'))
+                            ->send();
+
+                        $this->Flash->success('Odkaz na reset hesla byl úspěšně poslán na Váš email');
+                        return $this->redirect(['action' => 'lostpassword']);
+                    }
+                }
+                $this->Flash->error('Zadaný email neexistuje');
+            }
+        }
+    }
+
+    function reset($token=null){
+        if(!empty($token)){
+            $this->loadModel('Tickets');
+            $this->purgeTickets();
+            $ticket = $this->Tickets->find('all')
+                ->where(['hash'=>$token])
+                ->first();
+            if($ticket){
+                if ($this->request->is('post')) {
+                    $user = $this->Users->get($ticket->user_id);
+                    $user = $this->Users->patchEntity($user, $this->request->data, ['validate'=>'pass']);
+                    if(!$user->errors()){
+                        if($this->Users->save($user)){
+                            $this->Flash->success('Heslo úspěšně změněno');
+                            $this->Tickets->delete($ticket);
+                            return $this->redirect(['action' => 'login']);
+                        }
+                    }
+                    $this->writeErrors($user);
+                }
+            }
+            else
+            {
+                $this->Flash->error('Link na reset hesla již vypršel, požádejte o reset znovu.');
+                return $this->redirect(['action' => 'login']);
+            }
+        }
+        else{
+            return $this->redirect(['action' => 'login']);
+        }
+    }
+
+    function purgeTickets(){
+        $this->Tickets->deleteAll('expires <= now()');
+    }
+
+    function writeErrors($entity){
+        $errors = $entity->errors();
+        foreach ($errors as $error){
+            foreach ($error as $err) {
+                $this->Flash->error(__($err));
+            }
+        }
     }
 }
