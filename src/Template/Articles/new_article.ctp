@@ -72,7 +72,7 @@
             <script>
                 $(document).on('ready', function () {
                     $("#file_input").fileinput({
-                        uploadUrl: "", // server upload action
+                        uploadUrl: "http://localhost/", // server upload action
                         uploadAsync: false,
                         dropZoneEnabled: false,
                         overwriteInitial: false,
