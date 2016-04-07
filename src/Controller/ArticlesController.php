@@ -43,6 +43,7 @@ class ArticlesController extends AppController
                 $source = $this->Sources->patchEntity($source, $this->request->data);
                 $source->date_from = $this->request->data('date_from');
                 $source->date_to = $this->request->data('date_to');
+
                 if ($this->Sources->save($source)) {
                     $this->Flash->success(__('<strong>Příspěvek byl úspěšně nahrán!</strong> Počkejte, prosím, na jeho schválení.'));
                     return $this->redirect(['action' => 'new_article']);
