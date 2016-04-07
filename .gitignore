@@ -1,6 +1,4 @@
-bin/
-logs/
-tmp/
-vendor/
-webroot/
-.idea/
+bin
+logs
+tmp
+vendor

@@ -21,7 +21,8 @@
     </div>
     <div class="card-block">
         <?= $this->Flash->render(); ?>
-        <form action="newarticle" method="post">
+        <?php
+        echo $this->Form->create($source, ['type' => 'file']); ?>
         <?php if (!$this->request->session()->read('Auth.User')) { ?>
             <div>
                 <div class="col-md-6">
@@ -67,25 +68,38 @@
         </div>
         <div class="form-group col-md-12">
             <label class="control-label">Soubory</label>
-            <input id="file_input" name="file_input[]" multiple type="file" class="file-loading">
+            <input id="file_input" name="file_input[]" type="file" multiple class="file-loading">
             <script>
                 $(document).on('ready', function () {
                     $("#file_input").fileinput({
+                        uploadUrl: "http://localhost/", // server upload action
+                        uploadAsync: false,
+                        dropZoneEnabled: false,
                         overwriteInitial: false,
                         maxFileSize: 300000,
-
                         previewFileType: 'any',
-                        'showUpload': false,
+                        showUpload: false,
                         language: 'cz',
                         showCancel: false,
                         showClose: false,
+                        initialPreviewShowDelete: true,
                         allowedFileExtensions: ['jpg', 'jpeg', 'png', 'gif',
                             'mp3', 'wav',
                             'mp4', 'avi', 'wmv'],
                         removeClass: 'btn btn-danger btn-remove',
                         fileActionSettings: {
                             removeIcon: '<i class="fa fa-trash-o"></i>',
+                            removeClass: 'btn btn-danger-outline file-upload-remove-btn btn-sm',
                             uploadIcon: '<i class="fa fa-upload"></i>'
+                        },
+                        layoutTemplates: {
+                            actions: '<div class="file-actions file-upload-actionbar">\n' +
+                            '    <div class="file-footer-buttons file-upload-actionbar">\n' +
+                            '        {delete}' +
+                            '    </div>\n' +
+                            '    <div class="file-upload-indicator" tabindex="-1" title="{indicatorTitle}">{indicator}</div>\n' +
+                            '    <div class="clearfix"></div>\n' +
+                            '</div>'
                         }
                     });
                 });
@@ -169,7 +183,6 @@
         <input type="text" name="lat" id="lat" hidden>
         <input type="text" name="lng" id="lng" hidden>
         <hr>
-        <div class="g-recaptcha" style="margin-bottom: 15px;" data-sitekey="6LdMihwTAAAAABHyUIcfago1qMOTWkT4dL7XP_Bx"></div>
         <button type="submit" name="submit-article" class="btn btn-primary">Přidat článek</button>
         <?php echo $this->Form->end();
         ?>
