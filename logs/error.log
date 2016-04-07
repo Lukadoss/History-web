@@ -13120,3 +13120,669 @@ Stack Trace:
 #1 {main}
 
 
+2016-04-06 18:57:14 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/js/markerclusterer.js
+Referer URL: http://localhost/History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-07 01:26:11 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'd15579_lisaci.tickets' doesn't exist
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/lostpassword
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'tickets', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('tickets', Array)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('tickets')
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(505): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1436): Cake\ORM\Table->primaryKey()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1405): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1406): Cake\Database\Connection->transactional(Object(Closure))
+#8 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(134): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#9 [internal function]: App\Controller\UsersController->lostpassword()
+#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#12 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#13 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2016-04-07 01:28:45 Error: Fatal Error (1): Cannot use object of type Cake\I18n\Time as array in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 132]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-07 01:28:45 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\I18n\Time as array
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/lostpassword
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'C:\\xampp\\htdocs...', 132)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-07 01:29:13 Error: Fatal Error (1): Cannot use object of type Cake\I18n\Time as array in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 132]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-07 01:29:13 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\I18n\Time as array
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/lostpassword
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'C:\\xampp\\htdocs...', 132)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-07 01:32:38 Error: Fatal Error (1): Call to a member function save() on boolean in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 135]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-07 01:32:38 Error: [Cake\Error\FatalErrorException] Call to a member function save() on boolean
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/lostpassword
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 135)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-07 01:32:46 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'd15579_lisaci.tickets' doesn't exist
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/lostpassword
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'tickets', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('tickets', Array)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('tickets')
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(505): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1436): Cake\ORM\Table->primaryKey()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1405): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1406): Cake\Database\Connection->transactional(Object(Closure))
+#8 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(135): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#9 [internal function]: App\Controller\UsersController->lostpassword()
+#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#12 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#13 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2016-04-07 01:37:05 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'd15579_lisaci.tickets' doesn't exist
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/lostpassword
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'tickets', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('tickets', Array)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('tickets')
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(505): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Marshaller.php(457): Cake\ORM\Table->primaryKey()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(2073): Cake\ORM\Marshaller->merge(Object(App\Model\Entity\User), Array, Array)
+#6 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(133): Cake\ORM\Table->patchEntity(Object(App\Model\Entity\User), Array)
+#7 [internal function]: App\Controller\UsersController->lostpassword()
+#8 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#11 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#12 {main}
+
+
+2016-04-07 01:37:52 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Table::patchEntity() must be of the type array, none given, called in C:\xampp\htdocs\History-web\src\Controller\UsersController.php on line 134 and defined in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php, line 2067]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2067
+App\Controller\UsersController::lostpassword() - APP/Controller\UsersController.php, line 134
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 01:37:52 Warning: Warning (4096): Argument 2 passed to Cake\ORM\Marshaller::merge() must be of the type array, null given, called in C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php on line 2073 and defined in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 448]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 448
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2073
+App\Controller\UsersController::lostpassword() - APP/Controller\UsersController.php, line 134
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 01:37:52 Error: [InvalidArgumentException] Passed variable is not an array or object, using empty array instead
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/lostpassword
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Marshaller.php(212): ArrayObject->__construct(NULL)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Marshaller.php(450): Cake\ORM\Marshaller->_prepareDataAndOptions(NULL, Array)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(2073): Cake\ORM\Marshaller->merge(Object(Cake\ORM\Entity), NULL, Array)
+#3 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(134): Cake\ORM\Table->patchEntity(Object(Cake\ORM\Entity))
+#4 [internal function]: App\Controller\UsersController->lostpassword()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#8 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2016-04-07 01:45:38 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'd15579_lisaci.tickets' doesn't exist
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/lostpassword
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'tickets', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('tickets', Array)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('tickets')
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(505): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1436): Cake\ORM\Table->primaryKey()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1405): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1406): Cake\Database\Connection->transactional(Object(Closure))
+#8 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(134): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
+#9 [internal function]: App\Controller\UsersController->lostpassword()
+#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#12 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#13 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2016-04-07 10:24:35 Error: Fatal Error (1): Call to a member function deleteAll() on boolean in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 171]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-07 10:24:35 Error: [Cake\Error\FatalErrorException] Call to a member function deleteAll() on boolean
+Request URL: /History-web/users/reset/3580bd3a2887d22908f47f6d12b2f94b6fa1a6d7
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 171)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-07 10:25:06 Error: Fatal Error (1): Call to a member function deleteAll() on boolean in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 171]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-07 10:25:06 Error: [Cake\Error\FatalErrorException] Call to a member function deleteAll() on boolean
+Request URL: /History-web/users/reset/3580bd3a2887d22908f47f6d12b2f94b6fa1a6d7
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 171)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-07 10:25:08 Error: Fatal Error (1): Call to a member function deleteAll() on boolean in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 171]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-07 10:25:08 Error: [Cake\Error\FatalErrorException] Call to a member function deleteAll() on boolean
+Request URL: /History-web/users/reset/3580bd3a2887d22908f47f6d12b2f94b6fa1a6d7
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 171)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-07 10:46:28 Warning: Warning (2): strtolower() expects parameter 1 to be string, array given in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\BehaviorRegistry.php, line 215]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+strtolower - [internal], line ??
+Cake\ORM\BehaviorRegistry::hasFinder() - CORE\src\ORM\BehaviorRegistry.php, line 215
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1787
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 943
+App\Controller\UsersController::reset() - APP/Controller\UsersController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 10:46:28 Error: [BadMethodCallException] Unknown finder method "Array"
+Request URL: /History-web/users/reset/3580bd3a2887d22908f47f6d12b2f94b6fa1a6d7
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(943): Cake\ORM\Table->callFinder(Array, Object(Cake\ORM\Query), Array)
+#1 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(156): Cake\ORM\Table->find(Array)
+#2 [internal function]: App\Controller\UsersController->reset('3580bd3a2887d22...')
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-04-07 10:47:04 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "user"
+Request URL: /History-web/users/reset/3580bd3a2887d22908f47f6d12b2f94b6fa1a6d7
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1215): Cake\ORM\Query->firstOrFail()
+#1 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(156): Cake\ORM\Table->get(3)
+#2 [internal function]: App\Controller\UsersController->reset('3580bd3a2887d22...')
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-04-07 10:52:58 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "ticket"
+Request URL: /History-web/users/reset/3580bd3a2887d22908f47f6d12b2f94b6fa1a6d7
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1215): Cake\ORM\Query->firstOrFail()
+#1 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(156): Cake\ORM\Table->get('lukado2@seznam....')
+#2 [internal function]: App\Controller\UsersController->reset('3580bd3a2887d22...')
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-04-07 12:34:25 Error: Fatal Error (4): syntax error, unexpected end of file, expecting function (T_FUNCTION) in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 198]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-07 12:34:25 Error: [Cake\Error\FatalErrorException] syntax error, unexpected end of file, expecting function (T_FUNCTION)
+Request URL: /History-web/users/reset/3580bd3a2887d22908f47f6d12b2f94b6fa1a6d7
+Referer URL: http://localhost/History-web/users/reset/3580bd3a2887d22908f47f6d12b2f94b6fa1a6d7
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 198)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-07 12:38:48 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::save() must implement interface Cake\Datasource\EntityInterface, instance of Cake\ORM\Query given, called in C:\xampp\htdocs\History-web\src\Controller\UsersController.php on line 184 and defined in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php, line 1384]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\ORM\Table::save() - CORE\src\ORM\Table.php, line 1384
+App\Controller\UsersController::reset() - APP/Controller\UsersController.php, line 184
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 12:38:48 Error: [BadMethodCallException] Unknown method "errors"
+Request URL: /History-web/users/reset/3580bd3a2887d22908f47f6d12b2f94b6fa1a6d7
+Referer URL: http://localhost/History-web/users/reset/3580bd3a2887d22908f47f6d12b2f94b6fa1a6d7
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(1078): Cake\ORM\Query->_call('errors', Array)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1394): Cake\ORM\Query->__call('errors', Array)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1394): Cake\ORM\Query->errors()
+#3 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(184): Cake\ORM\Table->save(Object(Cake\ORM\Query))
+#4 [internal function]: App\Controller\UsersController->reset('3580bd3a2887d22...')
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#8 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2016-04-07 12:40:48 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/js/markerclusterer.js
+Referer URL: http://localhost/History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-07 12:43:40 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must implement interface Cake\Datasource\EntityInterface, instance of Cake\ORM\Query given, called in C:\xampp\htdocs\History-web\src\Controller\UsersController.php on line 183 and defined in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php, line 2067]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2067
+App\Controller\UsersController::reset() - APP/Controller\UsersController.php, line 183
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 12:43:40 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must implement interface Cake\Datasource\EntityInterface, instance of Cake\ORM\Query given, called in C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php on line 2073 and defined in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 448]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 448
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2073
+App\Controller\UsersController::reset() - APP/Controller\UsersController.php, line 183
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 12:43:40 Error: [BadMethodCallException] Unknown method "isNew"
+Request URL: /History-web/users/reset/3580bd3a2887d22908f47f6d12b2f94b6fa1a6d7
+Referer URL: http://localhost/History-web/users/reset/3580bd3a2887d22908f47f6d12b2f94b6fa1a6d7
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(1078): Cake\ORM\Query->_call('isNew', Array)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Marshaller.php(453): Cake\ORM\Query->__call('isNew', Array)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Marshaller.php(453): Cake\ORM\Query->isNew()
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(2073): Cake\ORM\Marshaller->merge(Object(Cake\ORM\Query), Array, Array)
+#4 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(183): Cake\ORM\Table->patchEntity(Object(Cake\ORM\Query), Array)
+#5 [internal function]: App\Controller\UsersController->reset('3580bd3a2887d22...')
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#9 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-04-07 12:44:33 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::patchEntity() must implement interface Cake\Datasource\EntityInterface, instance of Cake\ORM\Query given, called in C:\xampp\htdocs\History-web\src\Controller\UsersController.php on line 183 and defined in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php, line 2067]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2067
+App\Controller\UsersController::reset() - APP/Controller\UsersController.php, line 183
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 12:44:33 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Marshaller::merge() must implement interface Cake\Datasource\EntityInterface, instance of Cake\ORM\Query given, called in C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php on line 2073 and defined in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Marshaller.php, line 448]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\ORM\Marshaller::merge() - CORE\src\ORM\Marshaller.php, line 448
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2073
+App\Controller\UsersController::reset() - APP/Controller\UsersController.php, line 183
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 12:44:33 Error: [BadMethodCallException] Unknown method "isNew"
+Request URL: /History-web/users/reset/3580bd3a2887d22908f47f6d12b2f94b6fa1a6d7
+Referer URL: http://localhost/History-web/users/reset/3580bd3a2887d22908f47f6d12b2f94b6fa1a6d7
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(1078): Cake\ORM\Query->_call('isNew', Array)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Marshaller.php(453): Cake\ORM\Query->__call('isNew', Array)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Marshaller.php(453): Cake\ORM\Query->isNew()
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(2073): Cake\ORM\Marshaller->merge(Object(Cake\ORM\Query), Array, Array)
+#4 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(183): Cake\ORM\Table->patchEntity(Object(Cake\ORM\Query), Array)
+#5 [internal function]: App\Controller\UsersController->reset('3580bd3a2887d22...')
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#8 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#9 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-04-07 13:00:50 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::logi() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'logi',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /History-web/users/logi
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-04-07 13:01:13 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null
+Request URL: /History-web/users/lostpassword
+Referer URL: http://localhost/History-web/users/lostpassword
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1558): Cake\Database\Query->execute()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1474): Cake\ORM\Table->_insert(Object(App\Model\Entity\Ticket), Array)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1405): Cake\ORM\Table->_processSave(Object(App\Model\Entity\Ticket), Object(ArrayObject))
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1406): Cake\Database\Connection->transactional(Object(Closure))
+#8 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(132): Cake\ORM\Table->save(Object(App\Model\Entity\Ticket))
+#9 [internal function]: App\Controller\UsersController->lostpassword()
+#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#12 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#13 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#14 {main}
+
+
+2016-04-07 13:07:40 Error: [BadMethodCallException] Unknown method "findHash"
+Request URL: /History-web/users/reset/1b57de2374bffbef770cf83233bf957b1c08c77e
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(152): Cake\ORM\Table->__call('findHash', Array)
+#1 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(152): App\Model\Table\TicketsTable->findHash('1b57de2374bffbe...')
+#2 [internal function]: App\Controller\UsersController->reset('1b57de2374bffbe...')
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#6 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 {main}
+
+
+2016-04-07 13:19:58 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::delete() must implement interface Cake\Datasource\EntityInterface, integer given, called in C:\xampp\htdocs\History-web\src\Controller\UsersController.php on line 157 and defined in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php, line 1662]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\ORM\Table::delete() - CORE\src\ORM\Table.php, line 1662
+App\Controller\UsersController::reset() - APP/Controller\UsersController.php, line 157
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 13:19:58 Error: Fatal Error (1): Call to a member function isNew() on integer in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php, line 1707]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-07 13:19:58 Error: [Cake\Error\FatalErrorException] Call to a member function isNew() on integer
+Request URL: /History-web/users/reset/1b57de2374bffbef770cf83233bf957b1c08c77e
+Referer URL: http://localhost/History-web/users/reset/1b57de2374bffbef770cf83233bf957b1c08c77e
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 1707)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-07 13:22:04 Warning: Warning (4096): Argument 1 passed to Cake\ORM\Table::delete() must implement interface Cake\Datasource\EntityInterface, integer given, called in C:\xampp\htdocs\History-web\src\Controller\UsersController.php on line 157 and defined in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php, line 1662]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\ORM\Table::delete() - CORE\src\ORM\Table.php, line 1662
+App\Controller\UsersController::reset() - APP/Controller\UsersController.php, line 157
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 13:22:04 Error: Fatal Error (1): Call to a member function isNew() on integer in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php, line 1707]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-07 13:22:04 Error: [Cake\Error\FatalErrorException] Call to a member function isNew() on integer
+Request URL: /History-web/users/reset/1b57de2374bffbef770cf83233bf957b1c08c77e
+Referer URL: http://localhost/History-web/users/reset/1b57de2374bffbef770cf83233bf957b1c08c77e
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 1707)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-07 13:22:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/js/markerclusterer.js
+Referer URL: http://localhost/History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-07 13:23:58 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/js/markerclusterer.js
+Referer URL: http://localhost/History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-07 14:39:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-07 14:39:12 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/js/markerclusterer.js
+Referer URL: http://localhost/History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-07 14:39:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-07 14:39:16 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/js/markerclusterer.js
+Referer URL: http://localhost/History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-07 14:40:05 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/js/markerclusterer.js
+Referer URL: http://localhost/History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-07 14:44:32 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/js/markerclusterer.js
+Referer URL: http://localhost/History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-07 14:44:39 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+

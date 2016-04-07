@@ -60,4 +60,22 @@ class UsersTable extends Table
 
         return $validator;
     }
+    
+    public function validationPass(Validator $validator){
+        $validator
+            ->requirePresence('password')
+            ->notEmpty('password', 'Zadejte heslo')
+            ->add('password', 'length', [
+                'rule' => ['minLength', 5],
+                'message' => 'Délka hesla musí být větší než 5 znaků'
+            ])
+            ->requirePresence('pass')
+            ->notEmpty('pass', 'Zopakujte heslo')
+            ->add('pass', 'no-misspelling', [
+                'rule' => ['compareWith', 'password'],
+                'message' => 'Hesla se neshodují'
+            ]);
+
+        return $validator;
+    }
 }
