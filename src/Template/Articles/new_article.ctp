@@ -21,8 +21,7 @@
     </div>
     <div class="card-block">
         <?= $this->Flash->render(); ?>
-        <?php
-        echo $this->Form->create($source, ['type' => 'file']); ?>
+        <form action="newarticle" method="post">
         <?php if (!$this->request->session()->read('Auth.User')) { ?>
             <div>
                 <div class="col-md-6">
@@ -68,12 +67,13 @@
         </div>
         <div class="form-group col-md-12">
             <label class="control-label">Soubory</label>
-            <input id="file_input" name="file_input" type="file" multiple class="file-loading">
+            <input id="file_input" name="file_input[]" multiple type="file" class="file-loading">
             <script>
                 $(document).on('ready', function () {
                     $("#file_input").fileinput({
                         overwriteInitial: false,
                         maxFileSize: 300000,
+
                         previewFileType: 'any',
                         'showUpload': false,
                         language: 'cz',
@@ -169,6 +169,7 @@
         <input type="text" name="lat" id="lat" hidden>
         <input type="text" name="lng" id="lng" hidden>
         <hr>
+        <div class="g-recaptcha" style="margin-bottom: 15px;" data-sitekey="6LdMihwTAAAAABHyUIcfago1qMOTWkT4dL7XP_Bx"></div>
         <button type="submit" name="submit-article" class="btn btn-primary">Přidat článek</button>
         <?php echo $this->Form->end();
         ?>
