@@ -2113,3 +2113,180 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 62
 
 
 
+2016-04-07 01:03:06 Notice: Deprecated (16384): Using key `action` is deprecated, use `url` directly instead. in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php, line 360]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\View\Helper\FormHelper::create() - CORE\src\View\Helper\FormHelper.php, line 360
+include - APP/Template\Users\reset.ctp, line 4
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 01:21:01 Notice: Deprecated (16384): Using key `action` is deprecated, use `url` directly instead. in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php, line 360]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\View\Helper\FormHelper::create() - CORE\src\View\Helper\FormHelper.php, line 360
+include - APP/Template\Users\reset.ctp, line 4
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 01:37:52 Notice: Notice (8): Undefined variable: data in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php, line 2073]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\ORM\Table::patchEntity() - CORE\src\ORM\Table.php, line 2073
+App\Controller\UsersController::lostpassword() - APP/Controller\UsersController.php, line 134
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 01:58:54 Notice: Deprecated (16384): Using key `action` is deprecated, use `url` directly instead. in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php, line 360]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\View\Helper\FormHelper::create() - CORE\src\View\Helper\FormHelper.php, line 360
+include - APP/Template\Users\reset.ctp, line 4
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 02:00:06 Notice: Deprecated (16384): Using key `action` is deprecated, use `url` directly instead. in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php, line 360]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\View\Helper\FormHelper::create() - CORE\src\View\Helper\FormHelper.php, line 360
+include - APP/Template\Users\reset.ctp, line 4
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 02:06:19 Notice: Deprecated (16384): Using key `action` is deprecated, use `url` directly instead. in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php, line 360]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\View\Helper\FormHelper::create() - CORE\src\View\Helper\FormHelper.php, line 360
+include - APP/Template\Users\reset.ctp, line 4
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 02:08:17 Notice: Deprecated (16384): Using key `action` is deprecated, use `url` directly instead. in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php, line 360]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\View\Helper\FormHelper::create() - CORE\src\View\Helper\FormHelper.php, line 360
+include - APP/Template\Users\reset.ctp, line 4
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 02:08:23 Notice: Deprecated (16384): Using key `action` is deprecated, use `url` directly instead. in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php, line 360]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\View\Helper\FormHelper::create() - CORE\src\View\Helper\FormHelper.php, line 360
+include - APP/Template\Users\reset.ctp, line 4
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 10:46:28 Notice: Notice (8): Array to string conversion in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php, line 1782]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1782
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 943
+App\Controller\UsersController::reset() - APP/Controller\UsersController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 10:46:28 Notice: Notice (8): Array to string conversion in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php, line 1792]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+sprintf - [internal], line ??
+Cake\ORM\Table::callFinder() - CORE\src\ORM\Table.php, line 1792
+Cake\ORM\Table::find() - CORE\src\ORM\Table.php, line 943
+App\Controller\UsersController::reset() - APP/Controller\UsersController.php, line 156
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 10:57:01 Notice: Notice (8): Undefined property: Cake\ORM\Query::$email in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 154]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::reset() - APP/Controller\UsersController.php, line 154
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 10:57:18 Notice: Notice (8): Undefined property: Cake\ORM\Query::$email in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 154]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::reset() - APP/Controller\UsersController.php, line 154
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-07 11:08:50 Notice: Notice (8): Undefined property: Cake\ORM\Query::$email in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 154]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::reset() - APP/Controller\UsersController.php, line 154
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+

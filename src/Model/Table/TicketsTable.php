@@ -5,6 +5,7 @@
  * Date: 5. 4. 2016
  * Time: 13:44
  */
+namespace App\Model\Table;
 
 use Cake\ORM\Table;
 

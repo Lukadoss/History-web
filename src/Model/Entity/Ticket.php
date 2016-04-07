@@ -5,10 +5,11 @@
  * Date: 6. 4. 2016
  * Time: 20:25
  */
+namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
 
-class User extends Entity
+class Ticket extends Entity
 {
     protected $_accessible = [
         '*' => true,
