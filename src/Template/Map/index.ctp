@@ -1,3 +1,4 @@
+<?= $this->Html->script('markerclusterer.js') ?>
 <div class="card">
     <div class="card-header">Interaktivní mapa
     </div>
@@ -61,8 +62,7 @@
                     minZoom: 3
                 });
 
-                var mcOptions = {gridSize: 50, maxZoom: 15};
-                var mc = new MarkerClusterer(map, [], mcOptions);
+
 
                 var centerControlDiv = document.createElement('div');
                 var centerControl = new CenterControl(centerControlDiv, map);
@@ -160,6 +160,10 @@
                     text1infowindow.close(map);
                     image1infowindow.close(map);
                 });
+
+                var mcOptions = {gridSize: 20, maxZoom: 15/*, imagePath: */};
+                var markers = [textmarker1, textmarker2, imagemarker1, videomarker1, audiomarker1];
+                var mc = new MarkerClusterer(map, markers, mcOptions);
 
                 function CenterControl(controlDiv, map) {
 
