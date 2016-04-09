@@ -3,7 +3,7 @@
     </div>
     <div class="card-block">
         <?php echo $this->Flash->render(); ?>
-        <p class="card-text text-center">Do pole níže zadejte email, na který vám odešleme nové heslo.</p>
+        <p class="card-text text-center">Do pole níže zadejte email, se kterým jste se registrovali.<br> Na tento email vám odešleme odkaz na změnu hesla.</p>
         <?php echo $this->Form->create(); ?>
         <div class="row">
             <div class="form-group">
