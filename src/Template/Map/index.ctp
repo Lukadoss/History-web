@@ -1,29 +1,31 @@
+<?= $this->Html->script('markerclusterer.js') ?>
 <div class="card">
     <div class="card-header">Interaktivní mapa
     </div>
     <div class="card-block">
-        <div class="col-md-2"><span style="line-height: 2rem; text-align: center; min-width: 130px">Zobrazené období</span></div>
+        <div class="col-md-2"><span
+                style="line-height: 2rem; text-align: center; min-width: 130px">Zobrazené období</span></div>
         <div class="col-md-8">
-        <input id="pick-year" type="text" data-slider-min="<?= adodb_mktime(0, 0, 0, 1, 1, 1920) ?>"
-               data-slider-max="<?= adodb_mktime(0, 0, 0, 12, 31, 2015) ?>" data-slider-step="86400"
-               data-slider-value="<?= adodb_mktime(0, 0, 0, 10, 5, 1968) ?>">
+            <input id="pick-year" type="text" data-slider-min="<?= adodb_mktime(0, 0, 0, 1, 1, 1920) ?>"
+                   data-slider-max="<?= adodb_mktime(0, 0, 0, 12, 31, 2015) ?>" data-slider-step="86400"
+                   data-slider-value="<?= adodb_mktime(0, 0, 0, 10, 5, 1968) ?>">
         </div>
         <div class="col-md-2" style="padding-left: 0">
-        <input type="date" value="1968-10-05" id="pick-year-val" min="1920-01-01" max="2015-12-31">
+            <input type="date" value="1968-10-05" id="pick-year-val" min="1920-01-01" max="2015-12-31">
         </div>
         <div class="clearfix"></div>
         <script>
-            var delay = ( function() {
+            var delay = (function () {
                 var timer = 0;
-                return function(callback, ms) {
-                    clearTimeout (timer);
+                return function (callback, ms) {
+                    clearTimeout(timer);
                     timer = setTimeout(callback, ms);
                 };
             })();
 
             $("#pick-year").slider();
             $("#pick-year").on("change", function (slideEvt) {
-                delay(function(){
+                delay(function () {
                     $.ajax({
                         url: 'map',
                         type: 'get',
@@ -32,21 +34,21 @@
                             $("#pick-year-val").val(response);
                         }
                     });
-                }, 50 );
+                }, 50);
             });
 
-            $("#pick-year-val").on("change", function() {
-                delay(function(){
-                $.ajax({
-                    url: 'map',
-                    type: 'get',
-                    dataType: "text",
-                    data: {"float": $("#pick-year-val").val(), "funct": 'mktime'},
-                    success: function (converted) {
-                        $("#pick-year").slider().slider("setValue", parseInt(converted));
-                    }
-                });
-                }, 500 );
+            $("#pick-year-val").on("change", function () {
+                delay(function () {
+                    $.ajax({
+                        url: 'map',
+                        type: 'get',
+                        dataType: "text",
+                        data: {"float": $("#pick-year-val").val(), "funct": 'mktime'},
+                        success: function (converted) {
+                            $("#pick-year").slider().slider("setValue", parseInt(converted));
+                        }
+                    });
+                }, 500);
             })
         </script>
     </div>
@@ -61,8 +63,6 @@
                     minZoom: 3
                 });
 
-                var mcOptions = {gridSize: 50, maxZoom: 15};
-                var mc = new MarkerClusterer(map, [], mcOptions);
 
                 var centerControlDiv = document.createElement('div');
                 var centerControl = new CenterControl(centerControlDiv, map);
@@ -160,6 +160,42 @@
                     text1infowindow.close(map);
                     image1infowindow.close(map);
                 });
+
+                var mcOptions = {
+                    gridSize: 20, maxZoom: 15, averageCenter: true, styles: [{
+                        textColor: 'white',
+                        textSize: 14,
+                        height: 40,
+                        url: "/historyweb/img/mc/m1.png",
+                        width: 40
+                    },
+                        {
+                            textColor: 'white',
+                            height: 45,
+                            url: "/historyweb/img/mc/m2.png",
+                            width: 45
+                        },
+                        {
+                            textColor: 'white',
+                            height: 50,
+                            url: "/historyweb/img/mc/m3.png",
+                            width: 50
+                        },
+                        {
+                            textColor: 'white',
+                            height: 58,
+                            url: "/historyweb/img/mc/m4.png",
+                            width: 58
+                        },
+                        {
+                            textColor: 'white',
+                            height: 70,
+                            url: "/historyweb/img/mc/m5.png",
+                            width: 70
+                        }]/*, imagePath: */
+                };
+                var markers = [textmarker1, textmarker2, imagemarker1, videomarker1, audiomarker1];
+                var mc = new MarkerClusterer(map, markers, mcOptions);
 
                 function CenterControl(controlDiv, map) {
 
@@ -266,12 +302,14 @@
                 </div>
                 <div class="col-xs-6" style="padding-left: 0">
                     <div style="padding-left: 0">
-                        <input type="date" value="1968-10-05" id="pick-year-val" min="1920-01-01" max="2015-12-31" style="width: 9.5rem">
+                        <input type="date" value="1968-10-05" id="pick-year-val" min="1920-01-01" max="2015-12-31"
+                               style="width: 9.5rem">
                     </div>
                 </div>
                 <div class="col-xs-6" style="text-align: right; padding-right: 0">
                     <div style="float: right; padding-right: 0">
-                        <input type="date" value="1968-10-05" id="pick-year-val" min="1920-01-01" max="2015-12-31" style="width: 9.5rem">
+                        <input type="date" value="1968-10-05" id="pick-year-val" min="1920-01-01" max="2015-12-31"
+                               style="width: 9.5rem">
                     </div>
                 </div>
                 <script>
