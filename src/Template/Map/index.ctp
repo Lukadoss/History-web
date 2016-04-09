@@ -57,7 +57,8 @@
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: {lat: 49.406620, lng: 13.905871},
-                    zoom: 8
+                    zoom: 8,
+                    minZoom: 3
                 });
 
                 var mcOptions = {gridSize: 50, maxZoom: 15};
@@ -219,7 +220,7 @@
             </span>
                 </div>
                 <div class="bg-warning map-filter col-md-3"><span class="p-x-1"><i
-                            class="fa fa-picture-o"> </i> Foto</span>
+                            class="fa fa-picture-o"> </i> Obrázky</span>
             <span class="p-x-1 pull-right">
                 <label class="c-input c-checkbox">
                     <input type="checkbox" id="filter-foto" checked>

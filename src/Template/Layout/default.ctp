@@ -26,7 +26,6 @@
     <!-- Bootstrap v4 alpha init (http://v4-alpha.getbootstrap.com/) -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
           integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
     <!-- Bootstrap slider plugin init (https://github.com/seiyria/bootstrap-slider) -->
@@ -37,11 +36,14 @@
     <!-- Font Awesome icons init (http://fontawesome.io/get-started/) -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet"/>
+
     <!-- Google captcha -->
     <script src='https://www.google.com/recaptcha/api.js?hl=cs'></script>
 
     <?= $this->Html->meta('icon') ?>
 
+    <?= $this->Html->css('fileinput.min.css') ?>
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('addt.css') ?>
 

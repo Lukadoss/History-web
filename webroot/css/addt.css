@@ -63,6 +63,15 @@ body {
         text-align: center;
     }
 }
+
+.nav-link {
+    color: #818a91;
+}
+
+.nav-link.active {
+    color: #0275d8 !important;
+}
+
 /**
  * Custom colored Bootstrap nav bar
  */
@@ -317,6 +326,10 @@ body {
 }
 
 
+/**
+ * File upload plugin
+ */
+
 .file-upload-actionbar {
     height: 2rem;
     margin-top: 0 !important;
@@ -324,4 +337,8 @@ body {
 
 .file-upload-remove-btn {
     margin: 0;
+}
+
+.file-caption-name {
+    height: 1.5rem !important;
 }
