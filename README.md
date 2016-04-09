@@ -58,3 +58,29 @@ Profilová šablona pro uživatele, uživatelská nastavení, formulář pro obn
 
 Jan Palcút:     
 Pokračování s SQL dotazy, přidávání příspěvků (7h)  
+
+***
+
+**5. Týden**
+
+Petr Lukašík:   
+Logika ztraceného hesla a administrace (8h) 
+
+Jan Šedivý: 
+Nastavení a profil uživatele, přidávání příspěvků, úpravy na mapě (8h)  
+
+Jan Palcút:     
+Logika přidávání příspěvků, javascript funkce google map (8h)   
+
+***
+
+**6. Týden**
+
+Petr Lukašík:   
+Dodělat tokeny pro ztracená hesla, vážně se už pustit do administrace (accept, edit, delete) (7h)   
+
+Jan Šedivý: 
+Vytvoření šablon pro mail a reset hesla, zpracování zobrazování schválených příspěvků na web (6h)   
+
+Jan Palcút:     
+Dokončení přidávání příspěvků (4h)  
