@@ -48,10 +48,11 @@
 
             <div class="col-md-6">
                 <label><label class="c-input c-checkbox">
-                        <input type="checkbox" id="filter-text" checked>
+                        <input type="checkbox" id="date-span" onclick="document.getElementById('date-to').disabled=!this.checked;">
                         <span class="c-indicator"></span>
                     </label>Trvání události do:</label>
-                <input type="date" class="form-control" name="date_to" style="margin-bottom: 0">
+
+                <input type="date" class="form-control" id="date-to" name="date_to" style="margin-bottom: 0" disabled>
                 <span class="text-muted" style="font-size: 0.75rem">Pokud nevíte přesné datum, nebo událost trvala více jak den, zadejte datum jako interval</span>
             </div>
         </div>
