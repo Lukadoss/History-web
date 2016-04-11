@@ -8,6 +8,7 @@
 
 namespace App\Controller;
 
+use Cake\Auth\DefaultPasswordHasher;
 use Cake\Event\Event;
 use Cake\Validation\Validator;
 use Cake\Mailer\Email;
@@ -26,33 +27,45 @@ class UsersController extends AppController
     public function index()
     {
         $this->set('users', $this->Users->find('all'));
-        $this->setAction('login');
+        $this->setAction('detail');
     }
 
+    /**
+     * Registrace noveho uzivatele, kontrola captchou
+     * @return redirect
+     */
     function registration(){
         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
-            $user = $this->Users->patchEntity($user, $this->request->data);
+            $user = $this->Users->patchEntity($user, $this->request->data());
             $secret = "6LdMihwTAAAAAMwgcps-oICkyK436ACqKcAemD5F";
             $recaptcha = new \ReCaptcha($secret);
             $response = $recaptcha->verifyResponse($_SERVER['REMOTE_ADDR'], $this->request->data(['g-recaptcha-response']));
-            if($user->errors() && $response->errorCodes && $response != null){
+            if($user->errors()){
                 $this->writeErrors($user);
             }
-            else {
+            elseif($response->success) {
                 if ($this->request->data('forename') == null) {
                     $user['forename'] = 'Uživatel';
                 }
                 if ($this->Users->save($user)) {
+                    unset($user->pass);
                     $this->Auth->setUser($user->toArray());
                     $this->Flash->success(__('<strong>Registrace byla úspěšná!</strong>'));
-                    return $this->redirect(['action' => 'detail', $this->Auth->user('user_id')]);
+                    return $this->redirect(['action' => 'detail']);
                 }
+            }
+            else {
+                $this->Flash->error('Nebyla potvrzena captcha, zkuste to znovu');
             }
         }
         $this->set('user', $user);
     }
 
+    /**
+     * Login uzivatele
+     * @return redirect
+     */
     public function login(){
         if ($this->request->is('post')) {
             $user = $this->Auth->identify();
@@ -64,12 +77,20 @@ class UsersController extends AppController
         }
     }
 
+    /**
+     * Logout uzivatele
+     * @return redirect
+     */
     public function logout()
     {
         return $this->redirect($this->Auth->logout());
     }
 
 
+    /**
+     * Zobrazuje profil uzivatele
+     * @param null $user_id id uzivatele
+     */
     function detail($user_id = null)
     {
         if($user_id == null){
@@ -82,11 +103,51 @@ class UsersController extends AppController
         }
     }
 
+    /**
+     * Edituje nastaveni uzivatele - jmeno, prijmeni, heslo.
+     * @return redirect
+     */
     function settings()
     {
-        //TODO: edititace nastavení
+        if ($this->request->is('post')){
+            $user = $this->Users->get($this->Auth->user('user_id'));
+
+            if (!$this->request->data(['password'])){
+                unset($user['password']);
+            }elseif(!DefaultPasswordHasher::check($this->request->data('current_password'), $user['password'])) {
+                $user->errors('Check password', ['Chybné staré heslo']);
+            }
+
+            $user = $this->Users->patchEntity($user, $this->request->data, ['validate'=>'settings']);
+            if ($this->request->data(['password'])){
+                $user = $this->Users->patchEntity($user, $this->request->data, ['validate'=>'pass']);
+            }
+
+            if(!$user->errors()){
+                if(!$this->request->data(['forename']) && !$this->request->data(['surname']) && !$this->request->data(['password'])){
+                    return $this->redirect($this->referer());
+                }
+                if(!$this->request->data(['forename'])){
+                    $user->forename = $this->Auth->user('forename');
+                }
+                if (!$this->request->data(['surname'])){
+                    $user->surname = $this->Auth->user('surname');
+                }
+
+                if($this->Users->save($user)){
+                    $this->Flash->success('Profil úspěšně změněn');
+                    $this->Auth->setUser($user->toArray());
+                    return $this->redirect($this->referer());
+                }
+            }
+            $this->writeErrors($user);
+        }
     }
 
+    /**
+     * Zpracovava ztracene heslo, vytvari unikatni token do url a posle email na danou adresu.
+     * @return redirect
+     */
     function lostpassword()
     {
         if ($this->request->is('post')) {
@@ -98,7 +159,7 @@ class UsersController extends AppController
                 ])
                 ->notEmpty('email', 'Zadejte email');
 
-            $errors = $validator->errors($this->request->data);
+            $errors = $validator->errors($this->request->data());
 
             if (!empty($errors)) {
                 foreach ($errors as $error) {
@@ -113,7 +174,7 @@ class UsersController extends AppController
                 ->first();
                 if($user){
                     $email = new Email();
-                    $hash = sha1(date('dyM').rand(3000000,6666666));
+                    $hash = sha1(date('dyM').rand(3333333,6666666));
                     $url = Router::url( array('controller'=>'users','action'=>'reset'), true ).'/'.$hash;
                     $email->viewVars(['url' => $url]);
 
@@ -140,6 +201,11 @@ class UsersController extends AppController
         }
     }
 
+    /**
+     * Nacita a kontroluje tokeny vygenerovane pro reset hesla. Kontroluje a uklada nove heslo.
+     * @param null $token token
+     * @return redirect
+     */
     function reset($token=null){
         if(!empty($token)){
             $this->loadModel('Tickets');
@@ -172,10 +238,17 @@ class UsersController extends AppController
         }
     }
 
+    /**
+     * Maze tickety, kterym vyprchala doba platnosti
+     */
     function purgeTickets(){
         $this->Tickets->deleteAll('expires <= now()');
     }
 
+    /**
+     * Vypisuje errory z pole do jednotlivych prvku Flash erroru
+     * @param $entity Entita databaze
+     */
     function writeErrors($entity){
         $errors = $entity->errors();
         foreach ($errors as $error){

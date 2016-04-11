@@ -9,7 +9,6 @@
 namespace App\Controller;
 
 use Cake\Event\Event;
-use Cake\I18n\FrozenTime;
 require_once 'components/recaptchalib.php';
 
 class ArticlesController extends AppController
@@ -18,8 +17,7 @@ class ArticlesController extends AppController
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
-        $this->Auth->allow('detail');
-        $this->Auth->allow('newarticle');
+        $this->Auth->allow(['detail', 'newarticle']);
     }
 
     function newarticle()
@@ -27,10 +25,10 @@ class ArticlesController extends AppController
         $this->loadModel('Districts');
         $district = $this->Districts->find('all');
         $this->set(compact("district"));
-        //---
+
         $this->loadModel('Sources');
         $source = $this->Sources->newEntity();
-        debug($source->date_from);
+
         if ($this->request->is('post')) {
             $user_id = $this->Auth->user('user_id');
             $source->user_id = $user_id;
@@ -56,11 +54,15 @@ class ArticlesController extends AppController
 
     function detail($prispevek_id)
     {
-        $this->loadModel('Sources');
-        $source = $this->Sources->get($prispevek_id);
-        if(isset($source->user_id)) $articleAuthor = $this->Sources->Users->get($source->user_id);
+        if($prispevek_id){
+            $this->loadModel('Sources');
+            $source = $this->Sources->get($prispevek_id);
+            if($source && isset($source->user_id))
+                $articleAuthor = $this->Sources->Users->get($source->user_id);
+        }
         $this->set(compact('source'));
         $this->set(compact('articleAuthor'));
+        $this->redirect($this->Auth->redirectUrl());
     }
 
     public function add()

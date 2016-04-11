@@ -7,6 +7,7 @@
  */
 namespace App\Model\Table;
 
+use Cake\Auth\DefaultPasswordHasher;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
@@ -76,6 +77,21 @@ class UsersTable extends Table
                 'message' => 'Hesla se neshodují'
             ]);
 
+        return $validator;
+    }
+
+    public function validationSettings(Validator $validator){
+        $validator
+            ->allowEmpty('forename')
+            ->add('forename', 'length', [
+                'rule'=>['maxLength', 20],
+                'message' => 'Příliš dlouhé jméno'
+            ])
+            ->allowEmpty('surname')
+            ->add('surname', 'length', [
+                'rule'=>['maxLength', 20],
+                'message' => 'Příliš dlouhé příjmení'
+            ]);
         return $validator;
     }
 }
