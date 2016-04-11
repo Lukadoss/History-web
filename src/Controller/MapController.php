@@ -30,6 +30,10 @@ class MapController extends AppController
                 die();
             }
         }
+
+        $this->loadModel('Sources');
+        $sources = $this->Sources->find('all');
+        $this->set('sources', $sources);
         //return $this->redirect(['controller' => 'Article', 'action' => 'novy']);
     }
 }
