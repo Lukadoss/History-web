@@ -2334,3 +2334,339 @@ Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
 
 
 
+2016-04-08 00:20:27 Notice: Notice (8): Undefined variable: prispevek_id in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 58]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::detail() - APP/Controller\ArticlesController.php, line 58
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-08 00:21:41 Notice: Notice (8): Undefined variable: prispevek_id in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 57]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::detail() - APP/Controller\ArticlesController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-08 00:21:41 Notice: Notice (8): Undefined variable: prispevek_id in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 59]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::detail() - APP/Controller\ArticlesController.php, line 59
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-08 00:22:06 Notice: Notice (8): Undefined variable: prispevek_id in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 57]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::detail() - APP/Controller\ArticlesController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-08 00:22:06 Notice: Notice (8): Undefined variable: prispevek_id in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 59]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::detail() - APP/Controller\ArticlesController.php, line 59
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-08 00:22:07 Notice: Notice (8): Undefined variable: prispevek_id in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 57]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::detail() - APP/Controller\ArticlesController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-08 00:22:07 Notice: Notice (8): Undefined variable: prispevek_id in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 59]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::detail() - APP/Controller\ArticlesController.php, line 59
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-08 00:22:46 Notice: Notice (8): Undefined variable: prispevek_id in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 57]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::detail() - APP/Controller\ArticlesController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-08 00:22:46 Notice: Notice (8): Undefined variable: prispevek_id in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 59]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::detail() - APP/Controller\ArticlesController.php, line 59
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-08 00:23:16 Notice: Notice (8): Undefined variable: prispevek_id in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 57]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::detail() - APP/Controller\ArticlesController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-08 00:24:04 Notice: Notice (8): Undefined variable: prispevek_id in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 57]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::detail() - APP/Controller\ArticlesController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-08 00:24:05 Notice: Notice (8): Undefined variable: prispevek_id in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 57]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::detail() - APP/Controller\ArticlesController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-08 00:24:06 Notice: Notice (8): Undefined variable: prispevek_id in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 57]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::detail() - APP/Controller\ArticlesController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-08 00:24:20 Notice: Notice (8): Undefined variable: prispevek_id in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 57]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::detail() - APP/Controller\ArticlesController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-08 00:24:31 Notice: Notice (8): Undefined variable: prispevek_id in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 57]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::detail() - APP/Controller\ArticlesController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-08 00:24:31 Notice: Notice (8): Undefined variable: prispevek_id in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 57]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::detail() - APP/Controller\ArticlesController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-08 14:37:24 Notice: Notice (8): Undefined variable: prispevek_id in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 57]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::detail() - APP/Controller\ArticlesController.php, line 57
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-09 14:48:18 Notice: Notice (8): Array to string conversion in [C:\xampp\htdocs\History-web\src\Template\Element\Flash\success.ctp, line 1]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Element\Flash\success.ctp, line 1
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::_renderElement() - CORE\src\View\View.php, line 1330
+Cake\View\View::element() - CORE\src\View\View.php, line 494
+Cake\View\Helper\FlashHelper::render() - CORE\src\View\Helper\FlashHelper.php, line 89
+include - APP/Template\Users\settings.ctp, line 5
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-09 14:48:30 Notice: Notice (8): Array to string conversion in [C:\xampp\htdocs\History-web\src\Template\Element\Flash\success.ctp, line 1]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Element\Flash\success.ctp, line 1
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::_renderElement() - CORE\src\View\View.php, line 1330
+Cake\View\View::element() - CORE\src\View\View.php, line 494
+Cake\View\Helper\FlashHelper::render() - CORE\src\View\Helper\FlashHelper.php, line 89
+include - APP/Template\Users\settings.ctp, line 5
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-09 14:48:31 Notice: Notice (8): Array to string conversion in [C:\xampp\htdocs\History-web\src\Template\Element\Flash\success.ctp, line 1]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Element\Flash\success.ctp, line 1
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::_renderElement() - CORE\src\View\View.php, line 1330
+Cake\View\View::element() - CORE\src\View\View.php, line 494
+Cake\View\Helper\FlashHelper::render() - CORE\src\View\Helper\FlashHelper.php, line 89
+include - APP/Template\Users\settings.ctp, line 5
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-09 14:48:32 Notice: Notice (8): Array to string conversion in [C:\xampp\htdocs\History-web\src\Template\Element\Flash\success.ctp, line 1]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+include - APP/Template\Element\Flash\success.ctp, line 1
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::_renderElement() - CORE\src\View\View.php, line 1330
+Cake\View\View::element() - CORE\src\View\View.php, line 494
+Cake\View\Helper\FlashHelper::render() - CORE\src\View\Helper\FlashHelper.php, line 89
+include - APP/Template\Users\settings.ctp, line 5
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-10 22:29:50 Notice: Notice (8): Trying to get property of non-object in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 103]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::settings() - APP/Controller\UsersController.php, line 103
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-10 22:32:38 Notice: Notice (8): Use of undefined constant PHP_AUTH_USER - assumed 'PHP_AUTH_USER' in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 103]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::settings() - APP/Controller\UsersController.php, line 103
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-10 23:52:04 Notice: Notice (8): Indirect modification of overloaded property App\Model\Entity\User::$data has no effect in [C:\xampp\htdocs\History-web\src\Controller\UsersController.php, line 49]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\UsersController::registration() - APP/Controller\UsersController.php, line 49
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-10 23:52:28 Notice: Notice (8): Use of undefined constant error - assumed 'error' in [C:\xampp\htdocs\History-web\src\Controller\components\recaptchalib.php, line 133]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+ReCaptcha::verifyResponse() - APP/Controller\components\recaptchalib.php, line 133
+App\Controller\UsersController::registration() - APP/Controller\UsersController.php, line 39
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-10 23:52:28 Notice: Notice (8): Use of undefined constant codes - assumed 'codes' in [C:\xampp\htdocs\History-web\src\Controller\components\recaptchalib.php, line 133]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+ReCaptcha::verifyResponse() - APP/Controller\components\recaptchalib.php, line 133
+App\Controller\UsersController::registration() - APP/Controller\UsersController.php, line 39
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-10 23:52:28 Notice: Notice (8): Undefined offset: 0 in [C:\xampp\htdocs\History-web\src\Controller\components\recaptchalib.php, line 133]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+ReCaptcha::verifyResponse() - APP/Controller\components\recaptchalib.php, line 133
+App\Controller\UsersController::registration() - APP/Controller\UsersController.php, line 39
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
