@@ -62,7 +62,6 @@ class ArticlesController extends AppController
         }
         $this->set(compact('source'));
         $this->set(compact('articleAuthor'));
-        $this->redirect($this->Auth->redirectUrl());
     }
 
     public function add()
