@@ -67,13 +67,17 @@ class UsersController extends AppController
      * @return redirect
      */
     public function login(){
-        if ($this->request->is('post')) {
-            $user = $this->Auth->identify();
-            if ($user) {
-                $this->Auth->setUser($user);
-                return $this->redirect($this->Auth->redirectUrl());
+        if(!$this->Auth->user()) {
+            if ($this->request->is('post')) {
+                $user = $this->Auth->identify();
+                if ($user) {
+                    $this->Auth->setUser($user);
+                    return $this->redirect($this->Auth->redirectUrl());
+                }
+                $this->Flash->error(__('<strong>Přihlášení neproběhlo v pořádku!</strong> Chybný email nebo heslo.'));
             }
-            $this->Flash->error(__('<strong>Přihlášení neproběhlo v pořádku!</strong> Chybný email nebo heslo.'));
+        }else{
+            return $this->redirect(['action' => 'detail']);
         }
     }
 
@@ -193,7 +197,7 @@ class UsersController extends AppController
                             ->send();
 
                         $this->Flash->success('Odkaz na reset hesla byl úspěšně poslán na Váš email');
-                        return $this->redirect(['action' => 'lostpassword']);
+                        return $this->redirect($this->referer());
                     }
                 }
                 $this->Flash->error('Zadaný email neexistuje');
