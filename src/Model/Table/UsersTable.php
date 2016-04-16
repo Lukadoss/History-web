@@ -7,7 +7,6 @@
  */
 namespace App\Model\Table;
 
-use Cake\Auth\DefaultPasswordHasher;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
@@ -19,7 +18,6 @@ class UsersTable extends Table
         $this->hasMany('Sources', [
             'foreignKey' => 'user_id'
         ]);
-        //$this->addBehavior('Timestamp');
     }
 
     public function validationDefault(Validator $validator)
