@@ -42,6 +42,12 @@ class ArticlesController extends AppController
                 $source->date_from = $this->request->data('date_from');
                 $source->date_to = $this->request->data('date_to');
 
+                if ($this->request->data('forename') == null){
+                    $source->forename = $this->Auth->user('forename');
+                    $source->surname = $this->Auth->user('surname');
+                    $source->email = $this->Auth->user('email');
+                }
+
                 if ($this->Sources->save($source)) {
                     $this->Flash->success(__('<strong>Příspěvek byl úspěšně nahrán!</strong> Počkejte, prosím, na jeho schválení.'));
                     return $this->redirect(['action' => 'new_article']);
