@@ -26,6 +26,12 @@ class AdministrationController extends AppController
 
     function index(){
         $sources = $this->Sources->find('all')
+            ->contain([
+                'Users' => function ($q) {
+                    return $q
+                        ->select(['forename', 'surname', 'email']);
+                }
+            ])
             ->where(['onHold' => true]);
         $this->set('sources', $sources);
     }

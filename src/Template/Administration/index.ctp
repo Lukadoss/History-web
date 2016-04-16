@@ -8,7 +8,7 @@
                 <th>Název příspěvku</th>
                 <th>Autor</th>
                 <th>Typ</th>
-                <th>Možnosti</th>
+                <th style="">Možnosti</th>
             </tr>
             </thead>
             <tbody>
@@ -19,8 +19,21 @@
                             'action' => 'detail',
                             $source->source_id
                         ]) ?></td>
-                    <td style="vertical-align: middle"><?= $source->forename . ' ' . $source->surname ?><br><span
-                            class="text-muted"><?php echo $source->email ?></span></td>
+                    <td style="vertical-align: middle">
+                        <?php if(!isset($source->user_id)) {
+                            echo $source->forename . ' ' . $source->surname;
+                        }
+                        else {
+                            echo $source->user->forename . ' ' . $source->user->surname;
+                        }?><br>
+                        <span class="text-muted">
+                            <?php if(!isset($source->user_id)) {
+                                echo $source->email;
+                            }
+                            else {
+                                echo $source->user->email;
+                            }?>
+                        </span></td>
                     <td style="vertical-align: middle"><?= $source->type ?></td>
                     <td style="vertical-align: middle"><?= $this->Html->link(__('<i class="fa fa-check"></i> <span class="hidden-sm-down">Přijmout</span>'), [
                             'controller' => 'Administration', 'action' => 'accept'
