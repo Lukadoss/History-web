@@ -18336,3 +18336,1011 @@ Stack Trace:
 #1 {main}
 
 
+2016-04-11 23:18:56 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-11 23:19:24 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-11 23:20:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 13:14:43 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(97): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(571): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(30): Cake\Controller\Controller->setAction('detail')
+#4 [internal function]: App\Controller\UsersController->index()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#8 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2016-04-16 13:15:51 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 13:15:55 Error: [Cake\Datasource\Exception\InvalidPrimaryKeyException] Record not found in table "user" with primary key [NULL]
+Request URL: /History-web/users
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(97): Cake\ORM\Table->get(NULL)
+#1 [internal function]: App\Controller\UsersController->detail()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(571): call_user_func_array(Array, Array)
+#3 C:\xampp\htdocs\History-web\src\Controller\UsersController.php(30): Cake\Controller\Controller->setAction('detail')
+#4 [internal function]: App\Controller\UsersController->index()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#8 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2016-04-16 13:16:36 Error: Fatal Error (1): Call to a member function find() on boolean in [C:\xampp\htdocs\History-web\src\Controller\AdministrationController.php, line 16]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-16 13:16:36 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /History-web/administration
+Referer URL: http://localhost/History-web/users/detail
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 16)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-16 13:19:03 Error: Fatal Error (1): Call to a member function find() on boolean in [C:\xampp\htdocs\History-web\src\Controller\AdministrationController.php, line 16]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-16 13:19:04 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /History-web/administration
+Referer URL: http://localhost/History-web/users/detail
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 16)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-16 13:19:16 Error: Fatal Error (1): Call to a member function find() on boolean in [C:\xampp\htdocs\History-web\src\Controller\AdministrationController.php, line 16]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-16 13:19:16 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /History-web/administration
+Referer URL: http://localhost/History-web/users/detail
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 16)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-16 13:20:23 Warning: Warning (4096): Argument 1 passed to App\Controller\AdministrationController::beforeFilter() must be an instance of App\Controller\Event, instance of Cake\Event\Event given, called in C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Event\EventManager.php on line 386 and defined in [C:\xampp\htdocs\History-web\src\Controller\AdministrationController.php, line 14]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AdministrationController::beforeFilter() - APP/Controller\AdministrationController.php, line 14
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 491
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-16 13:20:23 Error: Fatal Error (1): Call to a member function find() on boolean in [C:\xampp\htdocs\History-web\src\Controller\AdministrationController.php, line 21]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-16 13:20:23 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /History-web/administration
+Referer URL: http://localhost/History-web/users/detail
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 21)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-16 13:21:02 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'd15579_lisaci.administration' doesn't exist
+Request URL: /History-web/administration
+Referer URL: http://localhost/History-web/users/detail
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'administration', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('administration', Array)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('administration')
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1256): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(941): Cake\ORM\Table->query()
+#7 C:\xampp\htdocs\History-web\src\Controller\AdministrationController.php(16): Cake\ORM\Table->find('all')
+#8 [internal function]: App\Controller\AdministrationController->index()
+#9 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#11 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdministrationController))
+#12 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2016-04-16 13:22:48 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 13:23:23 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 13:23:36 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Prispevek could not be found.
+Exception Attributes: array (
+  'class' => 'Prispevek',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/prispevek/detail/5
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 13:23:48 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Prispevek could not be found.
+Exception Attributes: array (
+  'class' => 'Prispevek',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/prispevek/detail/5
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 13:27:37 Error: Fatal Error (1): Call to a member function find() on boolean in [C:\xampp\htdocs\History-web\src\Controller\AdministrationController.php, line 20]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-16 13:27:37 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /History-web/administration
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 20)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-16 13:28:25 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'd15579_lisaci.administration' doesn't exist
+Request URL: /History-web/administration
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'administration', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('administration', Array)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('administration')
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1256): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(941): Cake\ORM\Table->query()
+#7 C:\xampp\htdocs\History-web\src\Controller\AdministrationController.php(23): Cake\ORM\Table->find('all')
+#8 [internal function]: App\Controller\AdministrationController->index()
+#9 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#11 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdministrationController))
+#12 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2016-04-16 13:28:39 Error: Fatal Error (1): Call to a member function find() on boolean in [C:\xampp\htdocs\History-web\src\Controller\AdministrationController.php, line 23]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-16 13:28:39 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /History-web/administration
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 23)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-16 13:28:49 Error: Fatal Error (1): Call to a member function find() on boolean in [C:\xampp\htdocs\History-web\src\Controller\AdministrationController.php, line 23]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-16 13:28:49 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /History-web/administration
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 23)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-16 13:28:50 Error: Fatal Error (1): Call to a member function find() on boolean in [C:\xampp\htdocs\History-web\src\Controller\AdministrationController.php, line 23]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-16 13:28:50 Error: [Cake\Error\FatalErrorException] Call to a member function find() on boolean
+Request URL: /History-web/administration
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 23)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-16 13:30:43 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'd15579_lisaci.articles' doesn't exist
+Request URL: /History-web/administration
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'articles', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('articles', Array)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('articles')
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1256): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(941): Cake\ORM\Table->query()
+#7 C:\xampp\htdocs\History-web\src\Controller\AdministrationController.php(23): Cake\ORM\Table->find('all')
+#8 [internal function]: App\Controller\AdministrationController->index()
+#9 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#11 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdministrationController))
+#12 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2016-04-16 13:30:45 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'd15579_lisaci.articles' doesn't exist
+Request URL: /History-web/administration
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(96): Cake\Database\Schema\Collection->_reflect('Column', 'articles', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(64): Cake\Database\Schema\Collection->describe('articles', Array)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(429): Cake\Database\Schema\CachedCollection->describe('articles')
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(211): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(Cake\ORM\Table))
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1256): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(941): Cake\ORM\Table->query()
+#7 C:\xampp\htdocs\History-web\src\Controller\AdministrationController.php(23): Cake\ORM\Table->find('all')
+#8 [internal function]: App\Controller\AdministrationController->index()
+#9 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
+#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#11 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdministrationController))
+#12 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 {main}
+
+
+2016-04-16 13:32:59 Error: Fatal Error (1): Cannot use object of type Cake\ORM\Query as array in [C:\xampp\htdocs\History-web\src\Template\Administration\index.ctp, line 16]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-16 13:32:59 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\Query as array
+Request URL: /History-web/administration
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'C:\\xampp\\htdocs...', 16)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-16 13:33:01 Error: Fatal Error (1): Cannot use object of type Cake\ORM\Query as array in [C:\xampp\htdocs\History-web\src\Template\Administration\index.ctp, line 16]
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
+[main] - [internal], line ??
+
+
+
+2016-04-16 13:33:01 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\Query as array
+Request URL: /History-web/administration
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'C:\\xampp\\htdocs...', 16)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-04-16 13:33:12 Error: [BadMethodCallException] Unknown method "get"
+Request URL: /History-web/administration
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(1078): Cake\ORM\Query->_call('get', Array)
+#1 C:\xampp\htdocs\History-web\src\Template\Administration\index.ctp(16): Cake\ORM\Query->__call('get', Array)
+#2 C:\xampp\htdocs\History-web\src\Template\Administration\index.ctp(16): Cake\ORM\Query->get(0)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#8 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdministrationController))
+#9 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-04-16 13:33:33 Error: [BadMethodCallException] Unknown finder method "0"
+Request URL: /History-web/administration
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(1003): Cake\ORM\Table->callFinder('0', Object(Cake\ORM\Query), Array)
+#1 C:\xampp\htdocs\History-web\src\Template\Administration\index.ctp(16): Cake\ORM\Query->find('0')
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdministrationController))
+#8 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#9 {main}
+
+
+2016-04-16 13:33:38 Error: [BadMethodCallException] Unknown method "get"
+Request URL: /History-web/administration
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(1078): Cake\ORM\Query->_call('get', Array)
+#1 C:\xampp\htdocs\History-web\src\Template\Administration\index.ctp(16): Cake\ORM\Query->__call('get', Array)
+#2 C:\xampp\htdocs\History-web\src\Template\Administration\index.ctp(16): Cake\ORM\Query->get('0')
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#8 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdministrationController))
+#9 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#10 {main}
+
+
+2016-04-16 13:36:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 13:37:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 13:51:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 14:38:52 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 14:49:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 14:52:29 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 14:53:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 14:53:15 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 14:57:02 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 15:02:50 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 15:05:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 15:06:06 Warning: Warning (4096): Argument 1 passed to App\Controller\AdministrationController::beforeFilter() must be an instance of App\Controller\Event, instance of Cake\Event\Event given, called in C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Event\EventManager.php on line 386 and defined in [C:\xampp\htdocs\History-web\src\Controller\AdministrationController.php, line 20]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\AdministrationController::beforeFilter() - APP/Controller\AdministrationController.php, line 20
+Cake\Event\EventManager::_callListener() - CORE\src\Event\EventManager.php, line 386
+Cake\Event\EventManager::dispatch() - CORE\src\Event\EventManager.php, line 356
+Cake\Controller\Controller::dispatchEvent() - CORE\src\Event\EventDispatcherTrait.php, line 78
+Cake\Controller\Controller::startupProcess() - CORE\src\Controller\Controller.php, line 491
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 109
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-16 15:07:20 Error: [Cake\Controller\Exception\MissingActionException] Action UsersController::administration() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'administration',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /History-web/users/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#2 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 {main}
+
+
+2016-04-16 15:09:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 15:35:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Prispevek could not be found.
+Exception Attributes: array (
+  'class' => 'Prispevek',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/prispevek/detail/5
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 15:35:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Prispevek could not be found.
+Exception Attributes: array (
+  'class' => 'Prispevek',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/prispevek/detail
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 15:35:46 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Prispevek could not be found.
+Exception Attributes: array (
+  'class' => 'Prispevek',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/prispevek/detail
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 15:36:30 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Prispevek could not be found.
+Exception Attributes: array (
+  'class' => 'Prispevek',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/prispevek/detail
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 15:36:31 Warning: Warning (2): rawurlencode() expects parameter 1 to be string, array given in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Route\Route.php, line 569]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+rawurlencode - [internal], line ??
+array_map - [internal], line ??
+Cake\Routing\Route\Route::_writeUrl() - CORE\src\Routing\Route\Route.php, line 569
+Cake\Routing\Route\Route::match() - CORE\src\Routing\Route\Route.php, line 530
+Cake\Routing\Route\DashedRoute::match() - CORE\src\Routing\Route\DashedRoute.php, line 100
+Cake\Routing\RouteCollection::match() - CORE\src\Routing\RouteCollection.php, line 252
+Cake\Routing\Router::url() - CORE\src\Routing\Router.php, line 612
+Cake\View\Helper\UrlHelper::build() - CORE\src\View\Helper\UrlHelper.php, line 40
+Cake\View\Helper\HtmlHelper::link() - CORE\src\View\Helper\HtmlHelper.php, line 337
+include - APP/Template\Administration\index.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-16 15:36:32 Warning: Warning (2): rawurlencode() expects parameter 1 to be string, array given in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Route\Route.php, line 569]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+rawurlencode - [internal], line ??
+array_map - [internal], line ??
+Cake\Routing\Route\Route::_writeUrl() - CORE\src\Routing\Route\Route.php, line 569
+Cake\Routing\Route\Route::match() - CORE\src\Routing\Route\Route.php, line 530
+Cake\Routing\Route\DashedRoute::match() - CORE\src\Routing\Route\DashedRoute.php, line 100
+Cake\Routing\RouteCollection::match() - CORE\src\Routing\RouteCollection.php, line 252
+Cake\Routing\Router::url() - CORE\src\Routing\Router.php, line 612
+Cake\View\Helper\UrlHelper::build() - CORE\src\View\Helper\UrlHelper.php, line 40
+Cake\View\Helper\HtmlHelper::link() - CORE\src\View\Helper\HtmlHelper.php, line 337
+include - APP/Template\Administration\index.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-16 15:36:32 Warning: Warning (2): rawurlencode() expects parameter 1 to be string, array given in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Route\Route.php, line 569]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+rawurlencode - [internal], line ??
+array_map - [internal], line ??
+Cake\Routing\Route\Route::_writeUrl() - CORE\src\Routing\Route\Route.php, line 569
+Cake\Routing\Route\Route::match() - CORE\src\Routing\Route\Route.php, line 530
+Cake\Routing\Route\DashedRoute::match() - CORE\src\Routing\Route\DashedRoute.php, line 100
+Cake\Routing\RouteCollection::match() - CORE\src\Routing\RouteCollection.php, line 252
+Cake\Routing\Router::url() - CORE\src\Routing\Router.php, line 612
+Cake\View\Helper\UrlHelper::build() - CORE\src\View\Helper\UrlHelper.php, line 40
+Cake\View\Helper\HtmlHelper::link() - CORE\src\View\Helper\HtmlHelper.php, line 337
+include - APP/Template\Administration\index.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-16 15:36:32 Warning: Warning (2): rawurlencode() expects parameter 1 to be string, array given in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Route\Route.php, line 569]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+rawurlencode - [internal], line ??
+array_map - [internal], line ??
+Cake\Routing\Route\Route::_writeUrl() - CORE\src\Routing\Route\Route.php, line 569
+Cake\Routing\Route\Route::match() - CORE\src\Routing\Route\Route.php, line 530
+Cake\Routing\Route\DashedRoute::match() - CORE\src\Routing\Route\DashedRoute.php, line 100
+Cake\Routing\RouteCollection::match() - CORE\src\Routing\RouteCollection.php, line 252
+Cake\Routing\Router::url() - CORE\src\Routing\Router.php, line 612
+Cake\View\Helper\UrlHelper::build() - CORE\src\View\Helper\UrlHelper.php, line 40
+Cake\View\Helper\HtmlHelper::link() - CORE\src\View\Helper\HtmlHelper.php, line 337
+include - APP/Template\Administration\index.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-16 15:36:33 Warning: Warning (2): rawurlencode() expects parameter 1 to be string, array given in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Route\Route.php, line 569]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+rawurlencode - [internal], line ??
+array_map - [internal], line ??
+Cake\Routing\Route\Route::_writeUrl() - CORE\src\Routing\Route\Route.php, line 569
+Cake\Routing\Route\Route::match() - CORE\src\Routing\Route\Route.php, line 530
+Cake\Routing\Route\DashedRoute::match() - CORE\src\Routing\Route\DashedRoute.php, line 100
+Cake\Routing\RouteCollection::match() - CORE\src\Routing\RouteCollection.php, line 252
+Cake\Routing\Router::url() - CORE\src\Routing\Router.php, line 612
+Cake\View\Helper\UrlHelper::build() - CORE\src\View\Helper\UrlHelper.php, line 40
+Cake\View\Helper\HtmlHelper::link() - CORE\src\View\Helper\HtmlHelper.php, line 337
+include - APP/Template\Administration\index.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-16 15:36:33 Warning: Warning (2): rawurlencode() expects parameter 1 to be string, array given in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Route\Route.php, line 569]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+rawurlencode - [internal], line ??
+array_map - [internal], line ??
+Cake\Routing\Route\Route::_writeUrl() - CORE\src\Routing\Route\Route.php, line 569
+Cake\Routing\Route\Route::match() - CORE\src\Routing\Route\Route.php, line 530
+Cake\Routing\Route\DashedRoute::match() - CORE\src\Routing\Route\DashedRoute.php, line 100
+Cake\Routing\RouteCollection::match() - CORE\src\Routing\RouteCollection.php, line 252
+Cake\Routing\Router::url() - CORE\src\Routing\Router.php, line 612
+Cake\View\Helper\UrlHelper::build() - CORE\src\View\Helper\UrlHelper.php, line 40
+Cake\View\Helper\HtmlHelper::link() - CORE\src\View\Helper\HtmlHelper.php, line 337
+include - APP/Template\Administration\index.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-16 15:36:34 Warning: Warning (2): rawurlencode() expects parameter 1 to be string, array given in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Route\Route.php, line 569]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+rawurlencode - [internal], line ??
+array_map - [internal], line ??
+Cake\Routing\Route\Route::_writeUrl() - CORE\src\Routing\Route\Route.php, line 569
+Cake\Routing\Route\Route::match() - CORE\src\Routing\Route\Route.php, line 530
+Cake\Routing\Route\DashedRoute::match() - CORE\src\Routing\Route\DashedRoute.php, line 100
+Cake\Routing\RouteCollection::match() - CORE\src\Routing\RouteCollection.php, line 252
+Cake\Routing\Router::url() - CORE\src\Routing\Router.php, line 612
+Cake\View\Helper\UrlHelper::build() - CORE\src\View\Helper\UrlHelper.php, line 40
+Cake\View\Helper\HtmlHelper::link() - CORE\src\View\Helper\HtmlHelper.php, line 337
+include - APP/Template\Administration\index.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-16 15:36:34 Warning: Warning (2): rawurlencode() expects parameter 1 to be string, array given in [C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Route\Route.php, line 569]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+rawurlencode - [internal], line ??
+array_map - [internal], line ??
+Cake\Routing\Route\Route::_writeUrl() - CORE\src\Routing\Route\Route.php, line 569
+Cake\Routing\Route\Route::match() - CORE\src\Routing\Route\Route.php, line 530
+Cake\Routing\Route\DashedRoute::match() - CORE\src\Routing\Route\DashedRoute.php, line 100
+Cake\Routing\RouteCollection::match() - CORE\src\Routing\RouteCollection.php, line 252
+Cake\Routing\Router::url() - CORE\src\Routing\Router.php, line 612
+Cake\View\Helper\UrlHelper::build() - CORE\src\View\Helper\UrlHelper.php, line 40
+Cake\View\Helper\HtmlHelper::link() - CORE\src\View\Helper\HtmlHelper.php, line 337
+include - APP/Template\Administration\index.ctp, line 21
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 993
+Cake\View\View::_render() - CORE\src\View\View.php, line 953
+Cake\View\View::render() - CORE\src\View\View.php, line 588
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-16 15:37:24 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Prispevek could not be found.
+Exception Attributes: array (
+  'class' => 'Prispevek',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/prispevek/detail/26
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 15:37:46 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Prispevek could not be found.
+Exception Attributes: array (
+  'class' => 'Prispevek',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/prispevek/detail/26
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 15:38:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 15:38:33 Error: [Cake\View\Exception\MissingTemplateException] Template file "Administration\accept.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Administration\\accept.ctp',
+)
+Request URL: /History-web/administration/accept
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(585): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdministrationController))
+#4 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-04-16 15:38:37 Error: [Cake\View\Exception\MissingTemplateException] Template file "Administration\edit.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Administration\\edit.ctp',
+)
+Request URL: /History-web/administration/edit
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(585): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdministrationController))
+#4 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-04-16 15:38:39 Error: [Cake\View\Exception\MissingTemplateException] Template file "Administration\delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Administration\\delete.ctp',
+)
+Request URL: /History-web/administration/delete
+Referer URL: http://localhost/History-web/administration
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(585): Cake\View\View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AdministrationController))
+#4 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 {main}
+
+
+2016-04-16 15:45:07 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-16 15:52:12 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+

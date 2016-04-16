@@ -82,4 +82,13 @@ class AppController extends Controller
     {
         $this->Auth->allow(['index']);
     }
+
+    public function isAuthorized($user = null)
+    {
+        if ($user['isadmin']){
+           return true;
+        }
+
+        return false;
+    }
 }
