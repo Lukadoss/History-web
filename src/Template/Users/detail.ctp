@@ -27,10 +27,55 @@
         </ul>
 
         <div class="tab-content">
-            <div class="tab-pane active" id="home" role="tabpanel" style="padding-top: 1rem">...
-            Zatím jste nenahrál žádný příspěvek</div>
-            <div class="tab-pane" id="profile" role="tabpanel" style="padding-top: 1rem">...
-            Nemáte žádné příspěvky čekající na schválení</div>
+            <div class="tab-pane active" id="home" role="tabpanel" style="padding-top: 1rem">
+                <?php if ($accepted->isEmpty()){ ?>... Zatím jste nenahrál žádný příspěvek<?php }else{ ?>
+                <table id="detail" class="table table-hover tablesorter">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th>Název příspěvku</th>
+                            <th>Typ souborů</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($accepted as $item){ ?>
+                        <tr>
+                            <td style="vertical-align: middle"><?= $this->Html->link(__($item->name), [
+                                    'controller' => 'Articles',
+                                    'action' => 'detail',
+                                    $item->source_id
+                                ]) ?></td>
+                            <td style="vertical-align: middle"><?= $item->type ?></td>
+                        </tr>
+                    <?php } ?>
+                    </tbody>
+                </table>
+                <?php } ?>
+            </div>
+
+            <div class="tab-pane" id="profile" role="tabpanel" style="padding-top: 1rem">
+                <?php if ($onHold->isEmpty()){ ?>... Nemáte žádné příspěvky čekající na schválení<?php }else{ ?>
+                    <table id="detail" class="table table-hover tablesorter">
+                        <thead class="thead-inverse">
+                        <tr>
+                            <th>Název příspěvku</th>
+                            <th>Typ souborů</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($onHold as $item){ ?>
+                            <tr>
+                                <td style="vertical-align: middle"><?= $this->Html->link(__($item->name), [
+                                        'controller' => 'Articles',
+                                        'action' => 'detail',
+                                        $item->source_id
+                                    ]) ?></td>
+                                <td style="vertical-align: middle"><?= $item->type ?></td>
+                            </tr>
+                        <?php } ?>
+                        </tbody>
+                    </table>
+                <?php } ?>
+            </div>
         </div>
     </div>
 </div>
