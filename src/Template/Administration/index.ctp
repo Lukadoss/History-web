@@ -9,7 +9,7 @@
                 <th>Název příspěvku</th>
                 <th>Autor</th>
                 <th>Typ</th>
-                <th style="">Možnosti</th>
+                <th class="admin-action">Akce</th>
             </tr>
             </thead>
             <tbody>
@@ -38,13 +38,13 @@
                     <td style="vertical-align: middle"><?= $source->type ?></td>
                     <td style="vertical-align: middle"><?= $this->Html->link(__('<i class="fa fa-check"></i> <span class="hidden-sm-down">Přijmout</span>'), [
                             'controller' => 'Administration', 'action' => 'accept', $source->source_id
-                        ], array('class' => 'label label-pill label-success', 'escape' => false)) ?>
+                        ], array('class' => 'label label-pill label-success', 'escape' => false, 'title' => 'Přijmout')) ?>
                         <?= $this->Html->link(__('<i class="fa fa-pencil-square-o"></i> <span class="hidden-sm-down">Editovat</span>'), [
-                            'controller' => 'Administration', 'action' => 'edit', $source->source_id
-                        ], array('class' => 'label label-pill label-primary', 'escape' => false)) ?>
+                            'controller' => 'Articles', 'action' => 'edit', $source->source_id
+                        ], array('class' => 'label label-pill label-primary', 'escape' => false, 'title' => 'Editovat')) ?>
                         <?= $this->Html->link(__('<i class="fa fa-times"></i> <span class="hidden-sm-down">Smazat</span>'), [
                             'controller' => 'Administration', 'action' => 'delete', $source->source_id
-                        ], array('class' => 'label label-pill label-danger', 'escape' => false)) ?>
+                        ], array('class' => 'label label-pill label-danger', 'escape' => false, 'title' => 'Smazat')) ?>
                 </tr>
             <?php } ?>
             </tbody>

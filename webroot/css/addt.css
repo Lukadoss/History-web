@@ -58,9 +58,17 @@ body {
     line-height: 3rem;
 }
 
+.admin-action {
+    width: 15rem;
+}
+
 @media (max-width: 767px) {
     .device-text-align{
         text-align: center;
+    }
+
+    .admin-action {
+        width: 3rem;
     }
 }
 
