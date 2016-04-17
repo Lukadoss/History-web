@@ -48,7 +48,8 @@
 
             <div class="col-md-6">
                 <label><label class="c-input c-checkbox">
-                        <input type="checkbox" id="date-span" onclick="document.getElementById('date-to').disabled=!this.checked;">
+                        <input type="checkbox" id="date-span" onclick="document.getElementById('date-to').disabled=!this.checked; if(!this.checked) document.getElementById('date-to').value = '';">
+                        <script>$('#date-span').prop('indeterminate', true)</script>
                         <span class="c-indicator"></span>
                     </label>Trvání události do:</label>
 
