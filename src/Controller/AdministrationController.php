@@ -49,25 +49,6 @@ class AdministrationController extends AppController
         return $this->redirect($this->referer());
     }
 
-    function edit($sourceID = null){
-        if ($sourceID != null) {
-            $source = $this->Sources->get($sourceID);
-
-            if ($this->request->is('post')) {
-                $this->Sources->patchEntity($source, $this->request->data);
-                $source->date_from = $this->request->data('date_from');
-                $source->date_to = $this->request->data('date_to');
-
-                if ($this->Sources->save($source)) {
-                    $this->Flash->success('Příspěvek "' . $source->name . '" byl úspěšně změněn!');
-                } else {
-                    $this->Flash->error('Chyba při ukládání změn :(');
-                }
-            }
-        }
-        return $this->redirect($this->redirect(['action' => 'index']));
-    }
-
     function delete($sourceID = null){
         if ($sourceID != null) {
             $source = $this->Sources->get($sourceID);
