@@ -319,6 +319,9 @@ body {
 /**
  * Bootstrap style for custom checkboxes
  */
+.c-checkbox input:indeterminate ~ .c-indicator {
+    background-color: #555;
+}
 
 .c-input > input:checked ~ .c-indicator {
     background-color: #555;
