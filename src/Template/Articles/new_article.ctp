@@ -306,8 +306,8 @@
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcDBMIqB9QnfD3wks9zVI2WUSHLnbU9so&callback=initMap"
                 async defer></script>
         </div>
-        <input type="text" name="lat" id="lat" hidden>
-        <input type="text" name="lng" id="lng" hidden>
+        <input type="text" name="lat" id="lat" required hidden>
+        <input type="text" name="lng" id="lng" required hidden>
         <hr>
         <div class="g-recaptcha" style="margin-bottom: 15px;"
              data-sitekey="6LdMihwTAAAAABHyUIcfago1qMOTWkT4dL7XP_Bx"></div>
