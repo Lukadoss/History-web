@@ -17,7 +17,7 @@ class ArticlesController extends AppController
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
-        $this->Auth->allow(['detail', 'newarticle']);
+        $this->Auth->allow(['detail', 'newarticle', 'edit']);
     }
 
     function newarticle()
@@ -75,8 +75,15 @@ class ArticlesController extends AppController
         $this->loadModel('Sources');
     }
 
-    function edit()
+    function edit($prispevek_id)
     {
-
+        if($prispevek_id){
+            $this->loadModel('Sources');
+            $source = $this->Sources->get($prispevek_id);
+            if($source && isset($source->user_id))
+                $articleAuthor = $this->Sources->Users->get($source->user_id);
+        }
+        $this->set(compact('source'));
+        $this->set(compact('articleAuthor'));
     }
 }
