@@ -8,8 +8,6 @@
 
 namespace App\Controller;
 
-use Cake\Event\Event;
-
 class MapController extends AppController
 {
 
