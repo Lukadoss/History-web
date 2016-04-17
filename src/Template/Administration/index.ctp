@@ -40,7 +40,7 @@
                             'controller' => 'Administration', 'action' => 'accept', $source->source_id
                         ], array('class' => 'label label-pill label-success', 'escape' => false)) ?>
                         <?= $this->Html->link(__('<i class="fa fa-pencil-square-o"></i> <span class="hidden-sm-down">Editovat</span>'), [
-                            'controller' => 'Administration', 'action' => 'edit', $source->source_id
+                            'controller' => 'Articles', 'action' => 'edit', $source->source_id
                         ], array('class' => 'label label-pill label-primary', 'escape' => false)) ?>
                         <?= $this->Html->link(__('<i class="fa fa-times"></i> <span class="hidden-sm-down">Smazat</span>'), [
                             'controller' => 'Administration', 'action' => 'delete', $source->source_id
