@@ -17,7 +17,8 @@ class ArticlesController extends AppController
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
-        $this->Auth->allow(['detail', 'newarticle', 'edit']);
+        $this->Auth->allow(['detail', 'newarticle']);
+        $this->Auth->config('authorize', ['Controller']);
     }
 
     function newarticle()
@@ -75,15 +76,49 @@ class ArticlesController extends AppController
         $this->loadModel('Sources');
     }
 
-    function edit($prispevek_id)
+    function edit($prispevek_id = null)
     {
-        if($prispevek_id){
+        if($prispevek_id) {
             $this->loadModel('Sources');
             $source = $this->Sources->get($prispevek_id);
-            if($source && isset($source->user_id))
+            if ($source && isset($source->user_id))
                 $articleAuthor = $this->Sources->Users->get($source->user_id);
+
+            $this->set(compact('source'));
+            $this->set(compact('articleAuthor'));
+
+            if($this->checkAuthorized()){
+                //$this->redirect($this->Auth->redirectUrl());
+            }
+
+            if ($this->request->is('post')) {
+                $this->Sources->patchEntity($source, $this->request->data);
+                $source->date_from = $this->request->data('date_from');
+                $source->date_to = $this->request->data('date_to');
+
+                if ($this->Sources->save($source)) {
+                    $this->loadModel('Users');
+                    $this->Flash->success('Příspěvek "' . $source->name . '" byl úspěšně změněn!');
+                    if($this->Users->get($this->Auth->user('user_id'))->isadmin == true) $this->redirect($this->redirect(['controller'=>'administration']));
+                    else $this->redirect($this->redirect(['controller'=>'users', 'action'=>'detail']));
+                } else {
+                    $this->Flash->error('Chyba při ukládání změn :(');
+                }
+            }
         }
-        $this->set(compact('source'));
-        $this->set(compact('articleAuthor'));
     }
+
+    public function isAuthorized($user = null, $article = null)
+    {
+        if (isset($user)){
+            return true;
+        }
+
+        return false;
+    }
+
+    public function checkAuthorized(){
+        return true; //TODO: dodělat authoriaci
+    }
+
 }
