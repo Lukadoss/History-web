@@ -74,14 +74,21 @@
                 centerControlDiv.index = 1;
                 map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(centerControlDiv);
 
-                var content, fileType;
-                var infowindow = new google.maps.InfoWindow(
-                {
-                    content: content
-                });
+                var content = '', clusterContent = '', fileType;
+                var infoWindow = new google.maps.InfoWindow(
+                    {
+                        content: clusterContent,
+                        maxWidth: 400
+                    });
+                var clusterInfoWindow = new google.maps.InfoWindow(
+                    {
+                        content: content,
+                        pixelOffset: new google.maps.Size(0, -30),
+                        maxWidth: 400
+                    });
                 var i;
-                for(i in marker_obj_data){
-                    if(marker_obj_data[i].type == 'text') {
+                for (i in marker_obj_data) {
+                    if (marker_obj_data[i].type == 'text') {
                         markerColor = 'd9534f';
                         fileType = 'Textový dokument';
                     }
@@ -101,7 +108,9 @@
                     var marker = new google.maps.Marker({
                         position: {lat: marker_obj_data[i].lat, lng: marker_obj_data[i].lng},
                         map: map,
-                        icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + markerColor
+                        icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + markerColor,
+                        sourceId: marker_obj_data[i].source_id,
+                        name: marker_obj_data[i].name
                     });
 
                     content = '<h6><a href="/historyweb/articles/detail/' + marker_obj_data[i].source_id + '" target="_blank" class="nav-link">' + marker_obj_data[i].name + '</a></h6><br>'
@@ -112,16 +121,17 @@
                     markers.push(marker);
                 }
 
-                function setInfoWindow(marker, content){
-                    google.maps.event.addListener(marker,'click', function(){
-                        infowindow.setContent(content);
-                        infowindow.open(map, this);
+                function setInfoWindow(marker, content) {
+                    google.maps.event.addListener(marker, 'click', function () {
+                        infoWindow.setContent(content);
+                        clusterInfoWindow.close();
+                        infoWindow.open(map, this);
 
                     });
                 }
 
                 var mcOptions = {
-                    gridSize: 20, maxZoom: 15, averageCenter: true, styles: [{
+                    gridSize: 30, maxZoom: 21, averageCenter: true, styles: [{
                         textColor: 'white',
                         textSize: 14,
                         height: 40,
@@ -155,6 +165,23 @@
                 };
 
                 var mc = new MarkerClusterer(map, markers, mcOptions);
+                var clusteredmarkers;
+                google.maps.event.addListener(mc, 'click', function (cluster) {
+                    clusteredmarkers = cluster.getMarkers();
+                    clusterContent = '';
+
+                    //map.fitBounds(cluster.getBounds());
+                    if (map.getZoom() > 20) {
+                        clusterContent = '<h6>Tato oblast obsahuje tyto příspěvky</h6>';
+                        for(i = 0; i<clusteredmarkers.length; i++){
+                            clusterContent += '<hr><h6><a href="/historyweb/articles/detail/' + clusteredmarkers[i].sourceId + '" target="_blank" class="nav-link">' + clusteredmarkers[i].name + '</a></h6>';
+                        }
+                        clusterInfoWindow.setContent(clusterContent);
+                        clusterInfoWindow.setPosition(cluster.getCenter());
+                        infoWindow.close();
+                        clusterInfoWindow.open(map);
+                    }
+                });
 
                 function CenterControl(controlDiv, map) {
 
@@ -189,7 +216,7 @@
 
             }
 
-            function setMarkers (){
+            function setMarkers() {
 
             }
         </script>

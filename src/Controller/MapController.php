@@ -15,24 +15,24 @@ class MapController extends AppController
 
     public function index()
     {
-        require_once(ROOT . DS . 'vendor' . DS  . 'adodb-time.inc.php');
+        require_once(ROOT . DS . 'vendor' . DS . 'adodb-time.inc.php');
 
         if (isset($_GET['float'])) {
-            if (isset($_GET['funct'])){
-                if($_GET['funct'] == 'mktime'){
+            if (isset($_GET['funct'])) {
+                if ($_GET['funct'] == 'mktime') {
                     $date_arr = explode('-', $_GET['float']);
-                    echo adodb_mktime(0,0,0, $date_arr[1], $date_arr[2], $date_arr[0]);
+                    echo adodb_mktime(0, 0, 0, $date_arr[1], $date_arr[2], $date_arr[0]);
                     die();
                 }
-            }
-            else {
+            } else {
                 echo adodb_date("Y-m-d", $_GET['float']);
                 die();
             }
         }
 
         $this->loadModel('Sources');
-        $sources = $this->Sources->find('all');
+        $sources = $this->Sources->find('all', array('fields' => array('source_id', 'name', 'date_from', 'date_to', 'lat', 'lng', 'type')))
+            ->where('onHold = 0');
         $this->set('sources', $sources);
         //return $this->redirect(['controller' => 'Article', 'action' => 'novy']);
     }
