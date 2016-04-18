@@ -87,8 +87,10 @@ class ArticlesController extends AppController
             $this->set(compact('source'));
             $this->set(compact('articleAuthor'));
 
-            if($this->checkAuthorized()){
-                //$this->redirect($this->Auth->redirectUrl());
+            $this->loadModel('Users');
+            $user = $this->Users->get($this->Auth->user('user_id'));
+            if(!(isset($articleAuthor) && $this->checkAuthorized($user, $articleAuthor))){
+                $this->redirect($this->Auth->redirectUrl());
             }
 
             if ($this->request->is('post')) {
@@ -97,9 +99,8 @@ class ArticlesController extends AppController
                 $source->date_to = $this->request->data('date_to');
 
                 if ($this->Sources->save($source)) {
-                    $this->loadModel('Users');
                     $this->Flash->success('Příspěvek "' . $source->name . '" byl úspěšně změněn!');
-                    if($this->Users->get($this->Auth->user('user_id'))->isadmin == true) $this->redirect($this->redirect(['controller'=>'administration']));
+                    if($user->isadmin == true) $this->redirect($this->redirect(['controller'=>'administration']));
                     else $this->redirect($this->redirect(['controller'=>'users', 'action'=>'detail']));
                 } else {
                     $this->Flash->error('Chyba při ukládání změn :(');
@@ -108,7 +109,7 @@ class ArticlesController extends AppController
         }
     }
 
-    public function isAuthorized($user = null, $article = null)
+    public function isAuthorized($user = null)
     {
         if (isset($user)){
             return true;
@@ -117,8 +118,12 @@ class ArticlesController extends AppController
         return false;
     }
 
-    public function checkAuthorized(){
-        return true; //TODO: dodělat authoriaci
+    public function checkAuthorized($user, $article){
+        if ($user->user_id === $article->user_id || $user->isAdmin == true){
+            return true;
+        }
+
+        return false;
     }
 
 }
