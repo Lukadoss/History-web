@@ -54,7 +54,7 @@ class ArticlesController extends AppController
                     return $this->redirect(['action' => 'new_article']);
                 }
             }
-            $this->Flash->error(__('<strong>Příspěvek se nepodařilo nahrát!</strong>'));
+            $this->Flash->error(__('<strong>Captcha nebyla potvrzena!</strong>'));
         }
         $this->set('source', $source);
     }
@@ -81,15 +81,17 @@ class ArticlesController extends AppController
         if($prispevek_id) {
             $this->loadModel('Sources');
             $source = $this->Sources->get($prispevek_id);
-            if ($source && isset($source->user_id))
+            if ($source && isset($source->user_id)){
                 $articleAuthor = $this->Sources->Users->get($source->user_id);
-
+            }else{
+                $articleAuthor = null;
+            }
             $this->set(compact('source'));
             $this->set(compact('articleAuthor'));
 
             $this->loadModel('Users');
             $user = $this->Users->get($this->Auth->user('user_id'));
-            if(!(isset($articleAuthor) && $this->checkAuthorized($user, $articleAuthor))){
+            if(!$this->checkAuthorized($user, $articleAuthor)){
                 $this->redirect($this->Auth->redirectUrl());
             }
 
@@ -119,11 +121,15 @@ class ArticlesController extends AppController
     }
 
     public function checkAuthorized($user, $article){
-        if ($user->user_id === $article->user_id || $user->isAdmin == true){
-            return true;
+        if ($article){
+            if ($user->user_id === $article->user_id || $user->isadmin == true){
+                return true;
+            }
+        }else{
+            if ($user->isadmin == true){
+                return true;
+            }
         }
-
         return false;
     }
-
 }
