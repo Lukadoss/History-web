@@ -6,7 +6,7 @@
     <div class="card-block">
         <div class="col-md-9" style="padding: 0">
             <div>
-                <?php echo $this->Form->text('forename', array('id' => 'name', 'value' => $source->name, 'style' => 'max-width: 40rem')) ?>
+                <?php echo $this->Form->text('name', array('id' => 'name', 'value' => $source->name, 'style' => 'max-width: 40rem')) ?>
             </div>
             <h5 class="text-muted form-inline">Datum:
                 <div class="form-group">
@@ -14,7 +14,7 @@
                            value="<?= date_format($source->date_from, 'Y-m-d'); ?>" style="max-width: 10rem"> -
                 </div>
                 <div class="form-group">
-                    <input type="date" class="form-control" required name="date_to"
+                    <input type="date" class="form-control" name="date_to"
                            value="<?php if ($source->date_to) echo date_format($source->date_to, 'Y-m-d'); ?>"
                            style="max-width: 10rem">
                 </div>

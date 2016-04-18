@@ -18,6 +18,7 @@ require_once "components/recaptchalib.php";
 
 class UsersController extends AppController
 {
+
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);;
@@ -97,6 +98,7 @@ class UsersController extends AppController
      */
     function detail($user_id = null)
     {
+        $this->loadModel('Sources');
         if($user_id == null){
             $user = $this->Users->get($this->Auth->user('user_id'));
             $this->set(compact('user'));
@@ -105,6 +107,12 @@ class UsersController extends AppController
             $user = $this->Users->get($user_id);
             $this->set(compact('user'));
         }
+        $accepted_articles = $this->Sources->find()
+            ->where(['user_id' => $user->user_id, 'onHold' => false]);
+        $onHold_articles = $this->Sources->find()
+            ->where(['user_id' => $user->user_id, 'onHold' => true]);
+        $this->set('accepted', $accepted_articles);
+        $this->set('onHold', $onHold_articles);
     }
 
     /**
