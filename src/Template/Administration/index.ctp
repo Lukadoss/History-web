@@ -44,7 +44,7 @@
                         ], array('class' => 'label label-pill label-primary', 'escape' => false)) ?>
                         <?= $this->Html->link(__('<i class="fa fa-times"></i> <span class="hidden-sm-down">Smazat</span>'), [
                             'controller' => 'Administration', 'action' => 'delete', $source->source_id
-                        ], array('class' => 'label label-pill label-danger', 'escape' => false)) ?>
+                        ], array('class' => 'label label-pill label-danger', 'escape' => false)) ?></td>
                 </tr>
             <?php } ?>
             </tbody>
