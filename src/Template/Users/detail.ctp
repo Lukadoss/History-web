@@ -33,7 +33,7 @@
                     <thead class="thead-inverse">
                         <tr>
                             <th>Název příspěvku</th>
-                            <th>Typ souborů</th>
+                            <th>Možnosti</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -44,7 +44,9 @@
                                     'action' => 'detail',
                                     $item->source_id
                                 ]) ?></td>
-                            <td style="vertical-align: middle"><?= $item->type ?></td>
+                            <td style="vertical-align: middle"><?= $this->Html->link(__('<i class="fa fa-pencil-square-o"></i> <span class="hidden-sm-down">Editovat</span>'), [
+                                    'controller' => 'Articles', 'action' => 'edit', $item->source_id
+                                ], array('class' => 'label label-pill label-primary', 'escape' => false)) ?></td>
                         </tr>
                     <?php } ?>
                     </tbody>
@@ -58,7 +60,7 @@
                         <thead class="thead-inverse">
                         <tr>
                             <th>Název příspěvku</th>
-                            <th>Typ souborů</th>
+                            <th>Možnosti</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -69,7 +71,9 @@
                                         'action' => 'detail',
                                         $item->source_id
                                     ]) ?></td>
-                                <td style="vertical-align: middle"><?= $item->type ?></td>
+                                <td style="vertical-align: middle"><?= $this->Html->link(__('<i class="fa fa-pencil-square-o"></i> <span class="hidden-sm-down">Editovat</span>'), [
+                                        'controller' => 'Articles', 'action' => 'edit', $item->source_id
+                                    ], array('class' => 'label label-pill label-primary', 'escape' => false)) ?></td>
                             </tr>
                         <?php } ?>
                         </tbody>
