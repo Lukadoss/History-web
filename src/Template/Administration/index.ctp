@@ -9,7 +9,7 @@
                 <th>Název příspěvku</th>
                 <th>Autor</th>
                 <th>Typ</th>
-                <th style="">Možnosti</th>
+                <th class="admin-action">Akce</th>
             </tr>
             </thead>
             <tbody>
@@ -44,7 +44,7 @@
                         ], array('class' => 'label label-pill label-primary', 'escape' => false)) ?>
                         <?= $this->Html->link(__('<i class="fa fa-times"></i> <span class="hidden-sm-down">Smazat</span>'), [
                             'controller' => 'Administration', 'action' => 'delete', $source->source_id
-                        ], array('class' => 'label label-pill label-danger', 'escape' => false)) ?></td>
+                        ], array('class' => 'label label-pill label-danger', 'escape' => false, 'confirm' => 'Opravdu chcete smazat tento příspěvek?')) ?></td>
                 </tr>
             <?php } ?>
             </tbody>
