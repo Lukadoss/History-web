@@ -4,6 +4,8 @@
     </div>
     <?= $this->Form->create(); ?>
     <div class="card-block">
+        <?= $this->Form->button('Uložit změny', ['class' => 'btn btn-primary', 'style' => 'margin-bottom: 0; float: right']); ?>
+        <div class="clearfix"></div>
         <div class="col-md-9" style="padding: 0">
             <div>
                 <?php echo $this->Form->text('name', array('id' => 'name', 'value' => $source->name, 'style' => 'max-width: 40rem')) ?>
@@ -31,22 +33,68 @@
         <?php if ($source->text) { ?>
             <hr>
             <?= $this->Form->textarea('text', ['rows' => '5', 'cols' => '5', 'value' => $source->text]);
-            echo $this->Form->button('Uložit změny', ['class' => 'btn btn-primary', 'style' => 'margin-bottom: 0']); ?>
-        <?php } ?>
+        } ?>
         <hr>
-        <?= $this->Form->end(); ?>
+
         <h5>Přiložené soubory:</h5>
         tady budou obrázky, video, audio...
     </div>
 </div>
 <div class="card card-map">
-    <div class="card-block card-map">
-        <iframe
-            width="100%"
-            height="100%"
-            frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDcDBMIqB9QnfD3wks9zVI2WUSHLnbU9so
-    &q=<?= $source->lat; ?>,<?= $source->lng; ?>&zoom=12">
-        </iframe>
+    <div class="card-block card-map" id="map">
+        <script>
+            var map;
+            var marker;
+
+            function initMap() {
+                geocoder = new google.maps.Geocoder();
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: <?php echo "{lat: " . $source->lat . ", lng: " . $source->lng . "}";?>,
+                    zoom: 13,
+                    minZoom: 3
+                });
+
+                google.maps.event.addListener(map, 'click', function (event) {
+                    placeMarker(event.latLng);
+                });
+
+                var strictBounds = new google.maps.LatLngBounds(
+                    new google.maps.LatLng(85, -180),           // top left corner of map
+                    new google.maps.LatLng(-85, 180)            // bottom right corner
+                );
+
+                marker = new google.maps.Marker({
+                    position: <?php echo "{lat: " . $source->lat . ", lng: " . $source->lng . "}";?>,
+                    map: map,
+                    draggable: false
+                });
+            }
+
+            function placeMarker(location) {
+                if (marker) {
+                    marker.setPosition(location);
+                } else {
+                    marker = new google.maps.Marker({
+                        position: location,
+                        map: map,
+                        draggable: false
+                    });
+                }
+                document.getElementById('lat').value = location.lat();
+                document.getElementById('lng').value = location.lng();
+            }
+
+            function setCenter() {
+                var elt = document.getElementById('district_id');
+                codeAddress(elt.options[elt.selectedIndex].text);
+            }
+        </script>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcDBMIqB9QnfD3wks9zVI2WUSHLnbU9so&callback=initMap"
+            async defer></script>
     </div>
+    <input type="text" name="lat" id="lat" required hidden value="<?= $source->lat ?>">
+    <input type="text" name="lng" id="lng" required hidden value="<?= $source->lng ?>">
+    <?= $this->Form->end(); ?>
+</div>
 </div>

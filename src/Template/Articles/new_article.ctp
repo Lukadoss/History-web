@@ -291,7 +291,7 @@
                         marker = new google.maps.Marker({
                             position: location,
                             map: map,
-                            draggable: true
+                            draggable: false
                         });
                     }
                     document.getElementById('lat').value = location.lat();
