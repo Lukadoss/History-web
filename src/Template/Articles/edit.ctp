@@ -2,18 +2,18 @@
     <div class="card-header">
         Editace příspěvku
     </div>
-    <?= $this->Form->create(); ?>
+    <?php echo $this->Form->create(); ?>
     <div class="card-block">
-        <?= $this->Form->button('Uložit změny', ['class' => 'btn btn-primary', 'style' => 'margin-bottom: 0; float: right']); ?>
+        <?php echo $this->Form->button('Uložit změny', ['class' => 'btn btn-primary', 'style' => 'margin-bottom: 0; float: right']); ?>
         <div class="clearfix"></div>
         <div class="col-md-9" style="padding: 0">
             <div>
-                <?php echo $this->Form->text('name', array('id' => 'name', 'value' => $source->name, 'style' => 'max-width: 40rem')) ?>
+                <?php echo $this->Form->text('name', array('id' => 'name', 'value' => htmlspecialchars($source->name), 'style' => 'max-width: 40rem')) ?>
             </div>
             <h5 class="text-muted form-inline">Datum:
                 <div class="form-group">
                     <input type="date" class="form-control" required name="date_from"
-                           value="<?= date_format($source->date_from, 'Y-m-d'); ?>" style="max-width: 10rem"> -
+                           value="<?php echo date_format($source->date_from, 'Y-m-d'); ?>" style="max-width: 10rem"> -
                 </div>
                 <div class="form-group">
                     <input type="date" class="form-control" name="date_to"
@@ -32,7 +32,7 @@
         </div>
         <?php if ($source->text) { ?>
             <hr>
-            <?= $this->Form->textarea('text', ['rows' => '5', 'cols' => '5', 'value' => $source->text]);
+            <?php echo $this->Form->textarea('text', ['rows' => '5', 'cols' => '5', 'value' => htmlspecialchars($source->text)]);
         } ?>
         <hr>
 
@@ -93,8 +93,8 @@
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcDBMIqB9QnfD3wks9zVI2WUSHLnbU9so&callback=initMap"
             async defer></script>
     </div>
-    <input type="text" name="lat" id="lat" required hidden value="<?= $source->lat ?>">
-    <input type="text" name="lng" id="lng" required hidden value="<?= $source->lng ?>">
-    <?= $this->Form->end(); ?>
+    <input type="text" name="lat" id="lat" required hidden value="<?php echo $source->lat ?>">
+    <input type="text" name="lng" id="lng" required hidden value="<?php echo $source->lng ?>">
+    <?php echo $this->Form->end(); ?>
 </div>
 </div>

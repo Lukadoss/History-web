@@ -15,7 +15,7 @@
             <tbody>
             <?php foreach ($sources as $source) { ?>
                 <tr>
-                    <td style="vertical-align: middle"><?= $this->Html->link(__($source->name), [
+                    <td style="vertical-align: middle"><?= $this->Html->link(__(htmlspecialchars($source->name)), [
                             'controller' => 'Articles',
                             'action' => 'detail',
                             $source->source_id

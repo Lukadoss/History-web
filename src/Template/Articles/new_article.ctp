@@ -1,13 +1,13 @@
-<?= $this->Html->script('canvas-to-blob.min.js') ?>
-<?= $this->Html->script('fileinput.min.js') ?>
+<?php echo $this->Html->script('canvas-to-blob.min.js') ?>
+<?php echo $this->Html->script('fileinput.min.js') ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/i18n/cs.js"></script>
-<?= $this->Html->script('fileinput_locale_cz.js', array('type' => 'text/javascript')) ?>
+<?php echo $this->Html->script('fileinput_locale_cz.js', array('type' => 'text/javascript')) ?>
 <div class="card">
     <div class="card-header">Přidání nového příspěvku
     </div>
     <div class="card-block">
-        <?= $this->Flash->render(); ?>
+        <?php echo $this->Flash->render(); ?>
         <?php
         echo $this->Form->create($source, ['type' => 'file']); ?>
         <?php if (!$this->request->session()->read('Auth.User')) { ?>
@@ -36,8 +36,7 @@
             <input type="text" class="form-control" required name="name">
         </div>
         <div class="form-group col-md-12">
-            <label>Krátký popis (nepovinný):</label>
-            <textarea type="text" rows="5" class="form-control" name="text"></textarea>
+            <?php echo $this->Form->input('Krátký popis (nepovinný):', ['type' => 'textarea', 'escape' => true, 'class' => 'form-control', 'rows' => '5', 'name' => 'text']); ?>
         </div>
         <div class="form-group">
 
@@ -113,6 +112,10 @@
                                 }
                             });
                         });
+
+                        $('#text_file_input').on('fileuploaderror', function() {
+                            document.getElementById('submit-article').disabled = true;
+                        });
                     </script>
                 </div>
                 <div class="tab-pane active" id="image" role="tabpanel">
@@ -148,6 +151,10 @@
                                     '</div>'
                                 }
                             });
+                        });
+
+                        $('#image_file_input').on('fileuploaderror', function() {
+                            document.getElementById('submit-article').disabled = true;
                         });
                     </script>
                 </div>
@@ -185,6 +192,10 @@
                                 }
                             });
                         });
+
+                        $('#audio_file_input').on('fileuploaderror', function() {
+                            document.getElementById('submit-article').disabled = true;
+                        });
                     </script>
                 </div>
                 <div class="tab-pane" id="video" role="tabpanel">
@@ -221,6 +232,10 @@
                                 }
                             });
                         });
+
+                        $('#video_file_input').on('fileuploaderror', function() {
+                            document.getElementById('submit-article').disabled = true;
+                        });
                     </script>
                 </div>
             </div>
@@ -243,8 +258,8 @@
                 <option></option>
                 <?php foreach ($district as $dist) {
                     ?>
-                    <option value="<?= $dist->id ?>"> <?= $dist->municipality ?>, <span class="text-muted"><i
-                                class="fa fa-user"> </i>okres <?= $dist->district ?>, <?= $dist->region ?></span>
+                    <option value=" $dist->id ?>"> <?php echo $dist->municipality ?>, <span class="text-muted"><i
+                                class="fa fa-user"> </i>okres <?php echo $dist->district ?>, <?php echo $dist->region ?></span>
                     </option> <?php
                 } ?>
 
@@ -312,7 +327,7 @@
         <hr>
         <div class="g-recaptcha" style="margin-bottom: 15px;"
              data-sitekey="6LdMihwTAAAAABHyUIcfago1qMOTWkT4dL7XP_Bx"></div>
-        <button type="submit" name="submit-article" class="btn btn-primary">Přidat článek</button>
+        <button type="submit" name="submit-article" id="submit-article" class="btn btn-primary">Přidat článek</button>
         <?php echo $this->Form->end();
         ?>
     </div>
