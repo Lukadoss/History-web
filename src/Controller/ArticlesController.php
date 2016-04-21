@@ -51,19 +51,22 @@ class ArticlesController extends AppController
                         $source->email = $this->Auth->user('email');
                     }
 
-                    if(!empty($this->request->data['text_file']))
-                    $text_file = $this->request->data['text_file'];
-                    if(!empty($this->request->data['image_file']))
-                    $image_file = $this->request->data['image_file'];
-                    if(!empty($this->request->data['audio_file']))
-                    $audio_file = $this->request->data['audio_file'];
-                    if(!empty($this->request->data['video_file']))
-                    $video_file = $this->request->data['video_file'];
-
-                    if(!empty($text_file)) $file_count = $file_count + sizeof($text_file);
-                    if(!empty($image_fil)) $file_count = $file_count + sizeof($image_file);
-                    if(!empty($audio_file)) $file_count = $file_count + sizeof($audio_file);
-                    if(!empty($video_file)) $file_count = $file_count + sizeof($video_file);
+                    if(!empty($this->request->data['text_file'])){
+                        $text_file = $this->request->data['text_file'];
+                        $file_count = $file_count + sizeof($text_file);
+                    }
+                    if(!empty($this->request->data['image_file'])){
+                        $image_file = $this->request->data['image_file'];
+                        $file_count = $file_count + sizeof($image_file);
+                    }
+                    if(!empty($this->request->data['audio_file'])){
+                        $audio_file = $this->request->data['audio_file'];
+                        $file_count = $file_count + sizeof($audio_file);
+                    }
+                    if(!empty($this->request->data['video_file'])){
+                        $video_file = $this->request->data['video_file'];
+                        $file_count = $file_count + sizeof($video_file);
+                    }
 
                     if($file_count<=19){
                     $text_size = $this->file_size($text_file);
