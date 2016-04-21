@@ -55,18 +55,18 @@
     <?= $this->Html->script('markerclusterer.js', array('type' => 'text/javascript')) ?>
     <div class="card-block card-map" id="map">
         <script>
-            var map;
+            var map, infoWindow, clusterInfoWindow;
+            var markers = [];
+            var marker_data = '<?php echo json_encode($sources); ?>';
+            var marker_obj_data = JSON.parse(marker_data);
+
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: {lat: 49.406620, lng: 13.905871},
                     zoom: 8,
-                    minZoom: 3
+                    minZoom: 3,
+                    fullscreenControl: false
                 });
-
-                var markers = new Array();
-                var marker_data = '<?php echo json_encode($sources); ?>';
-                var marker_obj_data = JSON.parse(marker_data);
-                var markerColor;
 
                 var centerControlDiv = document.createElement('div');
                 var centerControl = new CenterControl(centerControlDiv, map);
@@ -74,19 +74,86 @@
                 centerControlDiv.index = 1;
                 map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(centerControlDiv);
 
-                var content = '', clusterContent = '', fileType;
-                var infoWindow = new google.maps.InfoWindow(
+                infoWindow = new google.maps.InfoWindow(
                     {
-                        content: clusterContent,
                         maxWidth: 400
                     });
-                var clusterInfoWindow = new google.maps.InfoWindow(
+
+                clusterInfoWindow = new google.maps.InfoWindow(
                     {
-                        content: content,
                         pixelOffset: new google.maps.Size(0, -30),
                         maxWidth: 400
                     });
-                var i;
+            }
+
+            function CenterControl(controlDiv, map) {
+
+                // Set CSS for the control border.
+                var controlUI = document.createElement('div');
+                controlUI.style.backgroundColor = '#fff';
+                controlUI.style.border = '2px solid #fff';
+                controlUI.style.borderRadius = '3px';
+                controlUI.style.boxShadow = '0 1px 3px rgba(0,0,0,.3)';
+                controlUI.style.marginBottom = '22px';
+                controlUI.style.textAlign = 'center';
+                controlDiv.appendChild(controlUI);
+
+                // Set CSS for the control interior.
+                var controlText = document.createElement('div');
+                controlText.style.color = 'rgb(25,25,25)';
+                controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
+                controlText.style.fontSize = '16px';
+                controlText.style.lineHeight = '38px';
+                controlText.style.paddingLeft = '5px';
+                controlText.style.paddingRight = '5px';
+                controlText.innerHTML = '<a id="play-pause-btn" style="margin-right: 1rem"><?= $this->html->image('play-pause-btn.png', array('style' => 'height:1.5rem', 'title' => 'Přehrát/Pozastavit', 'id' => 'play-animation', 'onclick' => 'startAnimation()')) ?></a>' +
+                    '<a id="stop-btn"><?= $this->html->image('stop-btn.png', array('style' => 'height:1.5rem', 'title' => 'Zastavit', 'id' => 'anim-stop', 'onclick' => 'clearMarkers()')) ?></a>';
+                controlUI.appendChild(controlText);
+
+                // Setup the click event listeners
+                controlUI.addEventListener('click', function () {
+
+                });
+
+
+            }
+
+            function setMapOnAll(map) {
+                for (var i = 0; i < markers.length; i++) {
+                    markers[i].setMap(map);
+                }
+            }
+
+            // Removes the markers from the map, but keeps them in the array.
+            function clearMarkers() {
+                setMapOnAll(null);
+            }
+
+            // Shows any markers currently in the array.
+            function showMarkers() {
+                setMapOnAll(map);
+            }
+
+            function getBaseUrl() {
+                var re = new RegExp(/^.*\//);
+                return re.exec(window.location.href);
+            }
+
+            function startAnimation() {
+                setMarkers(marker_obj_data, markers);
+            }
+
+            function setInfoWindow(marker, content) {
+                google.maps.event.addListener(marker, 'click', function () {
+                    infoWindow.setContent(content);
+                    clusterInfoWindow.close();
+                    infoWindow.open(map, this);
+                });
+            }
+
+            function setMarkers(marker_obj_data, markers) {
+                var markerColor, fileType, i, content;
+
                 for (i in marker_obj_data) {
                     if (marker_obj_data[i].type == 'text') {
                         markerColor = 'd9534f';
@@ -113,26 +180,13 @@
                         name: marker_obj_data[i].name
                     });
 
-                    function getBaseUrl() {
-                        var re = new RegExp(/^.*\//);
-                        return re.exec(window.location.href);
-                    }
-
                     content = '<h6><a href="' + getBaseUrl() + 'articles/detail/' + marker_obj_data[i].source_id + '" target="_blank" class="nav-link">' + marker_obj_data[i].name + '</a></h6><br>'
                         + '<span class="text-muted">typ: ' + fileType
                         + '<br>Počet souborů: x</span>';
+
                     setInfoWindow(marker, content);
 
                     markers.push(marker);
-                }
-
-                function setInfoWindow(marker, content) {
-                    google.maps.event.addListener(marker, 'click', function () {
-                        infoWindow.setContent(content);
-                        clusterInfoWindow.close();
-                        infoWindow.open(map, this);
-
-                    });
                 }
 
                 var mcOptions = {
@@ -170,7 +224,7 @@
                 };
 
                 var mc = new MarkerClusterer(map, markers, mcOptions);
-                var clusteredmarkers;
+                var clusteredmarkers, clusterContent = '';
                 google.maps.event.addListener(mc, 'click', function (cluster) {
                     clusteredmarkers = cluster.getMarkers();
                     clusterContent = '';
@@ -178,7 +232,7 @@
                     //map.fitBounds(cluster.getBounds());
                     if (map.getZoom() > 20) {
                         clusterContent = '<h6>Tato oblast obsahuje tyto příspěvky</h6>';
-                        for(i = 0; i<clusteredmarkers.length; i++){
+                        for (i = 0; i < clusteredmarkers.length; i++) {
                             clusterContent += '<hr><h6><a href="' + getBaseUrl() + 'articles/detail/' + clusteredmarkers[i].sourceId + '" target="_blank" class="nav-link">' + clusteredmarkers[i].name + '</a></h6>';
                         }
                         clusterInfoWindow.setContent(clusterContent);
@@ -187,42 +241,6 @@
                         clusterInfoWindow.open(map);
                     }
                 });
-
-                function CenterControl(controlDiv, map) {
-
-                    // Set CSS for the control border.
-                    var controlUI = document.createElement('div');
-                    controlUI.style.backgroundColor = '#fff';
-                    controlUI.style.border = '2px solid #fff';
-                    controlUI.style.borderRadius = '3px';
-                    controlUI.style.boxShadow = '0 1px 3px rgba(0,0,0,.3)';
-                    controlUI.style.cursor = 'pointer';
-                    controlUI.style.marginBottom = '22px';
-                    controlUI.style.textAlign = 'center';
-                    controlDiv.appendChild(controlUI);
-
-                    // Set CSS for the control interior.
-                    var controlText = document.createElement('div');
-                    controlText.style.color = 'rgb(25,25,25)';
-                    controlText.style.fontFamily = 'Roboto,Arial,sans-serif';
-                    controlText.style.fontSize = '16px';
-                    controlText.style.lineHeight = '38px';
-                    controlText.style.paddingLeft = '5px';
-                    controlText.style.paddingRight = '5px';
-                    controlText.innerHTML = '<span id="play-pause-btn" style="margin-right: 1rem"><?= $this->html->image('play-pause-btn.png', array('style' => 'height:1.5rem', 'title' => 'Přehrát/Pozastavit')) ?></span>' +
-                        '<span id="stop-btn"><?= $this->html->image('stop-btn.png', array('style' => 'height:1.5rem', 'title' => 'Zastavit')) ?></span>';
-                    controlUI.appendChild(controlText);
-
-                    // Setup the click event listeners
-                    controlUI.addEventListener('click', function () {
-                    });
-
-                }
-
-            }
-
-            function setMarkers() {
-
             }
         </script>
         <script
