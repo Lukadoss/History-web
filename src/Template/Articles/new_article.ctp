@@ -80,7 +80,7 @@
 
             <div class="tab-content">
                 <div class="tab-pane" id="text" role="tabpanel">
-                    <input id="text_file_input" name="file_input[]" type="file" multiple class="file-loading">
+                    <input id="text_file_input" name="text_file[]" type="file" multiple="multiple">
                     <script>
                         $(document).on('ready', function () {
                             $("#text_file_input").fileinput({
@@ -88,7 +88,7 @@
                                 uploadAsync: false,
                                 dropZoneEnabled: false,
                                 overwriteInitial: false,
-                                maxFileSize: 300000,
+                                maxFileSize: 4000,
                                 previewFileType: 'any',
                                 showUpload: false,
                                 language: 'cz',
@@ -116,7 +116,7 @@
                     </script>
                 </div>
                 <div class="tab-pane active" id="image" role="tabpanel">
-                    <input id="image_file_input" name="file_input[]" type="file" multiple class="file-loading">
+                    <input id="image_file_input" name="image_file[]" type="file" multiple class="file-loading">
                     <script>
                         $(document).on('ready', function () {
                             $("#image_file_input").fileinput({
@@ -124,7 +124,7 @@
                                 uploadAsync: false,
                                 dropZoneEnabled: false,
                                 overwriteInitial: false,
-                                maxFileSize: 300000,
+                                maxFileSize: 10000,
                                 previewFileType: 'any',
                                 showUpload: false,
                                 language: 'cz',
@@ -152,7 +152,7 @@
                     </script>
                 </div>
                 <div class="tab-pane" id="audio" role="tabpanel">
-                    <input id="audio_file_input" name="file_input[]" type="file" multiple class="file-loading">
+                    <input id="audio_file_input" name="audio_file[]" type="file" multiple class="file-loading">
                     <script>
                         $(document).on('ready', function () {
                             $("#audio_file_input").fileinput({
@@ -160,14 +160,14 @@
                                 uploadAsync: false,
                                 dropZoneEnabled: false,
                                 overwriteInitial: false,
-                                maxFileSize: 300000,
+                                maxFileSize: 30000,
                                 previewFileType: 'any',
                                 showUpload: false,
                                 language: 'cz',
                                 showCancel: false,
                                 showClose: false,
                                 initialPreviewShowDelete: true,
-                                allowedFileExtensions: ['mp3', 'wav', 'ogg', 'flac', 'mpg'],
+                                allowedFileExtensions: ['mp3', 'wav', 'flac', 'mpg'],
                                 removeClass: 'btn btn-danger btn-remove',
                                 fileActionSettings: {
                                     removeIcon: '<i class="fa fa-trash-o"></i>',
@@ -188,7 +188,7 @@
                     </script>
                 </div>
                 <div class="tab-pane" id="video" role="tabpanel">
-                    <input id="video_file_input" name="file_input[]" type="file" multiple class="file-loading">
+                    <input id="video_file_input" name="video_file[]" type="file" multiple class="file-loading">
                     <script>
                         $(document).on('ready', function () {
                             $("#video_file_input").fileinput({
@@ -196,7 +196,7 @@
                                 uploadAsync: false,
                                 dropZoneEnabled: false,
                                 overwriteInitial: false,
-                                maxFileSize: 300000,
+                                maxFileSize: 100000,
                                 previewFileType: 'any',
                                 showUpload: false,
                                 language: 'cz',
