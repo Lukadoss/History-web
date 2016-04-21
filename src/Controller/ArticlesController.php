@@ -27,7 +27,7 @@ class ArticlesController extends AppController
         $this->loadModel('Districts');
         $district = $this->Districts->find('all');
         $this->set(compact("district"));
-
+        $file_count = 0;
         $this->loadModel('Sources');
         $source = $this->Sources->newEntity();
 
@@ -51,11 +51,24 @@ class ArticlesController extends AppController
                         $source->email = $this->Auth->user('email');
                     }
 
-                    $text_file = $this->request->data['text_file'];
-                    $image_file = $this->request->data['image_file'];
-                    $audio_file = $this->request->data['audio_file'];
-                    $video_file = $this->request->data['video_file'];
+                    if(!empty($this->request->data['text_file'])){
+                        $text_file = $this->request->data['text_file'];
+                        $file_count = $file_count + sizeof($text_file);
+                    }
+                    if(!empty($this->request->data['image_file'])){
+                        $image_file = $this->request->data['image_file'];
+                        $file_count = $file_count + sizeof($image_file);
+                    }
+                    if(!empty($this->request->data['audio_file'])){
+                        $audio_file = $this->request->data['audio_file'];
+                        $file_count = $file_count + sizeof($audio_file);
+                    }
+                    if(!empty($this->request->data['video_file'])){
+                        $video_file = $this->request->data['video_file'];
+                        $file_count = $file_count + sizeof($video_file);
+                    }
 
+                    if($file_count<=19){
                     $text_size = $this->file_size($text_file);
                     $image_size = $this->file_size($image_file);
                     $audio_size = $this->file_size($audio_file);
@@ -99,6 +112,10 @@ class ArticlesController extends AppController
                             $this->Flash->success(__('<strong>Příspěvek byl úspěšně nahrán!</strong> Počkejte, prosím, na jeho schválení.'));
                             return $this->redirect(['action' => 'new_article']);
                         }
+                    }
+                    }
+                    else{
+                        $this->Flash->error(__('<strong>Přesáhl jsi limit 19 souborů!</strong>'));
                     }
 
                 }
