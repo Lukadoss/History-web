@@ -57,7 +57,7 @@
         'controller' => 'Info',
     ], array('escape' => false)) ?>
 
-    <hr class="m-y-0">
+    <hr class="m-y-0" style="border-color: #3a84bd;">
 </div>
 <?php $loguser = $this->request->session()->read('Auth.User'); ?>
 <nav class="navbar navbar-default navbar-full">
