@@ -59,6 +59,41 @@
             var markers = [];
             var marker_data = '<?php echo json_encode($sources); ?>';
             var marker_obj_data = JSON.parse(marker_data);
+            var mc;
+
+            var mcOptions = {
+                gridSize: 30, maxZoom: 21, averageCenter: true, styles: [{
+                    textColor: 'white',
+                    textSize: 14,
+                    height: 40,
+                    url: "/historyweb/img/mc/m1.png",
+                    width: 40
+                },
+                    {
+                        textColor: 'white',
+                        height: 45,
+                        url: "/historyweb/img/mc/m2.png",
+                        width: 45
+                    },
+                    {
+                        textColor: 'white',
+                        height: 50,
+                        url: "/historyweb/img/mc/m3.png",
+                        width: 50
+                    },
+                    {
+                        textColor: 'white',
+                        height: 58,
+                        url: "/historyweb/img/mc/m4.png",
+                        width: 58
+                    },
+                    {
+                        textColor: 'white',
+                        height: 70,
+                        url: "/historyweb/img/mc/m5.png",
+                        width: 70
+                    }]/*, imagePath: */
+            };
 
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
@@ -84,6 +119,7 @@
                         pixelOffset: new google.maps.Size(0, -30),
                         maxWidth: 400
                     });
+                setMarkers(marker_obj_data, markers);
             }
 
             function CenterControl(controlDiv, map) {
@@ -189,41 +225,7 @@
                     markers.push(marker);
                 }
 
-                var mcOptions = {
-                    gridSize: 30, maxZoom: 21, averageCenter: true, styles: [{
-                        textColor: 'white',
-                        textSize: 14,
-                        height: 40,
-                        url: "/historyweb/img/mc/m1.png",
-                        width: 40
-                    },
-                        {
-                            textColor: 'white',
-                            height: 45,
-                            url: "/historyweb/img/mc/m2.png",
-                            width: 45
-                        },
-                        {
-                            textColor: 'white',
-                            height: 50,
-                            url: "/historyweb/img/mc/m3.png",
-                            width: 50
-                        },
-                        {
-                            textColor: 'white',
-                            height: 58,
-                            url: "/historyweb/img/mc/m4.png",
-                            width: 58
-                        },
-                        {
-                            textColor: 'white',
-                            height: 70,
-                            url: "/historyweb/img/mc/m5.png",
-                            width: 70
-                        }]/*, imagePath: */
-                };
-
-                var mc = new MarkerClusterer(map, markers, mcOptions);
+                mc = new MarkerClusterer(map, markers, mcOptions);
                 var clusteredmarkers, clusterContent = '';
                 google.maps.event.addListener(mc, 'click', function (cluster) {
                     clusteredmarkers = cluster.getMarkers();
