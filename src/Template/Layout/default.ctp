@@ -65,7 +65,7 @@
             style="background: #3a84bd; margin-bottom: 0">
         <i class="fa fa-bars"></i>
     </button>
-    <?php echo $this->Html->image('history-web-logo-sm.png', ['alt' => 'Logo-navbar', 'class' => 'hidden-md-up pull-right', 'style' => 'max-height: 38px']) ?>
+    <?php echo $this->Html->image('history-web-logo-sm.png', ['alt' => 'Logo-navbar', 'class' => 'hidden-md-up pull-right', 'style' => 'max-height: 38.59px']) ?>
     <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar2">
         <div class="container nav-center">
             <ul class="nav navbar-nav" style="box-sizing: border-box;">
