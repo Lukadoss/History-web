@@ -52,8 +52,8 @@
     <?= $this->fetch('script') ?>
 </head>
 <body>
-<div class="jumbotron hidden-sm-down">
-    <?php echo $this->Html->link($this->Html->image('logo2.png', ['alt' => 'Logo']), [
+<div class="jumbotron hidden-sm-down p-y-0">
+    <?php echo $this->Html->link($this->Html->image('history-web-logo-lg.png', ['alt' => 'Logo', 'style' => 'max-height: 8rem; margin: 1rem']), [
         'controller' => 'Info',
     ], array('escape' => false)) ?>
 
@@ -65,7 +65,7 @@
             style="background: #3a84bd; margin-bottom: 0">
         <i class="fa fa-bars"></i>
     </button>
-    <?php echo $this->Html->image('logo2-nav.png', ['alt' => 'Logo-navbar', 'class' => 'hidden-md-up pull-right']) ?>
+    <?php echo $this->Html->image('history-web-logo-sm.png', ['alt' => 'Logo-navbar', 'class' => 'hidden-md-up pull-right', 'style' => 'max-height: 38px']) ?>
     <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar2">
         <div class="container nav-center">
             <ul class="nav navbar-nav" style="box-sizing: border-box;">
