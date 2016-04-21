@@ -58,9 +58,17 @@ body {
     line-height: 3rem;
 }
 
+.admin-action {
+    width: 15rem;
+}
+
 @media (max-width: 767px) {
     .device-text-align{
         text-align: center;
+    }
+
+    .admin-action {
+        width: 3rem;
     }
 }
 
@@ -311,6 +319,9 @@ body {
 /**
  * Bootstrap style for custom checkboxes
  */
+.c-checkbox input:indeterminate ~ .c-indicator {
+    background-color: #555;
+}
 
 .c-input > input:checked ~ .c-indicator {
     background-color: #555;

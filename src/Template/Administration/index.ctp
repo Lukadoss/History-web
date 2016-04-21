@@ -2,70 +2,51 @@
     <div class="card-header">Administrace příspěvků
     </div>
     <div class="card-block" data-toggle="table">
-        <table class="table table-hover">
+        <?php echo $this->Flash->render(); ?>
+        <table id="administration" class="table table-hover tablesorter">
             <thead class="thead-inverse">
             <tr>
                 <th>Název příspěvku</th>
                 <th>Autor</th>
-                <th>Typ příspěvku</th>
-                <th>Možnosti</th>
+                <th>Typ</th>
+                <th class="admin-action">Akce</th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td><?php echo $this->Html->link(__('Audio příspěvek'), [
-                        'controller' => 'Prispevek',
-                        'action' => 'detail',
-                        5
-                    ]) ?></td>
-                <td>Otto</td>
-                <td>Audio</td>
-                <td><?php echo $this->Html->link(__('<i class="fa fa-check"></i> Přijmout'), [
-                        'controller' => 'Info',
-                    ], array('class' => 'label label-pill label-success', 'escape' => false)) ?>
-                    <?php echo $this->Html->link(__('<i class="fa fa-pencil-square-o"></i> Editovat'), [
-                        'controller' => 'Info',
-                    ], array('class' => 'label label-pill label-primary', 'escape' => false)) ?>
-                    <?php echo $this->Html->link(__('<i class="fa fa-times"></i> Smazat'), [
-                        'controller' => 'Info',
-                    ], array('class' => 'label label-pill label-danger', 'escape' => false)) ?>
-            </tr>
-            <tr>
-                <td><?php echo $this->Html->link(__('Další příspěvek'), [
-                        'controller' => 'Prispevek',
-                        'action' => 'detail',
-                        5
-                    ]) ?></td>
-                <td>Thornton</td>
-                <td>Text</td>
-                <td><?php echo $this->Html->link(__('<i class="fa fa-check"></i> Přijmout'), [
-                        'controller' => 'Info',
-                    ], array('class' => 'label label-pill label-success', 'escape' => false)) ?>
-                    <?php echo $this->Html->link(__('<i class="fa fa-pencil-square-o"></i> Editovat'), [
-                        'controller' => 'Info',
-                    ], array('class' => 'label label-pill label-primary', 'escape' => false)) ?>
-                    <?php echo $this->Html->link(__('<i class="fa fa-times"></i> Smazat'), [
-                        'controller' => 'Info',
-                    ], array('class' => 'label label-pill label-danger', 'escape' => false)) ?>
-            </tr>
-            <tr>
-                <td><?php echo $this->Html->link(__('Poslední příspěvek'), [
-                        'controller' => 'Prispevek',
-                        'action' => 'detail',
-                        5
-                    ]) ?></td>
-                <td>Larry the Bird</td>
-                <td>Obrázek</td>
-                <td><?php echo $this->Html->link(__('<i class="fa fa-check"></i> Přijmout'), [
-                        'controller' => 'Info',
-                    ], array('class' => 'label label-pill label-success', 'escape' => false)) ?>
-                    <?php echo $this->Html->link(__('<i class="fa fa-pencil-square-o"></i> Editovat'), [
-                        'controller' => 'Info',
-                    ], array('class' => 'label label-pill label-primary', 'escape' => false)) ?>
-                    <?php echo $this->Html->link(__('<i class="fa fa-times"></i> Smazat'), [
-                        'controller' => 'Info',
-                    ], array('class' => 'label label-pill label-danger', 'escape' => false)) ?>
-            </tr>
+            <?php foreach ($sources as $source) { ?>
+                <tr>
+                    <td style="vertical-align: middle"><?= $this->Html->link(__($source->name), [
+                            'controller' => 'Articles',
+                            'action' => 'detail',
+                            $source->source_id
+                        ]) ?></td>
+                    <td style="vertical-align: middle">
+                        <?php if(!isset($source->user_id)) {
+                            echo $source->forename . ' ' . $source->surname;
+                        }
+                        else {
+                            echo $source->user->forename . ' ' . $source->user->surname;
+                        }?><br>
+                        <span class="text-muted">
+                            <?php if(!isset($source->user_id)) {
+                                echo $source->email;
+                            }
+                            else {
+                                echo $source->user->email;
+                            }?>
+                        </span></td>
+                    <td style="vertical-align: middle"><?= $source->type ?></td>
+                    <td style="vertical-align: middle"><?= $this->Html->link(__('<i class="fa fa-check"></i> <span class="hidden-sm-down">Přijmout</span>'), [
+                            'controller' => 'Administration', 'action' => 'accept', $source->source_id
+                        ], array('class' => 'label label-pill label-success', 'escape' => false)) ?>
+                        <?= $this->Html->link(__('<i class="fa fa-pencil-square-o"></i> <span class="hidden-sm-down">Editovat</span>'), [
+                            'controller' => 'Articles', 'action' => 'edit', $source->source_id
+                        ], array('class' => 'label label-pill label-primary', 'escape' => false)) ?>
+                        <?= $this->Html->link(__('<i class="fa fa-times"></i> <span class="hidden-sm-down">Smazat</span>'), [
+                            'controller' => 'Administration', 'action' => 'delete', $source->source_id
+                        ], array('class' => 'label label-pill label-danger', 'escape' => false, 'confirm' => 'Opravdu chcete smazat tento příspěvek?')) ?></td>
+                </tr>
+            <?php } ?>
             </tbody>
         </table>
     </div>

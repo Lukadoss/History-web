@@ -17,7 +17,7 @@ class SourcesTable extends Table
         $this->table('source');
         $this->belongsTo('Users', [
             'foreignKey' => 'user_id',
-            'joinType' => 'INNER'
+            'joinType' => 'LEFT'
         ]);
         $this->hasOne('Districts', [
             'foreignKey' => 'district_id'

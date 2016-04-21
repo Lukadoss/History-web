@@ -27,10 +27,59 @@
         </ul>
 
         <div class="tab-content">
-            <div class="tab-pane active" id="home" role="tabpanel" style="padding-top: 1rem">...
-            Zatím jste nenahrál žádný příspěvek</div>
-            <div class="tab-pane" id="profile" role="tabpanel" style="padding-top: 1rem">...
-            Nemáte žádné příspěvky čekající na schválení</div>
+            <div class="tab-pane active" id="home" role="tabpanel" style="padding-top: 1rem">
+                <?php if ($accepted->isEmpty()){ ?>... Zatím jste nenahrál žádný příspěvek<?php }else{ ?>
+                <table id="detail" class="table table-hover tablesorter">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th>Název příspěvku</th>
+                            <th>Možnosti</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($accepted as $item){ ?>
+                        <tr>
+                            <td style="vertical-align: middle"><?= $this->Html->link(__($item->name), [
+                                    'controller' => 'Articles',
+                                    'action' => 'detail',
+                                    $item->source_id
+                                ]) ?></td>
+                            <td style="vertical-align: middle"><?= $this->Html->link(__('<i class="fa fa-pencil-square-o"></i> <span class="hidden-sm-down">Editovat</span>'), [
+                                    'controller' => 'Articles', 'action' => 'edit', $item->source_id
+                                ], array('class' => 'label label-pill label-primary', 'escape' => false)) ?></td>
+                        </tr>
+                    <?php } ?>
+                    </tbody>
+                </table>
+                <?php } ?>
+            </div>
+
+            <div class="tab-pane" id="profile" role="tabpanel" style="padding-top: 1rem">
+                <?php if ($onHold->isEmpty()){ ?>... Nemáte žádné příspěvky čekající na schválení<?php }else{ ?>
+                    <table id="detail" class="table table-hover tablesorter">
+                        <thead class="thead-inverse">
+                        <tr>
+                            <th>Název příspěvku</th>
+                            <th>Možnosti</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php foreach ($onHold as $item){ ?>
+                            <tr>
+                                <td style="vertical-align: middle"><?= $this->Html->link(__($item->name), [
+                                        'controller' => 'Articles',
+                                        'action' => 'detail',
+                                        $item->source_id
+                                    ]) ?></td>
+                                <td style="vertical-align: middle"><?= $this->Html->link(__('<i class="fa fa-pencil-square-o"></i> <span class="hidden-sm-down">Editovat</span>'), [
+                                        'controller' => 'Articles', 'action' => 'edit', $item->source_id
+                                    ], array('class' => 'label label-pill label-primary', 'escape' => false)) ?></td>
+                            </tr>
+                        <?php } ?>
+                        </tbody>
+                    </table>
+                <?php } ?>
+            </div>
         </div>
     </div>
 </div>

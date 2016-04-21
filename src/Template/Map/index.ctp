@@ -63,6 +63,10 @@
                     minZoom: 3
                 });
 
+                var markers = new Array();
+                var marker_data = '<?php echo json_encode($sources); ?>';
+                var marker_obj_data = JSON.parse(marker_data);
+                var markerColor;
 
                 var centerControlDiv = document.createElement('div');
                 var centerControl = new CenterControl(centerControlDiv, map);
@@ -70,99 +74,69 @@
                 centerControlDiv.index = 1;
                 map.controls[google.maps.ControlPosition.BOTTOM_CENTER].push(centerControlDiv);
 
-                var text1content = '<h6>test textového příspěvku</h6><br>' + '<span class="text-muted">typ: text<br>souborů: 1</span>';
-                var text1infowindow = new google.maps.InfoWindow({
-                    content: text1content
-                });
-                var audio1content = '<?php echo $this->Html->link(__('<h6>test audio příspěvku</h6><br>'), [
-                        'controller' => 'Articles',
-                        'action' => 'detail',
-                        10
-                    ], array('target' => '_blank', 'escape' => false)) ?>' + '<span class="text-muted">typ: audio<br>souborů: 1</span>';
-                var audio1infowindow = new google.maps.InfoWindow({
-                    content: audio1content
-                });
-                var video1content = '<h6>test video příspěvku</h6><br>' + '<span class="text-muted">typ: video<br>souborů: 2</span>';
-                var video1infowindow = new google.maps.InfoWindow({
-                    content: video1content
-                });
-                var image1content = '<h6>test image příspěvku</h6><br>' + '<span class="text-muted">typ: obrázek<br>souborů: 5</span>';
-                var image1infowindow = new google.maps.InfoWindow({
-                    content: image1content
-                });
+                var content = '', clusterContent = '', fileType;
+                var infoWindow = new google.maps.InfoWindow(
+                    {
+                        content: clusterContent,
+                        maxWidth: 400
+                    });
+                var clusterInfoWindow = new google.maps.InfoWindow(
+                    {
+                        content: content,
+                        pixelOffset: new google.maps.Size(0, -30),
+                        maxWidth: 400
+                    });
+                var i;
+                for (i in marker_obj_data) {
+                    if (marker_obj_data[i].type == 'text') {
+                        markerColor = 'd9534f';
+                        fileType = 'Textový dokument';
+                    }
+                    else if (marker_obj_data[i].type == 'audio') {
+                        markerColor = '0275d8';
+                        fileType = 'Audio';
+                    }
+                    else if (marker_obj_data[i].type == 'video') {
+                        markerColor = '5cb85c';
+                        fileType = 'Video';
+                    }
+                    else if (marker_obj_data[i].type == 'image') {
+                        markerColor = 'f0ad4e';
+                        fileType = 'Obrázky';
+                    }
 
-                var textmarker = 'd9534f';
-                var audiomarker = '0275d8';
-                var videomarker = '5cb85c';
-                var imagemarker = 'f0ad4e';
+                    var marker = new google.maps.Marker({
+                        position: {lat: marker_obj_data[i].lat, lng: marker_obj_data[i].lng},
+                        map: map,
+                        icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + markerColor,
+                        sourceId: marker_obj_data[i].source_id,
+                        name: marker_obj_data[i].name
+                    });
 
-                var textmarker1 = new google.maps.Marker({
-                    position: {lat: 48.9622271, lng: 14.5141815},
-                    map: map,
-                    icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + textmarker
-                });
+                    function getBaseUrl() {
+                        var re = new RegExp(/^.*\//);
+                        return re.exec(window.location.href);
+                    }
 
-                textmarker1.addListener('click', function () {
-                    video1infowindow.close(map);
-                    audio1infowindow.close(map);
-                    image1infowindow.close(map);
-                    text1infowindow.open(map, textmarker1);
-                });
+                    content = '<h6><a href="' + getBaseUrl() + 'articles/detail/' + marker_obj_data[i].source_id + '" target="_blank" class="nav-link">' + marker_obj_data[i].name + '</a></h6><br>'
+                        + '<span class="text-muted">typ: ' + fileType
+                        + '<br>Počet souborů: x</span>';
+                    setInfoWindow(marker, content);
 
-                var textmarker2 = new google.maps.Marker({
-                    position: {lat: 48.8622271, lng: 14.7141815},
-                    map: map,
-                    icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + textmarker
-                });
+                    markers.push(marker);
+                }
 
-                textmarker2.addListener('click', function () {
-                    video1infowindow.close(map);
-                    audio1infowindow.close(map);
-                    image1infowindow.close(map);
-                    text1infowindow.open(map, textmarker2);
-                });
+                function setInfoWindow(marker, content) {
+                    google.maps.event.addListener(marker, 'click', function () {
+                        infoWindow.setContent(content);
+                        clusterInfoWindow.close();
+                        infoWindow.open(map, this);
 
-                var imagemarker1 = new google.maps.Marker({
-                    position: {lat: 49.378962, lng: 13.275344},
-                    map: map,
-                    icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + imagemarker
-                });
-
-                imagemarker1.addListener('click', function () {
-                    image1infowindow.open(map, imagemarker1);
-                    video1infowindow.close(map);
-                    text1infowindow.close(map);
-                    audio1infowindow.close(map);
-                });
-
-                var audiomarker1 = new google.maps.Marker({
-                    position: {lat: 49.7188805, lng: 13.3593384},
-                    map: map,
-                    icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + audiomarker
-                });
-
-                audiomarker1.addListener('click', function () {
-                    audio1infowindow.open(map, audiomarker1);
-                    video1infowindow.close(map);
-                    text1infowindow.close(map);
-                    image1infowindow.close(map);
-                });
-
-                var videomarker1 = new google.maps.Marker({
-                    position: {lat: 49.420338, lng: 13.878407},
-                    map: map,
-                    icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + videomarker
-                });
-
-                videomarker1.addListener('click', function () {
-                    video1infowindow.open(map, videomarker1);
-                    audio1infowindow.close(map);
-                    text1infowindow.close(map);
-                    image1infowindow.close(map);
-                });
+                    });
+                }
 
                 var mcOptions = {
-                    gridSize: 20, maxZoom: 15, averageCenter: true, styles: [{
+                    gridSize: 30, maxZoom: 21, averageCenter: true, styles: [{
                         textColor: 'white',
                         textSize: 14,
                         height: 40,
@@ -194,8 +168,25 @@
                             width: 70
                         }]/*, imagePath: */
                 };
-                var markers = [textmarker1, textmarker2, imagemarker1, videomarker1, audiomarker1];
+
                 var mc = new MarkerClusterer(map, markers, mcOptions);
+                var clusteredmarkers;
+                google.maps.event.addListener(mc, 'click', function (cluster) {
+                    clusteredmarkers = cluster.getMarkers();
+                    clusterContent = '';
+
+                    //map.fitBounds(cluster.getBounds());
+                    if (map.getZoom() > 20) {
+                        clusterContent = '<h6>Tato oblast obsahuje tyto příspěvky</h6>';
+                        for(i = 0; i<clusteredmarkers.length; i++){
+                            clusterContent += '<hr><h6><a href="' + getBaseUrl() + 'articles/detail/' + clusteredmarkers[i].sourceId + '" target="_blank" class="nav-link">' + clusteredmarkers[i].name + '</a></h6>';
+                        }
+                        clusterInfoWindow.setContent(clusterContent);
+                        clusterInfoWindow.setPosition(cluster.getCenter());
+                        infoWindow.close();
+                        clusterInfoWindow.open(map);
+                    }
+                });
 
                 function CenterControl(controlDiv, map) {
 
@@ -227,6 +218,10 @@
                     });
 
                 }
+
+            }
+
+            function setMarkers() {
 
             }
         </script>

@@ -48,10 +48,12 @@
 
             <div class="col-md-6">
                 <label><label class="c-input c-checkbox">
-                        <input type="checkbox" id="filter-text" checked>
+                        <input type="checkbox" id="date-span" onclick="document.getElementById('date-to').disabled=!this.checked; if(!this.checked) document.getElementById('date-to').value = '';">
+                        <script>$('#date-span').prop('indeterminate', true)</script>
                         <span class="c-indicator"></span>
                     </label>Trvání události do:</label>
-                <input type="date" class="form-control" name="date_to" style="margin-bottom: 0">
+
+                <input type="date" class="form-control" id="date-to" name="date_to" style="margin-bottom: 0" disabled>
                 <span class="text-muted" style="font-size: 0.75rem">Pokud nevíte přesné datum, nebo událost trvala více jak den, zadejte datum jako interval</span>
             </div>
         </div>
@@ -289,7 +291,7 @@
                         marker = new google.maps.Marker({
                             position: location,
                             map: map,
-                            draggable: true
+                            draggable: false
                         });
                     }
                     document.getElementById('lat').value = location.lat();
@@ -305,8 +307,8 @@
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcDBMIqB9QnfD3wks9zVI2WUSHLnbU9so&callback=initMap"
                 async defer></script>
         </div>
-        <input type="text" name="lat" id="lat" hidden>
-        <input type="text" name="lng" id="lng" hidden>
+        <input type="text" name="lat" id="lat" required hidden>
+        <input type="text" name="lng" id="lng" required hidden>
         <hr>
         <div class="g-recaptcha" style="margin-bottom: 15px;"
              data-sitekey="6LdMihwTAAAAABHyUIcfago1qMOTWkT4dL7XP_Bx"></div>

@@ -18,7 +18,6 @@ class UsersTable extends Table
         $this->hasMany('Sources', [
             'foreignKey' => 'user_id'
         ]);
-        //$this->addBehavior('Timestamp');
     }
 
     public function validationDefault(Validator $validator)
@@ -76,6 +75,21 @@ class UsersTable extends Table
                 'message' => 'Hesla se neshodují'
             ]);
 
+        return $validator;
+    }
+
+    public function validationSettings(Validator $validator){
+        $validator
+            ->allowEmpty('forename')
+            ->add('forename', 'length', [
+                'rule'=>['maxLength', 20],
+                'message' => 'Příliš dlouhé jméno'
+            ])
+            ->allowEmpty('surname')
+            ->add('surname', 'length', [
+                'rule'=>['maxLength', 20],
+                'message' => 'Příliš dlouhé příjmení'
+            ]);
         return $validator;
     }
 }
