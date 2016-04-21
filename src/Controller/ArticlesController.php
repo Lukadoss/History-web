@@ -44,6 +44,13 @@ class ArticlesController extends AppController
                     $source = $this->Sources->patchEntity($source, $this->request->data);
                     $source->date_from = $this->request->data('date_from');
                     $source->date_to = $this->request->data('date_to');
+                    $source->name = htmlspecialchars($this->request->data('name'));
+                    $source->text = htmlspecialchars($this->request->data('text'));
+                    if($this->request->data('forename') || $this->request->data('surname') || $this->request->data('email')){
+                        $source->forename = htmlspecialchars($this->request->data('forename'));
+                        $source->surname = htmlspecialchars($this->request->data('surname'));
+                        $source->email = htmlspecialchars($this->request->data('email'));
+                    }
 
                     if ($this->request->data('forename') == null) {
                         $source->forename = $this->Auth->user('forename');
@@ -51,70 +58,69 @@ class ArticlesController extends AppController
                         $source->email = $this->Auth->user('email');
                     }
 
-                    if(!empty($this->request->data['text_file'])){
+                    if (!empty($this->request->data['text_file'])) {
                         $text_file = $this->request->data['text_file'];
                         $file_count = $file_count + sizeof($text_file);
                     }
-                    if(!empty($this->request->data['image_file'])){
+                    if (!empty($this->request->data['image_file'])) {
                         $image_file = $this->request->data['image_file'];
                         $file_count = $file_count + sizeof($image_file);
                     }
-                    if(!empty($this->request->data['audio_file'])){
+                    if (!empty($this->request->data['audio_file'])) {
                         $audio_file = $this->request->data['audio_file'];
                         $file_count = $file_count + sizeof($audio_file);
                     }
-                    if(!empty($this->request->data['video_file'])){
+                    if (!empty($this->request->data['video_file'])) {
                         $video_file = $this->request->data['video_file'];
                         $file_count = $file_count + sizeof($video_file);
                     }
 
-                    if($file_count<=19){
-                    $text_size = $this->file_size($text_file);
-                    $image_size = $this->file_size($image_file);
-                    $audio_size = $this->file_size($audio_file);
-                    $video_size = $this->file_size($video_file);
+                    if ($file_count <= 19) {
+                        $text_size = $this->file_size($text_file);
+                        $image_size = $this->file_size($image_file);
+                        $audio_size = $this->file_size($audio_file);
+                        $video_size = $this->file_size($video_file);
 
-                    $input_size = $text_size + $image_size + $audio_size + $video_size;
-                    if ($text_size > 15000000) {
-                        $this->Flash->error(__('<strong>Velikost dokumentů přesáhl limit 15MB</strong>'));
-                    }
-                    if ($image_size > 30000000) {
-                        $this->Flash->error(__('<strong>Velikost obrázků přesáhl limit 30MB</strong>'));
-                    }
-                    if ($audio_size > 40000000) {
-                        $this->Flash->error(__('<strong>Velikost audio souborů přesáhl limit 40MB</strong>'));
-                    }
-                    if ($video_size > 100000000) {
-                        $this->Flash->error(__('<strong>Velikost video souborů přesáhl limit 100MB</strong>'));
-                    }
-
-                    if ($text_size <= 15000000 && $image_size <= 30000000 && $audio_size <= 40000000 && $video_size <= 100000000 && $input_size <= 150000000) {
-                        if ($this->Sources->save($source)) {
-
-                            $text_validation = array("text/plain", "application/msword", "application/pdf",
-                                "application/vnd.openxmlformats-officedocument.wordprocessingml.template", "application/msword");
-                            $image_validation = array("image/jpeg", "image/png", "image/gif", "image/bmp");
-                            $audio_validation = array("audio/mpeg3", "audio/wav", "audio/x-wav", "audio/ogg", "audio/mpeg", "audio/x-mpeg-3", "video/x-mpeg", "audio/mp3");
-                            $video_validation = array("video/avi", "video/mpeg", "video/mp4", "application/mp4", "video/x-msvideo");
-                            $result = $this->Sources->save($source);
-                            $lastId = $result->source_id;
-
-                            $path_text = 'files/' . $lastId . '/Text';
-                            $path_audio = 'files/' . $lastId . '/Audio';
-                            $path_video = 'files/' . $lastId . '/Video';
-                            $path_image = 'files/' . $lastId . '/Image';
-
-                            $this->file_upload($text_file, $text_validation, $path_text);
-                            $this->file_upload($audio_file, $audio_validation, $path_audio);
-                            $this->file_upload($video_file, $video_validation, $path_video);
-                            $this->file_upload($image_file, $image_validation, $path_image);
-
-                            $this->Flash->success(__('<strong>Příspěvek byl úspěšně nahrán!</strong> Počkejte, prosím, na jeho schválení.'));
-                            return $this->redirect(['action' => 'new_article']);
+                        $input_size = $text_size + $image_size + $audio_size + $video_size;
+                        if ($text_size > 15000000) {
+                            $this->Flash->error(__('<strong>Velikost dokumentů přesáhl limit 15MB</strong>'));
                         }
-                    }
-                    }
-                    else{
+                        if ($image_size > 30000000) {
+                            $this->Flash->error(__('<strong>Velikost obrázků přesáhl limit 30MB</strong>'));
+                        }
+                        if ($audio_size > 40000000) {
+                            $this->Flash->error(__('<strong>Velikost audio souborů přesáhl limit 40MB</strong>'));
+                        }
+                        if ($video_size > 100000000) {
+                            $this->Flash->error(__('<strong>Velikost video souborů přesáhl limit 100MB</strong>'));
+                        }
+
+                        if ($text_size <= 15000000 && $image_size <= 30000000 && $audio_size <= 40000000 && $video_size <= 100000000 && $input_size <= 150000000) {
+                            if ($this->Sources->save($source)) {
+
+                                $text_validation = array("text/plain", "application/msword", "application/pdf",
+                                    "application/vnd.openxmlformats-officedocument.wordprocessingml.template", "application/msword");
+                                $image_validation = array("image/jpeg", "image/png", "image/gif", "image/bmp");
+                                $audio_validation = array("audio/mpeg3", "audio/wav", "audio/x-wav", "audio/ogg", "audio/mpeg", "audio/x-mpeg-3", "video/x-mpeg", "audio/mp3");
+                                $video_validation = array("video/avi", "video/mpeg", "video/mp4", "application/mp4", "video/x-msvideo");
+                                $result = $this->Sources->save($source);
+                                $lastId = $result->source_id;
+
+                                $path_text = 'files/' . $lastId . '/Text';
+                                $path_audio = 'files/' . $lastId . '/Audio';
+                                $path_video = 'files/' . $lastId . '/Video';
+                                $path_image = 'files/' . $lastId . '/Image';
+
+                                $this->file_upload($text_file, $text_validation, $path_text);
+                                $this->file_upload($audio_file, $audio_validation, $path_audio);
+                                $this->file_upload($video_file, $video_validation, $path_video);
+                                $this->file_upload($image_file, $image_validation, $path_image);
+
+                                $this->Flash->success(__('<strong>Příspěvek byl úspěšně nahrán!</strong> Počkejte, prosím, na jeho schválení.'));
+                                return $this->redirect(['action' => 'new_article']);
+                            }
+                        }
+                    } else {
                         $this->Flash->error(__('<strong>Přesáhl jsi limit 19 souborů!</strong>'));
                     }
 
