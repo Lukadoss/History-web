@@ -1,8 +1,8 @@
 body {
-    background: #cccccc; /* Old browsers */
-    background: -moz-linear-gradient(left, #cccccc 0%, #d9d9d9 50%, #cccccc 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #cccccc 0%, #d9d9d9 50%, #cccccc 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #cccccc 0%, #d9d9d9 50%, #cccccc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: #1b2838; /* Old browsers */
+    background: -moz-linear-gradient(left, #1b2838 0%, #00284d 50%, #1b2838 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #1b2838 0%, #00284d 50%, #1b2838 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #1b2838 0%, #00284d 50%, #1b2838 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 
 .card-header {
