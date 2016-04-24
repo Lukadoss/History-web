@@ -3,7 +3,7 @@
     </div>
     <div class="card-block" data-toggle="table">
         <?php echo $this->Flash->render();
-        if ($sources->first() == null){ ?>
+        if ($sources->toList() == null){ ?>
             Momentálně zde nejsou žádné příspěvky k potvrzení
         <?php } else { ?>
         <table id="administration" class="table table-hover tablesorter">
