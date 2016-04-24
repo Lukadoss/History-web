@@ -31,6 +31,9 @@ class MapController extends AppController
         $this->loadModel('Sources');
         $sources = $this->Sources->find('all', array('fields' => array('source_id', 'name', 'date_from', 'date_to', 'lat', 'lng', 'type')))
             ->where('onHold = 0');
+        foreach($sources as $source){
+            $source->date_from = date('Y-m-d', strtotime($source->date_from));
+        }
         $this->set('sources', $sources);
         //return $this->redirect(['controller' => 'Article', 'action' => 'novy']);
     }
