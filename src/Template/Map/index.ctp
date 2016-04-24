@@ -200,9 +200,10 @@
                 activeMarkers = [];
 
                 for (i in marker_obj_data) {
-                    var markerDate = new Date(marker_obj_data[i].date_from).toISOString().slice(0, 10);
+                    var markerDateFrom = new Date(marker_obj_data[i].date_from).toISOString().slice(0, 10);
+                    var markerDateTo = new Date(marker_obj_data[i].date_to).toISOString().slice(0, 10);
                     //var formattedDate = markerDate.getFullYear() + "-" + (markerDate.getMonth()+1) + "-" + markerDate.getDate();
-                    if (markerDate == currentDate) {
+                    if (markerDateFrom == currentDate || (markerDateFrom <= currentDate && markerDateTo >= currentDate)) {
                         if (marker_obj_data[i].type == 'text') {
                             if (filterSettings.text) {
                                 markerColor = 'd9534f';
