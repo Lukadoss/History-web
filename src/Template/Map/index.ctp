@@ -7,11 +7,11 @@
                 style="line-height: 2rem; text-align: center; min-width: 130px">Zobrazené období</span></div>
         <div class="col-md-8">
             <input id="pick-year" type="text" data-slider-min="<?= adodb_mktime(0, 0, 0, 1, 1, 1920) ?>"
-                   data-slider-max="<?= adodb_mktime(0, 0, 0, 12, 31, 2015) ?>" data-slider-step="86400"
-                   data-slider-value="<?= adodb_mktime(0, 0, 0, 10, 5, 1968) ?>">
+                   data-slider-max="<?= adodb_mktime(0, 0, 0, 12, 31, 2016) ?>" data-slider-step="86400"
+                   data-slider-value="<?= adodb_mktime(0, 0, 0, 04, 22, 2016) ?>">
         </div>
         <div class="col-md-2" style="padding-left: 0">
-            <input type="date" value="1968-10-05" id="pick-year-val" min="1920-01-01" max="2015-12-31">
+            <input type="date" value="2016-04-22" id="pick-year-val" min="1920-01-01" max="2016-12-31">
         </div>
         <div class="clearfix"></div>
         <script>
@@ -35,6 +35,8 @@
                         }
                     });
                 }, 50);
+                clearMapMarkers();
+                setMarkers(marker_obj_data, activeMarkers, document.getElementById("pick-year-val").value);
             });
 
             $("#pick-year-val").on("change", function () {
@@ -49,6 +51,8 @@
                         }
                     });
                 }, 500);
+                clearMapMarkers();
+                setMarkers(marker_obj_data, activeMarkers, document.getElementById("pick-year-val").value);
             })
         </script>
     </div>
@@ -56,10 +60,11 @@
     <div class="card-block card-map" id="map">
         <script>
             var map, infoWindow, clusterInfoWindow;
-            var markers = [];
+            var activeMarkers = [];
             var marker_data = '<?php echo json_encode($sources); ?>';
             var marker_obj_data = JSON.parse(marker_data);
             var mc;
+            var filterSettings = {audio: 1, video: 1, image: 1, text: 1}; //audio, video, image, text
 
             var mcOptions = {
                 gridSize: 30, maxZoom: 21, averageCenter: true, styles: [{
@@ -119,7 +124,7 @@
                         pixelOffset: new google.maps.Size(0, -30),
                         maxWidth: 400
                     });
-                setMarkers(marker_obj_data, markers);
+                setMarkers(marker_obj_data, activeMarkers, document.getElementById("pick-year-val").value);
             }
 
             function CenterControl(controlDiv, map) {
@@ -143,7 +148,7 @@
                 controlText.style.paddingLeft = '5px';
                 controlText.style.paddingRight = '5px';
                 controlText.innerHTML = '<a id="play-pause-btn" style="margin-right: 1rem"><?= $this->html->image('play-pause-btn.png', array('style' => 'height:1.5rem', 'title' => 'Přehrát/Pozastavit', 'id' => 'play-animation', 'onclick' => 'startAnimation()')) ?></a>' +
-                    '<a id="stop-btn"><?= $this->html->image('stop-btn.png', array('style' => 'height:1.5rem', 'title' => 'Zastavit', 'id' => 'anim-stop', 'onclick' => 'clearMarkers()')) ?></a>';
+                    '<a id="stop-btn"><?= $this->html->image('stop-btn.png', array('style' => 'height:1.5rem', 'title' => 'Zastavit', 'id' => 'anim-stop', 'onclick' => 'clearMapMarkers()')) ?></a>';
                 controlUI.appendChild(controlText);
 
                 // Setup the click event listeners
@@ -154,20 +159,22 @@
 
             }
 
-            function setMapOnAll(map) {
+            function setMarkerMap(map, markers) {
                 for (var i = 0; i < markers.length; i++) {
                     markers[i].setMap(map);
                 }
             }
 
             // Removes the markers from the map, but keeps them in the array.
-            function clearMarkers() {
-                setMapOnAll(null);
+            function clearMapMarkers() {
+                mc.clearMarkers();
+                setMarkerMap(null, activeMarkers);
+                activeMarkers = [];
             }
 
             // Shows any markers currently in the array.
             function showMarkers() {
-                setMapOnAll(map);
+                setMarkerMap(map, activeMarkers);
             }
 
             function getBaseUrl() {
@@ -176,7 +183,8 @@
             }
 
             function startAnimation() {
-                setMarkers(marker_obj_data, markers);
+                setMarkers(marker_obj_data, activeMarkers);
+                mc.addMarkers(activeMarkers);
             }
 
             function setInfoWindow(marker, content) {
@@ -187,45 +195,63 @@
                 });
             }
 
-            function setMarkers(marker_obj_data, markers) {
+            function setMarkers(marker_obj_data, activeMarkers, currentDate) {
                 var markerColor, fileType, i, content;
+                activeMarkers = [];
 
                 for (i in marker_obj_data) {
-                    if (marker_obj_data[i].type == 'text') {
-                        markerColor = 'd9534f';
-                        fileType = 'Textový dokument';
-                    }
-                    else if (marker_obj_data[i].type == 'audio') {
-                        markerColor = '0275d8';
-                        fileType = 'Audio';
-                    }
-                    else if (marker_obj_data[i].type == 'video') {
-                        markerColor = '5cb85c';
-                        fileType = 'Video';
-                    }
-                    else if (marker_obj_data[i].type == 'image') {
-                        markerColor = 'f0ad4e';
-                        fileType = 'Obrázky';
-                    }
+                    var markerDate = new Date(marker_obj_data[i].date_from).toISOString().slice(0, 10);
+                    //var formattedDate = markerDate.getFullYear() + "-" + (markerDate.getMonth()+1) + "-" + markerDate.getDate();
+                    if (markerDate == currentDate) {
+                        if (marker_obj_data[i].type == 'text') {
+                            if (filterSettings.text) {
+                                markerColor = 'd9534f';
+                                fileType = 'Textový dokument';
+                            }
+                            else continue;
+                        }
+                        else if (marker_obj_data[i].type == 'audio') {
+                            if (filterSettings.audio) {
+                                markerColor = '0275d8';
+                                fileType = 'Audio';
+                            }
+                            else continue;
+                        }
+                        else if (marker_obj_data[i].type == 'video') {
+                            if (filterSettings.video) {
+                                markerColor = '5cb85c';
+                                fileType = 'Video';
+                            }
+                            else continue;
+                        }
+                        else if (marker_obj_data[i].type == 'image') {
+                            if (filterSettings.image) {
+                                markerColor = 'f0ad4e';
+                                fileType = 'Obrázky';
+                            }
+                            else continue;
+                        }
 
-                    var marker = new google.maps.Marker({
-                        position: {lat: marker_obj_data[i].lat, lng: marker_obj_data[i].lng},
-                        map: map,
-                        icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + markerColor,
-                        sourceId: marker_obj_data[i].source_id,
-                        name: marker_obj_data[i].name
-                    });
+                        var marker = new google.maps.Marker({
+                            position: {lat: marker_obj_data[i].lat, lng: marker_obj_data[i].lng},
+                            map: map,
+                            animation: google.maps.Animation.DROP,
+                            icon: 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + markerColor,
+                            sourceId: marker_obj_data[i].source_id,
+                            name: marker_obj_data[i].name
+                        });
 
-                    content = '<h6><a href="' + getBaseUrl() + 'articles/detail/' + marker_obj_data[i].source_id + '" target="_blank" class="nav-link">' + marker_obj_data[i].name + '</a></h6><br>'
-                        + '<span class="text-muted">typ: ' + fileType
-                        + '<br>Počet souborů: x</span>';
+                        content = '<h6><a href="' + getBaseUrl() + 'articles/detail/' + marker_obj_data[i].source_id + '" target="_blank" class="nav-link">' + marker_obj_data[i].name + '</a></h6><br>'
+                            + '<span class="text-muted">typ: ' + fileType
+                            + '<br>Počet souborů: x</span>';
 
-                    setInfoWindow(marker, content);
+                        setInfoWindow(marker, content);
 
-                    markers.push(marker);
+                        activeMarkers.push(marker);
+                    }
                 }
 
-                mc = new MarkerClusterer(map, markers, mcOptions);
+                mc = new MarkerClusterer(map, activeMarkers, mcOptions);
                 var clusteredmarkers, clusterContent = '';
                 google.maps.event.addListener(mc, 'click', function (cluster) {
                     clusteredmarkers = cluster.getMarkers();
@@ -243,6 +269,13 @@
                         clusterInfoWindow.open(map);
                     }
                 });
+            }
+
+            function setFilters() {
+                delay(function () {
+                    alert(filterSettings.audio);
+                }, 350);
+
             }
         </script>
         <script
@@ -274,7 +307,7 @@
                             class="fa fa-picture-o"> </i> Obrázky</span>
             <span class="p-x-1 pull-right">
                 <label class="c-input c-checkbox">
-                    <input type="checkbox" id="filter-foto" checked>
+                    <input type="checkbox" id="filter-image" checked>
                     <span class="c-indicator"></span>
                 </label>
             </span>
@@ -290,6 +323,39 @@
                 </div>
             </div>
         </div>
+        <script>
+            document.getElementById('filter-audio').addEventListener('change', function () {
+                if (document.getElementById('filter-audio').checked)
+                    filterSettings.audio = 1;
+                else
+                    filterSettings.audio = 0;
+                setFilters();
+            });
+
+            document.getElementById('filter-video').addEventListener('change', function () {
+                if (document.getElementById('filter-video').checked)
+                    filterSettings.video = 1;
+                else
+                    filterSettings.video = 0;
+                setFilters();
+            });
+
+            document.getElementById('filter-image').addEventListener('change', function () {
+                if (document.getElementById('filter-image').checked)
+                    filterSettings.image = 1;
+                else
+                    filterSettings.image = 0;
+                setFilters();
+            });
+
+            document.getElementById('filter-text').addEventListener('change', function () {
+                if (document.getElementById('filter-text').checked)
+                    filterSettings.text = 1;
+                else
+                    filterSettings.text = 0;
+                setFilters();
+            });
+        </script>
         <div class="row">
             <div class="col-xs-6 text-left">
                 <button class="btn btn-primary btn-middle" type="button" data-toggle="collapse"
