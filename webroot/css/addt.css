@@ -341,8 +341,8 @@ body {
  * File upload plugin
  */
 
-.file-upload-actionbar {
-    height: 2rem;
+.file-caption {
+    height: 2.4rem !important;
     margin-top: 0 !important;
 }
 
