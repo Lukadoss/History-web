@@ -33,6 +33,8 @@ class MapController extends AppController
             ->where('onHold = 0');
         foreach($sources as $source){
             $source->date_from = date('Y-m-d', strtotime($source->date_from));
+            if($source->date_to)
+                $source->date_to = date('Y-m-d', strtotime($source->date_to));
         }
         $this->set('sources', $sources);
         //return $this->redirect(['controller' => 'Article', 'action' => 'novy']);
