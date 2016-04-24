@@ -2,7 +2,10 @@
     <div class="card-header">Administrace příspěvků
     </div>
     <div class="card-block" data-toggle="table">
-        <?php echo $this->Flash->render(); ?>
+        <?php echo $this->Flash->render();
+        if ($sources->first() == null){ ?>
+            Momentálně zde nejsou žádné příspěvky k potvrzení
+        <?php } else { ?>
         <table id="administration" class="table table-hover tablesorter">
             <thead class="thead-inverse">
             <tr>
@@ -46,7 +49,8 @@
                             'controller' => 'Administration', 'action' => 'delete', $source->source_id
                         ], array('class' => 'label label-pill label-danger', 'escape' => false, 'confirm' => 'Opravdu chcete smazat tento příspěvek?')) ?></td>
                 </tr>
-            <?php } ?>
+            <?php }
+            } ?>
             </tbody>
         </table>
     </div>
