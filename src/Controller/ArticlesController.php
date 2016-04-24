@@ -207,6 +207,9 @@ class ArticlesController extends AppController
                 $this->Sources->patchEntity($source, $this->request->data);
                 $source->date_from = $this->request->data('date_from');
                 $source->date_to = $this->request->data('date_to');
+                if ($user->isadmin != true){
+                    $source->onHold = true;
+                }
 
                 if ($this->Sources->save($source)) {
                     $this->Flash->success('Příspěvek "' . $source->name . '" byl úspěšně změněn!');
