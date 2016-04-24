@@ -1,13 +1,13 @@
-<?php echo $this->Html->script('canvas-to-blob.min.js') ?>
-<?php echo $this->Html->script('fileinput.min.js') ?>
+<?= $this->Html->script('canvas-to-blob.min.js') ?>
+<?= $this->Html->script('fileinput.min.js') ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/i18n/cs.js"></script>
-<?php echo $this->Html->script('fileinput_locale_cz.js', array('type' => 'text/javascript')) ?>
+<?= $this->Html->script('fileinput_locale_cz.js', array('type' => 'text/javascript')) ?>
 <div class="card">
     <div class="card-header">Přidání nového příspěvku
     </div>
     <div class="card-block">
-        <?php echo $this->Flash->render(); ?>
+        <?= $this->Flash->render(); ?>
         <?php
         echo $this->Form->create($source, ['type' => 'file']); ?>
         <?php if (!$this->request->session()->read('Auth.User')) { ?>
@@ -36,7 +36,8 @@
             <input type="text" class="form-control" required name="name">
         </div>
         <div class="form-group col-md-12">
-            <?php echo $this->Form->input('Krátký popis (nepovinný):', ['type' => 'textarea', 'escape' => true, 'class' => 'form-control', 'rows' => '5', 'name' => 'text']); ?>
+            <label>Krátký popis (nepovinný):</label>
+            <textarea type="text" rows="5" class="form-control" name="text"></textarea>
         </div>
         <div class="form-group">
 
@@ -55,6 +56,25 @@
                 <input type="date" class="form-control" id="date-to" name="date_to" style="margin-bottom: 0" disabled>
                 <span class="text-muted" style="font-size: 0.75rem">Pokud nevíte přesné datum, nebo událost trvala více jak den, zadejte datum jako interval</span>
             </div>
+            <script>
+            $('#submit').click( function() {
+            //check whether browser fully supports all File API
+            if (window.File && window.FileReader && window.FileList && window.Blob)
+            {
+            //get the file size and file type from file input field
+            var fsize = $('#text_file_input')[0].files[0].size;
+
+            if(fsize>150000000) //do something if file size more than 1 mb (1048576)
+            {
+            alert(fsize +" bites\nToo big!");
+            }else{
+            alert(fsize +" bites\nYou are good to go!");
+            }
+            }else{
+            alert("Please upgrade your browser, because your current browser lacks some new features we need!");
+            }
+            });
+            </script>
         </div>
         <div class="form-group col-md-12">
             <label class="control-label">Soubory</label>
@@ -112,10 +132,6 @@
                                 }
                             });
                         });
-
-                        $('#text_file_input').on('fileuploaderror', function() {
-                            document.getElementById('submit-article').disabled = true;
-                        });
                     </script>
                 </div>
                 <div class="tab-pane active" id="image" role="tabpanel">
@@ -151,10 +167,6 @@
                                     '</div>'
                                 }
                             });
-                        });
-
-                        $('#image_file_input').on('fileuploaderror', function() {
-                            document.getElementById('submit-article').disabled = true;
                         });
                     </script>
                 </div>
@@ -192,10 +204,6 @@
                                 }
                             });
                         });
-
-                        $('#audio_file_input').on('fileuploaderror', function() {
-                            document.getElementById('submit-article').disabled = true;
-                        });
                     </script>
                 </div>
                 <div class="tab-pane" id="video" role="tabpanel">
@@ -232,10 +240,6 @@
                                 }
                             });
                         });
-
-                        $('#video_file_input').on('fileuploaderror', function() {
-                            document.getElementById('submit-article').disabled = true;
-                        });
                     </script>
                 </div>
             </div>
@@ -258,8 +262,8 @@
                 <option></option>
                 <?php foreach ($district as $dist) {
                     ?>
-                    <option value=" $dist->id ?>"> <?php echo $dist->municipality ?>, <span class="text-muted"><i
-                                class="fa fa-user"> </i>okres <?php echo $dist->district ?>, <?php echo $dist->region ?></span>
+                    <option value="<?= $dist->id ?>"> <?= $dist->municipality ?>, <span class="text-muted"><i
+                                class="fa fa-user"> </i>okres <?= $dist->district ?>, <?= $dist->region ?></span>
                     </option> <?php
                 } ?>
 
@@ -327,7 +331,7 @@
         <hr>
         <div class="g-recaptcha" style="margin-bottom: 15px;"
              data-sitekey="6LdMihwTAAAAABHyUIcfago1qMOTWkT4dL7XP_Bx"></div>
-        <button type="submit" name="submit-article" id="submit-article" class="btn btn-primary">Přidat článek</button>
+        <button type="submit" name="submit-article" id="submit" class="btn btn-primary">Přidat článek</button>
         <?php echo $this->Form->end();
         ?>
     </div>

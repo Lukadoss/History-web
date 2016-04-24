@@ -2,70 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f77ee8a-7dc7-4d9d-9eea-51a94d6233cc" name="Default" comment="Administrace - half done">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/.scrutinizer.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/docs/Makefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/docs/conf.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/docs/configuration.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/docs/examples.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/docs/index.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/docs/installation.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/docs/interfaces.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/docs/introduction.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/docs/make.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/docs/validation.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/src/Database/Type/FileType.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/src/File/Path/Basepath/DefaultTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/src/File/Path/DefaultProcessor.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/src/File/Path/Filename/DefaultTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/src/File/Path/ProcessorInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/src/File/Transformer/DefaultTransformer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/src/File/Transformer/SlugTransformer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/src/File/Transformer/TransformerInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/src/File/Writer/DefaultWriter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/src/File/Writer/WriterInterface.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/src/Model/Behavior/UploadBehavior.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/src/Validation/DefaultValidation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/src/Validation/ImageValidation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/src/Validation/Traits/ImageValidationTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/src/Validation/Traits/UploadValidationTrait.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/src/Validation/UploadValidation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/tests/TestCase/Database/Type/FileTypeTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/tests/TestCase/File/Path/Basepath/DefaultTraitTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/tests/TestCase/File/Path/DefaultProcessorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/tests/TestCase/File/Path/Filename/DefaultTraitTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/tests/TestCase/File/Transformer/DefaultTransformerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/tests/TestCase/File/Transformer/SlugTransformerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/tests/TestCase/File/Writer/DefaultWriterTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/tests/TestCase/Model/Behavior/UploadBehaviorTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/tests/TestCase/Validation/ImageValidationTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/tests/TestCase/Validation/UploadValidationTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/Josegonzalez/upload/tests/bootstrap.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations_cake_en__u_s" afterPath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations_cake_en__u_s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/symfony/console/Resources/bin/hiddeninput.exe" afterPath="$PROJECT_DIR$/vendor/symfony/console/Resources/bin/hiddeninput.exe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations_default_en__u_s" afterPath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations_default_en__u_s" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/bootstrap.php" afterPath="$PROJECT_DIR$/config/bootstrap.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/debug.log" afterPath="$PROJECT_DIR$/logs/debug.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/error.log" afterPath="$PROJECT_DIR$/logs/error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/ArticlesController.php" afterPath="$PROJECT_DIR$/src/Controller/ArticlesController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Template/Articles/new_article.ctp" afterPath="$PROJECT_DIR$/src/Template/Articles/new_article.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations_default_en__u_s" afterPath="$PROJECT_DIR$/tmp/cache/persistent/myapp_cake_core_translations_default_en__u_s" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/cakephp-plugins.php" afterPath="$PROJECT_DIR$/vendor/cakephp-plugins.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
     </list>
     <ignored path="history.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,8 +39,32 @@
       <file leaf-file-name="ArticlesController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/ArticlesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="955">
-              <caret line="104" column="57" selection-start-line="104" selection-start-column="57" selection-end-line="104" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.02673147">
+              <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
+              <folding>
+                <element signature="e#6#87#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webroot/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <marker date="1458054815008" expanded="true" signature="0:129" placeholder="&lt;IfModule mod_rewrite.c&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LICENSE.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webroot/js/LICENSE.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -107,12 +73,20 @@
       <file leaf-file-name="new_article.ctp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Template/Articles/new_article.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="75" column="21" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.ctp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Template/Map/index.ctp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
               <folding>
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#5;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#1;n#div#5;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#6;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <marker date="1461267359963" expanded="true" signature="7921:7993" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -198,9 +172,9 @@
         <option value="$PROJECT_DIR$/src/Model/Table/SourcesTable.php" />
         <option value="$PROJECT_DIR$/src/Controller/AppController.php" />
         <option value="$PROJECT_DIR$/src/Model/Table/UsersTable.php" />
-        <option value="$PROJECT_DIR$/src/Controller/ArticlesController.php" />
         <option value="$PROJECT_DIR$/config/bootstrap.php" />
         <option value="$PROJECT_DIR$/src/Template/Articles/new_article.ctp" />
+        <option value="$PROJECT_DIR$/src/Controller/ArticlesController.php" />
       </list>
     </option>
   </component>
@@ -217,10 +191,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -272,8 +246,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -289,7 +261,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="History-web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -299,11 +271,11 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="History-web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -313,19 +285,47 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="History-web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webroot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="History-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="History-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="History-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="History-web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Template" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Users" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -335,15 +335,19 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="History-web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Template" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Map" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -353,41 +357,19 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="History-web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Template" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Layout" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="History-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="History-web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Template" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Articles" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -397,41 +379,15 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="History-web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Template" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Administration" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="History-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="History-web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Table" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -441,55 +397,21 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="History-web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="History-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="History-web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="History-web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="History-web" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -593,14 +515,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
-      <node-interpreter value="project" />
       <envs />
       <force value="false" />
       <verbose value="false" />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
@@ -611,7 +531,6 @@
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run-script" />
       <scripts />
-      <node-interpreter value="project" />
       <envs />
       <method />
     </configuration>
@@ -624,9 +543,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -635,7 +552,6 @@
       <changelist id="6f77ee8a-7dc7-4d9d-9eea-51a94d6233cc" name="Default" comment="" />
       <created>1456405389421</created>
       <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
       <updated>1456405389421</updated>
       <workItem from="1458338187663" duration="230000" />
       <workItem from="1458472639688" duration="287000" />
@@ -686,350 +602,301 @@
       <workItem from="1461001314020" duration="4382000" />
       <workItem from="1461011943711" duration="3449000" />
     </task>
-    <task id="LOCAL-00042" summary="Přidán jednoduchý formulář pro obnovení hesla">
-      <created>1458856694982</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1458856694983</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Přidán jednoduchý formulář pro obnovení hesla">
-      <created>1458856770374</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1458856770374</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Upravené flash error messages">
-      <created>1458859031610</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1458859031610</updated>
-    </task>
     <task id="LOCAL-00045" summary="hmm něco? Auth component update">
       <created>1458929008915</created>
       <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
       <option name="project" value="LOCAL" />
       <updated>1458929008915</updated>
     </task>
     <task id="LOCAL-00046" summary="minor update detailů">
       <created>1458930858714</created>
       <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
       <option name="project" value="LOCAL" />
       <updated>1458930858714</updated>
     </task>
     <task id="LOCAL-00047" summary="rework na cakephp form">
       <created>1459013313195</created>
       <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
       <option name="project" value="LOCAL" />
       <updated>1459013313195</updated>
     </task>
     <task id="LOCAL-00048" summary="rework na cakephp form, rework labelů">
       <created>1459013603809</created>
       <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
       <option name="project" value="LOCAL" />
       <updated>1459013603809</updated>
     </task>
     <task id="LOCAL-00049" summary="Kontrola emailu v DB">
       <created>1459048013306</created>
       <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
       <option name="project" value="LOCAL" />
       <updated>1459048013306</updated>
     </task>
     <task id="LOCAL-00050" summary="Přesunut flash render">
       <created>1459048033338</created>
       <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
       <option name="project" value="LOCAL" />
       <updated>1459048033338</updated>
     </task>
     <task id="LOCAL-00051" summary="card visual">
       <created>1459125831635</created>
       <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
       <option name="project" value="LOCAL" />
       <updated>1459125831636</updated>
     </task>
     <task id="LOCAL-00052" summary="registrace s validací">
       <created>1459131567892</created>
       <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
       <option name="project" value="LOCAL" />
       <updated>1459131567892</updated>
     </task>
     <task id="LOCAL-00053" summary="+Validace">
       <created>1459131582219</created>
       <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
       <option name="project" value="LOCAL" />
       <updated>1459131582219</updated>
     </task>
     <task id="LOCAL-00054" summary="rework na cakeform">
       <created>1459172311139</created>
       <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
       <option name="project" value="LOCAL" />
       <updated>1459172311139</updated>
     </task>
     <task id="LOCAL-00055" summary="rework na cakeform">
       <created>1459172534937</created>
       <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
       <option name="project" value="LOCAL" />
       <updated>1459172534937</updated>
     </task>
     <task id="LOCAL-00056" summary="lost password">
       <created>1459208538758</created>
       <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
       <option name="project" value="LOCAL" />
       <updated>1459208538758</updated>
     </task>
     <task id="LOCAL-00057" summary="form -&gt; cakephp form">
       <created>1459215248433</created>
       <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
       <option name="project" value="LOCAL" />
       <updated>1459215248433</updated>
     </task>
     <task id="LOCAL-00058" summary="form-&gt;cake">
       <created>1459682694828</created>
       <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
       <option name="project" value="LOCAL" />
       <updated>1459682694829</updated>
     </task>
     <task id="LOCAL-00059" summary="Captcha">
       <created>1459792077282</created>
       <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
       <option name="project" value="LOCAL" />
       <updated>1459792077282</updated>
     </task>
     <task id="LOCAL-00060" summary="Captcha">
       <created>1459792196729</created>
       <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
       <option name="project" value="LOCAL" />
       <updated>1459792196729</updated>
     </task>
     <task id="LOCAL-00061" summary="Captcha">
       <created>1459792271360</created>
       <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
       <option name="project" value="LOCAL" />
       <updated>1459792271360</updated>
     </task>
     <task id="LOCAL-00062" summary="Email transport logika">
       <created>1459819009794</created>
       <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
       <option name="project" value="LOCAL" />
       <updated>1459819009794</updated>
     </task>
     <task id="LOCAL-00063" summary="Email transport logika">
       <created>1459855709374</created>
       <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
       <option name="project" value="LOCAL" />
       <updated>1459855709374</updated>
     </task>
     <task id="LOCAL-00064" summary="Nový controller + fixes">
       <created>1459968572634</created>
       <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
       <option name="project" value="LOCAL" />
       <updated>1459968572634</updated>
     </task>
     <task id="LOCAL-00065" summary="deleted tests">
       <created>1459968890219</created>
       <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
       <option name="project" value="LOCAL" />
       <updated>1459968890219</updated>
     </task>
     <task id="LOCAL-00066" summary="deleted unnecesary">
       <created>1459969045286</created>
       <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
       <option name="project" value="LOCAL" />
       <updated>1459969045286</updated>
     </task>
     <task id="LOCAL-00067" summary="Zprovozněna funkce resetu hesla">
       <created>1460035532195</created>
       <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
       <option name="project" value="LOCAL" />
       <updated>1460035532195</updated>
     </task>
     <task id="LOCAL-00068" summary="Ztracené písmeno 'v'">
       <created>1460040249709</created>
       <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
       <option name="project" value="LOCAL" />
       <updated>1460040249709</updated>
     </task>
     <task id="LOCAL-00069" summary="Ztracené písmeno 'v'">
       <created>1460040292167</created>
       <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
       <option name="project" value="LOCAL" />
       <updated>1460040292167</updated>
     </task>
     <task id="LOCAL-00070" summary="smooth keky">
       <created>1460075188197</created>
       <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
       <option name="project" value="LOCAL" />
       <updated>1460075188197</updated>
     </task>
     <task id="LOCAL-00071" summary="Nastavení a editace uživatele - full done">
       <created>1460415951924</created>
       <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
       <option name="project" value="LOCAL" />
       <updated>1460415951924</updated>
     </task>
     <task id="LOCAL-00072" summary="Nastavení a editace uživatele - full done">
       <created>1460416725865</created>
       <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
       <option name="project" value="LOCAL" />
       <updated>1460416725865</updated>
     </task>
     <task id="LOCAL-00073" summary="    deleted unnecesary lines">
       <created>1460812403602</created>
       <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
       <option name="project" value="LOCAL" />
       <updated>1460812403602</updated>
     </task>
     <task id="LOCAL-00074" summary="Added logged user to DB">
       <created>1460818539714</created>
       <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
       <option name="project" value="LOCAL" />
       <updated>1460818539714</updated>
     </task>
     <task id="LOCAL-00075" summary="Již vypisuje jednotlivé příspěvky v DB">
       <created>1460821411484</created>
       <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
       <option name="project" value="LOCAL" />
       <updated>1460821411484</updated>
     </task>
     <task id="LOCAL-00076" summary="Administrace - half done">
       <created>1460829049594</created>
       <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
       <option name="project" value="LOCAL" />
       <updated>1460829049595</updated>
     </task>
     <task id="LOCAL-00077" summary="login redirecting">
       <created>1460841574314</created>
       <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
       <option name="project" value="LOCAL" />
       <updated>1460841574314</updated>
     </task>
     <task id="LOCAL-00078" summary="added render">
       <created>1460841586477</created>
       <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
       <option name="project" value="LOCAL" />
       <updated>1460841586477</updated>
     </task>
     <task id="LOCAL-00079" summary="Změna propojení tabulek INNER JOIN -&gt; LEFT JOIN">
       <created>1460924018369</created>
       <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
       <option name="project" value="LOCAL" />
       <updated>1460924018369</updated>
     </task>
     <task id="LOCAL-00080" summary="Administrace done">
       <created>1460924126084</created>
       <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
       <option name="project" value="LOCAL" />
       <updated>1460924126084</updated>
     </task>
     <task id="LOCAL-00081" summary="Přidány atributy pro funkce">
       <created>1460924166956</created>
       <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
       <option name="project" value="LOCAL" />
       <updated>1460924166956</updated>
     </task>
     <task id="LOCAL-00082" summary="redirect na edit do articles controlleru">
       <created>1460927196228</created>
       <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
       <option name="project" value="LOCAL" />
       <updated>1460927196228</updated>
     </task>
     <task id="LOCAL-00083" summary="smazána edit funkce, přesunuta do Articles controlleru">
       <created>1460927224831</created>
       <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
       <option name="project" value="LOCAL" />
       <updated>1460927224831</updated>
     </task>
     <task id="LOCAL-00084" summary="Vypisování příspěvků">
       <created>1460928745199</created>
       <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
       <option name="project" value="LOCAL" />
       <updated>1460928745199</updated>
     </task>
     <task id="LOCAL-00085" summary="nevim">
       <created>1460928924688</created>
       <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
       <option name="project" value="LOCAL" />
       <updated>1460928924688</updated>
     </task>
     <task id="LOCAL-00086" summary="zobrazování příspěvků na profilu">
       <created>1460929035560</created>
       <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
       <option name="project" value="LOCAL" />
       <updated>1460929035560</updated>
     </task>
     <task id="LOCAL-00087" summary="nevim">
       <created>1460987165976</created>
       <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
       <option name="project" value="LOCAL" />
       <updated>1460987165976</updated>
     </task>
     <task id="LOCAL-00088" summary="redirecty + authorizace (dodělat)">
       <created>1460988253127</created>
       <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
       <option name="project" value="LOCAL" />
       <updated>1460988253127</updated>
     </task>
     <task id="LOCAL-00089" summary="editace pouze pro admini + autory">
       <created>1460988737885</created>
       <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
       <option name="project" value="LOCAL" />
       <updated>1460988737885</updated>
     </task>
     <task id="LOCAL-00090" summary="&lt;/td&gt;">
       <created>1460988803622</created>
       <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
       <option name="project" value="LOCAL" />
       <updated>1460988803622</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="File upload">
+      <created>1461266424704</created>
+      <option name="number" value="00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1461266424704</updated>
+    </task>
+    <task id="LOCAL-00092" summary="Files upload limit fix">
+      <created>1461272777705</created>
+      <option name="number" value="00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1461272777705</updated>
+    </task>
+    <task id="LOCAL-00093" summary="File input fix v.2&#10;">
+      <created>1461274253173</created>
+      <option name="number" value="00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1461274253173</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1045,14 +912,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13006397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24866024" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24702059" sideWeight="0.30170575" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24702059" sideWeight="0.6982942" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24662162" sideWeight="0.6982942" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10642782" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32792208" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1090,9 +957,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Email transport logika" />
-    <MESSAGE value="Nový controller + fixes" />
-    <MESSAGE value="deleted tests" />
     <MESSAGE value="deleted unnecesary" />
     <MESSAGE value="Zprovozněna funkce resetu hesla" />
     <MESSAGE value="Ztracené písmeno 'v'" />
@@ -1115,7 +979,10 @@
     <MESSAGE value="redirecty + authorizace (dodělat)" />
     <MESSAGE value="editace pouze pro admini + autory" />
     <MESSAGE value="&lt;/td&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&lt;/td&gt;" />
+    <MESSAGE value="File upload" />
+    <MESSAGE value="Files upload limit fix" />
+    <MESSAGE value="File input fix v.2&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="File input fix v.2&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1124,91 +991,143 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Template/Email/html/default.ctp" />
+    <entry file="file://$PROJECT_DIR$/src/Template/Map/index.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding>
+            <marker date="1461267359963" expanded="true" signature="7921:7993" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ArticlesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="158" column="4" selection-start-line="158" selection-start-column="4" selection-end-line="158" selection-end-column="4" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Map/index.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1461267359963" expanded="true" signature="7921:7993" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ArticlesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ArticlesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Articles/new_article.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="21" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/AppView.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/app.default.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
+        <state vertical-scroll-proportion="0.0">
           <caret line="332" column="16" selection-start-line="332" selection-start-column="10" selection-end-line="332" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/paths.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="904">
+        <state vertical-scroll-proportion="0.0">
           <caret line="69" column="54" selection-start-line="69" selection-start-column="51" selection-end-line="69" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
+        <state vertical-scroll-proportion="0.0">
           <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.floo" />
     <entry file="file://$PROJECT_DIR$/.editorconfig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitattributes">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/default.editorconfig" />
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/TicketsController.php" />
     <entry file="file://$PROJECT_DIR$/src/Controller/components/recaptchalib.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
+        <state vertical-scroll-proportion="0.0">
           <caret line="132" column="59" selection-start-line="132" selection-start-column="59" selection-end-line="132" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Table/DistrictsTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/components/TicketMaster.php" />
     <entry file="file://$PROJECT_DIR$/src/Model/Entity/Ticket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state vertical-scroll-proportion="0.0">
           <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
         </state>
       </provider>
@@ -1220,238 +1139,236 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Email/html/reset.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Template/Map/index.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webroot/js/markerclusterer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4080">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/cakephp/cakephp/src/Controller/Component/AuthComponent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
+        <state vertical-scroll-proportion="0.0">
           <caret line="621" column="73" selection-start-line="621" selection-start-column="69" selection-end-line="621" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Users/registration.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state vertical-scroll-proportion="0.0">
           <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state vertical-scroll-proportion="0.0">
           <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Layout/default.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
+        <state vertical-scroll-proportion="0.0">
           <caret line="97" column="49" selection-start-line="97" selection-start-column="49" selection-end-line="97" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Users/reset.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state vertical-scroll-proportion="0.0">
           <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Articles/detail.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Users/login.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
+        <state vertical-scroll-proportion="0.0">
           <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Users/lostPassword.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state vertical-scroll-proportion="0.0">
           <caret line="4" column="32" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Table/TicketsTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state vertical-scroll-proportion="0.0">
           <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Users/settings.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
+        <state vertical-scroll-proportion="0.0">
           <caret line="41" column="57" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/PagesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state vertical-scroll-proportion="0.0">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/UsersController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state vertical-scroll-proportion="0.0">
           <caret line="124" column="17" selection-start-line="124" selection-start-column="12" selection-end-line="124" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Articles/edit.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state vertical-scroll-proportion="0.0">
           <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Administration/index.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
+        <state vertical-scroll-proportion="0.0">
           <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Users/detail.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AdministrationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/files/sources/photo/ea95af2e-fc33-4335-bb90-a3ef79c2cefe/portrait_weareliq.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/files/sources/photo/ea95af2e-fc33-4335-bb90-a3ef79c2cefe/square_weareliq.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webroot/files/sources/photo/ea95af2e-fc33-4335-bb90-a3ef79c2cefe/weareliq.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phpunit.xml.dist">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state vertical-scroll-proportion="0.0">
           <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.lock">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/MapController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state vertical-scroll-proportion="0.0">
           <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Table/SourcesTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state vertical-scroll-proportion="0.0">
           <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AppController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Table/UsersTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state vertical-scroll-proportion="0.0">
           <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/bootstrap.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1031">
+        <state vertical-scroll-proportion="0.0">
           <caret line="182" column="27" selection-start-line="182" selection-start-column="27" selection-end-line="182" selection-end-column="27" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AppController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.02673147">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/AdministrationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42770353">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Template/Map/index.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding>
+            <marker date="1461267359963" expanded="true" signature="7921:7993" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Template/Articles/new_article.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="75" column="21" selection-start-line="75" selection-start-column="21" selection-end-line="75" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/js/LICENSE.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webroot/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#5;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#1;n#div#5;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#6;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <marker date="1458054815008" expanded="true" signature="0:129" placeholder="&lt;IfModule mod_rewrite.c&gt;" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/ArticlesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="955">
-          <caret line="104" column="57" selection-start-line="104" selection-start-column="57" selection-end-line="104" selection-end-column="57" />
-          <folding />
+        <state vertical-scroll-proportion="0.02673147">
+          <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
