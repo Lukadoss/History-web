@@ -6,12 +6,12 @@
         <div class="col-md-2"><span
                 style="line-height: 2rem; text-align: center; min-width: 130px">Zobrazené období</span></div>
         <div class="col-md-8">
-            <input id="pick-year" type="text" data-slider-min="<?= adodb_mktime(0, 0, 0, 1, 1, 1920) ?>"
+            <input id="pick-year" type="text" data-slider-min="<?= adodb_mktime(0, 0, 0, 04, 01, 2016) ?>"
                    data-slider-max="<?= adodb_mktime(0, 0, 0, 12, 31, 2016) ?>" data-slider-step="86400"
                    data-slider-value="<?= adodb_mktime(0, 0, 0, 04, 22, 2016) ?>">
         </div>
         <div class="col-md-2" style="padding-left: 0">
-            <input type="date" value="2016-04-22" id="pick-year-val" min="1920-01-01" max="2016-12-31">
+            <input type="date" value="2016-04-22" id="pick-year-val" min="2016-04-01" max="2016-12-31">
         </div>
         <div class="clearfix"></div>
         <script>
@@ -71,31 +71,31 @@
                     textColor: 'white',
                     textSize: 14,
                     height: 40,
-                    url: "/historyweb/img/mc/m1.png",
+                    url: getBaseUrl() + "img/mc/m1.png",
                     width: 40
                 },
                     {
                         textColor: 'white',
                         height: 45,
-                        url: "/historyweb/img/mc/m2.png",
+                        url: getBaseUrl() + "img/mc/m2.png",
                         width: 45
                     },
                     {
                         textColor: 'white',
                         height: 50,
-                        url: "/historyweb/img/mc/m3.png",
+                        url: getBaseUrl() + "img/mc/m3.png",
                         width: 50
                     },
                     {
                         textColor: 'white',
                         height: 58,
-                        url: "/historyweb/img/mc/m4.png",
+                        url: getBaseUrl() + "img/mc/m4.png",
                         width: 58
                     },
                     {
                         textColor: 'white',
                         height: 70,
-                        url: "/historyweb/img/mc/m5.png",
+                        url: getBaseUrl() + "img/mc/m5.png",
                         width: 70
                     }]/*, imagePath: */
             };
