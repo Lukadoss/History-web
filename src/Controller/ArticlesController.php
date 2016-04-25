@@ -212,7 +212,7 @@ class ArticlesController extends AppController
                 }
 
                 if ($this->Sources->save($source)) {
-                    $this->Flash->success('Příspěvek "' . $source->name . '" byl úspěšně změněn!');
+                    $this->Flash->success('Příspěvek "' . htmlspecialchars($source->name) . '" byl úspěšně změněn!');
                     if ($user->isadmin == true) $this->redirect($this->redirect(['controller' => 'administration']));
                     else $this->redirect($this->redirect(['controller' => 'users', 'action' => 'detail']));
                 } else {
