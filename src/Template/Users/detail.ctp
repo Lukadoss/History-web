@@ -9,7 +9,7 @@
             <div class="col-md-10 device-text-align">
                 <?= $this->Flash->render();
                 ?>
-                <h3 class="card-title"><?= $user->forename; ?> <?= $user->surname ?></h3>
+                <h3 class="card-title"><?= htmlspecialchars($user->forename); ?> <?= htmlspecialchars($user->surname); ?></h3>
                 <h5 class="text-muted"><?= $user->email; ?></h5>
                 <?= $this->Html->link(__('<i class="fa fa-wrench"> </i> Nastavení'), [
                     'controller' => 'Users',
