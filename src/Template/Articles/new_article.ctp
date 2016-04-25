@@ -88,6 +88,7 @@
                                 dropZoneEnabled: false,
                                 overwriteInitial: false,
                                 maxFileSize: 4000,
+                                maxFileCount: 20,
                                 previewFileType: 'any',
                                 showUpload: false,
                                 language: 'cz',
@@ -109,7 +110,10 @@
                                     '    <div class="file-upload-indicator" tabindex="-1" title="{indicatorTitle}">{indicator}</div>\n' +
                                     '    <div class="clearfix"></div>\n' +
                                     '</div>'
-                                }
+                                },
+                                browseIcon: '<i class="fa fa-folder-open" aria-hidden="true"></i>',
+                                browseLabel: 'Vybrat',
+                                removeIcon: '<i class="fa fa-trash" aria-hidden="true"></i>'
                             });
                         });
 
@@ -128,6 +132,7 @@
                                 dropZoneEnabled: false,
                                 overwriteInitial: false,
                                 maxFileSize: 10000,
+                                maxFileCount: 20,
                                 previewFileType: 'any',
                                 showUpload: false,
                                 language: 'cz',
@@ -149,7 +154,10 @@
                                     '    <div class="file-upload-indicator" tabindex="-1" title="{indicatorTitle}">{indicator}</div>\n' +
                                     '    <div class="clearfix"></div>\n' +
                                     '</div>'
-                                }
+                                },
+                                browseIcon: '<i class="fa fa-folder-open" aria-hidden="true"></i>',
+                                browseLabel: 'Vybrat',
+                                removeIcon: '<i class="fa fa-trash" aria-hidden="true"></i>'
                             });
                         });
 
@@ -168,6 +176,7 @@
                                 dropZoneEnabled: false,
                                 overwriteInitial: false,
                                 maxFileSize: 30000,
+                                maxFileCount: 20,
                                 previewFileType: 'any',
                                 showUpload: false,
                                 language: 'cz',
@@ -189,7 +198,10 @@
                                     '    <div class="file-upload-indicator" tabindex="-1" title="{indicatorTitle}">{indicator}</div>\n' +
                                     '    <div class="clearfix"></div>\n' +
                                     '</div>'
-                                }
+                                },
+                                browseIcon: '<i class="fa fa-folder-open" aria-hidden="true"></i>',
+                                browseLabel: 'Vybrat',
+                                removeIcon: '<i class="fa fa-trash" aria-hidden="true"></i>'
                             });
                         });
 
@@ -208,6 +220,7 @@
                                 dropZoneEnabled: false,
                                 overwriteInitial: false,
                                 maxFileSize: 100000,
+                                maxFileCount: 20,
                                 previewFileType: 'any',
                                 showUpload: false,
                                 language: 'cz',
@@ -229,13 +242,18 @@
                                     '    <div class="file-upload-indicator" tabindex="-1" title="{indicatorTitle}">{indicator}</div>\n' +
                                     '    <div class="clearfix"></div>\n' +
                                     '</div>'
-                                }
+                                },
+                                browseIcon: '<i class="fa fa-folder-open" aria-hidden="true"></i>',
+                                browseLabel: 'Vybrat',
+                                removeIcon: '<i class="fa fa-trash" aria-hidden="true"></i>'
                             });
                         });
 
                         $('#video_file_input').on('fileuploaderror', function() {
                             document.getElementById('submit-article').disabled = true;
                         });
+
+
                     </script>
                 </div>
             </div>
@@ -327,7 +345,7 @@
         <hr>
         <div class="g-recaptcha" style="margin-bottom: 15px;"
              data-sitekey="6LdMihwTAAAAABHyUIcfago1qMOTWkT4dL7XP_Bx"></div>
-        <button type="submit" name="submit-article" id="submit-article" class="btn btn-primary">Přidat článek</button>
+        <button type="submit" name="submit-article" id="submit-article" class="btn btn-primary fileinput-upload">Přidat článek</button>
         <?php echo $this->Form->end();
         ?>
     </div>

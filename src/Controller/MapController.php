@@ -28,6 +28,20 @@ class MapController extends AppController
             }
         }
 
+        if (isset($_GET['float-min']) || isset($_GET['float-max'])) {
+            if (isset($_GET['funct'])) {
+                if ($_GET['funct'] == 'mktime') {
+                    $date_arr = explode('-', $_GET['float']);
+                    echo adodb_mktime(0, 0, 0, $date_arr[1], $date_arr[2], $date_arr[0]);
+                    die();
+                }
+            } else {
+                $res = [adodb_date("Y-m-d", $_GET['float-min']), adodb_date("Y-m-d", $_GET['float-max'])];
+                echo json_encode($res);
+                die();
+            }
+        }
+
         $this->loadModel('Sources');
         $sources = $this->Sources->find('all', array('fields' => array('source_id', 'name', 'date_from', 'date_to', 'lat', 'lng', 'type')))
             ->where('onHold = 0');

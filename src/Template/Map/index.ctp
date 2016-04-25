@@ -34,9 +34,10 @@
                             $("#pick-year-val").val(response);
                         }
                     });
+                    clearMapMarkers();
+                    setMarkers(marker_obj_data, activeMarkers, document.getElementById("pick-year-val").value);
                 }, 50);
-                clearMapMarkers();
-                setMarkers(marker_obj_data, activeMarkers, document.getElementById("pick-year-val").value);
+
             });
 
             $("#pick-year-val").on("change", function () {
@@ -50,9 +51,10 @@
                             $("#pick-year").slider().slider("setValue", parseInt(converted));
                         }
                     });
-                }, 500);
-                clearMapMarkers();
-                setMarkers(marker_obj_data, activeMarkers, document.getElementById("pick-year-val").value);
+                    clearMapMarkers();
+                    setMarkers(marker_obj_data, activeMarkers, document.getElementById("pick-year-val").value);
+                }, 300);
+
             })
         </script>
     </div>
@@ -182,9 +184,8 @@
                 return re.exec(window.location.href);
             }
 
-            function startAnimation() {
+            function startAnimation(animateFrom, animateTo, animationSpeed) {
                 setMarkers(marker_obj_data, activeMarkers);
-                mc.addMarkers(activeMarkers);
             }
 
             function setInfoWindow(marker, content) {
@@ -386,30 +387,54 @@
 
                 <div class="col-xs-12" style="padding-left: 0; padding-right: 0">
                     <input id="slider-year" type="text" class="slider slider-horizontal span2" value=""
-                           data-slider-min="1700" data-slider-max="2016"
-                           data-slider-step="1" data-slider-value="[1810,1920]" style="width: 100%"/>
+                           data-slider-min="<?= adodb_mktime(0, 0, 0, 04, 01, 2016) ?>" data-slider-max="<?= adodb_mktime(0, 0, 0, 12, 31, 2016) ?>"
+                           data-slider-step="86400" data-slider-value="[<?= adodb_mktime(0, 0, 0, 04, 20, 2016) ?>,<?= adodb_mktime(0, 0, 0, 8, 27, 2016) ?>]" style="width: 100%"/>
                 </div>
                 <div class="col-xs-6" style="padding-left: 0">
                     <div style="padding-left: 0">
-                        <input type="date" value="1968-10-05" id="pick-year-val" min="1920-01-01" max="2015-12-31"
+                        <input type="date" value="1968-10-05" id="pick-year-val-min" min="1920-01-01" max="2015-12-31"
                                style="width: 9.5rem">
                     </div>
                 </div>
                 <div class="col-xs-6" style="text-align: right; padding-right: 0">
                     <div style="float: right; padding-right: 0">
-                        <input type="date" value="1968-10-05" id="pick-year-val" min="1920-01-01" max="2015-12-31"
+                        <input type="date" value="1968-10-05" id="pick-year-val-max" min="1920-01-01" max="2015-12-31"
                                style="width: 9.5rem">
                     </div>
                 </div>
                 <script>
                     $("#slider-year").slider({});
+                    $("#slider-year").on("change", function (slideEvt) {
+                        delay(function () {
+                            $.ajax({
+                                url: 'map',
+                                type: 'get',
+                                dataType: 'json',
+                                data: {"float-min": slideEvt.value.newValue[0], "float-max": slideEvt.value.newValue[1]},
+                                success: function (response) {
+                                    $("#pick-year-val-min").val(response[0]);
+                                    $("#pick-year-val-max").val(response[1]);
+                                }
+                            });
+                        }, 50);
 
-                    $("#slider-year").on("slide", function (slideEvt) {
-                        $("#slider-year-val-min").val(slideEvt.value[0]);
-                        $("#slider-year-val-max").val(slideEvt.value[1]);
                     });
+/*
+                    $("#pick-year-val-min").on("change", function () {
+                        delay(function () {
+                            $.ajax({
+                                url: 'map',
+                                type: 'get',
+                                dataType: "text",
+                                data: {"float-min": $("#pick-year-val-min").val(), "funct": 'mktime'},
+                                success: function (converted) {
+                                    $("#slider-year").slider().slider("setValue", parseInt(converted));
+                                }
+                            });
+                        }, 300);
 
-                    $("$sli")
+                    })
+                    */
                 </script>
 
             </div>
@@ -431,8 +456,6 @@
                 <span class="c-indicator"></span>
                 5x
             </label>
-            <hr>
-            <a href="#" class="btn btn-primary">Uložit nastavení</a>
         </div>
     </div>
 </div>
