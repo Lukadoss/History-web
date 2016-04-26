@@ -164,14 +164,16 @@ class ArticlesController extends AppController
         return $input_size;
     }
 
-    function detail($prispevek_id)
+    function detail($prispevek_id = null)
     {
-        if ($prispevek_id) {
+        if ($prispevek_id!=null) {
             $this->loadModel('Sources');
             $source = $this->Sources->get($prispevek_id);
             if ($source && isset($source->user_id)) {
                 $articleAuthor = $this->Sources->Users->get($source->user_id);
             }
+        }else{
+            $this->redirect($this->Auth->redirectUrl());
         }
 
         $this->set(compact('source'));
