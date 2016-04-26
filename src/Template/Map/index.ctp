@@ -184,6 +184,15 @@
                 return re.exec(window.location.href);
             }
 
+            function escapeHtml(text) {
+                return text
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#039;");
+            }
+
             function startAnimation(animateFrom, animateTo, animationSpeed) {
                 setMarkers(marker_obj_data, activeMarkers);
             }
@@ -243,7 +252,7 @@
                             name: marker_obj_data[i].name
                         });
 
-                        content = '<h6><a href="' + getBaseUrl() + 'articles/detail/' + marker_obj_data[i].source_id + '" target="_blank" class="nav-link">' + marker_obj_data[i].name + '</a></h6><br>'
+                        content = '<h6><a href="' + getBaseUrl() + 'articles/detail/' + marker_obj_data[i].source_id + '" target="_blank" class="nav-link">' + escapeHtml(marker_obj_data[i].name) + '</a></h6><br>'
                             + '<span class="text-muted">typ: ' + fileType
                             + '<br>Počet souborů: x</span>';
 
@@ -263,7 +272,7 @@
                     if (map.getZoom() > 20) {
                         clusterContent = '<h6>Tato oblast obsahuje tyto příspěvky</h6>';
                         for (i = 0; i < clusteredmarkers.length; i++) {
-                            clusterContent += '<hr><h6><a href="' + getBaseUrl() + 'articles/detail/' + clusteredmarkers[i].sourceId + '" target="_blank" class="nav-link">' + clusteredmarkers[i].name + '</a></h6>';
+                            clusterContent += '<hr><h6><a href="' + getBaseUrl() + 'articles/detail/' + clusteredmarkers[i].sourceId + '" target="_blank" class="nav-link">' + escapeHtml(clusteredmarkers[i].name) + '</a></h6>';
                         }
                         clusterInfoWindow.setContent(clusterContent);
                         clusterInfoWindow.setPosition(cluster.getCenter());
