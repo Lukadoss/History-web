@@ -87,7 +87,7 @@
                                 uploadAsync: false,
                                 dropZoneEnabled: false,
                                 overwriteInitial: false,
-                                maxFileSize: 4000,
+                                maxFileSize: 15000,
                                 maxFileCount: 20,
                                 previewFileType: 'any',
                                 showUpload: false,
@@ -131,7 +131,7 @@
                                 uploadAsync: false,
                                 dropZoneEnabled: false,
                                 overwriteInitial: false,
-                                maxFileSize: 10000,
+                                maxFileSize: 30000,
                                 maxFileCount: 20,
                                 previewFileType: 'any',
                                 showUpload: false,
@@ -161,9 +161,6 @@
                             });
                         });
 
-                        $('#image_file_input').on('fileuploaderror', function() {
-                            document.getElementById('submit-article').disabled = true;
-                        });
                     </script>
                 </div>
                 <div class="tab-pane" id="audio" role="tabpanel">
@@ -175,7 +172,7 @@
                                 uploadAsync: false,
                                 dropZoneEnabled: false,
                                 overwriteInitial: false,
-                                maxFileSize: 30000,
+                                maxFileSize: 40000,
                                 maxFileCount: 20,
                                 previewFileType: 'any',
                                 showUpload: false,
@@ -227,7 +224,7 @@
                                 showCancel: false,
                                 showClose: false,
                                 initialPreviewShowDelete: true,
-                                allowedFileExtensions: ['mp4', 'mpg', 'avi'],
+                                allowedFileExtensions: ['mp4', 'mpeg', 'avi'],
                                 removeClass: 'btn btn-danger btn-remove',
                                 fileActionSettings: {
                                     removeIcon: '<i class="fa fa-trash-o"></i>',
