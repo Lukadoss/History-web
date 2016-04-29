@@ -78,11 +78,23 @@ class AppController extends Controller
 
     }
 
+    /**
+     * Before filter callback
+     *
+     * @param \Cake\Event\Event $event The beforeRender event.
+     * @return void
+     */
     public function beforeFilter(Event $event)
     {
         $this->Auth->allow(['index']);
     }
 
+    /**
+     * Checks authorized user
+     *
+     * @param null $user
+     * @return bool
+     */
     public function isAuthorized($user = null)
     {
         if ($user['isadmin']){

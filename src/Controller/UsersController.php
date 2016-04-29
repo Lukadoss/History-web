@@ -18,13 +18,19 @@ require_once "components/recaptchalib.php";
 
 class UsersController extends AppController
 {
-
+    /**
+     * Overrides beforeFilter in AppController
+     * @param Event $event
+     */
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);;
         $this->Auth->allow(['registration', 'logout', 'lostpassword', 'reset']);
     }
 
+    /**
+     * Shows index page
+     */
     public function index()
     {
         $this->set('users', $this->Users->find('all'));
@@ -32,7 +38,7 @@ class UsersController extends AppController
     }
 
     /**
-     * Registrace noveho uzivatele, kontrola captchou
+     * New user registration. Creates new entity of user and then saves it to the database.
      * @return redirect
      */
     function registration(){
@@ -64,7 +70,7 @@ class UsersController extends AppController
     }
 
     /**
-     * Login uzivatele
+     * User login
      * @return redirect
      */
     public function login(){
@@ -83,7 +89,7 @@ class UsersController extends AppController
     }
 
     /**
-     * Logout uzivatele
+     * User logout
      * @return redirect
      */
     public function logout()
@@ -93,7 +99,7 @@ class UsersController extends AppController
 
 
     /**
-     * Zobrazuje profil uzivatele
+     * Shows user profile
      * @param null $user_id id uzivatele
      */
     function detail($user_id = null)
@@ -116,7 +122,7 @@ class UsersController extends AppController
     }
 
     /**
-     * Edituje nastaveni uzivatele - jmeno, prijmeni, heslo.
+     * User settings, where he can edit his forename, surname and password.
      * @return redirect
      */
     function settings()
@@ -157,7 +163,7 @@ class UsersController extends AppController
     }
 
     /**
-     * Zpracovava ztracene heslo, vytvari unikatni token do url a posle email na danou adresu.
+     * Processes lost password. Creates unique token and send mail to requested email address.
      * @return redirect
      */
     function lostpassword()
@@ -214,7 +220,7 @@ class UsersController extends AppController
     }
 
     /**
-     * Nacita a kontroluje tokeny vygenerovane pro reset hesla. Kontroluje a uklada nove heslo.
+     * Loads and check tokens generated for lost password reset. After checks and saves new password.
      * @param null $token token
      * @return redirect
      */
@@ -251,14 +257,14 @@ class UsersController extends AppController
     }
 
     /**
-     * Maze tickety, kterym vyprchala doba platnosti
+     * Deletes out of date tickets.
      */
     function purgeTickets(){
         $this->Tickets->deleteAll('expires <= now()');
     }
 
     /**
-     * Vypisuje errory z pole do jednotlivych prvku Flash erroru
+     * Writes errors from array to single entity shown in Flash error.
      * @param $entity Entita databaze
      */
     function writeErrors($entity){

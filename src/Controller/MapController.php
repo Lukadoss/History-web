@@ -10,7 +10,9 @@ namespace App\Controller;
 
 class MapController extends AppController
 {
-
+    /**
+     * Shows index page, loads Ajax
+     */
     public function index()
     {
         require_once(ROOT . DS . 'vendor' . DS . 'adodb-time.inc.php');
@@ -24,6 +26,20 @@ class MapController extends AppController
                 }
             } else {
                 echo adodb_date("Y-m-d", $_GET['float']);
+                die();
+            }
+        }
+
+        if (isset($_GET['float-min']) || isset($_GET['float-max'])) {
+            if (isset($_GET['funct'])) {
+                if ($_GET['funct'] == 'mktime') {
+                    $date_arr = explode('-', $_GET['float']);
+                    echo adodb_mktime(0, 0, 0, $date_arr[1], $date_arr[2], $date_arr[0]);
+                    die();
+                }
+            } else {
+                $res = [adodb_date("Y-m-d", $_GET['float-min']), adodb_date("Y-m-d", $_GET['float-max'])];
+                echo json_encode($res);
                 die();
             }
         }

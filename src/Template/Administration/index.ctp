@@ -3,7 +3,7 @@
     </div>
     <div class="card-block" data-toggle="table">
         <?php echo $this->Flash->render();
-        if ($sources->first() == null){ ?>
+        if ($sources->toList() == null){ ?>
             Momentálně zde nejsou žádné příspěvky k potvrzení
         <?php } else { ?>
         <table id="administration" class="table table-hover tablesorter">
@@ -25,10 +25,10 @@
                         ]) ?></td>
                     <td style="vertical-align: middle">
                         <?php if(!isset($source->user_id)) {
-                            echo $source->forename . ' ' . $source->surname;
+                            echo htmlspecialchars($source->forename) . ' ' . htmlspecialchars($source->surname);
                         }
                         else {
-                            echo $source->user->forename . ' ' . $source->user->surname;
+                            echo htmlspecialchars($source->user->forename) . ' ' . htmlspecialchars($source->user->surname);
                         }?><br>
                         <span class="text-muted">
                             <?php if(!isset($source->user_id)) {

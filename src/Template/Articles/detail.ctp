@@ -6,9 +6,9 @@
         <h5 class="text-muted">Datum: <?php echo date_format($source->date_from, 'd. m. Y'); if(isset($source->date_to)) echo " - " . date_format($source->date_to, 'd. m. Y');; ?></h5>
     </div>
     <div class="col-md-3">
-    <h6 class="text-muted text-right">Autor: <?php if($source->user_id) echo $articleAuthor->forename . " " . $articleAuthor->surname;
+    <h6 class="text-muted text-right">Autor: <?php if($source->user_id) echo htmlspecialchars($articleAuthor->forename) . " " . htmlspecialchars($articleAuthor->surname);
         else{
-            echo $source->forename . " " . $source->surname;
+            echo htmlspecialchars($source->forename) . " " . htmlspecialchars($source->surname);
         }?>
     </h6>
     </div>

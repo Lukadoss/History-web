@@ -84,3 +84,55 @@ Vytvoření šablon pro mail a reset hesla, zpracování zobrazování schválen
 
 Jan Palcút:     
 Dokončení přidávání příspěvků (4h)  
+
+***
+
+**7. Týden**
+
+Petr Lukašík:   
+Administrace odborného uživatele, potvrzování, editace a mazání vytvořených příspěvků, následné vyobrazení pro všechny uživatele. (7h)  
+
+Jan Šedivý:     
+Javascript pro google mapy, zobrazování příspěvků z DB na mapu, uskupování do skupin.  (6h) 
+
+Jan Palcút:     
+Ukládání textových, audio, video, foto souborů do DB. Uložení cest k těmto souborům a přístup k nim. (4h)   
+
+***
+
+
+**8. Týden**
+
+Petr Lukašík:   
+Práce na google mapách, simulace, testování (8h)    
+
+Jan Šedivý:     
+Práce na google mapách (např. filtry), simulace, javascript funkce (8h) 
+
+Jan Palcút:     
+Validace nahrávaných souborů, následné zobrazování souborů na webu (8h) 
+
+***
+
+Pro otestování webového portálu pro sběr kulturních a historických artefaktů použijeme následující testy:
+
+Testování funkcionality (2-3 lidi)
+odkazy
+formuláře
+propojení databáze
+validace html/css
+monkey testy
+Testování kompability (1 člověk)
+OS
+prohlížeče
+responzibilita
+Testování výkonnosti (neurčený počet lidí)
+stress test
+načítání stránek
+Testování bezpečnosti (2-3lidi)
+kopírování interních metod do url adresy
+přistupování k nahraným souborům
+SSL bezpečnost
+XSRF a XSS
+
+Dále můžeme použít scénářové testy a junit testy. Scénářové testy bude zpracovávat 3-5 testerů.

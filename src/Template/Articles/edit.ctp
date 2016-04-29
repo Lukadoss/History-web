@@ -24,9 +24,9 @@
         </div>
         <div class="col-md-3">
             <h6 class="text-muted text-right">
-                Autor: <?php if ($source->user_id) echo $articleAuthor->forename . " " . $articleAuthor->surname . "<br>" . $articleAuthor->email;
+                Autor: <?php if ($source->user_id) echo htmlspecialchars($articleAuthor->forename) . " " . htmlspecialchars($articleAuthor->surname) . "<br>" . htmlspecialchars($articleAuthor->email);
                 else {
-                    echo $source->forename . " " . $source->surname . "<br>" . $source->email;
+                    echo htmlspecialchars($source->forename) . " " . htmlspecialchars($source->surname) . "<br>" . $source->email;
                 } ?>
             </h6>
         </div>
