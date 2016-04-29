@@ -11,6 +11,9 @@ namespace App\Controller;
 
 class InfoController extends AppController
 {
+    /**
+     * Does nuthing bruh..
+     */
     function index()
     {
 

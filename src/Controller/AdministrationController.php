@@ -12,6 +12,9 @@ use Cake\Event\Event;
 
 class AdministrationController extends AppController
 {
+    /**
+     * Overrides initialize in AppController
+     */
     function initialize()
     {
         parent::initialize();
@@ -19,11 +22,18 @@ class AdministrationController extends AppController
         $this->loadModel('Sources');
     }
 
+    /**
+     * Overrides beforeFilter in AppController
+     * @param Event $event
+     */
     function beforeFilter(Event $event)
     {
         $this->Auth->deny();
     }
 
+    /**
+     * Shows index page, loads articles from database
+     */
     function index(){
         $sources = $this->Sources->find('all')
             ->contain([
@@ -35,6 +45,12 @@ class AdministrationController extends AppController
         $this->set('sources', $sources);
     }
 
+    /**
+     * Accepts article which is freshly created (on hold)
+     * 
+     * @param null $sourceID
+     * @return \Cake\Network\Response|null
+     */
     function accept($sourceID = null){
         if ($sourceID != null){
             $source = $this->Sources->get($sourceID);
@@ -49,6 +65,12 @@ class AdministrationController extends AppController
         return $this->redirect($this->referer());
     }
 
+    /**
+     * Deletes article
+     * 
+     * @param null $sourceID
+     * @return \Cake\Network\Response|null
+     */
     function delete($sourceID = null){
         if ($sourceID != null) {
             $source = $this->Sources->get($sourceID);

@@ -15,6 +15,10 @@ require_once 'components/recaptchalib.php';
 class ArticlesController extends AppController
 {
 
+    /**
+     * Overrides beforeFilter in AppController
+     * @param Event $event
+     */
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
@@ -22,6 +26,9 @@ class ArticlesController extends AppController
         $this->Auth->config('authorize', ['Controller']);
     }
 
+    /**
+     * Creates new article
+     */
     function newarticle()
     {
         $this->loadModel('Districts');
@@ -121,18 +128,24 @@ class ArticlesController extends AppController
                             }
                         }
                     } else {
-                        $this->Flash->error(__('<strong>Přesáhl jsi limit 19 souborů!</strong>'));
+                        $this->Flash->error(__('<strong>Přesáhnut limit 19 souborů!</strong>'));
                     }
 
                 }
             } else {
-                $this->Flash->error(__('<strong>Velikost tvých souborů přesáhl limit 150MB!</strong>'));
+                $this->Flash->error(__('<strong>Velikost Vašich souborů přesáhl limit 150MB!</strong>'));
             }
             $this->Flash->error(__('<strong>Příspěvek se nepodařilo nahrát!</strong>'));
         }
         $this->set('source', $source);
     }
 
+    /**
+     * Uploads file to the server, checks validation of the file.
+     * @param $file uploaded file
+     * @param $validation validation rule
+     * @param $path path to file
+     */
     function file_upload($file, $validation, $path)
     {
         foreach ($file as $tmp) {
@@ -155,6 +168,11 @@ class ArticlesController extends AppController
         }
     }
 
+    /**
+     * File size of sigle entities (images, videos, documents, audio)
+     * @param $file file entity
+     * @return int size of files
+     */
     function file_size($file)
     {
         $input_size = 0;
@@ -164,6 +182,10 @@ class ArticlesController extends AppController
         return $input_size;
     }
 
+    /**
+     * Shows detail of single article
+     * @param null $prispevek_id article id
+     */
     function detail($prispevek_id = null)
     {
         if ($prispevek_id!=null) {
@@ -180,12 +202,10 @@ class ArticlesController extends AppController
         $this->set(compact('articleAuthor'));
     }
 
-    public
-    function add()
-    {
-        $this->loadModel('Sources');
-    }
-
+    /**
+     * Gives power to admin or author to edit the article
+     * @param null $prispevek_id article id
+     */
     function edit($prispevek_id = null)
     {
         if ($prispevek_id) {
@@ -224,8 +244,12 @@ class ArticlesController extends AppController
         }
     }
 
-    public
-    function isAuthorized($user = null)
+    /**
+     * Overwrites isAuthorized function
+     * @param null $user user
+     * @return bool
+     */
+    public function isAuthorized($user = null)
     {
         if (isset($user)) {
             return true;
@@ -234,8 +258,13 @@ class ArticlesController extends AppController
         return false;
     }
 
-    public
-    function checkAuthorized($user, $article)
+    /**
+     * Checks authorized person for editing an article
+     * @param $user
+     * @param $article
+     * @return bool
+     */
+    public function checkAuthorized($user, $article)
     {
         if ($article) {
             if ($user->user_id === $article->user_id || $user->isadmin == true) {

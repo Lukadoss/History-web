@@ -10,7 +10,9 @@ namespace App\Controller;
 
 class MapController extends AppController
 {
-
+    /**
+     * Shows index page, loads Ajax
+     */
     public function index()
     {
         require_once(ROOT . DS . 'vendor' . DS . 'adodb-time.inc.php');
