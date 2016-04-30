@@ -131,6 +131,7 @@ class ArticlesController extends AppController
                     }
 
                 }
+                $this->Flash->error(__('<strong>Captcha nebyla potvrzena!</strong>'));
             } else {
                 $this->Flash->error(__('<strong>Velikost Vašich souborů přesáhl limit 150MB!</strong>'));
             }
