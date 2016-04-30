@@ -215,33 +215,45 @@
                     //var formattedDate = markerDate.getFullYear() + "-" + (markerDate.getMonth()+1) + "-" + markerDate.getDate();
 
                     if (markerDateFrom == currentDate || (markerDateFrom <= currentDate && markerDateTo >= currentDate)) {
+                        var filterChecker = true;
+
+                        if (marker_obj_data[i].isText == false && marker_obj_data[i].isAudio == false && marker_obj_data[i].isVideo == false && marker_obj_data[i].isImage == false) {
+                            markerColor = 'b3b3b3';
+                            fileType = 'Bez přípony';
+                            filterChecker = false;
+                        }
+
                         if (marker_obj_data[i].isText == true) {
                             if (filterSettings.text) {
                                 markerColor = 'd9534f';
                                 fileType = 'Textový dokument';
+                                filterChecker = false;
                             }
-                            else continue;
                         }
-                        else if (marker_obj_data[i].isAudio == true) {
+                        if (marker_obj_data[i].isAudio == true) {
                             if (filterSettings.audio) {
                                 markerColor = '0275d8';
                                 fileType = 'Audio';
+                                filterChecker = false;
                             }
-                            else continue;
                         }
-                        else if (marker_obj_data[i].isVideo == true) {
+                        if (marker_obj_data[i].isVideo == true) {
                             if (filterSettings.video) {
                                 markerColor = '5cb85c';
                                 fileType = 'Video';
+                                filterChecker = false;
                             }
-                            else continue;
                         }
-                        else if (marker_obj_data[i].isImage == true) {
+                        if (marker_obj_data[i].isImage == true) {
                             if (filterSettings.image) {
                                 markerColor = 'f0ad4e';
                                 fileType = 'Obrázky';
+                                filterChecker = false;
                             }
-                            else continue;
+                        }
+
+                        if (filterChecker){
+                            continue;
                         }
 
                         var marker = new google.maps.Marker({
