@@ -217,6 +217,12 @@
                     if (markerDateFrom == currentDate || (markerDateFrom <= currentDate && markerDateTo >= currentDate)) {
                         var filterChecker = true;
 
+                        if (marker_obj_data[i].isText == false && marker_obj_data[i].isAudio == false && marker_obj_data[i].isVideo == false && marker_obj_data[i].isImage == false) {
+                            markerColor = 'b3b3b3';
+                            fileType = 'Bez přípony';
+                            filterChecker = false;
+                        }
+
                         if (marker_obj_data[i].isText == true) {
                             if (filterSettings.text) {
                                 markerColor = 'd9534f';
