@@ -135,9 +135,10 @@ class UsersController extends AppController
                 $user = $this->Users->patchEntity($user, $this->request->data, ['validate'=>'pass']);
             }
 
+            debug($this->request->data);
             if (!$this->request->data(['password'])){
                 unset($user->password);
-            }elseif(DefaultPasswordHasher::check($this->request->data('current_password'), $user['password'])) {
+            }elseif(!DefaultPasswordHasher::check($this->request->data('current_password'), $user['password'])) {
                 $user->errors('Check password', ['Chybné staré heslo']);
             }
 
