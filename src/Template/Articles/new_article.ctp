@@ -24,16 +24,16 @@
 
             <div>
                 <div class="col-md-6">
-                    <label for="jmeno">Jméno</label>
+                    <label for="jmeno">Jméno*</label>
                     <input type="text" class="form-control" required id="jmeno" name="forename">
                 </div>
                 <div class="col-md-6">
-                    <label for="prijmeni">Příjmení</label>
+                    <label for="prijmeni">Příjmení*</label>
                     <input type="text" class="form-control" required id="prijmeni" name="surname">
                 </div>
             </div>
             <div class="form-group col-md-12">
-                <label>Email</label>
+                <label>Email*</label>
                 <input type="text" class="form-control" required name="email">
             </div>
             <div class="form-group col-md-12 text-center">
@@ -42,16 +42,16 @@
             <hr>
         <?php } ?>
         <div class="form-group col-md-12">
-            <label>Název příspěvku:</label>
+            <label>Název příspěvku*:</label>
             <input type="text" class="form-control" required name="name">
         </div>
         <div class="form-group col-md-12">
-            <?php echo $this->Form->input('Krátký popis (nepovinný):', ['type' => 'textarea', 'escape' => true, 'class' => 'form-control', 'rows' => '5', 'name' => 'text']); ?>
+            <?php echo $this->Form->input('Krátký popis:', ['type' => 'textarea', 'escape' => true, 'class' => 'form-control', 'rows' => '5', 'name' => 'text']); ?>
         </div>
         <div class="form-group">
 
             <div class="col-md-6">
-                <label>Datum události:</label>
+                <label>Datum události*:</label>
                 <input type="date" class="form-control" required name="date_from">
             </div>
 
@@ -352,6 +352,7 @@
         <hr>
         <div class="g-recaptcha" style="margin-bottom: 15px;"
              data-sitekey="6LdMihwTAAAAABHyUIcfago1qMOTWkT4dL7XP_Bx"></div>
+        <h6 class="text-muted" style="color:red">Prosím potvrďte příspěvek tím že nejste robot.<br> Všechna pole označená * jsou povinná.</h6>
         <button type="submit" name="submit-article" id="submit-article" class="btn btn-primary fileinput-upload">Přidat článek</button>
         <?php echo $this->Form->end();
         ?>

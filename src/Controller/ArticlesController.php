@@ -122,7 +122,7 @@ class ArticlesController extends AppController
 
                             if ($this->Sources->save($source)) {
 
-                                $this->Flash->success(__('<strong>Příspěvek byl úspěšně nahrán!</strong> Počkejte, prosím, na jeho schválení.'));
+                                $this->Flash->success(__('<strong>Příspěvek byl nahrán!</strong> Nyní musí být potvrzen administrátorem.'));
                                 return $this->redirect(['action' => 'new_article']);
                             }
                         }
