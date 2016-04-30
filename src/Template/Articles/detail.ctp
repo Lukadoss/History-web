@@ -52,12 +52,13 @@
                     <?php while ($file = readdir($dir)) {
                         $validation = array('pdf', 'doc', 'docx', 'txt');
                         if (in_array((strtolower(pathinfo($file, PATHINFO_EXTENSION))), $validation)) {
+                            $path = "../"."../" . 'webroot/files/' . $source->source_id . '/Text/';
                             ?>
                             <tr>
                                 <td style="vertical-align: middle"><?php
-                                    echo $file;
+                                    echo $file
                                     ?></td>
-                                <td style="vertical-align: middle"><i class="fa fa-download"></i> <span class="hidden-sm-down">Download</span></td>
+                                <td style="vertical-align: middle"><a download="" href="<?php echo $path.$file ?>"> <i class="fa fa-download"></i> <span class="hidden-sm-down">Download</span></a></td>
                             </tr>
                         <?php }
                     } ?>
@@ -82,12 +83,13 @@
                     <?php while ($file = readdir($dir)) {
                         $validation = array('jpg', 'jpeg', 'gif', 'bmp', 'png');
                         if (in_array((strtolower(pathinfo($file, PATHINFO_EXTENSION))), $validation)) {
+                            $path = "../"."../" . 'webroot/files/' . $source->source_id . '/Image/';
                             ?>
                             <tr>
                                 <td style="vertical-align: middle"><?php
                                     echo $file;
                                     ?></td>
-                                <td style="vertical-align: middle"><i class="fa fa-download"></i> <span class="hidden-sm-down">Download</span></td>
+                                <td style="vertical-align: middle"><a download="" href="<?php echo $path.$file ?>"> <i class="fa fa-download"></i> <span class="hidden-sm-down">Download</span></a></td>
                             </tr>
                         <?php }
                     } ?>
@@ -112,12 +114,13 @@
                     <?php while ($file = readdir($dir)) {
                         $validation = array("mp3", "wav", "flac", "mpg");
                         if (in_array((strtolower(pathinfo($file, PATHINFO_EXTENSION))), $validation)) {
+                            $path = "../"."../" . 'webroot/files/' . $source->source_id . '/Audio/';
                             ?>
                             <tr>
                                 <td style="vertical-align: middle"><?php
                                     echo $file;
                                     ?></td>
-                                <td style="vertical-align: middle"><i class="fa fa-download"></i> <span class="hidden-sm-down">Download</span></td>
+                                <td style="vertical-align: middle"><a download="" href="<?php echo $path.$file ?>"> <i class="fa fa-download"></i> <span class="hidden-sm-down">Download</span></a></td>
                             </tr>
                         <?php }
                     } ?>
@@ -142,12 +145,13 @@
                     <?php while ($file = readdir($dir)) {
                         $validation = array("mp4", "avi", "mpeg");
                         if (in_array((strtolower(pathinfo($file, PATHINFO_EXTENSION))), $validation)) {
+                            $path = "../"."../" . 'webroot/files/' . $source->source_id . '/Video/';
                             ?>
                             <tr>
                                 <td style="vertical-align: middle"><?php
                                     echo $file;
                                     ?></td>
-                                <td style="vertical-align: middle"><i class="fa fa-download"></i> <span class="hidden-sm-down">Download</span></td>
+                                <td style="vertical-align: middle"><a download="" href="<?php echo $path.$file ?>"> <i class="fa fa-download"></i> <span class="hidden-sm-down">Download</span></a></td>
                             </tr>
                         <?php }
                     } ?>
