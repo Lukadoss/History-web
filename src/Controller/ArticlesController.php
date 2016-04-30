@@ -115,7 +115,7 @@ class ArticlesController extends AppController
                             $this->file_upload($video_file, $video_validation, $path_video);
                             $this->file_upload($image_file, $image_validation, $path_image);
 
-                            $source->isText = 1;
+                            if (is_dir($path_text)) $source->isText = 1;
                             if (is_dir($path_audio))$source->isAudio = 1;
                             if (is_dir($path_video))$source->isVideo = 1;
                             if (is_dir($path_image))$source->isImage = 1;
