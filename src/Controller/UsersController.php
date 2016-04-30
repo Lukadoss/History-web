@@ -141,7 +141,7 @@ class UsersController extends AppController
             if ($this->request->data(['password'])){
                 $user = $this->Users->patchEntity($user, $this->request->data, ['validate'=>'pass']);
             }
-
+ 
             if ($bool) unset($user->password);
 
             if(!$user->errors()){
