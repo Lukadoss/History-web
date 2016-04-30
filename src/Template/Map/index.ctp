@@ -210,8 +210,6 @@
                 var markerColor, fileType, i, content;
                 activeMarkers = [];
                 for (i in marker_obj_data) {
-                    console.log(marker_obj_data[i]);
-
                     var markerDateFrom = new Date(marker_obj_data[i].date_from).toISOString().slice(0, 10);
                     var markerDateTo = new Date(marker_obj_data[i].date_to).toISOString().slice(0, 10);
                     //var formattedDate = markerDate.getFullYear() + "-" + (markerDate.getMonth()+1) + "-" + markerDate.getDate();
