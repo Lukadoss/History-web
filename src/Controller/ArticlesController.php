@@ -97,25 +97,30 @@ class ArticlesController extends AppController
                         }
 
                         if ($text_size <= 15000000 && $image_size <= 30000000 && $audio_size <= 40000000 && $video_size <= 100000000 && $input_size <= 150000000) {
+                            $text_validation = array('pdf', 'doc', 'docx', 'txt');
+                            $image_validation = array('jpg', 'jpeg', 'gif', 'bmp', 'png');
+                            $audio_validation = array("mp3", "wav", "flac", "mpg");
+                            $video_validation = array("mp4", "avi", "mpeg");
+
+                            $result = $this->Sources->save($source);
+                            $lastId = $result->source_id;
+
+                            $path_text = 'files/' . $lastId . '/Text';
+                            $path_audio = 'files/' . $lastId . '/Audio';
+                            $path_video = 'files/' . $lastId . '/Video';
+                            $path_image = 'files/' . $lastId . '/Image';
+
+                            $this->file_upload($text_file, $text_validation, $path_text);
+                            $this->file_upload($audio_file, $audio_validation, $path_audio);
+                            $this->file_upload($video_file, $video_validation, $path_video);
+                            $this->file_upload($image_file, $image_validation, $path_image);
+
+                            if (is_dir($path_text)) $source->isText = 1;
+                            if (is_dir($path_audio))$source->isAudio = 1;
+                            if (is_dir($path_video))$source->isVideo = 1;
+                            if (is_dir($path_image))$source->isImage = 1;
+
                             if ($this->Sources->save($source)) {
-
-                                $text_validation = array("text/plain", "application/msword", "application/pdf",
-                                    "application/vnd.openxmlformats-officedocument.wordprocessingml.template", "application/msword");
-                                $image_validation = array("image/jpeg", "image/png", "image/gif", "image/bmp");
-                                $audio_validation = array("audio/mpeg3", "audio/wav", "audio/x-wav", "audio/ogg", "audio/mpeg", "audio/x-mpeg-3", "video/x-mpeg", "audio/mp3");
-                                $video_validation = array("video/avi", "video/mpeg", "video/mp4", "application/mp4", "video/x-msvideo");
-                                $result = $this->Sources->save($source);
-                                $lastId = $result->source_id;
-
-                                $path_text = 'files/' . $lastId . '/Text';
-                                $path_audio = 'files/' . $lastId . '/Audio';
-                                $path_video = 'files/' . $lastId . '/Video';
-                                $path_image = 'files/' . $lastId . '/Image';
-
-                                $this->file_upload($text_file, $text_validation, $path_text);
-                                $this->file_upload($audio_file, $audio_validation, $path_audio);
-                                $this->file_upload($video_file, $video_validation, $path_video);
-                                $this->file_upload($image_file, $image_validation, $path_image);
 
                                 $this->Flash->success(__('<strong>Příspěvek byl úspěšně nahrán!</strong> Počkejte, prosím, na jeho schválení.'));
                                 return $this->redirect(['action' => 'new_article']);
@@ -144,7 +149,7 @@ class ArticlesController extends AppController
     {
         foreach ($file as $tmp) {
             if ($tmp['name'] != null) {
-                if (in_array($tmp['type'], $validation)) {
+                if (in_array((strtolower(pathinfo($tmp["name"], PATHINFO_EXTENSION))), $validation)) {
                     if (!is_dir($path)) {
                         if (!mkdir($path, 0777, true)) {
                             die('Failed to create folders...');

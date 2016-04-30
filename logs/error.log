@@ -20310,7 +20310,7 @@ Stack Trace:
 #2 {main}
 
 
-2016-04-18 17:42:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+2016-04-21 19:08:36 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
 Exception Attributes: array (
   'class' => 'Img',
   'plugin' => NULL,
@@ -20324,17 +20324,7 @@ Stack Trace:
 #1 {main}
 
 
-2016-04-18 18:02:11 Error: [Cake\Core\Exception\MissingPluginException] Plugin Proffer could not be found.
-Exception Attributes: array (
-  'plugin' => 'Proffer',
-)
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\config\bootstrap.php(184): Cake\Core\Plugin::load('Proffer')
-#1 C:\xampp\htdocs\History-web\webroot\index.php(27): require('C:\\xampp\\htdocs...')
-#2 {main}
-
-
-2016-04-18 18:02:38 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+2016-04-21 19:08:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
 Exception Attributes: array (
   'class' => 'Img',
   'plugin' => NULL,
@@ -20348,17 +20338,7 @@ Stack Trace:
 #1 {main}
 
 
-2016-04-18 18:08:28 Error: [Cake\Core\Exception\MissingPluginException] Plugin Proffer could not be found.
-Exception Attributes: array (
-  'plugin' => 'Proffer',
-)
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\config\bootstrap.php(184): Cake\Core\Plugin::load('Proffer')
-#1 C:\xampp\htdocs\History-web\webroot\index.php(27): require('C:\\xampp\\htdocs...')
-#2 {main}
-
-
-2016-04-18 18:09:10 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+2016-04-21 19:09:46 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
 Exception Attributes: array (
   'class' => 'Img',
   'plugin' => NULL,
@@ -20372,31 +20352,7 @@ Stack Trace:
 #1 {main}
 
 
-2016-04-18 18:12:54 Error: [Cake\ORM\Exception\MissingBehaviorException] Behavior class ProfferBehavior could not be found.
-Exception Attributes: array (
-  'class' => 'ProfferBehavior',
-  'plugin' => 'Proffer',
-)
-Request URL: /History-web/articles/new-article
-Referer URL: http://localhost/History-web/map
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\ORM\BehaviorRegistry->_throwMissingClassError('Proffer', 'Proffer')
-#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(603): Cake\Core\ObjectRegistry->load('Proffer.Proffer', Array)
-#2 C:\xampp\htdocs\History-web\src\Model\Table\SourcesTable.php(45): Cake\ORM\Table->addBehavior('Proffer.Proffer', Array)
-#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(288): App\Model\Table\SourcesTable->initialize(Array)
-#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(207): Cake\ORM\Table->__construct(Array)
-#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(175): Cake\ORM\Locator\TableLocator->_create(Array)
-#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Datasource\ModelAwareTrait.php(114): Cake\ORM\Locator\TableLocator->get('Sources')
-#7 C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php(30): Cake\Controller\Controller->loadModel('Sources')
-#8 [internal function]: App\Controller\ArticlesController->newarticle()
-#9 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
-#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
-#11 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController))
-#12 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#13 {main}
-
-
-2016-04-18 18:21:39 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+2016-04-21 19:10:58 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
 Exception Attributes: array (
   'class' => 'Img',
   'plugin' => NULL,
@@ -20410,7 +20366,7 @@ Stack Trace:
 #1 {main}
 
 
-2016-04-18 18:22:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+2016-04-21 19:11:51 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
 Exception Attributes: array (
   'class' => 'Img',
   'plugin' => NULL,
@@ -20424,31 +20380,7 @@ Stack Trace:
 #1 {main}
 
 
-2016-04-18 18:27:31 Error: [Imagine\Exception\RuntimeException] Imagick not installed
-Request URL: /History-web/articles/new-article
-Referer URL: http://localhost/History-web/articles/new-article
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\vendor\davidyell\proffer\src\Lib\ImageTransform.php(79): Imagine\Imagick\Imagine->__construct()
-#1 C:\xampp\htdocs\History-web\vendor\davidyell\proffer\src\Lib\ImageTransform.php(124): Proffer\Lib\ImageTransform->setImagine('imagick')
-#2 C:\xampp\htdocs\History-web\vendor\davidyell\proffer\src\Lib\ImageTransform.php(103): Proffer\Lib\ImageTransform->makeThumbnail('square', Array, 'imagick')
-#3 C:\xampp\htdocs\History-web\vendor\davidyell\proffer\src\Model\Behavior\ProfferBehavior.php(116): Proffer\Lib\ImageTransform->processThumbnails(Array)
-#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Event\EventManager.php(390): Proffer\Model\Behavior\ProfferBehavior->beforeSave(Object(Cake\Event\Event), Object(Cake\ORM\Entity), Object(ArrayObject))
-#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Event\EventManager.php(356): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
-#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
-#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1453): Cake\ORM\Table->dispatchEvent('Model.beforeSav...', Array)
-#8 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1405): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
-#9 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
-#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1406): Cake\Database\Connection->transactional(Object(Closure))
-#11 C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php(52): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
-#12 [internal function]: App\Controller\ArticlesController->newarticle()
-#13 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
-#14 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
-#15 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController))
-#16 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#17 {main}
-
-
-2016-04-18 18:30:27 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+2016-04-21 19:13:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
 Exception Attributes: array (
   'class' => 'Img',
   'plugin' => NULL,
@@ -20462,7 +20394,7 @@ Stack Trace:
 #1 {main}
 
 
-2016-04-18 18:30:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+2016-04-21 19:14:36 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
 Exception Attributes: array (
   'class' => 'Img',
   'plugin' => NULL,
@@ -20476,7 +20408,7 @@ Stack Trace:
 #1 {main}
 
 
-2016-04-18 18:35:45 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+2016-04-21 19:14:47 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
 Exception Attributes: array (
   'class' => 'Img',
   'plugin' => NULL,
@@ -20490,265 +20422,233 @@ Stack Trace:
 #1 {main}
 
 
-2016-04-18 18:35:49 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-18 18:41:59 Error: [Cake\ORM\Exception\MissingBehaviorException] Behavior class ProfferBehavior could not be found.
-Exception Attributes: array (
-  'class' => 'ProfferBehavior',
-  'plugin' => 'Proffer',
-)
-Request URL: /History-web/articles/new-article
-Referer URL: http://localhost/History-web/articles/new-article
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(91): Cake\ORM\BehaviorRegistry->_throwMissingClassError('Proffer', 'Proffer')
-#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(603): Cake\Core\ObjectRegistry->load('Proffer.Proffer', Array)
-#2 C:\xampp\htdocs\History-web\src\Model\Table\SourcesTable.php(31): Cake\ORM\Table->addBehavior('Proffer.Proffer', Array)
-#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(288): App\Model\Table\SourcesTable->initialize(Array)
-#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(207): Cake\ORM\Table->__construct(Array)
-#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Locator\TableLocator.php(175): Cake\ORM\Locator\TableLocator->_create(Array)
-#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Datasource\ModelAwareTrait.php(114): Cake\ORM\Locator\TableLocator->get('Sources')
-#7 C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php(30): Cake\Controller\Controller->loadModel('Sources')
-#8 [internal function]: App\Controller\ArticlesController->newarticle()
-#9 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(429): call_user_func_array(Array, Array)
-#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
-#11 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\ArticlesController))
-#12 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#13 {main}
-
-
-2016-04-18 18:42:39 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-18 18:42:42 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-18 18:43:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-18 19:04:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-18 20:47:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-18 20:47:17 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-18 21:04:08 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-18 21:04:33 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-18 21:08:34 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-18 21:08:47 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-18 21:09:01 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-18 21:09:27 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-18 21:09:41 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-18 21:40:05 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: https://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-18 21:59:28 Error: [PDOException] SQLSTATE[HY000]: General error: 11 database disk image is malformed
+2016-04-21 19:18:49 Error: [Exception] Failed calling Cake\ORM\Query::jsonSerialize()
 Request URL: /History-web/map
-Referer URL: http://localhost/History-web/map
+Referer URL: http://localhost/History-web/users/login
 Stack Trace:
-#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): PDOStatement->execute(NULL)
-#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(171): Cake\Database\Statement\StatementDecorator->execute(NULL)
-#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(74): Cake\Database\Statement\StatementDecorator->execute(NULL)
-#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(41): Cake\Database\Statement\BufferedStatement->execute(NULL)
-#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Statement\SqliteStatement->execute()
-#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
-#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1558): Cake\Database\Query->execute()
-#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1474): Cake\ORM\Table->_insert(Object(Cake\ORM\Entity), Array)
-#8 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1405): Cake\ORM\Table->_processSave(Object(Cake\ORM\Entity), Object(ArrayObject))
-#9 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Connection.php(557): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
-#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Table.php(1406): Cake\Database\Connection->transactional(Object(Closure))
-#11 C:\xampp\htdocs\History-web\vendor\cakephp\debug_kit\src\Routing\Filter\DebugBarFilter.php(209): Cake\ORM\Table->save(Object(Cake\ORM\Entity))
-#12 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Event\EventManager.php(390): DebugKit\Routing\Filter\DebugBarFilter->afterDispatch(Object(Cake\Event\Event), Object(Cake\Network\Request), Object(Cake\Network\Response))
-#13 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Event\EventManager.php(356): Cake\Event\EventManager->_callListener(Array, Object(Cake\Event\Event))
-#14 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Event\EventDispatcherTrait.php(78): Cake\Event\EventManager->dispatch(Object(Cake\Event\Event))
-#15 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(92): Cake\Routing\Dispatcher->dispatchEvent('Dispatcher.afte...', Array)
+#0 C:\xampp\htdocs\History-web\src\Template\Map\index.ctp(0): json_encode()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\MapController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-04-21 19:18:53 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'onHold' in 'where clause'
+Request URL: /History-web/users/detail
+Referer URL: http://localhost/History-web/info
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(448): Cake\ORM\Query->all()
+#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(1078): Cake\ORM\Query->_call('isEmpty', Array)
+#8 C:\xampp\htdocs\History-web\src\Template\Users\detail.ctp(31): Cake\ORM\Query->__call('isEmpty', Array)
+#9 C:\xampp\htdocs\History-web\src\Template\Users\detail.ctp(31): Cake\ORM\Query->isEmpty()
+#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#12 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#14 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#15 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
 #16 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
 #17 {main}
 
 
-2016-04-18 21:59:48 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+2016-04-21 19:19:01 Error: [Exception] Failed calling Cake\ORM\Query::jsonSerialize()
+Request URL: /History-web/map
+Referer URL: http://localhost/History-web/info
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Template\Map\index.ctp(0): json_encode()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\MapController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-04-21 19:19:04 Error: [Exception] Failed calling Cake\ORM\Query::jsonSerialize()
+Request URL: /History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Template\Map\index.ctp(0): json_encode()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\MapController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-04-21 19:19:16 Error: [Exception] Failed calling Cake\ORM\Query::jsonSerialize()
+Request URL: /History-web/map
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Template\Map\index.ctp(0): json_encode()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\MapController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-04-21 19:20:55 Error: [Exception] Failed calling Cake\ORM\Query::jsonSerialize()
+Request URL: /History-web/map
+Referer URL: http://localhost/History-web/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Template\Map\index.ctp(0): json_encode()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\MapController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-04-21 19:21:06 Error: [Exception] Failed calling Cake\ORM\Query::jsonSerialize()
+Request URL: /History-web/map
+Referer URL: http://localhost/History-web/articles/new-article
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Template\Map\index.ctp(0): json_encode()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\MapController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-04-21 19:21:10 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'onHold' in 'where clause'
+Request URL: /History-web/users/detail
+Referer URL: http://localhost/History-web/info
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(448): Cake\ORM\Query->all()
+#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(1078): Cake\ORM\Query->_call('isEmpty', Array)
+#8 C:\xampp\htdocs\History-web\src\Template\Users\detail.ctp(31): Cake\ORM\Query->__call('isEmpty', Array)
+#9 C:\xampp\htdocs\History-web\src\Template\Users\detail.ctp(31): Cake\ORM\Query->isEmpty()
+#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#12 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#14 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#15 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#16 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-04-21 19:24:58 Error: [Exception] Failed calling Cake\ORM\Query::jsonSerialize()
+Request URL: /History-web/map
+Referer URL: http://localhost/History-web/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Template\Map\index.ctp(0): json_encode()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\MapController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-04-21 19:26:46 Error: [Exception] Failed calling Cake\ORM\Query::jsonSerialize()
+Request URL: /History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Template\Map\index.ctp(0): json_encode()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\MapController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-04-21 19:27:19 Error: [Exception] Failed calling Cake\ORM\Query::jsonSerialize()
+Request URL: /History-web/map
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Template\Map\index.ctp(0): json_encode()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\MapController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-04-21 19:34:51 Error: [Exception] Failed calling Cake\ORM\Query::jsonSerialize()
+Request URL: /History-web/map
+Referer URL: http://localhost/History-web/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Template\Map\index.ctp(0): json_encode()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\MapController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-04-21 19:36:07 Error: [Exception] Failed calling Cake\ORM\Query::jsonSerialize()
+Request URL: /History-web/map
+Referer URL: http://localhost/History-web/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Template\Map\index.ctp(0): json_encode()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\MapController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-04-21 19:36:21 Error: [Exception] Failed calling Cake\ORM\Query::jsonSerialize()
+Request URL: /History-web/map
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Template\Map\index.ctp(0): json_encode()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\MapController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-04-21 19:42:36 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
 Exception Attributes: array (
   'class' => 'Img',
   'plugin' => NULL,
@@ -20762,7 +20662,7 @@ Stack Trace:
 #1 {main}
 
 
-2016-04-18 22:04:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+2016-04-21 19:42:54 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
 Exception Attributes: array (
   'class' => 'Img',
   'plugin' => NULL,
@@ -20776,7 +20676,7 @@ Stack Trace:
 #1 {main}
 
 
-2016-04-18 22:04:21 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+2016-04-21 19:47:18 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
 Exception Attributes: array (
   'class' => 'Img',
   'plugin' => NULL,
@@ -20790,7 +20690,7 @@ Stack Trace:
 #1 {main}
 
 
-2016-04-18 23:50:01 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+2016-04-21 20:18:34 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
 Exception Attributes: array (
   'class' => 'Img',
   'plugin' => NULL,
@@ -20804,482 +20704,79 @@ Stack Trace:
 #1 {main}
 
 
-2016-04-19 00:20:47 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 00:26:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 11:23:39 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 11:23:49 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 11:25:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 11:35:16 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 11:37:37 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 11:48:33 Error: [Cake\Core\Exception\MissingPluginException] Plugin Josegonzales/Upload could not be found.
-Exception Attributes: array (
-  'plugin' => 'Josegonzales/Upload',
-)
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\config\bootstrap.php(184): Cake\Core\Plugin::load('Josegonzales/Up...')
-#1 C:\xampp\htdocs\History-web\webroot\index.php(27): require('C:\\xampp\\htdocs...')
-#2 {main}
-
-
-2016-04-19 11:49:01 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 11:49:06 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 11:50:38 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 11:50:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 11:57:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 11:59:29 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 12:00:46 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 12:05:31 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 12:06:20 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 12:06:34 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 12:07:28 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 12:11:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 12:34:39 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-19 12:34:41 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-21 19:31:32 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-21 19:33:08 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-21 19:33:52 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-21 19:38:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-21 19:38:47 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-24 14:08:48 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-24 17:55:54 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-24 18:03:16 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-24 18:03:58 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-24 18:04:10 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-24 18:04:22 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
-Exception Attributes: array (
-  'class' => 'Img',
-  'plugin' => NULL,
-  'prefix' => NULL,
-  '_ext' => NULL,
-)
-Request URL: /History-web/img/loading.gif
-Referer URL: http://localhost/History-web/css/fileinput.min.css
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
-#1 {main}
-
-
-2016-04-24 18:24:34 Error: Fatal Error (1): Cannot use object of type Cake\ORM\Query as array in [C:\xampp\htdocs\History-web\src\Template\Administration\index.ctp, line 8]
+2016-04-21 20:18:47 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 138]
 Trace:
-Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 216
-Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 99
-[main] - [internal], line ??
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_size() - APP/Controller\ArticlesController.php, line 138
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 60
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
 
 
 
-2016-04-24 18:24:35 Error: [Cake\Error\FatalErrorException] Cannot use object of type Cake\ORM\Query as array
-Request URL: /History-web/administration
-Referer URL: http://localhost/History-web/map
-Stack Trace:
-#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Error\BaseErrorHandler.php(99): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Cannot use obje...', 'C:\\xampp\\htdocs...', 8)
-#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
-#2 {main}
+2016-04-21 20:18:48 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 138]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_size() - APP/Controller\ArticlesController.php, line 138
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 61
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
 
 
-2016-04-24 18:30:14 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+
+2016-04-21 20:18:48 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 138]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_size() - APP/Controller\ArticlesController.php, line 138
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 62
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 20:18:48 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 115]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_upload() - APP/Controller\ArticlesController.php, line 115
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 95
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 20:18:48 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 115]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_upload() - APP/Controller\ArticlesController.php, line 115
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 96
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 20:18:48 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 115]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_upload() - APP/Controller\ArticlesController.php, line 115
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 97
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 20:25:18 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
 Exception Attributes: array (
   'class' => 'Img',
   'plugin' => NULL,
@@ -21293,7 +20790,7 @@ Stack Trace:
 #1 {main}
 
 
-2016-04-24 18:30:19 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+2016-04-21 20:25:20 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
 Exception Attributes: array (
   'class' => 'Img',
   'plugin' => NULL,
@@ -21307,7 +20804,7 @@ Stack Trace:
 #1 {main}
 
 
-2016-04-24 18:30:28 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+2016-04-21 20:25:36 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
 Exception Attributes: array (
   'class' => 'Img',
   'plugin' => NULL,
@@ -21319,5 +20816,821 @@ Referer URL: http://localhost/History-web/css/fileinput.min.css
 Stack Trace:
 #0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
 #1 {main}
+
+
+2016-04-21 20:25:56 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 144]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_size() - APP/Controller\ArticlesController.php, line 144
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 63
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 20:25:56 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 144]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_size() - APP/Controller\ArticlesController.php, line 144
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 64
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 20:25:56 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 144]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_size() - APP/Controller\ArticlesController.php, line 144
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 65
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 20:25:56 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 121]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_upload() - APP/Controller\ArticlesController.php, line 121
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 98
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 20:25:57 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 121]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_upload() - APP/Controller\ArticlesController.php, line 121
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 99
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 20:25:57 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 121]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_upload() - APP/Controller\ArticlesController.php, line 121
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 100
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 20:27:02 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:27:11 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:27:30 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 144]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_size() - APP/Controller\ArticlesController.php, line 144
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 63
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 20:27:30 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 144]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_size() - APP/Controller\ArticlesController.php, line 144
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 64
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 20:27:30 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 144]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_size() - APP/Controller\ArticlesController.php, line 144
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 65
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 20:27:30 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 121]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_upload() - APP/Controller\ArticlesController.php, line 121
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 98
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 20:27:31 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 121]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_upload() - APP/Controller\ArticlesController.php, line 121
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 99
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 20:27:31 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 121]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_upload() - APP/Controller\ArticlesController.php, line 121
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 100
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 20:38:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:38:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:39:08 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:39:23 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:40:30 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:40:34 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:45:17 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:45:41 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:45:48 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:46:33 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:46:42 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:46:54 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:52:04 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:52:42 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:53:01 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:54:28 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 20:54:44 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 21:04:29 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 21:04:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 21:10:59 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 152]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_size() - APP/Controller\ArticlesController.php, line 152
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 71
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 21:11:00 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 152]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_size() - APP/Controller\ArticlesController.php, line 152
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 72
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 21:11:00 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 129]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_upload() - APP/Controller\ArticlesController.php, line 129
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 105
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 21:11:00 Warning: Warning (2): Invalid argument supplied for foreach() in [C:\xampp\htdocs\History-web\src\Controller\ArticlesController.php, line 129]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 147
+App\Controller\ArticlesController::file_upload() - APP/Controller\ArticlesController.php, line 129
+App\Controller\ArticlesController::newarticle() - APP/Controller\ArticlesController.php, line 106
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 429
+Cake\Routing\Dispatcher::_invoke() - CORE\src\Routing\Dispatcher.php, line 114
+Cake\Routing\Dispatcher::dispatch() - CORE\src\Routing\Dispatcher.php, line 87
+[main] - ROOT\webroot\index.php, line 37
+
+
+
+2016-04-21 21:14:17 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 21:14:20 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 21:14:23 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 21:14:25 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 21:14:37 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 21:15:54 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 21:16:09 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 21:18:08 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 21:18:25 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 21:19:17 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 21:19:28 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 21:19:53 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 21:20:27 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 22:57:40 Error: [Cake\Routing\Exception\MissingControllerException] Controller class HistoryWeb could not be found.
+Exception Attributes: array (
+  'class' => 'HistoryWeb',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/history-web/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 22:57:59 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 22:58:25 Error: [Exception] Failed calling Cake\ORM\Query::jsonSerialize()
+Request URL: /History-web/map
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Template\Map\index.ctp(0): json_encode()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\MapController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-04-21 22:58:28 Error: [Exception] Failed calling Cake\ORM\Query::jsonSerialize()
+Request URL: /History-web/map
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Template\Map\index.ctp(0): json_encode()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\MapController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-04-21 22:58:47 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'onHold' in 'where clause'
+Request URL: /History-web/users/detail
+Referer URL: http://localhost/History-web/info
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(448): Cake\ORM\Query->all()
+#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(1078): Cake\ORM\Query->_call('isEmpty', Array)
+#8 C:\xampp\htdocs\History-web\src\Template\Users\detail.ctp(31): Cake\ORM\Query->__call('isEmpty', Array)
+#9 C:\xampp\htdocs\History-web\src\Template\Users\detail.ctp(31): Cake\ORM\Query->isEmpty()
+#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#12 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#14 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#15 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#16 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
+
+
+2016-04-21 22:58:55 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Img could not be found.
+Exception Attributes: array (
+  'class' => 'Img',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /History-web/img/loading.gif
+Referer URL: http://localhost/History-web/css/fileinput.min.css
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-04-21 22:59:05 Error: [Exception] Failed calling Cake\ORM\Query::jsonSerialize()
+Request URL: /History-web/map
+Referer URL: http://localhost/History-web/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Template\Map\index.ctp(0): json_encode()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\MapController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-04-21 22:59:07 Error: [Exception] Failed calling Cake\ORM\Query::jsonSerialize()
+Request URL: /History-web/map
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\src\Template\Map\index.ctp(0): json_encode()
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\MapController))
+#7 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#8 {main}
+
+
+2016-04-21 22:59:14 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'onHold' in 'where clause'
+Request URL: /History-web/users/detail
+Referer URL: http://localhost/History-web/
+Stack Trace:
+#0 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Connection.php(270): Cake\Database\Statement\MysqlStatement->execute()
+#2 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Database\Query.php(188): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#3 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(921): Cake\Database\Query->execute()
+#4 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(272): Cake\ORM\Query->_execute()
+#5 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(871): Cake\ORM\Query->_all()
+#6 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php(448): Cake\ORM\Query->all()
+#7 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\ORM\Query.php(1078): Cake\ORM\Query->_call('isEmpty', Array)
+#8 C:\xampp\htdocs\History-web\src\Template\Users\detail.ctp(31): Cake\ORM\Query->__call('isEmpty', Array)
+#9 C:\xampp\htdocs\History-web\src\Template\Users\detail.ctp(31): Cake\ORM\Query->isEmpty()
+#10 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(993): include('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(953): Cake\View\View->_evaluate('C:\\xampp\\htdocs...', Array)
+#12 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\View\View.php(588): Cake\View\View->_render('C:\\xampp\\htdocs...')
+#13 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Controller\Controller.php(611): Cake\View\View->render(NULL, NULL)
+#14 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(120): Cake\Controller\Controller->render()
+#15 C:\xampp\htdocs\History-web\vendor\cakephp\cakephp\src\Routing\Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\UsersController))
+#16 C:\xampp\htdocs\History-web\webroot\index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#17 {main}
 
 

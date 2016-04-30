@@ -38,7 +38,26 @@
                                 echo $source->user->email;
                             }?>
                         </span></td>
-                    <td style="vertical-align: middle"><?= $source->type ?></td>
+                    <td style="vertical-align: middle"><?php if($source->isImage==1) echo "Obrázek";
+                        if($source->isAudio==1 && $source->isImage==1){
+                            echo "<br>"; echo "Audio";
+                        }
+                        if($source->isAudio==1 && $source->isImage==0){
+                            echo "Audio";
+                        }
+                        if($source->isText==1 && ($source->isImage==1 || $source->isAudio==1)){
+                            echo "<br>"; echo "Text";
+                        }
+                        if($source->isText==1 && $source->isImage==0 && $source->isAudio==0){
+                            echo "Text";
+                        }
+                        if($source->isVideo==1 && ($source->isImage==1 || $source->isAudio==1 || $source->isText==1)){
+                            echo "<br>"; echo "Video";
+                        }
+                        if($source->isVideo==1 && $source->isImage==0 && $source->isAudio==0 && $source->isText==0){
+                            echo "Video";
+                        }
+                        ?></td>
                     <td style="vertical-align: middle"><?= $this->Html->link(__('<i class="fa fa-check"></i> <span class="hidden-sm-down">Přijmout</span>'), [
                             'controller' => 'Administration', 'action' => 'accept', $source->source_id
                         ], array('class' => 'label label-pill label-success', 'escape' => false)) ?>
