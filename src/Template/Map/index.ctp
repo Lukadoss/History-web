@@ -68,6 +68,7 @@
             var mc;
             var filterSettings = {audio: 1, video: 1, image: 1, text: 1}; //audio, video, image, text
             var interval;
+            var animSpeed = 1;
 
             var mcOptions = {
                 gridSize: 30, maxZoom: 21, averageCenter: true, styles: [{
@@ -190,21 +191,26 @@
 
             function startAnimation() {
                 var timesRun = 0;
+                var jump = 1;
                 document.getElementById("pick-year-val").value = document.getElementById("pick-year-val-min").value;
-                setTimeout(function () {
-                    interval = setInterval(function(){
-                        if(convertToDays(new Date(document.getElementById("pick-year-val-min").value), new Date(document.getElementById("pick-year-val-max").value)) === timesRun){
-                            clearInterval(interval);
-                        }else{
-                            clearMapMarkers();
-                            var date = new Date(document.getElementById("pick-year-val").value);
-                            date.setDate(date.getDate()+1);
-                            document.getElementById("pick-year-val").value = date.toISOString().substr(0,10);
-                            setMarkers(marker_obj_data, activeMarkers, document.getElementById("pick-year-val").value);
-                        }
-                        timesRun+=1;
-                    }, 2000);
-                }, 2000);
+                interval = setInterval(function(){
+                    var days = convertToDays(new Date(document.getElementById("pick-year-val-min").value), new Date(document.getElementById("pick-year-val-max").value));
+                    if (days>365 && days<3650) jump = 30;
+                    else if(days>3650) jump = 365;
+                    else jump = 1;
+
+                    if(days === timesRun){
+                        clearInterval(interval);
+                    }else{
+                        clearMapMarkers();
+                        var date = new Date(document.getElementById("pick-year-val").value);
+                        date.setDate(date.getDate()+jump);
+                        document.getElementById("pick-year-val").value = date.toISOString().substr(0,10);
+                        console.log(date.toISOString().substr(0,10));
+                        setMarkers(marker_obj_data, activeMarkers, document.getElementById("pick-year-val").value);
+                    }
+                    timesRun+=1;
+                }, 3000/animSpeed);
             }
 
             function stopAnimation(){
@@ -213,8 +219,7 @@
 
             function convertToDays(mindate, maxdate){
                 var oneDay = 24*60*60*1000;
-                var days = Math.round(Math.abs((mindate.getTime() - maxdate.getTime())/(oneDay)));
-                return days;
+                return Math.round(Math.abs((mindate.getTime() - maxdate.getTime()) / (oneDay)));
             }
 
             // Removes the markers from the map, but keeps them in the array.
@@ -222,6 +227,11 @@
                 mc.clearMarkers();
                 setMarkerMap(null, activeMarkers);
                 activeMarkers = [];
+            }
+
+            function setSpeed(){
+                animSpeed = $("input[name='radio']:checked").val();
+                console.log(animSpeed);
             }
 
             function setInfoWindow(marker, content) {
@@ -441,7 +451,7 @@
                 <div class="col-xs-6" style="padding-left: 0">
                     <div style="padding-left: 0">
                         <input type="date" value="1968-10-05" id="pick-year-val-min" min="1920-01-01" max="2015-12-31"
-                               style="width: 9.5rem">
+                               style="width: 9.5rem" >
                     </div>
                 </div>
                 <div class="col-xs-6" style="text-align: right; padding-right: 0">
@@ -465,7 +475,9 @@
                                 }
                             });
                         }, 50);
-
+                        if (interval != null){
+                            stopAnimation();
+                        }
                     });
 /*
                     $("#pick-year-val-min").on("change", function () {
@@ -490,17 +502,17 @@
             <hr>
             <h5>Rychlost animace</h5>
             <label class="c-input c-radio">
-                <input id="radio1" value="1" name="radio" type="radio" checked>
+                <input id="radio1" value="1" name="radio" type="radio" onclick="setSpeed()" checked>
                 <span class="c-indicator"></span>
                 1x
             </label>
             <label class="c-input c-radio">
-                <input id="radio2" value="2" name="radio" type="radio">
+                <input id="radio2" value="2" name="radio" onclick="setSpeed()" type="radio">
                 <span class="c-indicator"></span>
                 2x
             </label>
             <label class="c-input c-radio">
-                <input id="radio3" value="3" name="radio" type="radio">
+                <input id="radio3" value="3" name="radio" onclick="setSpeed()" type="radio">
                 <span class="c-indicator"></span>
                 3x
             </label>
