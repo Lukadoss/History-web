@@ -67,6 +67,7 @@
             var marker_obj_data = JSON.parse(marker_data);
             var mc;
             var filterSettings = {audio: 1, video: 1, image: 1, text: 1}; //audio, video, image, text
+            var interval;
 
             var mcOptions = {
                 gridSize: 30, maxZoom: 21, averageCenter: true, styles: [{
@@ -151,7 +152,7 @@
                 controlText.style.paddingLeft = '5px';
                 controlText.style.paddingRight = '5px';
                 controlText.innerHTML = '<a id="play-pause-btn" style="margin-right: 1rem"><?= $this->html->image('play-pause-btn.png', array('style' => 'height:1.5rem', 'title' => 'Přehrát/Pozastavit', 'id' => 'play-animation', 'onclick' => 'startAnimation()')) ?></a>' +
-                    '<a id="stop-btn"><?= $this->html->image('stop-btn.png', array('style' => 'height:1.5rem', 'title' => 'Zastavit', 'id' => 'anim-stop', 'onclick' => 'clearMapMarkers()')) ?></a>';
+                    '<a id="stop-btn"><?= $this->html->image('stop-btn.png', array('style' => 'height:1.5rem', 'title' => 'Zastavit', 'id' => 'anim-stop', 'onclick' => 'stopAnimation()')) ?></a>';
                 controlUI.appendChild(controlText);
 
                 // Setup the click event listeners
@@ -166,13 +167,6 @@
                 for (var i = 0; i < markers.length; i++) {
                     markers[i].setMap(map);
                 }
-            }
-
-            // Removes the markers from the map, but keeps them in the array.
-            function clearMapMarkers() {
-                mc.clearMarkers();
-                setMarkerMap(null, activeMarkers);
-                activeMarkers = [];
             }
 
             // Shows any markers currently in the array.
@@ -194,8 +188,40 @@
                     .replace(/'/g, "&#039;");
             }
 
-            function startAnimation(animateFrom, animateTo, animationSpeed) {
-                setMarkers(marker_obj_data, activeMarkers);
+            function startAnimation() {
+                var timesRun = 0;
+                document.getElementById("pick-year-val").value = document.getElementById("pick-year-val-min").value;
+                setTimeout(function () {
+                    interval = setInterval(function(){
+                        if(convertToDays(new Date(document.getElementById("pick-year-val-min").value), new Date(document.getElementById("pick-year-val-max").value)) === timesRun){
+                            clearInterval(interval);
+                        }else{
+                            clearMapMarkers();
+                            var date = new Date(document.getElementById("pick-year-val").value);
+                            date.setDate(date.getDate()+1);
+                            document.getElementById("pick-year-val").value = date.toISOString().substr(0,10);
+                            setMarkers(marker_obj_data, activeMarkers, document.getElementById("pick-year-val").value);
+                        }
+                        timesRun+=1;
+                    }, 2000);
+                }, 2000);
+            }
+
+            function stopAnimation(){
+                clearInterval(interval);
+            }
+
+            function convertToDays(mindate, maxdate){
+                var oneDay = 24*60*60*1000;
+                var days = Math.round(Math.abs((mindate.getTime() - maxdate.getTime())/(oneDay)));
+                return days;
+            }
+
+            // Removes the markers from the map, but keeps them in the array.
+            function clearMapMarkers() {
+                mc.clearMarkers();
+                setMarkerMap(null, activeMarkers);
+                activeMarkers = [];
             }
 
             function setInfoWindow(marker, content) {
@@ -464,19 +490,19 @@
             <hr>
             <h5>Rychlost animace</h5>
             <label class="c-input c-radio">
-                <input id="radio1" name="radio" type="radio" checked>
+                <input id="radio1" value="1" name="radio" type="radio" checked>
                 <span class="c-indicator"></span>
                 1x
             </label>
             <label class="c-input c-radio">
-                <input id="radio2" name="radio" type="radio">
+                <input id="radio2" value="2" name="radio" type="radio">
                 <span class="c-indicator"></span>
                 2x
             </label>
             <label class="c-input c-radio">
-                <input id="radio3" name="radio" type="radio">
+                <input id="radio3" value="3" name="radio" type="radio">
                 <span class="c-indicator"></span>
-                5x
+                3x
             </label>
         </div>
     </div>

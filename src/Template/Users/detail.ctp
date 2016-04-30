@@ -28,7 +28,7 @@
 
         <div class="tab-content">
             <div class="tab-pane active" id="home" role="tabpanel" style="padding-top: 1rem">
-                <?php if ($accepted->isEmpty()){ ?>... Zatím jste nenahrál žádný příspěvek<?php }else{ ?>
+                <?php if ($accepted->isEmpty()){ ?>... Zatím nemáte žádný vydaný příspěvek<?php }else{ ?>
                 <table id="detail" class="table table-hover tablesorter">
                     <thead class="thead-inverse">
                         <tr>
