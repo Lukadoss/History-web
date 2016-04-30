@@ -126,6 +126,7 @@
                         pixelOffset: new google.maps.Size(0, -30),
                         maxWidth: 400
                     });
+
                 setMarkers(marker_obj_data, activeMarkers, document.getElementById("pick-year-val").value);
             }
 
@@ -208,34 +209,36 @@
             function setMarkers(marker_obj_data, activeMarkers, currentDate) {
                 var markerColor, fileType, i, content;
                 activeMarkers = [];
-
                 for (i in marker_obj_data) {
+                    console.log(marker_obj_data[i]);
+
                     var markerDateFrom = new Date(marker_obj_data[i].date_from).toISOString().slice(0, 10);
                     var markerDateTo = new Date(marker_obj_data[i].date_to).toISOString().slice(0, 10);
                     //var formattedDate = markerDate.getFullYear() + "-" + (markerDate.getMonth()+1) + "-" + markerDate.getDate();
+
                     if (markerDateFrom == currentDate || (markerDateFrom <= currentDate && markerDateTo >= currentDate)) {
-                        if (marker_obj_data[i].type == 'text') {
+                        if (marker_obj_data[i].isText == true) {
                             if (filterSettings.text) {
                                 markerColor = 'd9534f';
                                 fileType = 'Textový dokument';
                             }
                             else continue;
                         }
-                        else if (marker_obj_data[i].type == 'audio') {
+                        else if (marker_obj_data[i].isAudio == true) {
                             if (filterSettings.audio) {
                                 markerColor = '0275d8';
                                 fileType = 'Audio';
                             }
                             else continue;
                         }
-                        else if (marker_obj_data[i].type == 'video') {
+                        else if (marker_obj_data[i].isVideo == true) {
                             if (filterSettings.video) {
                                 markerColor = '5cb85c';
                                 fileType = 'Video';
                             }
                             else continue;
                         }
-                        else if (marker_obj_data[i].type == 'image') {
+                        else if (marker_obj_data[i].isImage == true) {
                             if (filterSettings.image) {
                                 markerColor = 'f0ad4e';
                                 fileType = 'Obrázky';
