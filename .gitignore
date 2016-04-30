@@ -1,5 +1,8 @@
-bin
-logs
-tmp
-vendor
-webroot
+/bin/*
+/logs/*
+/tmp/*
+/vendor/*
+/webroot/*
+workspace.xml
+.gitignore
+.gitattributes

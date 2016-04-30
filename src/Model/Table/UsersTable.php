@@ -37,7 +37,7 @@ class UsersTable extends Table
             ->requirePresence('password')
             ->notEmpty('password', 'Zadejte heslo')
             ->add('password', 'length', [
-                'rule'=>['minLength', 5],
+                'rule'=>['minLength', 6],
                 'message' => 'Délka hesla musí být větší než 5 znaků'
             ])
             ->requirePresence('pass')
@@ -65,7 +65,7 @@ class UsersTable extends Table
             ->requirePresence('password')
             ->notEmpty('password', 'Zadejte heslo')
             ->add('password', 'length', [
-                'rule' => ['minLength', 5],
+                'rule' => ['minLength', 6],
                 'message' => 'Délka hesla musí být větší než 5 znaků'
             ])
             ->requirePresence('pass')

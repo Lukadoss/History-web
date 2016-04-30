@@ -137,7 +137,7 @@ class UsersController extends AppController
 
             if (!$this->request->data(['password'])){
                 unset($user->password);
-            }elseif(!DefaultPasswordHasher::check($this->request->data('current_password'), $user['password'])) {
+            }elseif(DefaultPasswordHasher::check($this->request->data('current_password'), $user['password'])) {
                 $user->errors('Check password', ['Chybné staré heslo']);
             }
 

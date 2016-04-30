@@ -59,12 +59,6 @@ class ArticlesController extends AppController
                         $source->email = htmlspecialchars($this->request->data('email'));
                     }
 
-                    if ($this->request->data('forename') == null) {
-                        $source->forename = $this->Auth->user('forename');
-                        $source->surname = $this->Auth->user('surname');
-                        $source->email = $this->Auth->user('email');
-                    }
-
                     if (!empty($this->request->data['text_file'])) {
                         $text_file = $this->request->data['text_file'];
                         $file_count = $file_count + sizeof($text_file);

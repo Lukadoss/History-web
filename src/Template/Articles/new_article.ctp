@@ -1,3 +1,13 @@
+<script type="text/javascript"
+        src="/path/to/shared/js/modernizr.com/Modernizr-2.5.3.forms.js">
+</script>
+
+<script type="text/javascript"
+        data-webforms2-support="date"
+        data-lang="en"
+        src="/path/to/html5Forms/shared/js/html5Forms.js" >
+
+</script>
 <?php echo $this->Html->script('canvas-to-blob.min.js') ?>
 <?php echo $this->Html->script('fileinput.min.js') ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
