@@ -129,17 +129,20 @@ class UsersController extends AppController
     {
         if ($this->request->is('post')){
             $user = $this->Users->get($this->Auth->user('user_id'));
-            $user = $this->Users->patchEntity($user, $this->request->data, ['validate'=>'settings']);
-
-            if ($this->request->data(['password'])){
-                $user = $this->Users->patchEntity($user, $this->request->data, ['validate'=>'pass']);
-            }
+            $bool = false;
 
             if (!$this->request->data(['password'])){
-                unset($user->password);
+                $bool = true;
             }elseif(!DefaultPasswordHasher::check($this->request->data('current_password'), $user['password'])) {
                 $user->errors('Check password', ['Chybné staré heslo']);
             }
+
+            $user = $this->Users->patchEntity($user, $this->request->data, ['validate'=>'settings']);
+            if ($this->request->data(['password'])){
+                $user = $this->Users->patchEntity($user, $this->request->data, ['validate'=>'pass']);
+            }
+ 
+            if ($bool) unset($user->password);
 
             if(!$user->errors()){
                 if(!$this->request->data(['forename']) && !$this->request->data(['surname']) && !$this->request->data(['password'])){
