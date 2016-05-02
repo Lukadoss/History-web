@@ -112,9 +112,9 @@
                             $path = "../" . "../" . 'webroot/files/' . $source->source_id . '/Text/';
                             ?>
                             <tr>
-                                <td style="vertical-align: middle"><?php
-                                    echo $file
-                                    ?></td>
+                                <td style="vertical-align: middle">
+                                    <a href="<?php echo $path . $file ?>" target="_blank"> <?php echo $file;?></a>
+                                    </td>
                                 <td style="vertical-align: middle"><a download="" href="<?php echo $path . $file ?>"> <i
                                             class="fa fa-download"></i> <span class="hidden-sm-down">Download</span></a>
                                 </td>
