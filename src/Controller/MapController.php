@@ -47,12 +47,20 @@ class MapController extends AppController
         $this->loadModel('Sources');
         $sources = $this->Sources->find('all', array('fields' => array('source_id', 'name', 'date_from', 'date_to', 'lat', 'lng', 'isImage', 'isText', 'isVideo', 'isAudio')))
             ->where('onHold = 0');
+        $oldest_source = date ("Y-m-d");
         foreach($sources as $source){
             $source->date_from = date('Y-m-d', strtotime($source->date_from));
+            if($source->date_from < $oldest_source) $oldest_source = $source->date_from;
             if($source->date_to)
                 $source->date_to = date('Y-m-d', strtotime($source->date_to));
         }
         $this->set('sources', $sources);
+        $oldest_source = explode('-', $oldest_source);
+        $current_date = explode('-', date("Y-m-d"));
+        $this->set('oldest', $oldest_source);
+        $this->set('current', $current_date);
+
+
         //return $this->redirect(['controller' => 'Article', 'action' => 'novy']);
     }
 }

@@ -6,12 +6,14 @@
         <div class="col-md-2"><span
                 style="line-height: 2rem; text-align: center; min-width: 130px">Zobrazené období</span></div>
         <div class="col-md-8">
-            <input id="pick-year" type="text" data-slider-min="<?= adodb_mktime(0, 0, 0, 04, 01, 2016) ?>"
-                   data-slider-max="<?= adodb_mktime(0, 0, 0, 12, 31, 2016) ?>" data-slider-step="86400"
-                   data-slider-value="<?= adodb_mktime(0, 0, 0, 04, 22, 2016) ?>">
+            <input id="pick-year" type="text"
+                   data-slider-min="<?= adodb_mktime(0, 0, 0, $oldest[1], $oldest[2], $oldest[0]) ?>"
+                   data-slider-max="<?= adodb_mktime(0, 0, 0, $current[1], $current[2], $current[0]) ?>"
+                   data-slider-step="86400"
+                   data-slider-value="<?= adodb_mktime(0, 0, 0, $oldest[1], $oldest[2], $oldest[0]) ?>">
         </div>
         <div class="col-md-2" style="padding-left: 0">
-            <input type="date" value="2016-04-22" id="pick-year-val" min="2016-04-01" max="2016-12-31">
+            <input type="date" value="<?php echo $oldest[0] . "-" . $oldest[1] . "-" . $oldest[2]?>" id="pick-year-val" min="<?php echo $oldest[0] . "-" . $oldest[1] . "-" . $oldest[2]?>" max="<?php echo $current[0] . "-" . $current[1] . "-" . $current[2]?>">
         </div>
         <div class="clearfix"></div>
         <script>
@@ -445,18 +447,25 @@
 
                 <div class="col-xs-12" style="padding-left: 0; padding-right: 0">
                     <input id="slider-year" type="text" class="slider slider-horizontal span2" value=""
-                           data-slider-min="<?= adodb_mktime(0, 0, 0, 04, 01, 2016) ?>" data-slider-max="<?= adodb_mktime(0, 0, 0, 12, 31, 2016) ?>"
-                           data-slider-step="86400" data-slider-value="[<?= adodb_mktime(0, 0, 0, 04, 20, 2016) ?>,<?= adodb_mktime(0, 0, 0, 8, 27, 2016) ?>]" style="width: 100%"/>
+                           data-slider-min="<?= adodb_mktime(0, 0, 0, $oldest[1], $oldest[2], $oldest[0]) ?>"
+                           data-slider-max="<?= adodb_mktime(0, 0, 0, $current[1], $current[2], $current[0]) ?>"
+                           data-slider-step="86400"
+                           data-slider-value="[<?= adodb_mktime(0, 0, 0, 04, 20, 2016) ?>,<?= adodb_mktime(0, 0, 0, 8, 27, 2016) ?>]"
+                           style="width: 100%"/>
                 </div>
                 <div class="col-xs-6" style="padding-left: 0">
                     <div style="padding-left: 0">
-                        <input type="date" value="1968-10-05" id="pick-year-val-min" min="1920-01-01" max="2015-12-31"
+                        <input type="date" value="<?php echo $oldest[0] . "-" . $oldest[1] . "-" . $oldest[2]?>" id="pick-year-val-min"
+                               min="<?php echo $oldest[0] . "-" . $oldest[1] . "-" . $oldest[2]?>"
+                               max="<?php echo $current[0] . "-" . $current[1] . "-" . $current[2]?>"
                                style="width: 9.5rem" >
                     </div>
                 </div>
                 <div class="col-xs-6" style="text-align: right; padding-right: 0">
                     <div style="float: right; padding-right: 0">
-                        <input type="date" value="1968-10-05" id="pick-year-val-max" min="1920-01-01" max="2015-12-31"
+                        <input type="date" value="<?php echo $current[0] . "-" . $current[1] . "-" . $current[2]?>" id="pick-year-val-max"
+                               min="<?php echo $oldest[0] . "-" . $oldest[1] . "-" . $oldest[2]?>"
+                               max="<?php echo $current[0] . "-" . $current[1] . "-" . $current[2]?>"
                                style="width: 9.5rem">
                     </div>
                 </div>
@@ -468,7 +477,10 @@
                                 url: 'map',
                                 type: 'get',
                                 dataType: 'json',
-                                data: {"float-min": slideEvt.value.newValue[0], "float-max": slideEvt.value.newValue[1]},
+                                data: {
+                                    "float-min": slideEvt.value.newValue[0],
+                                    "float-max": slideEvt.value.newValue[1]
+                                },
                                 success: function (response) {
                                     $("#pick-year-val-min").val(response[0]);
                                     $("#pick-year-val-max").val(response[1]);
@@ -479,22 +491,22 @@
                             stopAnimation();
                         }
                     });
-/*
-                    $("#pick-year-val-min").on("change", function () {
-                        delay(function () {
-                            $.ajax({
-                                url: 'map',
-                                type: 'get',
-                                dataType: "text",
-                                data: {"float-min": $("#pick-year-val-min").val(), "funct": 'mktime'},
-                                success: function (converted) {
-                                    $("#slider-year").slider().slider("setValue", parseInt(converted));
-                                }
-                            });
-                        }, 300);
+                    /*
+                     $("#pick-year-val-min").on("change", function () {
+                     delay(function () {
+                     $.ajax({
+                     url: 'map',
+                     type: 'get',
+                     dataType: "text",
+                     data: {"float-min": $("#pick-year-val-min").val(), "funct": 'mktime'},
+                     success: function (converted) {
+                     $("#slider-year").slider().slider("setValue", parseInt(converted));
+                     }
+                     });
+                     }, 300);
 
-                    })
-                    */
+                     })
+                     */
                 </script>
 
             </div>
