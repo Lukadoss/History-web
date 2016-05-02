@@ -6,15 +6,20 @@
         <div class="col-md-2"><span
                 style="line-height: 2rem; text-align: center; min-width: 130px">Zobrazené období</span></div>
         <div class="col-md-8">
-            <input id="pick-year" type="text" data-slider-min="<?= adodb_mktime(0, 0, 0, 04, 01, 2016) ?>"
-                   data-slider-max="<?= adodb_mktime(0, 0, 0, 12, 31, 2016) ?>" data-slider-step="86400"
-                   data-slider-value="<?= adodb_mktime(0, 0, 0, 04, 22, 2016) ?>">
+            <input id="pick-year" type="text"
+                   data-slider-min="<?= adodb_mktime(0, 0, 0, $oldest[1], $oldest[2], $oldest[0]) ?>"
+                   data-slider-max="<?= adodb_mktime(0, 0, 0, $current[1], $current[2], $current[0]) ?>"
+                   data-slider-step="86400"
+                   data-slider-value="<?= adodb_mktime(0, 0, 0, $oldest[1], $oldest[2], $oldest[0]) ?>">
         </div>
         <div class="col-md-2" style="padding-left: 0">
-            <input type="date" value="2016-04-22" id="pick-year-val" min="2016-04-01" max="2016-12-31">
+            <input type="date" value="<?php echo $oldest[0] . "-" . $oldest[1] . "-" . $oldest[2]?>" id="pick-year-val" min="<?php echo $oldest[0] . "-" . $oldest[1] . "-" . $oldest[2]?>" max="<?php echo $current[0] . "-" . $current[1] . "-" . $current[2]?>">
         </div>
         <div class="clearfix"></div>
         <script>
+            /*
+                Function for delaying another function call
+             */
             var delay = (function () {
                 var timer = 0;
                 return function (callback, ms) {
@@ -23,6 +28,12 @@
                 };
             })();
 
+            /*
+                Initializing the plugin javascript slider.
+
+                Adding an event listener for slider change, to refresh the value in the related date input
+                and setting the approptiate markers on map
+             */
             $("#pick-year").slider();
             $("#pick-year").on("change", function (slideEvt) {
                 delay(function () {
@@ -40,6 +51,10 @@
 
             });
 
+            /*
+                Event listener for adjusting the slider value based on changed date input
+                Setting the appropriate markers on map based on the selected date from the date input
+             */
             $("#pick-year-val").on("change", function () {
                 delay(function () {
                     $.ajax({
@@ -61,6 +76,10 @@
     <?= $this->Html->script('markerclusterer.js', array('type' => 'text/javascript')) ?>
     <div class="card-block card-map" id="map">
         <script>
+            /*
+                Google Maps Api v3 javascript, MarkerClusterer initialization, Map animation functions
+
+             */
             var map, infoWindow, clusterInfoWindow;
             var activeMarkers = [];
             var marker_data = '<?php echo json_encode($sources); ?>';
@@ -104,6 +123,11 @@
                     }]/*, imagePath: */
             };
 
+            /*
+                Initialization of the whole map provided by Google Maps Api v3.
+                Adding a custom control element containing animation controls.
+                Adding default markers on map, based on default date.
+             */
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: {lat: 49.406620, lng: 13.905871},
@@ -132,6 +156,9 @@
                 setMarkers(marker_obj_data, activeMarkers, document.getElementById("pick-year-val").value);
             }
 
+            /*
+                Function for specifying the custom map control element and its inner HTML containing the animation control buttons
+             */
             function CenterControl(controlDiv, map) {
 
                 // Set CSS for the control border.
@@ -164,22 +191,26 @@
 
             }
 
+            /*
+                Function for setting a map value for every marker in passed array
+            */
             function setMarkerMap(map, markers) {
                 for (var i = 0; i < markers.length; i++) {
                     markers[i].setMap(map);
                 }
             }
 
-            // Shows any markers currently in the array.
-            function showMarkers() {
-                setMarkerMap(map, activeMarkers);
-            }
-
+            /*
+                Dynamically getting the base URL of website, for creating dynamic links
+            */
             function getBaseUrl() {
                 var re = new RegExp(/^.*\//);
                 return re.exec(window.location.href);
             }
 
+            /*
+                Function for string escaping, preventing XSS attacks
+            */
             function escapeHtml(text) {
                 return text
                     .replace(/&/g, "&amp;")
@@ -222,7 +253,9 @@
                 return Math.round(Math.abs((mindate.getTime() - maxdate.getTime()) / (oneDay)));
             }
 
-            // Removes the markers from the map, but keeps them in the array.
+            /*
+                Removes the markers from the map, aswell as from the array of active markers.
+            */
             function clearMapMarkers() {
                 mc.clearMarkers();
                 setMarkerMap(null, activeMarkers);
@@ -234,6 +267,9 @@
                 console.log(animSpeed);
             }
 
+            /*
+                Function for creating an info window for passed marker
+             */
             function setInfoWindow(marker, content) {
                 google.maps.event.addListener(marker, 'click', function () {
                     infoWindow.setContent(content);
@@ -242,6 +278,11 @@
                 });
             }
 
+            /*
+                Function that selects markers by appropriate date, pushing them into an array of active markers
+                An info window is created for each of the active marker, aswell as setting the right color depending on the source type
+                Function then sets all the active markers on map.
+             */
             function setMarkers(marker_obj_data, activeMarkers, currentDate) {
                 var markerColor, fileType, i, content;
                 activeMarkers = [];
@@ -311,6 +352,12 @@
                     }
                 }
 
+                /*
+                    Initializing the google maps javascript addon MarkerClusterer
+
+                    Adding an event listener that is fired when user clicks on any of the clusters on map
+                    that shows an info window for that cluster, containing an additional information.
+                 */
                 mc = new MarkerClusterer(map, activeMarkers, mcOptions);
                 var clusteredmarkers, clusterContent = '';
                 google.maps.event.addListener(mc, 'click', function (cluster) {
@@ -331,6 +378,9 @@
                 });
             }
 
+            /*
+                This function is called any time when an object of filter settings is changed, refreshing the map markers with the changed filter settings
+             */
             function setFilters() {
                 clearMapMarkers();
                 setMarkers(marker_obj_data, activeMarkers, document.getElementById("pick-year-val").value);
@@ -391,6 +441,9 @@
             </script>
         </div>
         <script>
+            /*
+                Event listeners for every filter checkbox, adjusting an object filter settings according to the user selected filters
+             */
             document.getElementById('filter-audio').addEventListener('change', function () {
                 if (document.getElementById('filter-audio').checked)
                     filterSettings.audio = 1;
@@ -445,18 +498,25 @@
 
                 <div class="col-xs-12" style="padding-left: 0; padding-right: 0">
                     <input id="slider-year" type="text" class="slider slider-horizontal span2" value=""
-                           data-slider-min="<?= adodb_mktime(0, 0, 0, 04, 01, 2016) ?>" data-slider-max="<?= adodb_mktime(0, 0, 0, 12, 31, 2016) ?>"
-                           data-slider-step="86400" data-slider-value="[<?= adodb_mktime(0, 0, 0, 04, 20, 2016) ?>,<?= adodb_mktime(0, 0, 0, 8, 27, 2016) ?>]" style="width: 100%"/>
+                           data-slider-min="<?= adodb_mktime(0, 0, 0, $oldest[1], $oldest[2], $oldest[0]) ?>"
+                           data-slider-max="<?= adodb_mktime(0, 0, 0, $current[1], $current[2], $current[0]) ?>"
+                           data-slider-step="86400"
+                           data-slider-value="[<?= adodb_mktime(0, 0, 0, 04, 20, 2016) ?>,<?= adodb_mktime(0, 0, 0, 8, 27, 2016) ?>]"
+                           style="width: 100%"/>
                 </div>
                 <div class="col-xs-6" style="padding-left: 0">
                     <div style="padding-left: 0">
-                        <input type="date" value="1968-10-05" id="pick-year-val-min" min="1920-01-01" max="2015-12-31"
+                        <input type="date" value="<?php echo $oldest[0] . "-" . $oldest[1] . "-" . $oldest[2]?>" id="pick-year-val-min"
+                               min="<?php echo $oldest[0] . "-" . $oldest[1] . "-" . $oldest[2]?>"
+                               max="<?php echo $current[0] . "-" . $current[1] . "-" . $current[2]?>"
                                style="width: 9.5rem" >
                     </div>
                 </div>
                 <div class="col-xs-6" style="text-align: right; padding-right: 0">
                     <div style="float: right; padding-right: 0">
-                        <input type="date" value="1968-10-05" id="pick-year-val-max" min="1920-01-01" max="2015-12-31"
+                        <input type="date" value="<?php echo $current[0] . "-" . $current[1] . "-" . $current[2]?>" id="pick-year-val-max"
+                               min="<?php echo $oldest[0] . "-" . $oldest[1] . "-" . $oldest[2]?>"
+                               max="<?php echo $current[0] . "-" . $current[1] . "-" . $current[2]?>"
                                style="width: 9.5rem">
                     </div>
                 </div>
@@ -468,7 +528,10 @@
                                 url: 'map',
                                 type: 'get',
                                 dataType: 'json',
-                                data: {"float-min": slideEvt.value.newValue[0], "float-max": slideEvt.value.newValue[1]},
+                                data: {
+                                    "float-min": slideEvt.value.newValue[0],
+                                    "float-max": slideEvt.value.newValue[1]
+                                },
                                 success: function (response) {
                                     $("#pick-year-val-min").val(response[0]);
                                     $("#pick-year-val-max").val(response[1]);
@@ -479,22 +542,22 @@
                             stopAnimation();
                         }
                     });
-/*
-                    $("#pick-year-val-min").on("change", function () {
-                        delay(function () {
-                            $.ajax({
-                                url: 'map',
-                                type: 'get',
-                                dataType: "text",
-                                data: {"float-min": $("#pick-year-val-min").val(), "funct": 'mktime'},
-                                success: function (converted) {
-                                    $("#slider-year").slider().slider("setValue", parseInt(converted));
-                                }
-                            });
-                        }, 300);
+                    /*
+                     $("#pick-year-val-min").on("change", function () {
+                     delay(function () {
+                     $.ajax({
+                     url: 'map',
+                     type: 'get',
+                     dataType: "text",
+                     data: {"float-min": $("#pick-year-val-min").val(), "funct": 'mktime'},
+                     success: function (converted) {
+                     $("#slider-year").slider().slider("setValue", parseInt(converted));
+                     }
+                     });
+                     }, 300);
 
-                    })
-                    */
+                     })
+                     */
                 </script>
 
             </div>
