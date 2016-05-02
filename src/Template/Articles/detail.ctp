@@ -206,6 +206,7 @@
                     <thead class="thead-inverse">
                     <tr>
                         <th>Název příspěvku</th>
+                        <th>Video</th>
                         <th>Možnosti</th>
                     </tr>
                     </thead>
@@ -214,9 +215,11 @@
                         $validation = array("mp4", "avi", "mpeg");
                         if (in_array((strtolower(pathinfo($file, PATHINFO_EXTENSION))), $validation)) {
                             $path = "../" . "../" . 'webroot/files/' . $source->source_id . '/Video/';
-                            echo $path . $file;
                             ?>
                             <tr>
+                                <td style="vertical-align: middle">
+                                    <?= $file ?>
+                                </td>
                                 <td style="vertical-align: middle">
                                     <video controls="controls" width="300px" height="200px">
                                         <source src="<?php echo $path . $file ?>" type="video/mp4">
