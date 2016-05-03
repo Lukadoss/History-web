@@ -501,7 +501,7 @@
                            data-slider-min="<?= adodb_mktime(0, 0, 0, $oldest[1], $oldest[2], $oldest[0]) ?>"
                            data-slider-max="<?= adodb_mktime(0, 0, 0, $current[1], $current[2], $current[0]) ?>"
                            data-slider-step="86400"
-                           data-slider-value="[<?= adodb_mktime(0, 0, 0, 04, 20, 2016) ?>,<?= adodb_mktime(0, 0, 0, 8, 27, 2016) ?>]"
+                           data-slider-value="[<?= adodb_mktime(0, 0, 0, $oldest[1], $oldest[2], $oldest[0]) ?>,<?= adodb_mktime(0, 0, 0, $current[1], $current[2], $current[0]) ?>]"
                            style="width: 100%"/>
                 </div>
                 <div class="col-xs-6" style="padding-left: 0">
