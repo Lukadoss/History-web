@@ -1,3 +1,60 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.css"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.css"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function ($) {
+        // delegate calls to data-toggle="lightbox"
+        $(document).delegate('*[data-toggle="lightbox"]:not([data-gallery="navigateTo"])', 'click', function (event) {
+            event.preventDefault();
+            return $(this).ekkoLightbox({
+                onShown: function () {
+                    if (window.console) {
+                        return console.log('Checking our the events huh?');
+                    }
+                },
+                onNavigate: function (direction, itemIndex) {
+                    if (window.console) {
+                        return console.log('Navigating ' + direction + '. Current item: ' + itemIndex);
+                    }
+                }
+            });
+        });
+
+        //Programatically call
+        $('#open-image').click(function (e) {
+            e.preventDefault();
+            $(this).ekkoLightbox();
+        });
+        $('#open-youtube').click(function (e) {
+            e.preventDefault();
+            $(this).ekkoLightbox();
+        });
+
+        // navigateTo
+        $(document).delegate('*[data-gallery="navigateTo"]', 'click', function (event) {
+            event.preventDefault();
+
+            var lb;
+            return $(this).ekkoLightbox({
+                onShown: function () {
+
+                    lb = this;
+
+                    $(lb.modal_content).on('click', '.modal-footer a', function (e) {
+
+                        e.preventDefault();
+                        lb.navigateTo(2);
+
+                    });
+
+                }
+            });
+        });
+
+
+    });
+</script>
 <div class="card card-block">
     <div class="card-title col-md-9" style="padding: 0">
         <h4>
@@ -52,13 +109,15 @@
                     <?php while ($file = readdir($dir)) {
                         $validation = array('pdf', 'doc', 'docx', 'txt');
                         if (in_array((strtolower(pathinfo($file, PATHINFO_EXTENSION))), $validation)) {
-                            $path = "../"."../" . 'webroot/files/' . $source->source_id . '/Text/';
+                            $path = "../" . "../" . 'webroot/files/' . $source->source_id . '/Text/';
                             ?>
                             <tr>
-                                <td style="vertical-align: middle"><?php
-                                    echo $file
-                                    ?></td>
-                                <td style="vertical-align: middle"><a download="" href="<?php echo $path.$file ?>"> <i class="fa fa-download"></i> <span class="hidden-sm-down">Download</span></a></td>
+                                <td style="vertical-align: middle">
+                                    <a href="<?php echo $path . $file ?>" target="_blank"> <?php echo $file;?></a>
+                                    </td>
+                                <td style="vertical-align: middle"><a download="" href="<?php echo $path . $file ?>"> <i
+                                            class="fa fa-download"></i> <span class="hidden-sm-down">Download</span></a>
+                                </td>
                             </tr>
                         <?php }
                     } ?>
@@ -83,13 +142,16 @@
                     <?php while ($file = readdir($dir)) {
                         $validation = array('jpg', 'jpeg', 'gif', 'bmp', 'png');
                         if (in_array((strtolower(pathinfo($file, PATHINFO_EXTENSION))), $validation)) {
-                            $path = "../"."../" . 'webroot/files/' . $source->source_id . '/Image/';
+                            $path = "../" . "../" . 'webroot/files/' . $source->source_id . '/Image/';
                             ?>
                             <tr>
-                                <td style="vertical-align: middle"><?php
-                                    echo $file;
-                                    ?></td>
-                                <td style="vertical-align: middle"><a download="" href="<?php echo $path.$file ?>"> <i class="fa fa-download"></i> <span class="hidden-sm-down">Download</span></a></td>
+                                <td style="vertical-align: middle">
+                                    <a href="<?php echo $path . $file ?>" data-toggle="lightbox"
+                                       data-gallery="multiimages"><?php echo $file ?></a>
+                                </td>
+                                <td style="vertical-align: middle"><a download="" href="<?php echo $path . $file ?>"> <i
+                                            class="fa fa-download"></i> <span class="hidden-sm-down">Download</span></a>
+                                </td>
                             </tr>
                         <?php }
                     } ?>
@@ -107,6 +169,7 @@
                     <thead class="thead-inverse">
                     <tr>
                         <th>Název příspěvku</th>
+                        <th>Audio</th>
                         <th>Možnosti</th>
                     </tr>
                     </thead>
@@ -114,13 +177,17 @@
                     <?php while ($file = readdir($dir)) {
                         $validation = array("mp3", "wav", "flac", "mpg");
                         if (in_array((strtolower(pathinfo($file, PATHINFO_EXTENSION))), $validation)) {
-                            $path = "../"."../" . 'webroot/files/' . $source->source_id . '/Audio/';
+                            $path = "../" . "../" . 'webroot/files/' . $source->source_id . '/Audio/';
                             ?>
                             <tr>
-                                <td style="vertical-align: middle"><?php
-                                    echo $file;
-                                    ?></td>
-                                <td style="vertical-align: middle"><a download="" href="<?php echo $path.$file ?>"> <i class="fa fa-download"></i> <span class="hidden-sm-down">Download</span></a></td>
+                                <td><?= $file ?></td>
+                                <td style="vertical-align: middle">
+                                    <audio controls src="<?php
+                                    echo $path . $file; ?>"></audio>
+                                </td>
+                                <td style="vertical-align: middle"><a download="" href="<?php echo $path . $file ?>"> <i
+                                            class="fa fa-download"></i> <span class="hidden-sm-down">Download</span></a>
+                                </td>
                             </tr>
                         <?php }
                     } ?>
@@ -134,10 +201,12 @@
                 $path = 'files/' . $source->source_id . '/Video';
                 $dir = opendir($path);
                 ?>
+
                 <table id="detail" class="table table-hover tablesorter">
                     <thead class="thead-inverse">
                     <tr>
                         <th>Název příspěvku</th>
+                        <th>Video</th>
                         <th>Možnosti</th>
                     </tr>
                     </thead>
@@ -145,13 +214,20 @@
                     <?php while ($file = readdir($dir)) {
                         $validation = array("mp4", "avi", "mpeg");
                         if (in_array((strtolower(pathinfo($file, PATHINFO_EXTENSION))), $validation)) {
-                            $path = "../"."../" . 'webroot/files/' . $source->source_id . '/Video/';
+                            $path = "../" . "../" . 'webroot/files/' . $source->source_id . '/Video/';
                             ?>
                             <tr>
-                                <td style="vertical-align: middle"><?php
-                                    echo $file;
-                                    ?></td>
-                                <td style="vertical-align: middle"><a download="" href="<?php echo $path.$file ?>"> <i class="fa fa-download"></i> <span class="hidden-sm-down">Download</span></a></td>
+                                <td style="vertical-align: middle">
+                                    <?= $file ?>
+                                </td>
+                                <td style="vertical-align: middle">
+                                    <video controls="controls" width="300px" height="200px">
+                                        <source src="<?php echo $path . $file ?>" type="video/mp4">
+                                    </video>
+                                </td>
+                                <td style="vertical-align: middle"><a download="" href="<?php echo $path . $file ?>"> <i
+                                            class="fa fa-download"></i> <span class="hidden-sm-down">Download</span></a>
+                                </td>
                             </tr>
                         <?php }
                     } ?>
