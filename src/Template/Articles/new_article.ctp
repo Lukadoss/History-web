@@ -126,10 +126,6 @@
                                 removeIcon: '<i class="fa fa-trash" aria-hidden="true"></i>'
                             });
                         });
-
-                        $('#text_file_input').on('fileuploaderror', function() {
-                            document.getElementById('submit-article').disabled = true;
-                        });
                     </script>
                 </div>
                 <div class="tab-pane active" id="image" role="tabpanel">
@@ -170,7 +166,6 @@
                                 removeIcon: '<i class="fa fa-trash" aria-hidden="true"></i>'
                             });
                         });
-
                     </script>
                 </div>
                 <div class="tab-pane" id="audio" role="tabpanel">
@@ -210,10 +205,6 @@
                                 browseLabel: 'Vybrat',
                                 removeIcon: '<i class="fa fa-trash" aria-hidden="true"></i>'
                             });
-                        });
-
-                        $('#audio_file_input').on('fileuploaderror', function() {
-                            document.getElementById('submit-article').disabled = true;
                         });
                     </script>
                 </div>
@@ -255,12 +246,6 @@
                                 removeIcon: '<i class="fa fa-trash" aria-hidden="true"></i>'
                             });
                         });
-
-                        $('#video_file_input').on('fileuploaderror', function() {
-                            document.getElementById('submit-article').disabled = true;
-                        });
-
-
                     </script>
                 </div>
             </div>
