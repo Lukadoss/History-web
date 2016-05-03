@@ -51,6 +51,16 @@ body {
     border: none;
 }
 
+.error-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.error-text {
+    color: darkslategray;
+    font-size: 6rem;
+}
+
 .map-filter {
     height: 3rem;
     padding: 0.1rem;
@@ -63,7 +73,7 @@ body {
 }
 
 @media (max-width: 767px) {
-    .device-text-align{
+    .device-text-align {
         text-align: center;
     }
 
@@ -209,15 +219,18 @@ body {
 .navbar-nav .nav-item {
     float: none;
 }
+
 .navbar-divider,
-.navbar-nav .nav-item+.nav-item,
+.navbar-nav .nav-item + .nav-item,
 .navbar-nav .nav-link + .nav-link {
     margin-left: 0;
 }
+
 @media (min-width: 768px) {
     .navbar-nav .nav-item {
         float: left;
     }
+
     .navbar-divider,
     .navbar-nav .nav-item + .nav-item,
     .navbar-nav .nav-link + .nav-link {
@@ -241,7 +254,6 @@ body {
         margin-right: 0 !important;
     }
 }
-
 
 /**
  * Google maps api, map container
@@ -275,7 +287,6 @@ body {
     background: lightgray;
 }
 
-
 /**
  * Form
  */
@@ -292,7 +303,6 @@ body {
         text-align: right;
     }
 }
-
 
 /**
  * Bootstrap select plugin
@@ -315,7 +325,6 @@ body {
 
 }
 
-
 /**
  * Bootstrap style for custom checkboxes
  */
@@ -335,7 +344,6 @@ body {
 .c-input > input:active ~ .c-indicator {
     background-color: #566;
 }
-
 
 /**
  * File upload plugin
