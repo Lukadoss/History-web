@@ -256,19 +256,20 @@
             <label class="control-label">Obec:</label>
             <script type="text/javascript">
                 $(document).ready(function () {
-                    $(".js-example-basic-single").select2({
+                    $(".js-basic-single").select2({
                         language: "cs",
                         width: '100%',
-                        placeholder: "Vyberte obec"
+                        placeholder: "Vyberte obec",
+                        tags: "true",
                     });
                 });
             </script>
 
-            <select class="js-example-basic-single" id="district_id" name="district_id" onChange="setCenter()">
+            <select class="js-basic-single" id="district_id" name="district_id" onChange="setCenter()">
                 <option></option>
                 <?php foreach ($district as $dist) {
                     ?>
-                    <option value=" $dist->id ?>"> <?php echo $dist->municipality ?>, <span class="text-muted"><i
+                    <option > <?php echo $dist->municipality ?>, <span class="text-muted"><i
                                 class="fa fa-user"> </i>okres <?php echo $dist->district ?>, <?php echo $dist->region ?></span>
                     </option> <?php
                 } ?>
