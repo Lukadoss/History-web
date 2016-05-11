@@ -271,6 +271,7 @@
                         language: "cs",
                         width: '100%',
                         placeholder: "Vyberte obec",
+                        minimumInputLength: 1,
                         matcher: function (params, data) {
                             if ($.trim(params.term) === '') {
                                 return data;
