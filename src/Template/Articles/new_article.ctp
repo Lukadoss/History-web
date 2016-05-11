@@ -255,8 +255,6 @@
         <hr>
         <div class="form-group col-md-12 select-box" id="district-selector">
             <label class="control-label">Obec:</label>
-
-
             <select class="js-example-basic-single" id="district_id" name="district_id" onChange="setCenter()">
                 <option></option>
                 <?php foreach ($district as $dist) {
