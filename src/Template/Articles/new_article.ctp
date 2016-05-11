@@ -5,13 +5,13 @@
 <script type="text/javascript"
         data-webforms2-support="date"
         data-lang="en"
-        src="/path/to/html5Forms/shared/js/html5Forms.js" >
+        src="/path/to/html5Forms/shared/js/html5Forms.js">
 
 </script>
 <?php echo $this->Html->script('canvas-to-blob.min.js') ?>
 <?php echo $this->Html->script('fileinput.min.js') ?>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/i18n/cs.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/i18n/cs.js"></script>
 <?php echo $this->Html->script('fileinput_locale_cz.js', array('type' => 'text/javascript')) ?>
 <div class="card">
     <div class="card-header">Přidání nového příspěvku
@@ -57,7 +57,8 @@
 
             <div class="col-md-6">
                 <label><label class="c-input c-checkbox">
-                        <input type="checkbox" id="date-span" onclick="document.getElementById('date-to').disabled=!this.checked; if(!this.checked) document.getElementById('date-to').value = '';">
+                        <input type="checkbox" id="date-span"
+                               onclick="document.getElementById('date-to').disabled=!this.checked; if(!this.checked) document.getElementById('date-to').value = '';">
                         <script>$('#date-span').prop('indeterminate', true)</script>
                         <span class="c-indicator"></span>
                     </label>Trvání události do:</label>
@@ -252,28 +253,44 @@
 
         </div>
         <hr>
-        <div class="form-group col-md-12 select-box" id="district-selector" name="district">
+        <div class="form-group col-md-12 select-box" id="district-selector">
             <label class="control-label">Obec:</label>
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    $(".js-example-basic-single").select2({
-                        language: "cs",
-                        width: '100%',
-                        placeholder: "Vyberte obec"
-                    });
-                });
-            </script>
+
 
             <select class="js-example-basic-single" id="district_id" name="district_id" onChange="setCenter()">
                 <option></option>
                 <?php foreach ($district as $dist) {
                     ?>
-                    <option value=" $dist->id ?>"> <?php echo $dist->municipality ?>, <span class="text-muted"><i
-                                class="fa fa-user"> </i>okres <?php echo $dist->district ?>, <?php echo $dist->region ?></span>
+                    <option> <?php echo $dist->municipality ?>,
+                        okres <?php echo $dist->district ?>, <?php echo $dist->region ?>
                     </option> <?php
                 } ?>
 
             </select>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $(".js-example-basic-single").select2({
+                        language: "cs",
+                        width: '100%',
+                        placeholder: "Vyberte obec",
+                        matcher: function (params, data) {
+                            if ($.trim(params.term) === '') {
+                                return data;
+                            }
+
+                            if (
+                                $(data.element).text().toUpperCase().indexOf(params.term.toUpperCase()) == 1
+                            ) {
+                                var modifiedData = $.extend({}, data, true);
+
+                                return modifiedData;
+                            }
+
+                            return null;
+                        }
+                    });
+                });
+            </script>
         </div>
         <div class="clearfix"></div>
         <div class="card-map m-x-1" id="map">
@@ -337,8 +354,11 @@
         <hr>
         <div class="g-recaptcha" style="margin-bottom: 15px;"
              data-sitekey="6LdMihwTAAAAABHyUIcfago1qMOTWkT4dL7XP_Bx"></div>
-        <h6 class="text-muted" style="color:red">Prosím potvrďte příspěvek tím že nejste robot.<br> Všechna pole označená * jsou povinná.</h6>
-        <button type="submit" name="submit-article" id="submit-article" class="btn btn-primary fileinput-upload">Přidat článek</button>
+        <h6 class="text-muted" style="color:red">Prosím potvrďte příspěvek tím že nejste robot.<br> Všechna pole
+            označená * jsou povinná.</h6>
+        <button type="submit" name="submit-article" id="submit-article" class="btn btn-primary fileinput-upload">Přidat
+            článek
+        </button>
         <?php echo $this->Form->end();
         ?>
     </div>
