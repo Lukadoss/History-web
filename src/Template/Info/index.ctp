@@ -3,6 +3,7 @@
     </div>
     <div class="card-block">
         <p class="card-text">
+
             Tato webová aplikace představuje prototypovou verzi webového portálu pro sběr kulturních (a historických)
             artefaktů. Portál umožňuje na určitém území nahrávat, spravovat a zobrazovat kulturní (a historické)
             artefakty (dokumenty, mluvené slovo, videa) v chronologických a místních souvislostech.
