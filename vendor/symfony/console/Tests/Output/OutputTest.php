@@ -170,6 +170,6 @@ class TestOutput extends Output
 
     protected function doWrite($message, $newline)
     {
-        $this->output .= $message . ($newline ? "\n" : '');
+        $this->output .= $message.($newline ? "\n" : '');
     }
 }

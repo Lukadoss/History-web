@@ -42,34 +42,34 @@ use Phinx\Migration\MigrationInterface;
  */
 interface AdapterInterface
 {
-    const PHINX_TYPE_STRING = 'string';
-    const PHINX_TYPE_CHAR = 'char';
-    const PHINX_TYPE_TEXT = 'text';
-    const PHINX_TYPE_INTEGER = 'integer';
-    const PHINX_TYPE_BIG_INTEGER = 'biginteger';
-    const PHINX_TYPE_FLOAT = 'float';
-    const PHINX_TYPE_DECIMAL = 'decimal';
-    const PHINX_TYPE_DATETIME = 'datetime';
-    const PHINX_TYPE_TIMESTAMP = 'timestamp';
-    const PHINX_TYPE_TIME = 'time';
-    const PHINX_TYPE_DATE = 'date';
-    const PHINX_TYPE_BINARY = 'binary';
-    const PHINX_TYPE_BLOB = 'blob';
-    const PHINX_TYPE_BOOLEAN = 'boolean';
-    const PHINX_TYPE_JSON = 'json';
-    const PHINX_TYPE_JSONB = 'jsonb';
-    const PHINX_TYPE_UUID = 'uuid';
-    const PHINX_TYPE_FILESTREAM = 'filestream';
+    const PHINX_TYPE_STRING         = 'string';
+    const PHINX_TYPE_CHAR           = 'char';
+    const PHINX_TYPE_TEXT           = 'text';
+    const PHINX_TYPE_INTEGER        = 'integer';
+    const PHINX_TYPE_BIG_INTEGER    = 'biginteger';
+    const PHINX_TYPE_FLOAT          = 'float';
+    const PHINX_TYPE_DECIMAL        = 'decimal';
+    const PHINX_TYPE_DATETIME       = 'datetime';
+    const PHINX_TYPE_TIMESTAMP      = 'timestamp';
+    const PHINX_TYPE_TIME           = 'time';
+    const PHINX_TYPE_DATE           = 'date';
+    const PHINX_TYPE_BINARY         = 'binary';
+    const PHINX_TYPE_BLOB           = 'blob';
+    const PHINX_TYPE_BOOLEAN        = 'boolean';
+    const PHINX_TYPE_JSON           = 'json';
+    const PHINX_TYPE_JSONB          = 'jsonb';
+    const PHINX_TYPE_UUID           = 'uuid';
+    const PHINX_TYPE_FILESTREAM     = 'filestream';
 
     // Geospatial database types
-    const PHINX_TYPE_GEOMETRY = 'geometry';
-    const PHINX_TYPE_POINT = 'point';
-    const PHINX_TYPE_LINESTRING = 'linestring';
-    const PHINX_TYPE_POLYGON = 'polygon';
+    const PHINX_TYPE_GEOMETRY       = 'geometry';
+    const PHINX_TYPE_POINT          = 'point';
+    const PHINX_TYPE_LINESTRING     = 'linestring';
+    const PHINX_TYPE_POLYGON        = 'polygon';
 
     // only for mysql so far
-    const PHINX_TYPE_ENUM = 'enum';
-    const PHINX_TYPE_SET = 'set';
+    const PHINX_TYPE_ENUM           = 'enum';
+    const PHINX_TYPE_SET            = 'set';
 
     /**
      * Get all migrated version numbers.
@@ -77,6 +77,13 @@ interface AdapterInterface
      * @return array
      */
     public function getVersions();
+
+    /**
+     * Get all migration log entries, indexed by version number.
+     *
+     * @return array
+     */
+    public function getVersionLog();
 
     /**
      * Set adapter configuration options.
@@ -277,7 +284,7 @@ interface AdapterInterface
      * Renames the specified database table.
      *
      * @param string $tableName Table Name
-     * @param string $newName New Name
+     * @param string $newName   New Name
      * @return void
      */
     public function renameTable($tableName, $newName);
@@ -301,7 +308,7 @@ interface AdapterInterface
     /**
      * Checks to see if a column exists.
      *
-     * @param string $tableName Table Name
+     * @param string $tableName  Table Name
      * @param string $columnName Column Name
      * @return boolean
      */
@@ -310,7 +317,7 @@ interface AdapterInterface
     /**
      * Adds the specified column to a database table.
      *
-     * @param Table $table Table
+     * @param Table  $table  Table
      * @param Column $column Column
      * @return void
      */
@@ -329,9 +336,9 @@ interface AdapterInterface
     /**
      * Change a table column type.
      *
-     * @param string $tableName Table Name
+     * @param string $tableName  Table Name
      * @param string $columnName Column Name
-     * @param Column $newColumn New Column
+     * @param Column $newColumn  New Column
      * @return Table
      */
     public function changeColumn($tableName, $columnName, Column $newColumn);
@@ -349,7 +356,7 @@ interface AdapterInterface
      * Checks to see if an index exists.
      *
      * @param string $tableName Table Name
-     * @param mixed $columns Column(s)
+     * @param mixed  $columns   Column(s)
      * @return boolean
      */
     public function hasIndex($tableName, $columns);
@@ -376,7 +383,7 @@ interface AdapterInterface
      * Drops the specified index from a database table.
      *
      * @param string $tableName
-     * @param mixed $columns Column(s)
+     * @param mixed  $columns Column(s)
      * @return void
      */
     public function dropIndex($tableName, $columns);
@@ -393,9 +400,9 @@ interface AdapterInterface
     /**
      * Checks to see if a foreign key exists.
      *
-     * @param string $tableName
-     * @param string[] $columns Column(s)
-     * @param string $constraint Constraint name
+     * @param string   $tableName
+     * @param string[] $columns    Column(s)
+     * @param string   $constraint Constraint name
      * @return boolean
      */
     public function hasForeignKey($tableName, $columns, $constraint = null);
@@ -403,7 +410,7 @@ interface AdapterInterface
     /**
      * Adds the specified foreign key to a database table.
      *
-     * @param Table $table
+     * @param Table      $table
      * @param ForeignKey $foreignKey
      * @return void
      */
@@ -412,9 +419,9 @@ interface AdapterInterface
     /**
      * Drops the specified foreign key from a database table.
      *
-     * @param string $tableName
-     * @param string[] $columns Column(s)
-     * @param string $constraint Constraint name
+     * @param string   $tableName
+     * @param string[] $columns    Column(s)
+     * @param string   $constraint Constraint name
      * @return void
      */
     public function dropForeignKey($tableName, $columns, $constraint = null);

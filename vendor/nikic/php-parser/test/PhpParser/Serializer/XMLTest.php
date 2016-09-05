@@ -9,8 +9,7 @@ class XMLTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers PhpParser\Serializer\XML<extended>
      */
-    public function testSerialize()
-    {
+    public function testSerialize() {
         $code = <<<CODE
 <?php
 // comment
@@ -24,6 +23,9 @@ CODE;
 <AST xmlns:node="http://nikic.github.com/PHPParser/XML/node" xmlns:subNode="http://nikic.github.com/PHPParser/XML/subNode" xmlns:attribute="http://nikic.github.com/PHPParser/XML/attribute" xmlns:scalar="http://nikic.github.com/PHPParser/XML/scalar">
  <scalar:array>
   <node:Stmt_Function>
+   <attribute:startLine>
+    <scalar:int>4</scalar:int>
+   </attribute:startLine>
    <attribute:comments>
     <scalar:array>
      <comment isDocComment="false" line="2">// comment
@@ -31,9 +33,6 @@ CODE;
      <comment isDocComment="true" line="3">/** doc comment */</comment>
     </scalar:array>
    </attribute:comments>
-   <attribute:startLine>
-    <scalar:int>4</scalar:int>
-   </attribute:startLine>
    <attribute:endLine>
     <scalar:int>6</scalar:int>
    </attribute:endLine>
@@ -72,6 +71,9 @@ CODE;
         <attribute:endLine>
          <scalar:int>4</scalar:int>
         </attribute:endLine>
+        <attribute:kind>
+         <scalar:int>10</scalar:int>
+        </attribute:kind>
         <subNode:value>
          <scalar:int>0</scalar:int>
         </subNode:value>
@@ -134,6 +136,9 @@ CODE;
          <attribute:endLine>
           <scalar:int>5</scalar:int>
          </attribute:endLine>
+         <attribute:kind>
+          <scalar:int>1</scalar:int>
+         </attribute:kind>
          <subNode:value>
           <scalar:string>Foo</scalar:string>
          </subNode:value>
@@ -148,7 +153,7 @@ CODE;
 </AST>
 XML;
 
-        $parser = new PhpParser\Parser\Php7(new PhpParser\Lexer);
+        $parser     = new PhpParser\Parser\Php7(new PhpParser\Lexer);
         $serializer = new XML;
 
         $code = str_replace("\r\n", "\n", $code);
@@ -160,8 +165,7 @@ XML;
      * @expectedException        \InvalidArgumentException
      * @expectedExceptionMessage Unexpected node type
      */
-    public function testError()
-    {
+    public function testError() {
         $serializer = new XML;
         $serializer->serialize(array(new \stdClass));
     }

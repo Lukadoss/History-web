@@ -20,8 +20,8 @@ $this->assign('templateName', 'missing_layout.ctp');
 
 $this->start('subheading');
 ?>
-<strong>Error: </strong>
-The layout file <em><?= h($file) ?></em> can not be found or does not exist.
+    <strong>Error: </strong>
+    The layout file <em><?= h($file) ?></em> can not be found or does not exist.
 <?php $this->end() ?>
 
 <?php $this->start('file') ?>
@@ -29,7 +29,7 @@ The layout file <em><?= h($file) ?></em> can not be found or does not exist.
     Confirm you have created the file: <?= h($file) ?> in one of the following paths:
 </p>
 <ul>
-    <?php
+<?php
     $paths = $this->_paths($this->plugin);
     foreach ($paths as $path):
         if (strpos($path, CORE_PATH) !== false) {
@@ -37,6 +37,6 @@ The layout file <em><?= h($file) ?></em> can not be found or does not exist.
         }
         echo sprintf('<li>%s%s</li>', h($path), h($file));
     endforeach;
-    ?>
+?>
 </ul>
 <?php $this->end() ?>

@@ -171,8 +171,8 @@ class SQLiteAdapter extends PdoAdapter implements AdapterInterface
         if (!isset($options['id']) || (isset($options['id']) && $options['id'] === true)) {
             $column = new Column();
             $column->setName('id')
-                ->setType('integer')
-                ->setIdentity(true);
+                   ->setType('integer')
+                   ->setIdentity(true);
 
             array_unshift($columns, $column);
 
@@ -180,8 +180,8 @@ class SQLiteAdapter extends PdoAdapter implements AdapterInterface
             // Handle id => "field_name" to support AUTO_INCREMENT
             $column = new Column();
             $column->setName($options['id'])
-                ->setType('integer')
-                ->setIdentity(true);
+                   ->setType('integer')
+                   ->setIdentity(true);
 
             array_unshift($columns, $column);
         }
@@ -270,12 +270,12 @@ class SQLiteAdapter extends PdoAdapter implements AdapterInterface
             $column = new Column();
             $type = strtolower($columnInfo['type']);
             $column->setName($columnInfo['name'])
-                ->setNull($columnInfo['notnull'] !== '1')
-                ->setDefault($columnInfo['dflt_value']);
+                   ->setNull($columnInfo['notnull'] !== '1')
+                   ->setDefault($columnInfo['dflt_value']);
 
             $phinxType = $this->getPhinxType($type);
             $column->setType($phinxType['name'])
-                ->setLimit($phinxType['limit']);
+                   ->setLimit($phinxType['limit']);
 
             if ($columnInfo['pk'] == 1) {
                 $column->setIdentity(true);
@@ -342,7 +342,7 @@ class SQLiteAdapter extends PdoAdapter implements AdapterInterface
         $writeColumns = array();
         foreach ($columns as $column) {
             $selectName = $column['name'];
-            $writeName = ($selectName == $columnName) ? $newColumnName : $selectName;
+            $writeName = ($selectName == $columnName)? $newColumnName : $selectName;
             $selectColumns[] = $this->quoteColumnName($selectName);
             $writeColumns[] = $this->quoteColumnName($writeName);
         }
@@ -404,7 +404,7 @@ class SQLiteAdapter extends PdoAdapter implements AdapterInterface
         $writeColumns = array();
         foreach ($columns as $column) {
             $selectName = $column['name'];
-            $writeName = ($selectName === $columnName) ? $newColumn->getName() : $selectName;
+            $writeName = ($selectName === $columnName)? $newColumn->getName() : $selectName;
             $selectColumns[] = $this->quoteColumnName($selectName);
             $writeColumns[] = $this->quoteColumnName($writeName);
         }
@@ -576,7 +576,7 @@ class SQLiteAdapter extends PdoAdapter implements AdapterInterface
         $this->writeCommand('addIndex', array($table->getName(), $index->getColumns()));
         $indexColumnArray = array();
         foreach ($index->getColumns() as $column) {
-            $indexColumnArray [] = sprintf('`%s` ASC', $column);
+            $indexColumnArray []= sprintf('`%s` ASC', $column);
         }
         $indexColumns = implode(',', $indexColumnArray);
         $this->execute(
@@ -822,7 +822,7 @@ class SQLiteAdapter extends PdoAdapter implements AdapterInterface
         );
 
         $columns = array_keys($row);
-        $sql .= "(" . implode(', ', array_map(array($this, 'quoteColumnName'), $columns)) . ")";
+        $sql .= "(". implode(', ', array_map(array($this, 'quoteColumnName'), $columns)) . ")";
         $sql .= " VALUES ";
 
         $sql .= "(" . implode(', ', array_map(function ($value) {
@@ -1013,7 +1013,7 @@ class SQLiteAdapter extends PdoAdapter implements AdapterInterface
         if (is_string($default) && 'CURRENT_TIMESTAMP' !== $default) {
             $default = $this->getConnection()->quote($default);
         } elseif (is_bool($default)) {
-            $default = (int)$default;
+            $default = (int) $default;
         }
         return isset($default) ? ' DEFAULT ' . $default : '';
     }

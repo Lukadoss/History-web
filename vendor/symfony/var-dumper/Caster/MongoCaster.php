@@ -24,10 +24,10 @@ class MongoCaster
     {
         if ($info = $cursor->info()) {
             foreach ($info as $k => $v) {
-                $a[Caster::PREFIX_VIRTUAL . $k] = $v;
+                $a[Caster::PREFIX_VIRTUAL.$k] = $v;
             }
         }
-        $a[Caster::PREFIX_VIRTUAL . 'dead'] = $cursor->dead();
+        $a[Caster::PREFIX_VIRTUAL.'dead'] = $cursor->dead();
 
         return $a;
     }

@@ -88,7 +88,7 @@ class ClassConstantEnumerator extends Enumerator
         foreach ($constants as $name => $constant) {
             if ($this->showItem($name)) {
                 $ret[$name] = array(
-                    'name' => $name,
+                    'name'  => $name,
                     'style' => self::IS_CONSTANT,
                     'value' => $this->presentRef($constant->getValue()),
                 );

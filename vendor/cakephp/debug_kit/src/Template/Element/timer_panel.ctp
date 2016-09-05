@@ -21,10 +21,10 @@
 
     <table cellspacing="0" cellpadding="0">
         <thead>
-        <tr>
-            <th><?= __d('debug_kit', 'Message') ?></th>
-            <th><?= __d('debug_kit', 'Memory Use') ?></th>
-        </tr>
+            <tr>
+                <th><?= __d('debug_kit', 'Message') ?></th>
+                <th><?= __d('debug_kit', 'Memory Use') ?></th>
+            </tr>
         </thead>
         <tbody>
         <?php foreach ($memory as $key => $value): ?>
@@ -62,13 +62,13 @@
         $values = array_values($timers);
 
         foreach ($timers as $timerName => $timeInfo):
-        $indent = 0;
-        for ($j = 0; $j < $i; $j++):
-            if (($values[$j]['end'] > $timeInfo['start']) && ($values[$j]['end']) > ($timeInfo['end'])):
-                $indent++;
-            endif;
-        endfor;
-        $indent = str_repeat("\xC2\xA0\xC2\xA0", $indent);
+            $indent = 0;
+            for ($j = 0; $j < $i; $j++):
+                if (($values[$j]['end'] > $timeInfo['start']) && ($values[$j]['end']) > ($timeInfo['end'])):
+                    $indent++;
+                endif;
+            endfor;
+            $indent = str_repeat("\xC2\xA0\xC2\xA0", $indent);
         ?>
         <tr>
             <td>
@@ -87,8 +87,8 @@
             </td>
             <?php
             $i++;
-            endforeach;
-            ?>
+        endforeach;
+        ?>
         </tbody>
     </table>
 </section>

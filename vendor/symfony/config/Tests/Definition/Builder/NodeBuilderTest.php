@@ -38,7 +38,7 @@ class NodeBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testAddingANewNodeType()
     {
-        $class = __NAMESPACE__ . '\\SomeNodeDefinition';
+        $class = __NAMESPACE__.'\\SomeNodeDefinition';
 
         $builder = new BaseNodeBuilder();
         $node = $builder
@@ -50,7 +50,7 @@ class NodeBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testOverridingAnExistingNodeType()
     {
-        $class = __NAMESPACE__ . '\\SomeNodeDefinition';
+        $class = __NAMESPACE__.'\\SomeNodeDefinition';
 
         $builder = new BaseNodeBuilder();
         $node = $builder
@@ -69,7 +69,7 @@ class NodeBuilderTest extends \PHPUnit_Framework_TestCase
 
         $this->assertInstanceOf(get_class($node1), $node2);
 
-        $builder->setNodeClass('CuStOm', __NAMESPACE__ . '\\SomeNodeDefinition');
+        $builder->setNodeClass('CuStOm', __NAMESPACE__.'\\SomeNodeDefinition');
 
         $node1 = $builder->node('', 'CUSTOM');
         $node2 = $builder->node('', 'custom');

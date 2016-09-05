@@ -28,15 +28,15 @@ class ConfigCache extends ResourceCheckerConfigCache
     private $debug;
 
     /**
-     * @param string $file The absolute cache path
-     * @param bool $debug Whether debugging is enabled or not
+     * @param string $file  The absolute cache path
+     * @param bool   $debug Whether debugging is enabled or not
      */
     public function __construct($file, $debug)
     {
         parent::__construct($file, array(
             new SelfCheckingResourceChecker(),
         ));
-        $this->debug = (bool)$debug;
+        $this->debug = (bool) $debug;
     }
 
     /**

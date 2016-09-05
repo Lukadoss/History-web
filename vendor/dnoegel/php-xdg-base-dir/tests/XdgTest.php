@@ -12,8 +12,8 @@ class XdgTest extends PHPUnit_Framework_TestCase
 
     public function testGetHomeDir()
     {
-        putenv('HOME=/fake-dir');
-        $this->assertEquals('/fake-dir', $this->getXdg()->getHomeDir());
+         putenv('HOME=/fake-dir');
+         $this->assertEquals('/fake-dir', $this->getXdg()->getHomeDir());
     }
 
     public function testGetFallbackHomeDir()

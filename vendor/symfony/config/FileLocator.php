@@ -27,7 +27,7 @@ class FileLocator implements FileLocatorInterface
      */
     public function __construct($paths = array())
     {
-        $this->paths = (array)$paths;
+        $this->paths = (array) $paths;
     }
 
     /**
@@ -57,7 +57,7 @@ class FileLocator implements FileLocatorInterface
         $filepaths = array();
 
         foreach ($paths as $path) {
-            if (file_exists($file = $path . DIRECTORY_SEPARATOR . $name)) {
+            if (file_exists($file = $path.DIRECTORY_SEPARATOR.$name)) {
                 if (true === $first) {
                     return $file;
                 }

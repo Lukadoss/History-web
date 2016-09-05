@@ -18,7 +18,7 @@ class CalledClassPassTest extends CodeCleanerTestCase
 {
     public function setUp()
     {
-        $this->pass = new CalledClassPass();
+        $this->pass      = new CalledClassPass();
         $this->traverser = new NodeTraverser();
         $this->traverser->addVisitor($this->pass);
     }

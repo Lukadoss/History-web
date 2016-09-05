@@ -51,8 +51,8 @@ interface CreationInterface
      * processing, specific to the template to be performed.
      *
      * @param string $migrationFilename The name of the newly created migration.
-     * @param string $className The class name.
-     * @param string $baseClassName The name of the base class.
+     * @param string $className         The class name.
+     * @param string $baseClassName     The name of the base class.
      * @return void
      */
     public function postMigrationCreation($migrationFilename, $className, $baseClassName);

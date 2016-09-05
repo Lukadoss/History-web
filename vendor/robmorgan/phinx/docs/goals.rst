@@ -1,5 +1,5 @@
 .. index::
-single: Goals
+   single: Goals
    
 Goals
 =====

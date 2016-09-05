@@ -51,7 +51,7 @@ class WtfCommand extends TraceCommand implements ContextAware
             ->setAliases(array('last-exception', 'wtf?'))
             ->setDefinition(array(
                 new InputArgument('incredulity', InputArgument::OPTIONAL | InputArgument::IS_ARRAY, 'Number of lines to show'),
-                new InputOption('verbose', 'v', InputOption::VALUE_NONE, 'Show entire backtrace.'),
+                new InputOption('verbose', 'v',  InputOption::VALUE_NONE, 'Show entire backtrace.'),
             ))
             ->setDescription('Show the backtrace of the most recent exception.')
             ->setHelp(
@@ -98,8 +98,8 @@ HELP
         }
 
         $exception = $this->context->getLastException();
-        $count = $input->getOption('verbose') ? PHP_INT_MAX : pow(2, max(0, (strlen($incredulity) - 1)));
-        $trace = $this->getBacktrace($exception, $count);
+        $count     = $input->getOption('verbose') ? PHP_INT_MAX : pow(2, max(0, (strlen($incredulity) - 1)));
+        $trace     = $this->getBacktrace($exception, $count);
 
         $shell = $this->getApplication();
         $output->page(function ($output) use ($exception, $trace, $shell) {

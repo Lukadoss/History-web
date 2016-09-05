@@ -116,6 +116,7 @@ class Plugin
                 list($name, $conf) = (is_numeric($name)) ? [$conf, $config] : [$name, $conf];
                 static::load($name, $conf);
             }
+
             return;
         }
 
@@ -190,6 +191,7 @@ class Plugin
             $vendorFile = dirname(dirname(dirname(dirname(__DIR__)))) . DIRECTORY_SEPARATOR . 'cakephp-plugins.php';
             if (!file_exists($vendorFile)) {
                 Configure::write(['plugins' => []]);
+
                 return;
             }
         }
@@ -263,6 +265,7 @@ class Plugin
         if (empty(static::$_plugins[$plugin])) {
             throw new MissingPluginException(['plugin' => $plugin]);
         }
+
         return static::$_plugins[$plugin]['path'];
     }
 
@@ -278,6 +281,7 @@ class Plugin
         if (empty(static::$_plugins[$plugin])) {
             throw new MissingPluginException(['plugin' => $plugin]);
         }
+
         return static::$_plugins[$plugin]['classPath'];
     }
 
@@ -293,6 +297,7 @@ class Plugin
         if (empty(static::$_plugins[$plugin])) {
             throw new MissingPluginException(['plugin' => $plugin]);
         }
+
         return static::$_plugins[$plugin]['configPath'];
     }
 
@@ -320,7 +325,7 @@ class Plugin
     /**
      * Loads the routes file for a plugin, or all plugins configured to load their respective routes file
      *
-     * @param string $plugin name of the plugin, if null will operate on all plugins having enabled the
+     * @param string|null $plugin name of the plugin, if null will operate on all plugins having enabled the
      * loading of routes files
      * @return bool
      */
@@ -330,12 +335,14 @@ class Plugin
             foreach (static::loaded() as $p) {
                 static::routes($p);
             }
+
             return true;
         }
         $config = static::$_plugins[$plugin];
         if ($config['routes'] === false) {
             return false;
         }
+
         return (bool)static::_includeFile(
             $config['configPath'] . 'routes.php',
             $config['ignoreMissing']
@@ -346,7 +353,7 @@ class Plugin
      * Returns true if the plugin $plugin is already loaded
      * If plugin is null, it will return a list of all loaded plugins
      *
-     * @param string $plugin Plugin name.
+     * @param string|null $plugin Plugin name.
      * @return bool|array Boolean true if $plugin is already loaded.
      *   If $plugin is null, returns a list of plugins that have been loaded
      */
@@ -357,13 +364,14 @@ class Plugin
         }
         $return = array_keys(static::$_plugins);
         sort($return);
+
         return $return;
     }
 
     /**
      * Forgets a loaded plugin or all of them if first parameter is null
      *
-     * @param string $plugin name of the plugin to forget
+     * @param string|null $plugin name of the plugin to forget
      * @return void
      */
     public static function unload($plugin = null)
@@ -387,6 +395,7 @@ class Plugin
         if ($ignoreMissing && !is_file($file)) {
             return false;
         }
+
         return include $file;
     }
 }

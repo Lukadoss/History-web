@@ -86,6 +86,7 @@ class QueryExpression implements ExpressionInterface, Countable
         }
 
         $this->_conjunction = strtoupper($conjunction);
+
         return $this;
     }
 
@@ -126,15 +127,18 @@ class QueryExpression implements ExpressionInterface, Countable
     {
         if (is_string($conditions)) {
             $this->_conditions[] = $conditions;
+
             return $this;
         }
 
         if ($conditions instanceof ExpressionInterface) {
             $this->_conditions[] = $conditions;
+
             return $this;
         }
 
         $this->_addConditions($conditions, $types);
+
         return $this;
     }
 
@@ -143,7 +147,7 @@ class QueryExpression implements ExpressionInterface, Countable
      *
      * @param string $field Database field to be compared against value
      * @param mixed $value The value to be bound to $field for comparison
-     * @param string $type the type name for $value as configured using the Type map.
+     * @param string|null $type the type name for $value as configured using the Type map.
      * If it is suffixed with "[]" and the value is an array then multiple placeholders
      * will be created, one per each value in the array.
      * @return $this
@@ -153,6 +157,7 @@ class QueryExpression implements ExpressionInterface, Countable
         if ($type === null) {
             $type = $this->_calculateType($field);
         }
+
         return $this->add(new Comparison($field, $value, $type, '='));
     }
 
@@ -161,7 +166,7 @@ class QueryExpression implements ExpressionInterface, Countable
      *
      * @param string $field Database field to be compared against value
      * @param mixed $value The value to be bound to $field for comparison
-     * @param string $type the type name for $value as configured using the Type map.
+     * @param string|null $type the type name for $value as configured using the Type map.
      * If it is suffixed with "[]" and the value is an array then multiple placeholders
      * will be created, one per each value in the array.
      * @return $this
@@ -171,6 +176,7 @@ class QueryExpression implements ExpressionInterface, Countable
         if ($type === null) {
             $type = $this->_calculateType($field);
         }
+
         return $this->add(new Comparison($field, $value, $type, '!='));
     }
 
@@ -179,7 +185,7 @@ class QueryExpression implements ExpressionInterface, Countable
      *
      * @param string $field Database field to be compared against value
      * @param mixed $value The value to be bound to $field for comparison
-     * @param string $type the type name for $value as configured using the Type map.
+     * @param string|null $type the type name for $value as configured using the Type map.
      * @return $this
      */
     public function gt($field, $value, $type = null)
@@ -187,6 +193,7 @@ class QueryExpression implements ExpressionInterface, Countable
         if ($type === null) {
             $type = $this->_calculateType($field);
         }
+
         return $this->add(new Comparison($field, $value, $type, '>'));
     }
 
@@ -195,7 +202,7 @@ class QueryExpression implements ExpressionInterface, Countable
      *
      * @param string $field Database field to be compared against value
      * @param mixed $value The value to be bound to $field for comparison
-     * @param string $type the type name for $value as configured using the Type map.
+     * @param string|null $type the type name for $value as configured using the Type map.
      * @return $this
      */
     public function lt($field, $value, $type = null)
@@ -203,6 +210,7 @@ class QueryExpression implements ExpressionInterface, Countable
         if ($type === null) {
             $type = $this->_calculateType($field);
         }
+
         return $this->add(new Comparison($field, $value, $type, '<'));
     }
 
@@ -211,7 +219,7 @@ class QueryExpression implements ExpressionInterface, Countable
      *
      * @param string $field Database field to be compared against value
      * @param mixed $value The value to be bound to $field for comparison
-     * @param string $type the type name for $value as configured using the Type map.
+     * @param string|null $type the type name for $value as configured using the Type map.
      * @return $this
      */
     public function gte($field, $value, $type = null)
@@ -219,6 +227,7 @@ class QueryExpression implements ExpressionInterface, Countable
         if ($type === null) {
             $type = $this->_calculateType($field);
         }
+
         return $this->add(new Comparison($field, $value, $type, '>='));
     }
 
@@ -227,7 +236,7 @@ class QueryExpression implements ExpressionInterface, Countable
      *
      * @param string $field Database field to be compared against value
      * @param mixed $value The value to be bound to $field for comparison
-     * @param string $type the type name for $value as configured using the Type map.
+     * @param string|null $type the type name for $value as configured using the Type map.
      * @return $this
      */
     public function lte($field, $value, $type = null)
@@ -235,6 +244,7 @@ class QueryExpression implements ExpressionInterface, Countable
         if ($type === null) {
             $type = $this->_calculateType($field);
         }
+
         return $this->add(new Comparison($field, $value, $type, '<='));
     }
 
@@ -250,6 +260,7 @@ class QueryExpression implements ExpressionInterface, Countable
         if (!($field instanceof ExpressionInterface)) {
             $field = new IdentifierExpression($field);
         }
+
         return $this->add(new UnaryExpression('IS NULL', $field, UnaryExpression::POSTFIX));
     }
 
@@ -265,6 +276,7 @@ class QueryExpression implements ExpressionInterface, Countable
         if (!($field instanceof ExpressionInterface)) {
             $field = new IdentifierExpression($field);
         }
+
         return $this->add(new UnaryExpression('IS NOT NULL', $field, UnaryExpression::POSTFIX));
     }
 
@@ -273,7 +285,7 @@ class QueryExpression implements ExpressionInterface, Countable
      *
      * @param string $field Database field to be compared against value
      * @param mixed $value The value to be bound to $field for comparison
-     * @param string $type the type name for $value as configured using the Type map.
+     * @param string|null $type the type name for $value as configured using the Type map.
      * @return $this
      */
     public function like($field, $value, $type = null)
@@ -281,6 +293,7 @@ class QueryExpression implements ExpressionInterface, Countable
         if ($type === null) {
             $type = $this->_calculateType($field);
         }
+
         return $this->add(new Comparison($field, $value, $type, 'LIKE'));
     }
 
@@ -289,7 +302,7 @@ class QueryExpression implements ExpressionInterface, Countable
      *
      * @param string $field Database field to be compared against value
      * @param mixed $value The value to be bound to $field for comparison
-     * @param string $type the type name for $value as configured using the Type map.
+     * @param string|null $type the type name for $value as configured using the Type map.
      * @return $this
      */
     public function notLike($field, $value, $type = null)
@@ -297,6 +310,7 @@ class QueryExpression implements ExpressionInterface, Countable
         if ($type === null) {
             $type = $this->_calculateType($field);
         }
+
         return $this->add(new Comparison($field, $value, $type, 'NOT LIKE'));
     }
 
@@ -306,7 +320,7 @@ class QueryExpression implements ExpressionInterface, Countable
      *
      * @param string $field Database field to be compared against value
      * @param string|array $values the value to be bound to $field for comparison
-     * @param string $type the type name for $value as configured using the Type map.
+     * @param string|null $type the type name for $value as configured using the Type map.
      * @return $this
      */
     public function in($field, $values, $type = null)
@@ -317,6 +331,7 @@ class QueryExpression implements ExpressionInterface, Countable
         $type = $type ?: 'string';
         $type .= '[]';
         $values = $values instanceof ExpressionInterface ? $values : (array)$values;
+
         return $this->add(new Comparison($field, $values, $type, 'IN'));
     }
 
@@ -342,7 +357,7 @@ class QueryExpression implements ExpressionInterface, Countable
      *
      * @param string $field Database field to be compared against value
      * @param array $values the value to be bound to $field for comparison
-     * @param string $type the type name for $value as configured using the Type map.
+     * @param string|null $type the type name for $value as configured using the Type map.
      * @return $this
      */
     public function notIn($field, $values, $type = null)
@@ -353,7 +368,30 @@ class QueryExpression implements ExpressionInterface, Countable
         $type = $type ?: 'string';
         $type .= '[]';
         $values = $values instanceof ExpressionInterface ? $values : (array)$values;
+
         return $this->add(new Comparison($field, $values, $type, 'NOT IN'));
+    }
+
+    /**
+     * Adds a new condition to the expression object in the form "EXISTS (...)".
+     *
+     * @param \Cake\Database\ExpressionInterface $query the inner query
+     * @return $this
+     */
+    public function exists(ExpressionInterface $query)
+    {
+        return $this->add(new UnaryExpression('EXISTS', $query, UnaryExpression::PREFIX));
+    }
+
+    /**
+     * Adds a new condition to the expression object in the form "NOT EXISTS (...)".
+     *
+     * @param \Cake\Database\ExpressionInterface $query the inner query
+     * @return $this
+     */
+    public function notExists(ExpressionInterface $query)
+    {
+        return $this->add(new UnaryExpression('NOT EXISTS', $query, UnaryExpression::PREFIX));
     }
 
     /**
@@ -363,7 +401,7 @@ class QueryExpression implements ExpressionInterface, Countable
      * @param mixed $field The field name to compare for values in between the range.
      * @param mixed $from The initial value of the range.
      * @param mixed $to The ending value in the comparison range.
-     * @param string $type the type name for $value as configured using the Type map.
+     * @param string|null $type the type name for $value as configured using the Type map.
      * @return $this
      */
     public function between($field, $from, $to, $type = null)
@@ -371,6 +409,7 @@ class QueryExpression implements ExpressionInterface, Countable
         if ($type === null) {
             $type = $this->_calculateType($field);
         }
+
         return $this->add(new BetweenExpression($field, $from, $to, $type));
     }
 
@@ -389,6 +428,7 @@ class QueryExpression implements ExpressionInterface, Countable
         if ($this->isCallable($conditions)) {
             return $conditions(new self([], $this->typeMap()->types($types)));
         }
+
         return new self($conditions, $this->typeMap()->types($types));
     }
 
@@ -406,6 +446,7 @@ class QueryExpression implements ExpressionInterface, Countable
         if ($this->isCallable($conditions)) {
             return $conditions(new self([], $this->typeMap()->types($types), 'OR'));
         }
+
         return new self($conditions, $this->typeMap()->types($types), 'OR');
     }
 // @codingStandardsIgnoreEnd
@@ -451,8 +492,10 @@ class QueryExpression implements ExpressionInterface, Countable
             if ($field instanceof ExpressionInterface) {
                 return $field;
             }
+
             return new IdentifierExpression($field);
         };
+
         return $this->eq($wrapIdentifier($left), $wrapIdentifier($right));
     }
 
@@ -484,6 +527,7 @@ class QueryExpression implements ExpressionInterface, Countable
                 $parts[] = $part;
             }
         }
+
         return sprintf($template, implode(" $conjunction ", $parts));
     }
 
@@ -572,6 +616,7 @@ class QueryExpression implements ExpressionInterface, Countable
         if (is_object($c) && is_callable($c)) {
             return true;
         }
+
         return is_array($c) && isset($c[0]) && is_object($c[0]) && is_callable($c);
     }
 
@@ -588,6 +633,7 @@ class QueryExpression implements ExpressionInterface, Countable
                 return true;
             }
         }
+
         return false;
     }
 
@@ -726,6 +772,7 @@ class QueryExpression implements ExpressionInterface, Countable
         if (is_string($field)) {
             return $this->typeMap()->type($field);
         }
+
         return null;
     }
 

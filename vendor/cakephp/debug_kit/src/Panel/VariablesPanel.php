@@ -12,11 +12,12 @@
  */
 namespace DebugKit\Panel;
 
+use Cake\Collection\Collection;
 use Cake\Controller\Controller;
-use Cake\Database\Query;
 use Cake\Datasource\EntityInterface;
 use Cake\Event\Event;
 use Cake\Form\Form;
+use Cake\ORM\Query;
 use Cake\ORM\ResultSet;
 use Cake\Utility\Hash;
 use Closure;
@@ -72,7 +73,10 @@ class VariablesPanel extends DebugPanel
         $errors = [];
 
         $walker = function (&$item) use (&$walker) {
-            if ($item instanceof Query || $item instanceof ResultSet) {
+            if ($item instanceof Collection ||
+                $item instanceof Query ||
+                $item instanceof ResultSet
+            ) {
                 try {
                     $item = $item->toArray();
                 } catch (\Cake\Database\Exception $e) {
@@ -99,6 +103,7 @@ class VariablesPanel extends DebugPanel
                 // Convert objects into using __debugInfo.
                 $item = array_map($walker, $item->__debugInfo());
             }
+
             return $item;
         };
         // Copy so viewVars is not mutated.
@@ -133,6 +138,7 @@ class VariablesPanel extends DebugPanel
         if (!isset($this->_data['content'])) {
             return 0;
         }
+
         return count($this->_data['content']);
     }
 }

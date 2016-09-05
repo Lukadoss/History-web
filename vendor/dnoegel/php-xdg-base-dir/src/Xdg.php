@@ -80,7 +80,7 @@ class Xdg
 
     }
 
-    public function getRuntimeDir($strict = true)
+    public function getRuntimeDir($strict=true)
     {
         if ($runtimeDir = getenv('XDG_RUNTIME_DIR')) {
             return $runtimeDir;

@@ -161,7 +161,7 @@ class Util
      */
     public static function isValidPhinxClassName($className)
     {
-        return (bool)preg_match('/^([A-Z][a-z0-9]+)+$/', $className);
+        return (bool) preg_match('/^([A-Z][a-z0-9]+)+$/', $className);
     }
 
     /**

@@ -20,16 +20,15 @@ class Foreach_ extends Node\Stmt
     /**
      * Constructs a foreach node.
      *
-     * @param Node\Expr $expr Expression to iterate
-     * @param Node\Expr $valueVar Variable to assign value to
-     * @param array $subNodes Array of the following optional subnodes:
+     * @param Node\Expr $expr       Expression to iterate
+     * @param Node\Expr $valueVar   Variable to assign value to
+     * @param array     $subNodes   Array of the following optional subnodes:
      *                              'keyVar' => null   : Variable to assign key to
      *                              'byRef'  => false  : Whether to assign value by reference
      *                              'stmts'  => array(): Statements
-     * @param array $attributes Additional attributes
+     * @param array     $attributes Additional attributes
      */
-    public function __construct(Node\Expr $expr, Node\Expr $valueVar, array $subNodes = array(), array $attributes = array())
-    {
+    public function __construct(Node\Expr $expr, Node\Expr $valueVar, array $subNodes = array(), array $attributes = array()) {
         parent::__construct($attributes);
         $this->expr = $expr;
         $this->keyVar = isset($subNodes['keyVar']) ? $subNodes['keyVar'] : null;
@@ -38,8 +37,7 @@ class Foreach_ extends Node\Stmt
         $this->stmts = isset($subNodes['stmts']) ? $subNodes['stmts'] : array();
     }
 
-    public function getSubNodeNames()
-    {
+    public function getSubNodeNames() {
         return array('expr', 'keyVar', 'byRef', 'valueVar', 'stmts');
     }
 }

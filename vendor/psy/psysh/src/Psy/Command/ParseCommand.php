@@ -53,7 +53,7 @@ class ParseCommand extends Command implements PresenterAware
         $this->presenter->addCasters(array(
             'PhpParser\Node' => function (Node $node, array $a) {
                 $a = array(
-                    Caster::PREFIX_VIRTUAL . 'type' => $node->getType(),
+                    Caster::PREFIX_VIRTUAL . 'type'       => $node->getType(),
                     Caster::PREFIX_VIRTUAL . 'attributes' => $node->getAttributes(),
                 );
 
@@ -114,8 +114,8 @@ HELP
         }
 
         $parserKind = $input->getOption('kind');
-        $depth = $input->getOption('depth');
-        $nodes = $this->parse($this->getParser($parserKind), $code);
+        $depth      = $input->getOption('depth');
+        $nodes      = $this->parse($this->getParser($parserKind), $code);
         $output->page($this->presenter->present($nodes, $depth));
     }
 

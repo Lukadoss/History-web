@@ -6,8 +6,7 @@ use PhpParser\Node\Scalar\MagicConst;
 
 class Line extends MagicConst
 {
-    public function getName()
-    {
+    public function getName() {
         return '__LINE__';
     }
 }

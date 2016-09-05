@@ -14,7 +14,6 @@
  */
 use Cake\Core\Plugin;
 use Cake\Core\Configure;
-
 $namespace = Configure::read('App.namespace');
 
 $pluginPath = Configure::read('App.paths.plugins.0');
@@ -37,12 +36,12 @@ $this->assign('templateName', 'missing_view.ctp');
 
 $this->start('subheading');
 ?>
-<strong>Error: </strong>
-<em><?= h($pluginDot . $class) ?></em> could not be found.
-<?php if (!empty($plugin) && !Plugin::loaded($plugin)): ?>
+    <strong>Error: </strong>
+    <em><?= h($pluginDot . $class) ?></em> could not be found.
+    <?php if (!empty($plugin) && !Plugin::loaded($plugin)): ?>
     Make sure your plugin <em><?= h($plugin) ?></em> is in the <?= h($pluginPath) ?> directory and was loaded.
-<?php endif ?>
-<?= $this->element('plugin_class_error', ['pluginPath' => $pluginPath]) ?>
+    <?php endif ?>
+    <?= $this->element('plugin_class_error', ['pluginPath' => $pluginPath]) ?>
 
 <?php $this->end() ?>
 

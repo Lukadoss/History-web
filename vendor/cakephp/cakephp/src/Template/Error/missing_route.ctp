@@ -25,39 +25,35 @@ $attributes = $error->getAttributes();
 
 $this->start('subheading');
 ?>
-<strong>Error: </strong>
-<?= $error->getMessage(); ?>
+    <strong>Error: </strong>
+    <?= $error->getMessage(); ?>
 <?php $this->end() ?>
 
 <?php $this->start('file') ?>
-<p>None of the currently connected routes match the given URL or parameters.
-    Add a matching route to <?= 'config' . DIRECTORY_SEPARATOR . 'routes.php' ?></p>
+<p>None of the currently connected routes match the provided parameters.
+Add a matching route to <?= 'config' . DIRECTORY_SEPARATOR . 'routes.php' ?></p>
 
 <?php if (!empty($attributes['context'])): ?>
-    <p>The passed context was:</p>
-    <pre>
-<?= Debugger::exportVar($attributes['context']); ?>
+<p>The passed context was:</p>
+<pre>
+<?=  Debugger::exportVar($attributes['context']); ?>
 </pre>
 <?php endif; ?>
 
 <h3>Connected Routes</h3>
 <table cellspacing="0" cellpadding="0">
-    <tr>
-        <th>Template</th>
-        <th>Defaults</th>
-        <th>Options</th>
-    </tr>
-    <?php
-    foreach (Router::routes() as $route):
-        echo '<tr>';
-        printf(
-            '<td width="25%%">%s</td><td>%s</td><td width="20%%">%s</td>',
-            $route->template,
-            Debugger::exportVar($route->defaults),
-            Debugger::exportVar($route->options)
-        );
-        echo '</tr>';
-    endforeach;
-    ?>
+<tr><th>Template</th><th>Defaults</th><th>Options</th></tr>
+<?php
+foreach (Router::routes() as $route):
+    echo '<tr>';
+    printf(
+        '<td width="25%%">%s</td><td>%s</td><td width="20%%">%s</td>',
+        $route->template,
+        Debugger::exportVar($route->defaults),
+        Debugger::exportVar($route->options)
+    );
+    echo '</tr>';
+endforeach;
+?>
 </table>
 <?php $this->end() ?>

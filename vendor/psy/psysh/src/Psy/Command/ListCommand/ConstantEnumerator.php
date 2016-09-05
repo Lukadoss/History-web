@@ -39,8 +39,8 @@ class ConstantEnumerator extends Enumerator
             return;
         }
 
-        $category = $input->getOption('user') ? 'user' : $input->getOption('category');
-        $label = $category ? ucfirst($category) . ' Constants' : 'Constants';
+        $category  = $input->getOption('user') ? 'user' : $input->getOption('category');
+        $label     = $category ? ucfirst($category) . ' Constants' : 'Constants';
         $constants = $this->prepareConstants($this->getConstants($category));
 
         if (empty($constants)) {
@@ -91,7 +91,7 @@ class ConstantEnumerator extends Enumerator
         foreach ($names as $name) {
             if ($this->showItem($name)) {
                 $ret[$name] = array(
-                    'name' => $name,
+                    'name'  => $name,
                     'style' => self::IS_CONSTANT,
                     'value' => $this->presentRef($constants[$name]),
                 );

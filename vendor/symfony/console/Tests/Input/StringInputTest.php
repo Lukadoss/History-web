@@ -75,12 +75,12 @@ class StringInputTest extends \PHPUnit_Framework_TestCase
     public function testToString()
     {
         $input = new StringInput('-f foo');
-        $this->assertEquals('-f foo', (string)$input);
+        $this->assertEquals('-f foo', (string) $input);
 
         $input = new StringInput('-f --bar=foo "a b c d"');
-        $this->assertEquals('-f --bar=foo ' . escapeshellarg('a b c d'), (string)$input);
+        $this->assertEquals('-f --bar=foo '.escapeshellarg('a b c d'), (string) $input);
 
-        $input = new StringInput('-f --bar=foo \'a b c d\' ' . "'A\nB\\'C'");
-        $this->assertEquals('-f --bar=foo ' . escapeshellarg('a b c d') . ' ' . escapeshellarg("A\nB'C"), (string)$input);
+        $input = new StringInput('-f --bar=foo \'a b c d\' '."'A\nB\\'C'");
+        $this->assertEquals('-f --bar=foo '.escapeshellarg('a b c d').' '.escapeshellarg("A\nB'C"), (string) $input);
     }
 }

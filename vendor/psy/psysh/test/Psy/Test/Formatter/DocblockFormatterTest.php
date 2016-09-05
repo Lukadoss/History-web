@@ -23,7 +23,7 @@ class DocblockFormatterTest extends \PHPUnit_Framework_TestCase
      * @throws InvalidArgumentException if $foo is empty.
      *
      * @param mixed $foo It's a foo thing.
-     * @param int $bar This is definitely bar.
+     * @param int   $bar This is definitely bar.
      *
      * @return string A string of no consequence.
      */

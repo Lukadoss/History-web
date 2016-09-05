@@ -17,6 +17,8 @@ class FilesystemTestCase extends \PHPUnit_Framework_TestCase
 {
     private $umask;
 
+    protected $longPathNamesWindows = array();
+
     /**
      * @var \Symfony\Component\Filesystem\Filesystem
      */
@@ -33,10 +35,9 @@ class FilesystemTestCase extends \PHPUnit_Framework_TestCase
     {
         if ('\\' === DIRECTORY_SEPARATOR && null === self::$symlinkOnWindows) {
             $target = tempnam(sys_get_temp_dir(), 'sl');
-            $link = sys_get_temp_dir() . '/sl' . microtime(true) . mt_rand();
-            if (self::$symlinkOnWindows = @symlink($target, $link)) {
-                unlink($link);
-            }
+            $link = sys_get_temp_dir().'/sl'.microtime(true).mt_rand();
+            self::$symlinkOnWindows = @symlink($target, $link) && is_link($link);
+            @unlink($link);
             unlink($target);
         }
     }
@@ -44,25 +45,32 @@ class FilesystemTestCase extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $this->umask = umask(0);
-        $this->workspace = rtrim(sys_get_temp_dir(), DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . time() . mt_rand(0, 1000);
+        $this->filesystem = new Filesystem();
+        $this->workspace = sys_get_temp_dir().'/'.microtime(true).'.'.mt_rand();
         mkdir($this->workspace, 0777, true);
         $this->workspace = realpath($this->workspace);
-        $this->filesystem = new Filesystem();
     }
 
     protected function tearDown()
     {
+        if (!empty($this->longPathNamesWindows)) {
+            foreach ($this->longPathNamesWindows as $path) {
+                exec('DEL '.$path);
+            }
+            $this->longPathNamesWindows = array();
+        }
+
         $this->filesystem->remove($this->workspace);
         umask($this->umask);
     }
 
     /**
-     * @param int $expectedFilePerms expected file permissions as three digits (i.e. 755)
+     * @param int    $expectedFilePerms expected file permissions as three digits (i.e. 755)
      * @param string $filePath
      */
     protected function assertFilePermissions($expectedFilePerms, $filePath)
     {
-        $actualFilePerms = (int)substr(sprintf('%o', fileperms($filePath)), -3);
+        $actualFilePerms = (int) substr(sprintf('%o', fileperms($filePath)), -3);
         $this->assertEquals(
             $expectedFilePerms,
             $actualFilePerms,
@@ -94,10 +102,6 @@ class FilesystemTestCase extends \PHPUnit_Framework_TestCase
 
     protected function markAsSkippedIfSymlinkIsMissing($relative = false)
     {
-        if (!function_exists('symlink')) {
-            $this->markTestSkipped('Function symlink is required.');
-        }
-
         if ('\\' === DIRECTORY_SEPARATOR && false === self::$symlinkOnWindows) {
             $this->markTestSkipped('symlink requires "Create symbolic links" privilege on Windows');
         }

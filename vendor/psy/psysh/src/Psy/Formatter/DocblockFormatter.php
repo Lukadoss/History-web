@@ -21,7 +21,7 @@ class DocblockFormatter implements Formatter
 {
     private static $vectorParamTemplates = array(
         'type' => 'info',
-        'var' => 'strong',
+        'var'  => 'strong',
     );
 
     /**
@@ -34,7 +34,7 @@ class DocblockFormatter implements Formatter
     public static function format(\Reflector $reflector)
     {
         $docblock = new Docblock($reflector);
-        $chunks = array();
+        $chunks   = array();
 
         if (!empty($docblock->desc)) {
             $chunks[] = '<comment>Description:</comment>';
@@ -126,7 +126,7 @@ class DocblockFormatter implements Formatter
      * Get a docblock vector template.
      *
      * @param string $type Vector type
-     * @param int $max Pad width
+     * @param int    $max  Pad width
      *
      * @return string
      */
@@ -142,7 +142,7 @@ class DocblockFormatter implements Formatter
     /**
      * Indent a string.
      *
-     * @param string $text String to indent
+     * @param string $text   String to indent
      * @param string $indent (default: '  ')
      *
      * @return string

@@ -44,7 +44,7 @@ abstract class ParserAbstract implements Parser
 
     /** @var array Map of states to a displacement into the $action table. The corresponding action for this
      *             state/symbol pair is $action[$actionBase[$state] + $symbol]. If $actionBase[$state] is 0, the
-     * action is defaulted, i.e. $actionDefault[$state] should be used instead. */
+                   action is defaulted, i.e. $actionDefault[$state] should be used instead. */
     protected $actionBase;
     /** @var array Table of actions. Indexed according to $actionBase comment. */
     protected $action;
@@ -88,6 +88,8 @@ abstract class ParserAbstract implements Parser
     protected $startAttributeStack;
     /** @var array End attributes of last *shifted* token */
     protected $endAttributes;
+    /** @var array Start attributes of last *read* token */
+    protected $lookaheadStartAttributes;
 
     /** @var bool Whether to throw on first error */
     protected $throwOnError;
@@ -102,8 +104,7 @@ abstract class ParserAbstract implements Parser
      *                       thrown on first error, or if the parser should try to continue parsing the remaining code
      *                       and build a partial AST.
      */
-    public function __construct(Lexer $lexer, array $options = array())
-    {
+    public function __construct(Lexer $lexer, array $options = array()) {
         $this->lexer = $lexer;
         $this->errors = array();
         $this->throwOnError = isset($options['throwOnError']) ? $options['throwOnError'] : true;
@@ -116,8 +117,7 @@ abstract class ParserAbstract implements Parser
      *
      * @return Error[]
      */
-    public function getErrors()
-    {
+    public function getErrors() {
         return $this->errors;
     }
 
@@ -129,8 +129,7 @@ abstract class ParserAbstract implements Parser
      * @return Node[]|null Array of statements (or null if the 'throwOnError' option is disabled and the parser was
      *                     unable to recover from an error).
      */
-    public function parse($code)
-    {
+    public function parse($code) {
         $this->lexer->startLexing($code);
         $this->errors = array();
 
@@ -160,7 +159,7 @@ abstract class ParserAbstract implements Parser
 
         $errorState = 0;
 
-        for (; ;) {
+        for (;;) {
             //$this->traceNewState($state, $symbol);
 
             if ($this->actionBase[$state] == 0) {
@@ -187,18 +186,18 @@ abstract class ParserAbstract implements Parser
 
                     // This is necessary to assign some meaningful attributes to /* empty */ productions. They'll get
                     // the attributes of the next token, even though they don't contain it themselves.
-                    $this->startAttributeStack[$this->stackPos + 1] = $startAttributes;
+                    $this->startAttributeStack[$this->stackPos+1] = $startAttributes;
+                    $this->lookaheadStartAttributes = $startAttributes;
 
                     //$this->traceRead($symbol);
                 }
 
                 $idx = $this->actionBase[$state] + $symbol;
                 if ((($idx >= 0 && $idx < $this->actionTableSize && $this->actionCheck[$idx] == $symbol)
-                        || ($state < $this->YY2TBLSTATE
-                            && ($idx = $this->actionBase[$state + $this->YYNLSTATES] + $symbol) >= 0
-                            && $idx < $this->actionTableSize && $this->actionCheck[$idx] == $symbol))
-                    && ($action = $this->action[$idx]) != $this->defaultAction
-                ) {
+                     || ($state < $this->YY2TBLSTATE
+                         && ($idx = $this->actionBase[$state + $this->YYNLSTATES] + $symbol) >= 0
+                         && $idx < $this->actionTableSize && $this->actionCheck[$idx] == $symbol))
+                    && ($action = $this->action[$idx]) != $this->defaultAction) {
                     /*
                      * >= YYNLSTATES: shift and reduce
                      * > 0: shift
@@ -235,7 +234,7 @@ abstract class ParserAbstract implements Parser
                 }
             }
 
-            for (; ;) {
+            for (;;) {
                 if ($rule === 0) {
                     /* accept */
                     //$this->traceAccept();
@@ -271,7 +270,7 @@ abstract class ParserAbstract implements Parser
                     }
 
                     ++$this->stackPos;
-                    $stateStack[$this->stackPos] = $state;
+                    $stateStack[$this->stackPos]     = $state;
                     $this->semStack[$this->stackPos] = $this->semValue;
                 } else {
                     /* error */
@@ -283,19 +282,19 @@ abstract class ParserAbstract implements Parser
                             if ($this->throwOnError) {
                                 throw $error;
                             }
-                        // Break missing intentionally
+                            // Break missing intentionally
                         case 1:
                         case 2:
                             $errorState = 3;
 
                             // Pop until error-expecting state uncovered
                             while (!(
-                                    (($idx = $this->actionBase[$state] + $this->errorSymbol) >= 0
-                                        && $idx < $this->actionTableSize && $this->actionCheck[$idx] == $this->errorSymbol)
-                                    || ($state < $this->YY2TBLSTATE
-                                        && ($idx = $this->actionBase[$state + $this->YYNLSTATES] + $this->errorSymbol) >= 0
-                                        && $idx < $this->actionTableSize && $this->actionCheck[$idx] == $this->errorSymbol)
-                                ) || ($action = $this->action[$idx]) == $this->defaultAction) { // Not totally sure about this
+                                (($idx = $this->actionBase[$state] + $this->errorSymbol) >= 0
+                                    && $idx < $this->actionTableSize && $this->actionCheck[$idx] == $this->errorSymbol)
+                                || ($state < $this->YY2TBLSTATE
+                                    && ($idx = $this->actionBase[$state + $this->YYNLSTATES] + $this->errorSymbol) >= 0
+                                    && $idx < $this->actionTableSize && $this->actionCheck[$idx] == $this->errorSymbol)
+                            ) || ($action = $this->action[$idx]) == $this->defaultAction) { // Not totally sure about this
                                 if ($this->stackPos <= 0) {
                                     // Could not recover from error
                                     return null;
@@ -332,8 +331,7 @@ abstract class ParserAbstract implements Parser
         throw new \RuntimeException('Reached end of parser loop');
     }
 
-    protected function getErrorMessage($symbol, $state)
-    {
+    protected function getErrorMessage($symbol, $state) {
         $expectedString = '';
         if ($expected = $this->getExpectedTokens($state)) {
             $expectedString = ', expecting ' . implode(' or ', $expected);
@@ -342,8 +340,7 @@ abstract class ParserAbstract implements Parser
         return 'Syntax error, unexpected ' . $this->symbolToName[$symbol] . $expectedString;
     }
 
-    protected function getExpectedTokens($state)
-    {
+    protected function getExpectedTokens($state) {
         $expected = array();
 
         $base = $this->actionBase[$state];
@@ -413,8 +410,7 @@ abstract class ParserAbstract implements Parser
      * @param Node[] $stmts
      * @return Node[]
      */
-    protected function handleNamespaces(array $stmts)
-    {
+    protected function handleNamespaces(array $stmts) {
         $style = $this->getNamespacingStyle($stmts);
         if (null === $style) {
             // not namespaced, nothing to do
@@ -450,11 +446,10 @@ abstract class ParserAbstract implements Parser
         }
     }
 
-    private function getNamespacingStyle(array $stmts)
-    {
+    private function getNamespacingStyle(array $stmts) {
         $style = null;
         $hasNotAllowedStmts = false;
-        foreach ($stmts as $stmt) {
+        foreach ($stmts as $i => $stmt) {
             if ($stmt instanceof Node\Stmt\Namespace_) {
                 $currentStyle = null === $stmt->stmts ? 'semicolon' : 'brace';
                 if (null === $style) {
@@ -465,19 +460,32 @@ abstract class ParserAbstract implements Parser
                 } elseif ($style !== $currentStyle) {
                     throw new Error('Cannot mix bracketed namespace declarations with unbracketed namespace declarations', $stmt->getLine());
                 }
-            } elseif (!$stmt instanceof Node\Stmt\Declare_ && !$stmt instanceof Node\Stmt\HaltCompiler) {
-                $hasNotAllowedStmts = true;
+                continue;
             }
+
+            /* declare(), __halt_compiler() and nops can be used before a namespace declaration */
+            if ($stmt instanceof Node\Stmt\Declare_
+                || $stmt instanceof Node\Stmt\HaltCompiler
+                || $stmt instanceof Node\Stmt\Nop) {
+                continue;
+            }
+
+            /* There may be a hashbang line at the very start of the file */
+            if ($i == 0 && $stmt instanceof Node\Stmt\InlineHTML && preg_match('/\A#!.*\r?\n\z/', $stmt->value)) {
+                continue;
+            }
+
+            /* Everything else if forbidden before namespace declarations */
+            $hasNotAllowedStmts = true;
         }
         return $style;
     }
 
-    protected function handleScalarTypes(Name $name)
-    {
+    protected function handleScalarTypes(Name $name) {
         $scalarTypes = [
-            'bool' => true,
-            'int' => true,
-            'float' => true,
+            'bool'   => true,
+            'int'    => true,
+            'float'  => true,
             'string' => true,
         ];
 

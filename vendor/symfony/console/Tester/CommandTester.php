@@ -32,7 +32,7 @@ class CommandTester
     /**
      * Constructor.
      *
-     * @param Command $command A Command instance to test.
+     * @param Command $command A Command instance to test
      */
     public function __construct(Command $command)
     {
@@ -48,7 +48,7 @@ class CommandTester
      *  * decorated:   Sets the output decorated flag
      *  * verbosity:   Sets the output verbosity flag
      *
-     * @param array $input An array of command arguments and options
+     * @param array $input   An array of command arguments and options
      * @param array $options An array of execution options
      *
      * @return int The command exit code

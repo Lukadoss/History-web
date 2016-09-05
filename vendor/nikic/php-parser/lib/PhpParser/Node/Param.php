@@ -21,15 +21,14 @@ class Param extends NodeAbstract
     /**
      * Constructs a parameter node.
      *
-     * @param string $name Name
-     * @param null|Expr $default Default value
-     * @param null|string|Name $type Typehint
-     * @param bool $byRef Whether is passed by reference
-     * @param bool $variadic Whether this is a variadic argument
-     * @param array $attributes Additional attributes
+     * @param string           $name       Name
+     * @param null|Expr        $default    Default value
+     * @param null|string|Name $type       Typehint
+     * @param bool             $byRef      Whether is passed by reference
+     * @param bool             $variadic   Whether this is a variadic argument
+     * @param array            $attributes Additional attributes
      */
-    public function __construct($name, Expr $default = null, $type = null, $byRef = false, $variadic = false, array $attributes = array())
-    {
+    public function __construct($name, Expr $default = null, $type = null, $byRef = false, $variadic = false, array $attributes = array()) {
         parent::__construct($attributes);
         $this->type = $type;
         $this->byRef = $byRef;
@@ -42,8 +41,7 @@ class Param extends NodeAbstract
         }
     }
 
-    public function getSubNodeNames()
-    {
+    public function getSubNodeNames() {
         return array('type', 'byRef', 'variadic', 'name', 'default');
     }
 }

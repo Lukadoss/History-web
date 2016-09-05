@@ -30,7 +30,7 @@ $this->start('file');
     in one of the following paths:
 </p>
 <ul>
-    <?php
+<?php
     $paths = $this->_paths($this->plugin);
     foreach ($paths as $path):
         if (strpos($path, CORE_PATH) !== false) {
@@ -38,6 +38,6 @@ $this->start('file');
         }
         echo sprintf('<li>%sCell/%s/%s</li>', h($path), h($name), h($file . $this->_ext));
     endforeach;
-    ?>
+?>
 </ul>
 <?php $this->end(); ?>

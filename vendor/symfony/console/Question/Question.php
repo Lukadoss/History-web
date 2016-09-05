@@ -34,7 +34,7 @@ class Question
      * Constructor.
      *
      * @param string $question The question to ask to the user
-     * @param mixed $default The default answer to return if the user enters nothing
+     * @param mixed  $default  The default answer to return if the user enters nothing
      */
     public function __construct($question, $default = null)
     {
@@ -87,7 +87,7 @@ class Question
             throw new LogicException('A hidden question cannot use the autocompleter.');
         }
 
-        $this->hidden = (bool)$hidden;
+        $this->hidden = (bool) $hidden;
 
         return $this;
     }
@@ -111,7 +111,7 @@ class Question
      */
     public function setHiddenFallback($fallback)
     {
-        $this->hiddenFallback = (bool)$fallback;
+        $this->hiddenFallback = (bool) $fallback;
 
         return $this;
     }
@@ -138,12 +138,12 @@ class Question
      */
     public function setAutocompleterValues($values)
     {
-        if (is_array($values) && $this->isAssoc($values)) {
-            $values = array_merge(array_keys($values), array_values($values));
+        if (is_array($values)) {
+            $values = $this->isAssoc($values) ? array_merge(array_keys($values), array_values($values)) : array_values($values);
         }
 
         if (null !== $values && !is_array($values)) {
-            if (!$values instanceof \Traversable || $values instanceof \Countable) {
+            if (!$values instanceof \Traversable || !$values instanceof \Countable) {
                 throw new InvalidArgumentException('Autocompleter values can be either an array, `null` or an object implementing both `Countable` and `Traversable` interfaces.');
             }
         }
@@ -245,6 +245,6 @@ class Question
 
     protected function isAssoc($array)
     {
-        return (bool)count(array_filter(array_keys($array), 'is_string'));
+        return (bool) count(array_filter(array_keys($array), 'is_string'));
     }
 }

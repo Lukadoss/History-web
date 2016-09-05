@@ -12,7 +12,6 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 use DebugKit\Log\DebugKitLog;
-
 ?>
 <?php if ($logger->noLogs()): ?>
     <p class="info"><?= __d('debug_kit', 'There were no log entries made this request') ?></p>
@@ -21,10 +20,10 @@ use DebugKit\Log\DebugKitLog;
         <h3><?= __d('debug_kit', '{0} Messages', h(ucfirst($logName))) ?> </h3>
         <table cellspacing="0" cellpadding="0" class="debug-table">
             <thead>
-            <tr>
-                <th><?= __d('debug_kit', 'Time') ?></th>
-                <th><?= __d('debug_kit', 'Message') ?></th>
-            </tr>
+                <tr>
+                    <th><?= __d('debug_kit', 'Time') ?></th>
+                    <th><?= __d('debug_kit', 'Message') ?></th>
+                </tr>
             </thead>
             <tbody>
             <?php foreach ($logs as $log): ?>

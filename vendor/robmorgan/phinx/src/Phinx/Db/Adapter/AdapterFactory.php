@@ -63,8 +63,8 @@ class AdapterFactory
      * @var array
      */
     protected $adapters = array(
-        'mysql' => 'Phinx\Db\Adapter\MysqlAdapter',
-        'pgsql' => 'Phinx\Db\Adapter\PostgresAdapter',
+        'mysql'  => 'Phinx\Db\Adapter\MysqlAdapter',
+        'pgsql'  => 'Phinx\Db\Adapter\PostgresAdapter',
         'sqlite' => 'Phinx\Db\Adapter\SQLiteAdapter',
         'sqlsrv' => 'Phinx\Db\Adapter\SqlServerAdapter',
     );
@@ -76,7 +76,7 @@ class AdapterFactory
      */
     protected $wrappers = array(
         'prefix' => 'Phinx\Db\Adapter\TablePrefixAdapter',
-        'proxy' => 'Phinx\Db\Adapter\ProxyAdapter',
+        'proxy'  => 'Phinx\Db\Adapter\ProxyAdapter',
     );
 
     /**
@@ -121,7 +121,7 @@ class AdapterFactory
      * Get an adapter instance by name.
      *
      * @param  string $name
-     * @param  array $options
+     * @param  array  $options
      * @return AdapterInterface
      */
     public function getAdapter($name, array $options)

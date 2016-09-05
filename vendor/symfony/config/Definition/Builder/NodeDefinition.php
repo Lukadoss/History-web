@@ -42,7 +42,7 @@ abstract class NodeDefinition implements NodeParentInterface
     /**
      * Constructor.
      *
-     * @param string $name The name of the node
+     * @param string                   $name   The name of the node
      * @param NodeParentInterface|null $parent The parent
      */
     public function __construct($name, NodeParentInterface $parent = null)
@@ -93,7 +93,7 @@ abstract class NodeDefinition implements NodeParentInterface
      * Sets an attribute on the node.
      *
      * @param string $key
-     * @param mixed $value
+     * @param mixed  $value
      *
      * @return NodeDefinition|$this
      */

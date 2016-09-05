@@ -15,12 +15,11 @@ class Property extends Node\Stmt
     /**
      * Constructs a class property list node.
      *
-     * @param int $type Modifiers
-     * @param PropertyProperty[] $props Properties
-     * @param array $attributes Additional attributes
+     * @param int                $type       Modifiers
+     * @param PropertyProperty[] $props      Properties
+     * @param array              $attributes Additional attributes
      */
-    public function __construct($type, array $props, array $attributes = array())
-    {
+    public function __construct($type, array $props, array $attributes = array()) {
         if ($type & Class_::MODIFIER_ABSTRACT) {
             throw new Error('Properties cannot be declared abstract');
         }
@@ -34,29 +33,24 @@ class Property extends Node\Stmt
         $this->props = $props;
     }
 
-    public function getSubNodeNames()
-    {
+    public function getSubNodeNames() {
         return array('type', 'props');
     }
 
-    public function isPublic()
-    {
+    public function isPublic() {
         return ($this->type & Class_::MODIFIER_PUBLIC) !== 0
-        || ($this->type & Class_::VISIBILITY_MODIFER_MASK) === 0;
+            || ($this->type & Class_::VISIBILITY_MODIFER_MASK) === 0;
     }
 
-    public function isProtected()
-    {
-        return (bool)($this->type & Class_::MODIFIER_PROTECTED);
+    public function isProtected() {
+        return (bool) ($this->type & Class_::MODIFIER_PROTECTED);
     }
 
-    public function isPrivate()
-    {
-        return (bool)($this->type & Class_::MODIFIER_PRIVATE);
+    public function isPrivate() {
+        return (bool) ($this->type & Class_::MODIFIER_PRIVATE);
     }
 
-    public function isStatic()
-    {
-        return (bool)($this->type & Class_::MODIFIER_STATIC);
+    public function isStatic() {
+        return (bool) ($this->type & Class_::MODIFIER_STATIC);
     }
 }

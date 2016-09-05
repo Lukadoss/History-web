@@ -1,2 +1,6 @@
-<div class="alert alert-success text-center" onclick="this.classList.add('hidden')"><?= $message ?></div>
-<!-- h($message) for msg escaping -->
+<?php
+if (!isset($params['escape']) || $params['escape'] !== false) {
+    $message = h($message);
+}
+?>
+<div class="message success" onclick="this.classList.add('hidden')"><?= $message ?></div>

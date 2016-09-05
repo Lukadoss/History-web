@@ -80,7 +80,7 @@ class GlobalVariableEnumerator extends Enumerator
             if ($this->showItem($name)) {
                 $fname = '$' . $name;
                 $ret[$fname] = array(
-                    'name' => $fname,
+                    'name'  => $fname,
                     'style' => self::IS_GLOBAL,
                     'value' => $this->presentRef($value),
                 );

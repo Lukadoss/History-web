@@ -72,13 +72,13 @@ trait ExtractTrait
             }
 
             if ($collectionTransform &&
-                !($data instanceof Traversable || is_array($data))
-            ) {
+                !($data instanceof Traversable || is_array($data))) {
                 return null;
             }
 
             if ($collectionTransform) {
                 $rest = implode('.', array_slice($path, $i));
+
                 return (new Collection($data))->extract($rest);
             }
 
@@ -89,6 +89,7 @@ trait ExtractTrait
             $value = $data[$column];
             $data = $value;
         }
+
         return $value;
     }
 
@@ -110,6 +111,7 @@ trait ExtractTrait
             $value = $data[$column];
             $data = $value;
         }
+
         return $value;
     }
 
@@ -138,6 +140,7 @@ trait ExtractTrait
                     return false;
                 }
             }
+
             return true;
         };
     }

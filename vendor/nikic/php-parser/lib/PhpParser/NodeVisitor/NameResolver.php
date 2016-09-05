@@ -18,13 +18,11 @@ class NameResolver extends NodeVisitorAbstract
     /** @var array Map of format [aliasType => [aliasName => originalName]] */
     protected $aliases;
 
-    public function beforeTraverse(array $nodes)
-    {
+    public function beforeTraverse(array $nodes) {
         $this->resetState();
     }
 
-    public function enterNode(Node $node)
-    {
+    public function enterNode(Node $node) {
         if ($node instanceof Stmt\Namespace_) {
             $this->resetState($node->name);
         } elseif ($node instanceof Stmt\Use_) {
@@ -59,7 +57,7 @@ class NameResolver extends NodeVisitorAbstract
             $this->addNamespacedName($node);
             $this->resolveSignature($node);
         } elseif ($node instanceof Stmt\ClassMethod
-            || $node instanceof Expr\Closure
+                  || $node instanceof Expr\Closure
         ) {
             $this->resolveSignature($node);
         } elseif ($node instanceof Stmt\Const_) {
@@ -67,10 +65,10 @@ class NameResolver extends NodeVisitorAbstract
                 $this->addNamespacedName($const);
             }
         } elseif ($node instanceof Expr\StaticCall
-            || $node instanceof Expr\StaticPropertyFetch
-            || $node instanceof Expr\ClassConstFetch
-            || $node instanceof Expr\New_
-            || $node instanceof Expr\Instanceof_
+                  || $node instanceof Expr\StaticPropertyFetch
+                  || $node instanceof Expr\ClassConstFetch
+                  || $node instanceof Expr\New_
+                  || $node instanceof Expr\Instanceof_
         ) {
             if ($node->class instanceof Name) {
                 $node->class = $this->resolveClassName($node->class);
@@ -103,18 +101,16 @@ class NameResolver extends NodeVisitorAbstract
         }
     }
 
-    protected function resetState(Name $namespace = null)
-    {
+    protected function resetState(Name $namespace = null) {
         $this->namespace = $namespace;
-        $this->aliases = array(
-            Stmt\Use_::TYPE_NORMAL => array(),
+        $this->aliases   = array(
+            Stmt\Use_::TYPE_NORMAL   => array(),
             Stmt\Use_::TYPE_FUNCTION => array(),
             Stmt\Use_::TYPE_CONSTANT => array(),
         );
     }
 
-    protected function addAlias(Stmt\UseUse $use, $type, Name $prefix = null)
-    {
+    protected function addAlias(Stmt\UseUse $use, $type, Name $prefix = null) {
         // Add prefix for group uses
         $name = $prefix ? Name::concat($prefix, $use->name) : $use->name;
         // Type is determined either by individual element or whole use declaration
@@ -129,7 +125,7 @@ class NameResolver extends NodeVisitorAbstract
 
         if (isset($this->aliases[$type][$aliasName])) {
             $typeStringMap = array(
-                Stmt\Use_::TYPE_NORMAL => '',
+                Stmt\Use_::TYPE_NORMAL   => '',
                 Stmt\Use_::TYPE_FUNCTION => 'function ',
                 Stmt\Use_::TYPE_CONSTANT => 'const ',
             );
@@ -147,8 +143,7 @@ class NameResolver extends NodeVisitorAbstract
     }
 
     /** @param Stmt\Function_|Stmt\ClassMethod|Expr\Closure $node */
-    private function resolveSignature($node)
-    {
+    private function resolveSignature($node) {
         foreach ($node->params as $param) {
             if ($param->type instanceof Name) {
                 $param->type = $this->resolveClassName($param->type);
@@ -159,8 +154,7 @@ class NameResolver extends NodeVisitorAbstract
         }
     }
 
-    protected function resolveClassName(Name $name)
-    {
+    protected function resolveClassName(Name $name) {
         // don't resolve special class names
         if (in_array(strtolower($name->toString()), array('self', 'parent', 'static'))) {
             if (!$name->isUnqualified()) {
@@ -193,8 +187,7 @@ class NameResolver extends NodeVisitorAbstract
         return new FullyQualified($name->parts, $name->getAttributes());
     }
 
-    protected function resolveOtherName(Name $name, $type)
-    {
+    protected function resolveOtherName(Name $name, $type) {
         // fully qualified names are already resolved
         if ($name->isFullyQualified()) {
             return $name;
@@ -230,8 +223,7 @@ class NameResolver extends NodeVisitorAbstract
         return new FullyQualified($name->parts, $name->getAttributes());
     }
 
-    protected function addNamespacedName(Node $node)
-    {
+    protected function addNamespacedName(Node $node) {
         if (null !== $this->namespace) {
             $node->namespacedName = Name::concat($this->namespace, $node->name);
         } else {

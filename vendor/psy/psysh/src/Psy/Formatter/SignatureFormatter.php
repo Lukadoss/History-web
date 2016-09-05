@@ -236,23 +236,23 @@ class SignatureFormatter implements Formatter
                 // come to think of it, the only time I've seen this is with the intl extension.
 
                 // Hax: we'll try to extract it :P
-                $chunks = explode('$' . $param->getName(), (string)$param);
+                $chunks = explode('$' . $param->getName(), (string) $param);
                 $chunks = explode(' ', trim($chunks[0]));
-                $guess = end($chunks);
+                $guess  = end($chunks);
 
                 $hint = sprintf('<urgent>%s</urgent> ', $guess);
             }
 
             if ($param->isOptional()) {
                 if (!$param->isDefaultValueAvailable()) {
-                    $value = 'unknown';
+                    $value     = 'unknown';
                     $typeStyle = 'urgent';
                 } else {
-                    $value = $param->getDefaultValue();
+                    $value     = $param->getDefaultValue();
                     $typeStyle = self::getTypeStyle($value);
-                    $value = is_array($value) ? 'array()' : is_null($value) ? 'null' : var_export($value, true);
+                    $value     = is_array($value) ? 'array()' : is_null($value) ? 'null' : var_export($value, true);
                 }
-                $default = sprintf(' = <%s>%s</%s>', $typeStyle, OutputFormatter::escape($value), $typeStyle);
+                $default   = sprintf(' = <%s>%s</%s>', $typeStyle, OutputFormatter::escape($value), $typeStyle);
             } else {
                 $default = '';
             }

@@ -14,6 +14,7 @@
  */
 namespace Cake\ORM;
 
+use Cake\Collection\Collection;
 use Cake\Core\ConventionsTrait;
 use Cake\Database\Expression\IdentifierExpression;
 use Cake\Datasource\EntityInterface;
@@ -27,6 +28,7 @@ use RuntimeException;
  * An Association is a relationship established between two tables and is used
  * to configure and customize the way interconnected records are retrieved.
  *
+ * @mixin \Cake\ORM\Table
  */
 abstract class Association
 {
@@ -132,7 +134,7 @@ abstract class Association
     /**
      * Whether or not cascaded deletes should also fire callbacks.
      *
-     * @var string
+     * @var bool
      */
     protected $_cascadeCallbacks = false;
 
@@ -242,6 +244,7 @@ abstract class Association
         if ($name !== null) {
             $this->_name = $name;
         }
+
         return $this->_name;
     }
 
@@ -257,7 +260,18 @@ abstract class Association
         if ($cascadeCallbacks !== null) {
             $this->_cascadeCallbacks = $cascadeCallbacks;
         }
+
         return $this->_cascadeCallbacks;
+    }
+
+    /**
+     * The class name of the target table object
+     *
+     * @return string
+     */
+    public function className()
+    {
+        return $this->_className;
     }
 
     /**
@@ -272,6 +286,7 @@ abstract class Association
         if ($table === null) {
             return $this->_sourceTable;
         }
+
         return $this->_sourceTable = $table;
     }
 
@@ -323,6 +338,7 @@ abstract class Association
         if ($conditions !== null) {
             $this->_conditions = $conditions;
         }
+
         return $this->_conditions;
     }
 
@@ -362,6 +378,7 @@ abstract class Association
         if ($key !== null) {
             $this->_foreignKey = $key;
         }
+
         return $this->_foreignKey;
     }
 
@@ -381,6 +398,7 @@ abstract class Association
         if ($dependent !== null) {
             $this->_dependent = $dependent;
         }
+
         return $this->_dependent;
     }
 
@@ -393,6 +411,7 @@ abstract class Association
     public function canBeJoined(array $options = [])
     {
         $strategy = isset($options['strategy']) ? $options['strategy'] : $this->strategy();
+
         return $strategy == $this::STRATEGY_JOIN;
     }
 
@@ -400,7 +419,7 @@ abstract class Association
      * Sets the type of join to be used when adding the association to a query.
      * If no arguments are passed, the currently configured type is returned.
      *
-     * @param string $type the join type to be used (e.g. INNER)
+     * @param string|null $type the join type to be used (e.g. INNER)
      * @return string
      */
     public function joinType($type = null)
@@ -408,6 +427,7 @@ abstract class Association
         if ($type === null) {
             return $this->_joinType;
         }
+
         return $this->_joinType = $type;
     }
 
@@ -425,10 +445,30 @@ abstract class Association
             $this->_propertyName = $name;
         }
         if ($name === null && !$this->_propertyName) {
-            list(, $name) = pluginSplit($this->_name);
-            $this->_propertyName = Inflector::underscore($name);
+            $this->_propertyName = $this->_propertyName();
+            if (in_array($this->_propertyName, $this->_sourceTable->schema()->columns())) {
+                $msg = 'Association property name "%s" clashes with field of same name of table "%s".' .
+                    ' You should explicitly specify the "propertyName" option.';
+                trigger_error(
+                    sprintf($msg, $this->_propertyName, $this->_sourceTable->table()),
+                    E_USER_WARNING
+                );
+            }
         }
+
         return $this->_propertyName;
+    }
+
+    /**
+     * Returns default property name based on association name.
+     *
+     * @return string
+     */
+    protected function _propertyName()
+    {
+        list(, $name) = pluginSplit($this->_name);
+
+        return Inflector::underscore($name);
     }
 
     /**
@@ -451,6 +491,7 @@ abstract class Association
             }
             $this->_strategy = $name;
         }
+
         return $this->_strategy;
     }
 
@@ -467,6 +508,7 @@ abstract class Association
         if ($finder !== null) {
             $this->_finder = $finder;
         }
+
         return $this->_finder;
     }
 
@@ -514,13 +556,15 @@ abstract class Association
     {
         $target = $this->target();
         $joinType = empty($options['joinType']) ? $this->joinType() : $options['joinType'];
+        $table = $target->table();
+
         $options += [
             'includeFields' => true,
             'foreignKey' => $this->foreignKey(),
             'conditions' => [],
             'fields' => [],
             'type' => $joinType,
-            'table' => $target->table(),
+            'table' => $table,
             'finder' => $this->finder()
         ];
 
@@ -535,6 +579,7 @@ abstract class Association
         $dummy = $this
             ->find($finder, $opts)
             ->eagerLoaded(true);
+
         if (!empty($options['queryBuilder'])) {
             $dummy = $options['queryBuilder']($dummy);
             if (!($dummy instanceof Query)) {
@@ -573,6 +618,7 @@ abstract class Association
             $primaryKey = $query->aliasFields((array)$target->primaryKey(), $this->_name);
             $query->andWhere(function ($exp) use ($primaryKey) {
                 array_map([$exp, 'isNull'], $primaryKey);
+
                 return $exp;
             });
         }
@@ -587,16 +633,20 @@ abstract class Association
      *   should be found
      * @param bool $joined Whether or not the row is a result of a direct join
      *   with this association
+     * @param string $targetProperty The property name in the source results where the association
+     * data shuld be nested in. Will use the default one if not provided.
      * @return array
      */
-    public function transformRow($row, $nestKey, $joined)
+    public function transformRow($row, $nestKey, $joined, $targetProperty = null)
     {
         $sourceAlias = $this->source()->alias();
         $nestKey = $nestKey ?: $this->_name;
+        $targetProperty = $targetProperty ?: $this->property();
         if (isset($row[$sourceAlias])) {
-            $row[$sourceAlias][$this->property()] = $row[$nestKey];
+            $row[$sourceAlias][$targetProperty] = $row[$nestKey];
             unset($row[$nestKey]);
         }
+
         return $row;
     }
 
@@ -616,6 +666,7 @@ abstract class Association
         if (isset($row[$sourceAlias])) {
             $row[$sourceAlias][$this->property()] = null;
         }
+
         return $row;
     }
 
@@ -624,7 +675,7 @@ abstract class Association
      * and modifies the query accordingly based of this association
      * configuration
      *
-     * @param string|array $type the type of query to perform, if an array is passed,
+     * @param string|array|null $type the type of query to perform, if an array is passed,
      *   it will be interpreted as the `$options` parameter
      * @param array $options The options to for the find
      * @see \Cake\ORM\Table::find()
@@ -634,9 +685,30 @@ abstract class Association
     {
         $type = $type ?: $this->finder();
         list($type, $opts) = $this->_extractFinder($type);
+
         return $this->target()
             ->find($type, $options + $opts)
             ->where($this->conditions());
+    }
+
+    /**
+     * Proxies the operation to the target table's exists method after
+     * appending the default conditions for this association
+     *
+     * @param array|callable|ExpressionInterface $conditions The conditions to use
+     * for checking if any record matches.
+     * @see \Cake\ORM\Table::exists()
+     * @return bool
+     */
+    public function exists($conditions)
+    {
+        if (!empty($this->_conditions)) {
+            $conditions = $this
+                ->find('all', ['conditions' => $conditions])
+                ->clause('where');
+        }
+
+        return $this->target()->exists($conditions);
     }
 
     /**
@@ -655,6 +727,7 @@ abstract class Association
             ->where($this->conditions())
             ->where($conditions)
             ->clause('where');
+
         return $target->updateAll($fields, $expression);
     }
 
@@ -673,6 +746,7 @@ abstract class Association
             ->where($this->conditions())
             ->where($conditions)
             ->clause('where');
+
         return $target->deleteAll($expression);
     }
 
@@ -745,11 +819,24 @@ abstract class Association
         }
 
         $property = $options['propertyPath'];
-        $query->formatResults(function ($results) use ($formatters, $property) {
-            $extracted = $results->extract($property)->compile();
+        $propertyPath = explode('.', $property);
+        $query->formatResults(function ($results) use ($formatters, $property, $propertyPath) {
+            $extracted = [];
+            foreach ($results as $result) {
+                foreach ($propertyPath as $propertyPathItem) {
+                    if (!isset($result[$propertyPathItem])) {
+                        $result = null;
+                        break;
+                    }
+                    $result = $result[$propertyPathItem];
+                }
+                $extracted[] = $result;
+            }
+            $extracted = new Collection($extracted);
             foreach ($formatters as $callable) {
                 $extracted = new ResultSetDecorator($callable($extracted));
             }
+
             return $results->insert($property, $extracted);
         }, Query::PREPEND);
     }
@@ -812,6 +899,11 @@ abstract class Association
         $bindingKey = (array)$this->bindingKey();
 
         if (count($foreignKey) !== count($bindingKey)) {
+            if (empty($bindingKey)) {
+                $msg = 'The "%s" table does not define a primary key. Please set one.';
+                throw new RuntimeException(sprintf($msg, $this->target()->table()));
+            }
+
             $msg = 'Cannot match provided foreignKey for "%s", got "(%s)" but expected foreign key for "(%s)"';
             throw new RuntimeException(sprintf(
                 $msg,

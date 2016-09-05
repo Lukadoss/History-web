@@ -1,5 +1,5 @@
 .. index::
-single: Commands
+   single: Commands
 
 Commands
 ========

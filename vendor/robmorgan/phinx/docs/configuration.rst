@@ -1,5 +1,5 @@
 .. index::
-single: Configuration
+   single: Configuration
 
 Configuration
 =============
@@ -74,6 +74,14 @@ You can also use the ``%%PHINX_CONFIG_DIR%%`` token in your path.
 
     paths:
         migrations: %%PHINX_CONFIG_DIR%%/your/relative/path
+
+Migrations are captured with ``glob``, so you can define a pattern for multiple
+directories.
+
+.. code-block:: yaml
+
+    paths:
+        migrations: %%PHINX_CONFIG_DIR%%/module/*/{data,scripts}/migrations
 
 Custom Migration Base
 ---------------------
@@ -150,7 +158,7 @@ file:
 
 
 Table Prefix and Suffix
-------------------
+-----------------------
 
 You can define a table prefix and table suffix:
 

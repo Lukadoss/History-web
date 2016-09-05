@@ -49,6 +49,7 @@ class BakeHelper extends Helper
             'name' => $name,
             'value' => $value
         ];
+
         return $this->_View->element('array_property', $options);
     }
 
@@ -65,6 +66,7 @@ class BakeHelper extends Helper
             'indent' => 2,
             'tab' => '    ',
             'trailingComma' => false,
+            'quotes' => true
         ];
 
         if (!$list) {
@@ -72,7 +74,9 @@ class BakeHelper extends Helper
         }
 
         foreach ($list as $k => &$v) {
-            $v = "'$v'";
+            if ($options['quotes']) {
+                $v = "'$v'";
+            }
             if (!is_numeric($k)) {
                 $v = "'$k' => $v";
             }
@@ -163,12 +167,14 @@ class BakeHelper extends Helper
      *
      * @param \Cake\ORM\Table $table Table
      * @param array $aliases array of aliases
+     * @return array
      */
     protected function _filterHasManyAssociationsAliases($table, $aliases)
     {
         if (is_null($this->_associationFilter)) {
             $this->_associationFilter = new AssociationFilter();
         }
+
         return $this->_associationFilter->filterHasManyAssociationsAliases($table, $aliases);
     }
 }

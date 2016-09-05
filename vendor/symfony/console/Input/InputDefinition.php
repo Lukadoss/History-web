@@ -392,11 +392,11 @@ class InputDefinition
         }
 
         foreach ($this->getArguments() as $argument) {
-            $element = '<' . $argument->getName() . '>';
+            $element = '<'.$argument->getName().'>';
             if (!$argument->isRequired()) {
-                $element = '[' . $element . ']';
+                $element = '['.$element.']';
             } elseif ($argument->isArray()) {
-                $element = $element . ' (' . $element . ')';
+                $element = $element.' ('.$element.')';
             }
 
             if ($argument->isArray()) {

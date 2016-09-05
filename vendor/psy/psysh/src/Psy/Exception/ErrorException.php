@@ -21,11 +21,11 @@ class ErrorException extends \ErrorException implements Exception
     /**
      * Construct a Psy ErrorException.
      *
-     * @param string $message (default: "")
-     * @param int $code (default: 0)
-     * @param int $severity (default: 1)
-     * @param string $filename (default: null)
-     * @param int $lineno (default: null)
+     * @param string    $message  (default: "")
+     * @param int       $code     (default: 0)
+     * @param int       $severity (default: 1)
+     * @param string    $filename (default: null)
+     * @param int       $lineno   (default: null)
      * @param Exception $previous (default: null)
      */
     public function __construct($message = '', $code = 0, $severity = 1, $filename = null, $lineno = null, $previous = null)
@@ -33,7 +33,7 @@ class ErrorException extends \ErrorException implements Exception
         $this->rawMessage = $message;
 
         if (!empty($filename) && preg_match('{Psy[/\\\\]ExecutionLoop}', $filename)) {
-            $filename = null;
+            $filename = '';
         }
 
         switch ($severity) {
@@ -76,10 +76,10 @@ class ErrorException extends \ErrorException implements Exception
      *
      * @throws ErrorException
      *
-     * @param int $errno Error type
-     * @param string $errstr Message
+     * @param int    $errno   Error type
+     * @param string $errstr  Message
      * @param string $errfile Filename
-     * @param int $errline Line number
+     * @param int    $errline Line number
      */
     public static function throwException($errno, $errstr, $errfile, $errline)
     {

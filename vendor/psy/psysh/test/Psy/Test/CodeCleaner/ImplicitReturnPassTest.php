@@ -31,7 +31,7 @@ class ImplicitReturnPassTest extends CodeCleanerTestCase
     public function implicitReturns()
     {
         return array(
-            array('4', 'return 4;'),
+            array('4',     'return 4;'),
             array('foo()', 'return foo();'),
             array('exit()', 'die;'),
         );

@@ -4,33 +4,30 @@ namespace PhpParser;
 
 class NodeDumperTest extends \PHPUnit_Framework_TestCase
 {
-    private function canonicalize($string)
-    {
+    private function canonicalize($string) {
         return str_replace("\r\n", "\n", $string);
     }
 
     /**
      * @dataProvider provideTestDump
-     * @covers       PhpParser\NodeDumper::dump
+     * @covers PhpParser\NodeDumper::dump
      */
-    public function testDump($node, $dump)
-    {
+    public function testDump($node, $dump) {
         $dumper = new NodeDumper;
 
         $this->assertSame($this->canonicalize($dump), $this->canonicalize($dumper->dump($node)));
     }
 
-    public function provideTestDump()
-    {
+    public function provideTestDump() {
         return array(
             array(
                 array(),
-                'array(
+'array(
 )'
             ),
             array(
                 array('Foo', 'Bar', 'Key' => 'FooBar'),
-                'array(
+'array(
     0: Foo
     1: Bar
     Key: FooBar
@@ -38,7 +35,7 @@ class NodeDumperTest extends \PHPUnit_Framework_TestCase
             ),
             array(
                 new Node\Name(array('Hallo', 'World')),
-                'Name(
+'Name(
     parts: array(
         0: Hallo
         1: World
@@ -49,7 +46,7 @@ class NodeDumperTest extends \PHPUnit_Framework_TestCase
                 new Node\Expr\Array_(array(
                     new Node\Expr\ArrayItem(new Node\Scalar\String_('Foo'))
                 )),
-                'Expr_Array(
+'Expr_Array(
     items: array(
         0: Expr_ArrayItem(
             key: null
@@ -68,8 +65,7 @@ class NodeDumperTest extends \PHPUnit_Framework_TestCase
      * @expectedException        \InvalidArgumentException
      * @expectedExceptionMessage Can only dump nodes and arrays.
      */
-    public function testError()
-    {
+    public function testError() {
         $dumper = new NodeDumper;
         $dumper->dump(new \stdClass);
     }

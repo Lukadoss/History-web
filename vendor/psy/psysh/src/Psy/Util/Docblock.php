@@ -32,7 +32,7 @@ class Docblock
      */
     public static $vectors = array(
         'throws' => array('type', 'desc'),
-        'param' => array('type', 'var', 'desc'),
+        'param'  => array('type', 'var', 'desc'),
         'return' => array('type', 'desc'),
     );
 
@@ -84,8 +84,8 @@ class Docblock
      */
     protected function setComment($comment)
     {
-        $this->desc = '';
-        $this->tags = array();
+        $this->desc    = '';
+        $this->tags    = array();
         $this->comment = $comment;
 
         $this->parseComment($comment);
@@ -109,7 +109,7 @@ class Docblock
         sort($lines);
 
         $first = reset($lines);
-        $last = end($lines);
+        $last  = end($lines);
 
         // find the longest common substring
         $count = min(strlen($first), strlen($last));
@@ -164,7 +164,7 @@ class Docblock
                 $this->desc = $body;
             } else {
                 // This block is tagged
-                $tag = substr(self::strTag($body), 1);
+                $tag  = substr(self::strTag($body), 1);
                 $body = ltrim(substr($body, strlen($tag) + 2));
 
                 if (isset(self::$vectors[$tag])) {

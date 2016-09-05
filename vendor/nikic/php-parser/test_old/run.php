@@ -7,11 +7,10 @@ if ('cli' !== php_sapi_name()) {
     die('This script is designed for running on the command line.');
 }
 
-function showHelp($error)
-{
+function showHelp($error) {
     die($error . "\n\n" .
-        <<<OUTPUT
-        This script has to be called with the following signature:
+<<<OUTPUT
+This script has to be called with the following signature:
 
     php run.php [--no-progress] testType pathToTestFiles
 
@@ -44,9 +43,12 @@ if (count($arguments) !== 2) {
 }
 
 $showProgress = true;
-if (count($options) > 0) {
-    if (count($options) === 1 && $options[0] === '--no-progress') {
+$verbose = false;
+foreach ($options as $option) {
+    if ($option === '--no-progress') {
         $showProgress = false;
+    } elseif ($option === '--verbose') {
+        $verbose = true;
     } else {
         showHelp('Invalid option passed!');
     }
@@ -58,20 +60,20 @@ $dir = $arguments[1];
 switch ($testType) {
     case 'Symfony':
         $version = 'Php5';
-        $fileFilter = function ($path) {
+        $fileFilter = function($path) {
             return preg_match('~\.php(?:\.cache)?$~', $path) && false === strpos($path, 'skeleton');
         };
-        $codeExtractor = function ($file, $code) {
+        $codeExtractor = function($file, $code) {
             return $code;
         };
         break;
     case 'PHP5':
     case 'PHP7':
-        $version = $testType === 'PHP5' ? 'Php5' : 'Php7';
-        $fileFilter = function ($path) {
+    $version = $testType === 'PHP5' ? 'Php5' : 'Php7';
+        $fileFilter = function($path) {
             return preg_match('~\.phpt$~', $path);
         };
-        $codeExtractor = function ($file, $code) {
+        $codeExtractor = function($file, $code) {
             if (preg_match('~(?:
 # skeleton files
   ext.gmp.tests.001
@@ -86,6 +88,13 @@ switch ($testType) {
 # pretty print difference due to INF vs 1e1000
 | ext.standard.tests.general_functions.bug27678
 | tests.lang.bug24640
+# pretty print difference due to nop statements
+| ext.mbstring.tests.htmlent
+| ext.standard.tests.file.fread_basic
+# tests using __halt_compiler as semi reserved keyword
+| Zend.tests.grammar.semi_reserved_001
+| Zend.tests.grammar.semi_reserved_002
+| Zend.tests.grammar.semi_reserved_005
 )\.phpt$~x', $file)) {
                 return null;
             }
@@ -107,10 +116,10 @@ switch ($testType) {
 require_once dirname(__FILE__) . '/../lib/PhpParser/Autoloader.php';
 PhpParser\Autoloader::register();
 
-$parserName = 'PhpParser\Parser\\' . $version;
-$parser = new $parserName(new PhpParser\Lexer\Emulative);
+$parserName    = 'PhpParser\Parser\\' . $version;
+$parser        = new $parserName(new PhpParser\Lexer\Emulative);
 $prettyPrinter = new PhpParser\PrettyPrinter\Standard;
-$nodeDumper = new PhpParser\NodeDumper;
+$nodeDumper    = new PhpParser\NodeDumper;
 
 $parseFail = $ppFail = $compareFail = $count = 0;
 
@@ -161,11 +170,17 @@ foreach (new RecursiveIteratorIterator(
 
             if (!$same) {
                 echo $file, ":\n    Result of initial parse and parse after pretty print differ\n";
+                if ($verbose) {
+                    echo "Pretty printer output:\n=====\n$code\n=====\n\n";
+                }
 
                 ++$compareFail;
             }
         } catch (PhpParser\Error $e) {
             echo $file, ":\n    Parse of pretty print failed with message: {$e->getMessage()}\n";
+            if ($verbose) {
+                echo "Pretty printer output:\n=====\n$code\n=====\n\n";
+            }
 
             ++$ppFail;
         }
@@ -177,28 +192,32 @@ foreach (new RecursiveIteratorIterator(
 }
 
 if (0 === $parseFail && 0 === $ppFail && 0 === $compareFail) {
+    $exit = 0;
     echo "\n\n", 'All tests passed.', "\n";
 } else {
+    $exit = 1;
     echo "\n\n", '==========', "\n\n", 'There were: ', "\n";
     if (0 !== $parseFail) {
-        echo '    ', $parseFail, ' parse failures.', "\n";
+        echo '    ', $parseFail,   ' parse failures.',        "\n";
     }
     if (0 !== $ppFail) {
-        echo '    ', $ppFail, ' pretty print failures.', "\n";
+        echo '    ', $ppFail,      ' pretty print failures.', "\n";
     }
     if (0 !== $compareFail) {
-        echo '    ', $compareFail, ' compare failures.', "\n";
+        echo '    ', $compareFail, ' compare failures.',      "\n";
     }
 }
 
 echo "\n",
-'Tested files:         ', $count, "\n",
-"\n",
-'Reading files took:   ', $readTime, "\n",
-'Parsing took:         ', $parseTime, "\n",
-'Pretty printing took: ', $ppTime, "\n",
-'Reparsing took:       ', $reparseTime, "\n",
-'Comparing took:       ', $compareTime, "\n",
-"\n",
-'Total time:           ', microtime(true) - $totalStartTime, "\n",
-'Maximum memory usage: ', memory_get_peak_usage(true), "\n";
+     'Tested files:         ', $count,        "\n",
+     "\n",
+     'Reading files took:   ', $readTime,    "\n",
+     'Parsing took:         ', $parseTime,   "\n",
+     'Pretty printing took: ', $ppTime,      "\n",
+     'Reparsing took:       ', $reparseTime, "\n",
+     'Comparing took:       ', $compareTime, "\n",
+     "\n",
+     'Total time:           ', microtime(true) - $totalStartTime, "\n",
+     'Maximum memory usage: ', memory_get_peak_usage(true), "\n";
+
+exit($exit);

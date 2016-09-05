@@ -74,7 +74,7 @@ class CodeCleanerTestCase extends \PHPUnit_Framework_TestCase
     {
         if (!isset($this->parser)) {
             $parserFactory = new ParserFactory();
-            $this->parser = $parserFactory->createParser();
+            $this->parser  = $parserFactory->createParser();
         }
 
         return $this->parser;

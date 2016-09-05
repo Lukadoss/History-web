@@ -46,7 +46,7 @@ class SeedRunTest extends \PHPUnit_Framework_TestCase
         // mock the manager class
         $managerStub = $this->getMock('\Phinx\Migration\Manager', array(), array($this->config, $output));
         $managerStub->expects($this->once())
-            ->method('seed');
+                    ->method('seed');
 
         $command->setConfig($this->config);
         $command->setManager($managerStub);
@@ -70,7 +70,7 @@ class SeedRunTest extends \PHPUnit_Framework_TestCase
         // mock the manager class
         $managerStub = $this->getMock('\Phinx\Migration\Manager', array(), array($this->config, $output));
         $managerStub->expects($this->any())
-            ->method('migrate');
+                    ->method('migrate');
 
         $command->setConfig($this->config);
         $command->setManager($managerStub);
@@ -93,7 +93,7 @@ class SeedRunTest extends \PHPUnit_Framework_TestCase
         // mock the manager class
         $managerStub = $this->getMock('\Phinx\Migration\Manager', array(), array($this->config, $output));
         $managerStub->expects($this->once())
-            ->method('seed');
+                    ->method('seed');
 
         $command->setConfig($this->config);
         $command->setManager($managerStub);

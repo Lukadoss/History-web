@@ -35,14 +35,14 @@ class NormalizationBuilder
     /**
      * Registers a key to remap to its plural form.
      *
-     * @param string $key The key to remap
+     * @param string $key    The key to remap
      * @param string $plural The plural of the key in case of irregular plural
      *
      * @return NormalizationBuilder
      */
     public function remap($key, $plural = null)
     {
-        $this->remappings[] = array($key, null === $plural ? $key . 's' : $plural);
+        $this->remappings[] = array($key, null === $plural ? $key.'s' : $plural);
 
         return $this;
     }

@@ -30,7 +30,7 @@ class VariableEnumerator extends Enumerator
      * the current scope variables, so we need to pass it a Context instance.
      *
      * @param Presenter $presenter
-     * @param Context $context
+     * @param Context   $context
      */
     public function __construct(Presenter $presenter, Context $context)
     {
@@ -53,7 +53,7 @@ class VariableEnumerator extends Enumerator
             return;
         }
 
-        $showAll = $input->getOption('all');
+        $showAll   = $input->getOption('all');
         $variables = $this->prepareVariables($this->getVariables($showAll));
 
         if (empty($variables)) {
@@ -117,7 +117,7 @@ class VariableEnumerator extends Enumerator
             if ($this->showItem($name)) {
                 $fname = '$' . $name;
                 $ret[$fname] = array(
-                    'name' => $fname,
+                    'name'  => $fname,
                     'style' => in_array($name, self::$specialVars) ? self::IS_PRIVATE : self::IS_PUBLIC,
                     'value' => $this->presentRef($val), // TODO: add types to variable signatures
                 );

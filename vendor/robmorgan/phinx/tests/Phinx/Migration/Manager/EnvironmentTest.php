@@ -108,8 +108,8 @@ class EnvironmentTest extends \PHPUnit_Framework_TestCase
     {
         $stub = $this->getMock('\Phinx\Db\Adapter\PdoAdapter', array(), array(array()));
         $stub->expects($this->any())
-            ->method('getVersions')
-            ->will($this->returnValue(array('20110301080000')));
+             ->method('getVersions')
+             ->will($this->returnValue(array('20110301080000')));
 
         $this->environment->setAdapter($stub);
 
@@ -121,15 +121,15 @@ class EnvironmentTest extends \PHPUnit_Framework_TestCase
         // stub adapter
         $adapterStub = $this->getMock('\Phinx\Db\Adapter\PdoAdapter', array(), array(array()));
         $adapterStub->expects($this->once())
-            ->method('migrated')
-            ->will($this->returnArgument(0));
+                    ->method('migrated')
+                    ->will($this->returnArgument(0));
 
         $this->environment->setAdapter($adapterStub);
 
         // up
         $upMigration = $this->getMock('\Phinx\Migration\AbstractMigration', array('up'), array('20110301080000'));
         $upMigration->expects($this->once())
-            ->method('up');
+                    ->method('up');
 
         $this->environment->executeMigration($upMigration, MigrationInterface::UP);
     }
@@ -139,15 +139,15 @@ class EnvironmentTest extends \PHPUnit_Framework_TestCase
         // stub adapter
         $adapterStub = $this->getMock('\Phinx\Db\Adapter\PdoAdapter', array(), array(array()));
         $adapterStub->expects($this->once())
-            ->method('migrated')
-            ->will($this->returnArgument(0));
+                    ->method('migrated')
+                    ->will($this->returnArgument(0));
 
         $this->environment->setAdapter($adapterStub);
 
         // down
         $downMigration = $this->getMock('\Phinx\Migration\AbstractMigration', array('down'), array('20110301080000'));
         $downMigration->expects($this->once())
-            ->method('down');
+                      ->method('down');
 
         $this->environment->executeMigration($downMigration, MigrationInterface::DOWN);
     }
@@ -157,21 +157,21 @@ class EnvironmentTest extends \PHPUnit_Framework_TestCase
         // stub adapter
         $adapterStub = $this->getMock('\Phinx\Db\Adapter\PdoAdapter', array(), array(array()));
         $adapterStub->expects($this->once())
-            ->method('beginTransaction');
+                    ->method('beginTransaction');
 
         $adapterStub->expects($this->once())
-            ->method('commitTransaction');
+                    ->method('commitTransaction');
 
         $adapterStub->expects($this->exactly(2))
-            ->method('hasTransactions')
-            ->will($this->returnValue(true));
+                    ->method('hasTransactions')
+                    ->will($this->returnValue(true));
 
         $this->environment->setAdapter($adapterStub);
 
         // migrate
         $migration = $this->getMock('\Phinx\Migration\AbstractMigration', array('up'), array('20110301080000'));
         $migration->expects($this->once())
-            ->method('up');
+                  ->method('up');
 
         $this->environment->executeMigration($migration, MigrationInterface::UP);
     }
@@ -181,15 +181,15 @@ class EnvironmentTest extends \PHPUnit_Framework_TestCase
         // stub adapter
         $adapterStub = $this->getMock('\Phinx\Db\Adapter\PdoAdapter', array(), array(array()));
         $adapterStub->expects($this->once())
-            ->method('migrated')
-            ->will($this->returnArgument(0));
+                    ->method('migrated')
+                    ->will($this->returnArgument(0));
 
         $this->environment->setAdapter($adapterStub);
 
         // migration
         $migration = $this->getMock('\Phinx\Migration\AbstractMigration', array('change'), array('20130301080000'));
         $migration->expects($this->once())
-            ->method('change');
+                  ->method('change');
 
         $this->environment->executeMigration($migration, MigrationInterface::UP);
     }
@@ -199,15 +199,15 @@ class EnvironmentTest extends \PHPUnit_Framework_TestCase
         // stub adapter
         $adapterStub = $this->getMock('\Phinx\Db\Adapter\PdoAdapter', array(), array(array()));
         $adapterStub->expects($this->once())
-            ->method('migrated')
-            ->will($this->returnArgument(0));
+                    ->method('migrated')
+                    ->will($this->returnArgument(0));
 
         $this->environment->setAdapter($adapterStub);
 
         // migration
         $migration = $this->getMock('\Phinx\Migration\AbstractMigration', array('change'), array('20130301080000'));
         $migration->expects($this->once())
-            ->method('change');
+                  ->method('change');
 
         $this->environment->executeMigration($migration, MigrationInterface::DOWN);
     }

@@ -10,13 +10,12 @@ class Error extends \RuntimeException
     /**
      * Creates an Exception signifying a parse error.
      *
-     * @param string $message Error message
+     * @param string    $message    Error message
      * @param array|int $attributes Attributes of node/token where error occurred
      *                              (or start line of error -- deprecated)
      */
-    public function __construct($message, $attributes = array())
-    {
-        $this->rawMessage = (string)$message;
+    public function __construct($message, $attributes = array()) {
+        $this->rawMessage = (string) $message;
         if (is_array($attributes)) {
             $this->attributes = $attributes;
         } else {
@@ -30,8 +29,7 @@ class Error extends \RuntimeException
      *
      * @return string Error message
      */
-    public function getRawMessage()
-    {
+    public function getRawMessage() {
         return $this->rawMessage;
     }
 
@@ -40,8 +38,7 @@ class Error extends \RuntimeException
      *
      * @return int Error start line
      */
-    public function getStartLine()
-    {
+    public function getStartLine() {
         return isset($this->attributes['startLine']) ? $this->attributes['startLine'] : -1;
     }
 
@@ -50,8 +47,7 @@ class Error extends \RuntimeException
      *
      * @return int Error end line
      */
-    public function getEndLine()
-    {
+    public function getEndLine() {
         return isset($this->attributes['endLine']) ? $this->attributes['endLine'] : -1;
     }
 
@@ -61,8 +57,7 @@ class Error extends \RuntimeException
      *
      * @return array
      */
-    public function getAttributes()
-    {
+    public function getAttributes() {
         return $this->attributes;
     }
 
@@ -71,9 +66,8 @@ class Error extends \RuntimeException
      *
      * @param string $message Error message
      */
-    public function setRawMessage($message)
-    {
-        $this->rawMessage = (string)$message;
+    public function setRawMessage($message) {
+        $this->rawMessage = (string) $message;
         $this->updateMessage();
     }
 
@@ -82,9 +76,8 @@ class Error extends \RuntimeException
      *
      * @param int $line Error start line
      */
-    public function setStartLine($line)
-    {
-        $this->attributes['startLine'] = (int)$line;
+    public function setStartLine($line) {
+        $this->attributes['startLine'] = (int) $line;
         $this->updateMessage();
     }
 
@@ -95,8 +88,7 @@ class Error extends \RuntimeException
      *
      * @return bool
      */
-    public function hasColumnInfo()
-    {
+    public function hasColumnInfo() {
         return isset($this->attributes['startFilePos']) && isset($this->attributes['endFilePos']);
     }
 
@@ -106,8 +98,7 @@ class Error extends \RuntimeException
      * @param string $code Source code of the file
      * @return int
      */
-    public function getStartColumn($code)
-    {
+    public function getStartColumn($code) {
         if (!$this->hasColumnInfo()) {
             throw new \RuntimeException('Error does not have column information');
         }
@@ -121,8 +112,7 @@ class Error extends \RuntimeException
      * @param string $code Source code of the file
      * @return int
      */
-    public function getEndColumn($code)
-    {
+    public function getEndColumn($code) {
         if (!$this->hasColumnInfo()) {
             throw new \RuntimeException('Error does not have column information');
         }
@@ -130,8 +120,7 @@ class Error extends \RuntimeException
         return $this->toColumn($code, $this->attributes['endFilePos']);
     }
 
-    private function toColumn($code, $pos)
-    {
+    private function toColumn($code, $pos) {
         if ($pos > strlen($code)) {
             throw new \RuntimeException('Invalid position information');
         }
@@ -147,8 +136,7 @@ class Error extends \RuntimeException
     /**
      * Updates the exception message after a change to rawMessage or rawLine.
      */
-    protected function updateMessage()
-    {
+    protected function updateMessage() {
         $this->message = $this->rawMessage;
 
         if (-1 === $this->getStartLine()) {
@@ -159,14 +147,12 @@ class Error extends \RuntimeException
     }
 
     /** @deprecated Use getStartLine() instead */
-    public function getRawLine()
-    {
+    public function getRawLine() {
         return $this->getStartLine();
     }
 
     /** @deprecated Use setStartLine() instead */
-    public function setRawLine($line)
-    {
+    public function setRawLine($line) {
         $this->setStartLine($line);
     }
 }

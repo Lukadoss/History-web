@@ -24,7 +24,7 @@ class CliDumperTest extends \PHPUnit_Framework_TestCase
 
     public function testGet()
     {
-        require __DIR__ . '/Fixtures/dumb-var.php';
+        require __DIR__.'/Fixtures/dumb-var.php';
 
         $dumper = new CliDumper('php://output');
         $dumper->setColors(false);
@@ -43,7 +43,7 @@ class CliDumperTest extends \PHPUnit_Framework_TestCase
         $out = ob_get_clean();
         $out = preg_replace('/[ \t]+$/m', '', $out);
         $intMax = PHP_INT_MAX;
-        $res = (int)$var['res'];
+        $res = (int) $var['res'];
 
         $r = defined('HHVM_VERSION') ? '' : '#%d';
         $this->assertStringMatchesFormat(
@@ -62,15 +62,12 @@ array:24 [
   7 => b"é\\x00"
   "[]" => []
   "res" => stream resource {@{$res}
-    wrapper_type: "plainfile"
+%A  wrapper_type: "plainfile"
     stream_type: "STDIO"
     mode: "r"
     unread_bytes: 0
     seekable: true
-    timed_out: false
-    blocked: true
-    eof: false
-    options: []
+%A  options: []
   }
   "obj" => Symfony\Component\VarDumper\Tests\Fixture\DumbFoo {#%d
     +foo: "foo"
@@ -131,6 +128,45 @@ EOTXT
         );
     }
 
+    public function testJsonCast()
+    {
+        $var = (array) json_decode('{"0":{},"1":null}');
+        foreach ($var as &$v) {
+        }
+        $var[] = &$v;
+        $var[''] = 2;
+
+        $this->assertDumpMatchesFormat(
+            <<<EOTXT
+array:4 [
+  "0" => {}
+  "1" => &1 null
+  0 => &1 null
+  "" => 2
+]
+EOTXT
+            ,
+            $var
+        );
+    }
+
+    public function testObjectCast()
+    {
+        $var = (object) array(1 => 1);
+        $var->{1} = 2;
+
+        $this->assertDumpMatchesFormat(
+            <<<EOTXT
+{
+  +1: 1
+  +"1": 2
+}
+EOTXT
+            ,
+            $var
+        );
+    }
+
     public function testClosedResource()
     {
         if (defined('HHVM_VERSION') && HHVM_VERSION_ID < 30600) {
@@ -148,7 +184,7 @@ EOTXT
         ob_start();
         $dumper->dump($data);
         $out = ob_get_clean();
-        $res = (int)$var;
+        $res = (int) $var;
 
         $this->assertStringMatchesFormat(
             <<<EOTXT
@@ -160,11 +196,43 @@ EOTXT
         );
     }
 
+    public function testFlags()
+    {
+        putenv('DUMP_LIGHT_ARRAY=1');
+        putenv('DUMP_STRING_LENGTH=1');
+
+        $var = array(
+            range(1, 3),
+            array('foo', 2 => 'bar'),
+        );
+
+        $this->assertDumpEquals(
+            <<<EOTXT
+[
+  [
+    1
+    2
+    3
+  ]
+  [
+    0 => (3) "foo"
+    2 => (3) "bar"
+  ]
+]
+EOTXT
+            ,
+            $var
+        );
+
+        putenv('DUMP_LIGHT_ARRAY=');
+        putenv('DUMP_STRING_LENGTH=');
+    }
+
     public function testThrowingCaster()
     {
         $out = fopen('php://memory', 'r+b');
 
-        require_once __DIR__ . '/Fixtures/Twig.php';
+        require_once __DIR__.'/Fixtures/Twig.php';
         $twig = new \__TwigTemplate_VarDumperFixture_u75a09(new \Twig_Environment(new \Twig_Loader_Filesystem()));
 
         $dumper = new CliDumper();
@@ -187,7 +255,7 @@ EOTXT
             };'),
         ));
         $line = __LINE__ - 2;
-        $ref = (int)$out;
+        $ref = (int) $out;
 
         $data = $cloner->cloneVar($out);
         $dumper->dump($data, $out);
@@ -198,7 +266,7 @@ EOTXT
             $twig = <<<EOTXT
           foo.twig:2: """
             foo bar\\n
-                twig source\\n
+              twig source\\n
             \\n
             """
 
@@ -211,16 +279,13 @@ EOTXT;
         $this->assertStringMatchesFormat(
             <<<EOTXT
 stream resource {@{$ref}
-  wrapper_type: "PHP"
+%Awrapper_type: "PHP"
   stream_type: "MEMORY"
   mode: "%s+b"
   unread_bytes: 0
   seekable: true
   uri: "php://memory"
-  timed_out: false
-  blocked: true
-  eof: false
-  options: []
+%Aoptions: []
   ⚠: Symfony\Component\VarDumper\Exception\ThrowingCasterException {{$r}
     #message: "Unexpected Exception thrown from a caster: Foobar"
     -trace: {
@@ -281,7 +346,7 @@ EOTXT
 
     public function testRefsInProperties()
     {
-        $var = (object)array('foo' => 'foo');
+        $var = (object) array('foo' => 'foo');
         $var->bar = &$var->foo;
 
         $dumper = new CliDumper();
@@ -350,7 +415,7 @@ EOTXT
 
         $dumper = new CliDumper(function ($line, $depth) use (&$out) {
             if ($depth >= 0) {
-                $out .= str_repeat('  ', $depth) . $line . "\n";
+                $out .= str_repeat('  ', $depth).$line."\n";
             }
         });
         $dumper->setColors(false);
@@ -401,7 +466,7 @@ EOTXT
         $out = '';
         $dumper->dump($data, function ($line, $depth) use (&$out) {
             if ($depth >= 0) {
-                $out .= str_repeat('  ', $depth) . $line . "\n";
+                $out .= str_repeat('  ', $depth).$line."\n";
             }
         });
 

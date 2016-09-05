@@ -35,8 +35,8 @@ function htmlwrap($text, $width = null)
         switch (substr($text, $i, 1)) {
             case "\n":
                 $return[] = trim(substr($text, 0, $i));
-                $text = substr($text, $i);
-                $len = strlen($text);
+                $text     = substr($text, $i);
+                $len      = strlen($text);
 
                 $i = $lastSpace = 0;
                 continue;
@@ -67,8 +67,8 @@ function htmlwrap($text, $width = null)
             $lastSpace = $lastSpace ?: $width;
 
             $return[] = trim(substr($text, 0, $lastSpace));
-            $text = substr($text, $lastSpace);
-            $len = strlen($text);
+            $text     = substr($text, $lastSpace);
+            $len      = strlen($text);
 
             $i = $tagWidth = 0;
         }
@@ -108,7 +108,7 @@ function extract_paragraphs($element)
 
 function format_doc($doc)
 {
-    $chunks = array();
+    $chunks   = array();
 
     if (!empty($doc['description'])) {
         $chunks[] = '<comment>Description:</comment>';
@@ -127,8 +127,8 @@ function format_doc($doc)
             return strlen($param['name']);
         }, $doc['params']));
 
-        $template = '  <info>%-' . $typeMax . 's</info>  <strong>%-' . $max . 's</strong>  %s';
-        $indent = str_repeat(' ', $typeMax + $max + 6);
+        $template  = '  <info>%-' . $typeMax . 's</info>  <strong>%-' . $max . 's</strong>  %s';
+        $indent    = str_repeat(' ', $typeMax + $max + 6);
         $wrapWidth = WRAP_WIDTH - strlen($indent);
 
         foreach ($doc['params'] as $param) {
@@ -141,10 +141,10 @@ function format_doc($doc)
     if (isset($doc['return']) || isset($doc['return_type'])) {
         $chunks[] = '<comment>Return:</comment>';
 
-        $type = isset($doc['return_type']) ? $doc['return_type'] : 'unknown';
-        $desc = isset($doc['return']) ? $doc['return'] : '';
+        $type   = isset($doc['return_type']) ? $doc['return_type'] : 'unknown';
+        $desc   = isset($doc['return']) ? $doc['return'] : '';
 
-        $indent = str_repeat(' ', strlen($type) + 4);
+        $indent    = str_repeat(' ', strlen($type) + 4);
         $wrapWidth = WRAP_WIDTH - strlen($indent);
 
         if (!empty($desc)) {
@@ -164,17 +164,17 @@ function thunk_tags($text)
 {
     $tagMap = array(
         'parameter>' => 'strong>',
-        'function>' => 'strong>',
-        'literal>' => 'return>',
-        'type>' => 'info>',
-        'constant>' => 'info>',
+        'function>'  => 'strong>',
+        'literal>'   => 'return>',
+        'type>'      => 'info>',
+        'constant>'  => 'info>',
     );
 
     $andBack = array(
-        '&amp;' => '&',
-        '&amp;true;' => '<return>true</return>',
+        '&amp;'       => '&',
+        '&amp;true;'  => '<return>true</return>',
         '&amp;false;' => '<return>false</return>',
-        '&amp;null;' => '<return>null</return>',
+        '&amp;null;'  => '<return>null</return>',
     );
 
     return strtr(strip_tags(strtr($text, $tagMap), '<strong><return><info>'), $andBack);
@@ -244,8 +244,8 @@ foreach (glob($argv[1] . '/*/*/*.xml') as $function) {
                 foreach ($vars as $var) {
                     if ($name = $var->getElementsByTagName('parameter')->item(0)) {
                         $params[] = array(
-                            'name' => '$' . $name->textContent,
-                            'type' => find_type($xml, $name->textContent),
+                            'name'        => '$' . $name->textContent,
+                            'type'        => find_type($xml, $name->textContent),
                             'description' => extract_paragraphs($var),
                         );
                     }

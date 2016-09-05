@@ -26,6 +26,9 @@ use Cake\Network\Response;
 use Cake\Routing\RequestActionTrait;
 use Cake\Routing\Router;
 use Cake\Utility\Inflector;
+use Cake\View\Exception\MissingElementException;
+use Cake\View\Exception\MissingLayoutException;
+use Cake\View\Exception\MissingTemplateException;
 use InvalidArgumentException;
 use LogicException;
 use RuntimeException;
@@ -314,8 +317,7 @@ class View implements EventDispatcherInterface
         Response $response = null,
         EventManager $eventManager = null,
         array $viewOptions = []
-    )
-    {
+    ) {
         if (isset($viewOptions['view'])) {
             $this->template($viewOptions['view']);
         }
@@ -363,7 +365,7 @@ class View implements EventDispatcherInterface
     /**
      * Get/set path for templates files.
      *
-     * @param string $path Path for template files. If null returns current path.
+     * @param string|null $path Path for template files. If null returns current path.
      * @return string|null
      */
     public function templatePath($path = null)
@@ -378,7 +380,7 @@ class View implements EventDispatcherInterface
     /**
      * Get/set path for layout files.
      *
-     * @param string $path Path for layout files. If null returns current path.
+     * @param string|null $path Path for layout files. If null returns current path.
      * @return string|null
      */
     public function layoutPath($path = null)
@@ -395,7 +397,7 @@ class View implements EventDispatcherInterface
      * On by default. Setting to off means that layouts will not be
      * automatically applied to rendered templates.
      *
-     * @param bool $autoLayout Boolean to turn on/off. If null returns current value.
+     * @param bool|null $autoLayout Boolean to turn on/off. If null returns current value.
      * @return bool|null
      */
     public function autoLayout($autoLayout = null)
@@ -410,7 +412,7 @@ class View implements EventDispatcherInterface
     /**
      * The view theme to use.
      *
-     * @param string $theme Theme name. If null returns current theme.
+     * @param string|null $theme Theme name. If null returns current theme.
      * @return string|null
      */
     public function theme($theme = null)
@@ -426,7 +428,7 @@ class View implements EventDispatcherInterface
      * Get/set the name of the template file to render. The name specified is the
      * filename in /src/Template/<SubFolder> without the .ctp extension.
      *
-     * @param string $name Template file name to set. If null returns current name.
+     * @param string|null $name Template file name to set. If null returns current name.
      * @return string|null
      */
     public function template($name = null)
@@ -443,7 +445,7 @@ class View implements EventDispatcherInterface
      * The name specified is the filename of the layout in /src/Template/Layout
      * without the .ctp extension.
      *
-     * @param string $name Layout file name to set. If null returns current name.
+     * @param string|null $name Layout file name to set. If null returns current name.
      * @return string|null
      */
     public function layout($name = null)
@@ -498,7 +500,7 @@ class View implements EventDispatcherInterface
             list ($plugin, $name) = pluginSplit($name, true);
             $name = str_replace('/', DIRECTORY_SEPARATOR, $name);
             $file = $plugin . 'Element' . DIRECTORY_SEPARATOR . $name . $this->_ext;
-            throw new Exception\MissingElementException($file);
+            throw new MissingElementException($file);
         }
     }
 
@@ -531,6 +533,7 @@ class View implements EventDispatcherInterface
         $result = ob_get_clean();
 
         Cache::write($options['key'], $result, $options['config']);
+
         return $result;
     }
 
@@ -597,6 +600,7 @@ class View implements EventDispatcherInterface
         }
 
         $this->hasRendered = true;
+
         return $this->Blocks->get('content');
     }
 
@@ -619,7 +623,7 @@ class View implements EventDispatcherInterface
         }
 
         if (!empty($content)) {
-            $this->Blocks->set('content', $content);
+             $this->Blocks->set('content', $content);
         }
 
         $this->dispatchEvent('View.beforeLayout', [$layoutFileName]);
@@ -634,6 +638,7 @@ class View implements EventDispatcherInterface
         $this->Blocks->set('content', $this->_render($layoutFileName));
 
         $this->dispatchEvent('View.afterLayout', [$layoutFileName]);
+
         return $this->Blocks->get('content');
     }
 
@@ -659,6 +664,7 @@ class View implements EventDispatcherInterface
         if (!isset($this->viewVars[$var])) {
             return $default;
         }
+
         return $this->viewVars[$var];
     }
 
@@ -708,7 +714,8 @@ class View implements EventDispatcherInterface
      * Appending to a new block will create the block.
      *
      * @param string $name Name of the block
-     * @param mixed $value The content for the block.
+     * @param mixed $value The content for the block. Value will be type cast
+     *   to string.
      * @return void
      * @see \Cake\View\ViewBlock::concat()
      */
@@ -723,7 +730,8 @@ class View implements EventDispatcherInterface
      * Prepending to a new block will create the block.
      *
      * @param string $name Name of the block
-     * @param mixed $value The content for the block.
+     * @param mixed $value The content for the block. Value will be type cast
+     *   to string.
      * @return void
      * @see \Cake\View\ViewBlock::concat()
      */
@@ -737,7 +745,8 @@ class View implements EventDispatcherInterface
      * existing content.
      *
      * @param string $name Name of the block
-     * @param mixed $value The content for the block.
+     * @param mixed $value The content for the block. Value will be type cast
+     *   to string.
      * @return void
      * @see \Cake\View\ViewBlock::set()
      */
@@ -765,7 +774,7 @@ class View implements EventDispatcherInterface
      *
      * @param string $name Name of the block
      * @param string $default Default text
-     * @return string default The block content or $default if the block does not exist.
+     * @return string The block content or $default if the block does not exist.
      * @see \Cake\View\ViewBlock::get()
      */
     public function fetch($name, $default = '')
@@ -857,6 +866,7 @@ class View implements EventDispatcherInterface
             $c++;
         }
         $this->uuids[] = $hash;
+
         return $hash;
     }
 
@@ -888,8 +898,10 @@ class View implements EventDispatcherInterface
         $registry = $this->helpers();
         if (isset($registry->{$name})) {
             $this->{$name} = $registry->{$name};
+
             return $registry->{$name};
         }
+
         return $this->{$name};
     }
 
@@ -904,10 +916,12 @@ class View implements EventDispatcherInterface
     {
         if ($name === 'view') {
             $this->template = $value;
+
             return;
         }
         if ($name === 'viewPath') {
             $this->templatePath = $value;
+
             return;
         }
 
@@ -973,6 +987,7 @@ class View implements EventDispatcherInterface
                 $this->Blocks->active()
             ));
         }
+
         return $content;
     }
 
@@ -993,6 +1008,7 @@ class View implements EventDispatcherInterface
         include $this->__viewFile;
 
         unset($this->__viewFile);
+
         return ob_get_clean();
     }
 
@@ -1006,6 +1022,7 @@ class View implements EventDispatcherInterface
         if ($this->_helpers === null) {
             $this->_helpers = new HelperRegistry($this);
         }
+
         return $this->_helpers;
     }
 
@@ -1021,6 +1038,7 @@ class View implements EventDispatcherInterface
     {
         list(, $class) = pluginSplit($name);
         $helpers = $this->helpers();
+
         return $this->{$class} = $helpers->load($name, $config);
     }
 
@@ -1070,7 +1088,7 @@ class View implements EventDispatcherInterface
                 return $this->_checkFilePath($path . $name . $this->_ext, $path);
             }
         }
-        throw new Exception\MissingTemplateException(['file' => $name . $this->_ext]);
+        throw new MissingTemplateException(['file' => $name . $this->_ext]);
     }
 
     /**
@@ -1107,6 +1125,7 @@ class View implements EventDispatcherInterface
                 $file
             ));
         }
+
         return $absolute;
     }
 
@@ -1130,6 +1149,7 @@ class View implements EventDispatcherInterface
         if (isset($this->plugin) && !$plugin && $fallback) {
             $plugin = $this->plugin;
         }
+
         return [$plugin, $name];
     }
 
@@ -1162,7 +1182,7 @@ class View implements EventDispatcherInterface
                 }
             }
         }
-        throw new Exception\MissingLayoutException([
+        throw new MissingLayoutException([
             'file' => $layoutPaths[0] . $name . $this->_ext
         ]);
     }
@@ -1187,6 +1207,7 @@ class View implements EventDispatcherInterface
                 }
             }
         }
+
         return false;
     }
 
@@ -1266,6 +1287,7 @@ class View implements EventDispatcherInterface
         if ($plugin !== null) {
             return $this->_pathsForPlugin[$plugin] = $paths;
         }
+
         return $this->_paths = $paths;
     }
 
@@ -1303,6 +1325,7 @@ class View implements EventDispatcherInterface
             $config = $options['cache'] + $defaults;
         }
         $config['key'] = 'element_' . $config['key'];
+
         return $config;
     }
 

@@ -1,5 +1,5 @@
 .. index::
-single: Introduction
+   single: Introduction
    
 Introduction
 ============

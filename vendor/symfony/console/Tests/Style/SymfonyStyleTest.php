@@ -50,25 +50,9 @@ class SymfonyStyleTest extends PHPUnit_Framework_TestCase
 
     public function inputCommandToOutputFilesProvider()
     {
-        $baseDir = __DIR__ . '/../Fixtures/Style/SymfonyStyle';
+        $baseDir = __DIR__.'/../Fixtures/Style/SymfonyStyle';
 
-        return array_map(null, glob($baseDir . '/command/command_*.php'), glob($baseDir . '/output/output_*.txt'));
-    }
-
-    public function testLongWordsBlockWrapping()
-    {
-        $word = 'Lopadotemachoselachogaleokranioleipsanodrimhypotrimmatosilphioparaomelitokatakechymenokichlepikossyphophattoperisteralektryonoptekephalliokigklopeleiolagoiosiraiobaphetraganopterygon';
-        $wordLength = strlen($word);
-        $maxLineLength = SymfonyStyle::MAX_LINE_LENGTH - 3;
-
-        $this->command->setCode(function (InputInterface $input, OutputInterface $output) use ($word) {
-            $sfStyle = new SymfonyStyleWithForcedLineLength($input, $output);
-            $sfStyle->block($word, 'CUSTOM', 'fg=white;bg=blue', ' § ', false);
-        });
-
-        $this->tester->execute(array(), array('interactive' => false, 'decorated' => false));
-        $expectedCount = (int)ceil($wordLength / ($maxLineLength)) + (int)($wordLength > $maxLineLength - 5);
-        $this->assertSame($expectedCount, substr_count($this->tester->getDisplay(true), ' § '));
+        return array_map(null, glob($baseDir.'/command/command_*.php'), glob($baseDir.'/output/output_*.txt'));
     }
 }
 

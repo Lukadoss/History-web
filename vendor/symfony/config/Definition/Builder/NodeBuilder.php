@@ -27,13 +27,13 @@ class NodeBuilder implements NodeParentInterface
     public function __construct()
     {
         $this->nodeMapping = array(
-            'variable' => __NAMESPACE__ . '\\VariableNodeDefinition',
-            'scalar' => __NAMESPACE__ . '\\ScalarNodeDefinition',
-            'boolean' => __NAMESPACE__ . '\\BooleanNodeDefinition',
-            'integer' => __NAMESPACE__ . '\\IntegerNodeDefinition',
-            'float' => __NAMESPACE__ . '\\FloatNodeDefinition',
-            'array' => __NAMESPACE__ . '\\ArrayNodeDefinition',
-            'enum' => __NAMESPACE__ . '\\EnumNodeDefinition',
+            'variable' => __NAMESPACE__.'\\VariableNodeDefinition',
+            'scalar' => __NAMESPACE__.'\\ScalarNodeDefinition',
+            'boolean' => __NAMESPACE__.'\\BooleanNodeDefinition',
+            'integer' => __NAMESPACE__.'\\IntegerNodeDefinition',
+            'float' => __NAMESPACE__.'\\FloatNodeDefinition',
+            'array' => __NAMESPACE__.'\\ArrayNodeDefinition',
+            'enum' => __NAMESPACE__.'\\EnumNodeDefinition',
         );
     }
 
@@ -204,7 +204,7 @@ class NodeBuilder implements NodeParentInterface
     /**
      * Adds or overrides a node Type.
      *
-     * @param string $type The name of the type
+     * @param string $type  The name of the type
      * @param string $class The fully qualified name the node definition class
      *
      * @return NodeBuilder This node builder

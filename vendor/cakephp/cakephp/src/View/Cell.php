@@ -25,13 +25,13 @@ use Cake\ORM\Locator\LocatorAwareTrait;
 use Cake\Utility\Inflector;
 use Cake\View\Exception\MissingCellViewException;
 use Cake\View\Exception\MissingTemplateException;
+use Error;
 use Exception;
 use ReflectionException;
 use ReflectionMethod;
 
 /**
  * Cell base.
- *
  */
 abstract class Cell
 {
@@ -133,9 +133,9 @@ abstract class Cell
     /**
      * Constructor.
      *
-     * @param \Cake\Network\Request $request The request to use in the cell.
-     * @param \Cake\Network\Response $response The response to use in the cell.
-     * @param \Cake\Event\EventManager $eventManager The eventManager to bind events to.
+     * @param \Cake\Network\Request|null $request The request to use in the cell.
+     * @param \Cake\Network\Response|null $response The response to use in the cell.
+     * @param \Cake\Event\EventManager|null $eventManager The eventManager to bind events to.
      * @param array $cellOptions Cell options to apply.
      */
     public function __construct(
@@ -143,8 +143,7 @@ abstract class Cell
         Response $response = null,
         EventManager $eventManager = null,
         array $cellOptions = []
-    )
-    {
+    ) {
         $this->eventManager($eventManager);
         $this->request = $request;
         $this->response = $response;
@@ -202,10 +201,12 @@ abstract class Cell
             $builder->layout(false)
                 ->template($template);
 
-            $className = substr(strrchr(get_class($this), "\\"), 1);
-            $name = substr($className, 0, -4);
+            $className = get_class($this);
+            $namePrefix = '\View\Cell\\';
+            $name = substr($className, strpos($className, $namePrefix) + strlen($namePrefix));
+            $name = substr($name, 0, -4);
             if (!$builder->templatePath()) {
-                $builder->templatePath('Cell' . DIRECTORY_SEPARATOR . $name);
+                $builder->templatePath('Cell' . DIRECTORY_SEPARATOR . str_replace('\\', DIRECTORY_SEPARATOR, $name));
             }
 
             $this->View = $this->createView();
@@ -219,6 +220,7 @@ abstract class Cell
         if ($cache) {
             return Cache::remember($cache['key'], $render, $cache['config']);
         }
+
         return $render();
     }
 
@@ -244,6 +246,7 @@ abstract class Cell
         if ($this->_cache === true) {
             return $default;
         }
+
         return $this->_cache + $default;
     }
 
@@ -256,14 +259,18 @@ abstract class Cell
      * This is because PHP will not allow a __toString() method to throw an exception.
      *
      * @return string Rendered cell
+     * @throws \Error Include error details for PHP 7 fatal errors.
      */
     public function __toString()
     {
         try {
             return $this->render();
         } catch (Exception $e) {
-            trigger_error('Could not render cell - ' . $e->getMessage(), E_USER_WARNING);
+            trigger_error(sprintf('Could not render cell - %s [%s, line %d]', $e->getMessage(), $e->getFile(), $e->getLine()), E_USER_WARNING);
+
             return '';
+        } catch (Error $e) {
+            throw new Error(sprintf('Could not render cell - %s [%s, line %d]', $e->getMessage(), $e->getFile(), $e->getLine()));
         }
     }
 

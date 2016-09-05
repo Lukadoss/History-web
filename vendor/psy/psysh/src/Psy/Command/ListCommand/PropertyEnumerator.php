@@ -39,7 +39,7 @@ class PropertyEnumerator extends Enumerator
             return;
         }
 
-        $showAll = $input->getOption('all');
+        $showAll    = $input->getOption('all');
         $properties = $this->prepareProperties($this->getProperties($showAll, $reflector), $target);
 
         if (empty($properties)) {
@@ -55,7 +55,7 @@ class PropertyEnumerator extends Enumerator
     /**
      * Get defined properties for the given class or object Reflector.
      *
-     * @param bool $showAll Include private and protected properties.
+     * @param bool       $showAll   Include private and protected properties.
      * @param \Reflector $reflector
      *
      * @return array
@@ -91,7 +91,7 @@ class PropertyEnumerator extends Enumerator
             if ($this->showItem($name)) {
                 $fname = '$' . $name;
                 $ret[$fname] = array(
-                    'name' => $fname,
+                    'name'  => $fname,
                     'style' => $this->getVisibilityStyle($property),
                     'value' => $this->presentValue($property, $target),
                 );
@@ -141,7 +141,7 @@ class PropertyEnumerator extends Enumerator
      * Present the $target's current value for a reflection property.
      *
      * @param \ReflectionProperty $property
-     * @param mixed $target
+     * @param mixed               $target
      *
      * @return string
      */

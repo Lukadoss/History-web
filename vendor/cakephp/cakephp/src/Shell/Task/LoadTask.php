@@ -19,7 +19,6 @@ use Cake\Filesystem\File;
 
 /**
  * Task for loading plugins.
- *
  */
 class LoadTask extends Shell
 {
@@ -34,7 +33,7 @@ class LoadTask extends Shell
     /**
      * Execution method always used for tasks.
      *
-     * @param string $plugin The plugin name.
+     * @param string|null $plugin The plugin name.
      * @return bool
      */
     public function main($plugin = null)
@@ -44,6 +43,7 @@ class LoadTask extends Shell
         if (empty($plugin)) {
             $this->err('<error>You must provide a plugin name in CamelCase format.</error>');
             $this->err('To load an "Example" plugin, run <info>`cake plugin load Example`</info>.');
+
             return false;
         }
 
@@ -80,8 +80,10 @@ class LoadTask extends Shell
             $bootstrap->append(str_replace(', []', '', sprintf($append, $plugin, $options)));
             $this->out('');
             $this->out(sprintf('%s modified', $this->bootstrap));
+
             return true;
         }
+
         return false;
     }
 
@@ -95,26 +97,26 @@ class LoadTask extends Shell
         $parser = parent::getOptionParser();
 
         $parser->addOption('bootstrap', [
-            'short' => 'b',
-            'help' => 'Will load bootstrap.php from plugin.',
-            'boolean' => true,
-            'default' => false,
-        ])
-            ->addOption('routes', [
-                'short' => 'r',
-                'help' => 'Will load routes.php from plugin.',
-                'boolean' => true,
-                'default' => false,
-            ])
-            ->addOption('autoload', [
-                'help' => 'Will autoload the plugin using CakePHP. ' .
-                    'Set to true if you are not using composer to autoload your plugin.',
-                'boolean' => true,
-                'default' => false,
-            ])
-            ->addArgument('plugin', [
-                'help' => 'Name of the plugin to load.',
-            ]);
+                    'short' => 'b',
+                    'help' => 'Will load bootstrap.php from plugin.',
+                    'boolean' => true,
+                    'default' => false,
+                ])
+                ->addOption('routes', [
+                    'short' => 'r',
+                    'help' => 'Will load routes.php from plugin.',
+                    'boolean' => true,
+                    'default' => false,
+                ])
+                ->addOption('autoload', [
+                    'help' => 'Will autoload the plugin using CakePHP. ' .
+                        'Set to true if you are not using composer to autoload your plugin.',
+                    'boolean' => true,
+                    'default' => false,
+                ])
+                ->addArgument('plugin', [
+                    'help' => 'Name of the plugin to load.',
+                ]);
 
         return $parser;
     }

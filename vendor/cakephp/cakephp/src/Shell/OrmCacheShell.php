@@ -51,6 +51,7 @@ class OrmCacheShell extends Shell
             $schema->describe($table, ['forceRefresh' => true]);
         }
         $this->out('<success>Cache build complete</success>');
+
         return true;
     }
 
@@ -82,6 +83,7 @@ class OrmCacheShell extends Shell
             Cache::delete($key, $configName);
         }
         $this->out('<success>Cache clear complete</success>');
+
         return true;
     }
 
@@ -100,6 +102,7 @@ class OrmCacheShell extends Shell
                 $this->params['connection']
             );
             $this->error($msg);
+
             return false;
         }
         $config = $source->config();
@@ -107,6 +110,7 @@ class OrmCacheShell extends Shell
             $this->_io->verbose('Metadata cache was disabled in config. Enabling to clear cache.');
             $source->cacheMetadata(true);
         }
+
         return $source->schemaCollection();
     }
 
@@ -123,7 +127,7 @@ class OrmCacheShell extends Shell
                 'table name is provided, only that table will be removed.',
         ])->addSubcommand('build', [
             'help' => 'Build all metadata caches for the connection. If a ' .
-                'table name is provided, only that table will be cached.',
+            'table name is provided, only that table will be cached.',
         ])->addOption('connection', [
             'help' => 'The connection to build/clear metadata cache data for.',
             'short' => 'c',

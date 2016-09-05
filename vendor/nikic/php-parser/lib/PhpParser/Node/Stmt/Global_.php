@@ -12,17 +12,15 @@ class Global_ extends Node\Stmt
     /**
      * Constructs a global variables list node.
      *
-     * @param Node\Expr[] $vars Variables to unset
-     * @param array $attributes Additional attributes
+     * @param Node\Expr[] $vars       Variables to unset
+     * @param array       $attributes Additional attributes
      */
-    public function __construct(array $vars, array $attributes = array())
-    {
+    public function __construct(array $vars, array $attributes = array()) {
         parent::__construct($attributes);
         $this->vars = $vars;
     }
 
-    public function getSubNodeNames()
-    {
+    public function getSubNodeNames() {
         return array('vars');
     }
 }

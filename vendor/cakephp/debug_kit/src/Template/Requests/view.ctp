@@ -12,16 +12,16 @@ use Cake\Core\Configure;
 
 <ul id="toolbar" class="toolbar">
     <?php foreach ($toolbar->panels as $panel): ?>
-        <li class="panel hidden" data-id="<?= $panel->id ?>">
+    <li class="panel hidden" data-id="<?= $panel->id ?>">
         <span class="panel-button">
             <?= h($panel->title) ?>
         </span>
-            <?php if (strlen($panel->summary)): ?>
-                <span class="panel-summary">
+        <?php if (strlen($panel->summary)): ?>
+        <span class="panel-summary">
             <?= h($panel->summary) ?>
         </span>
-            <?php endif ?>
-        </li>
+        <?php endif ?>
+    </li>
     <?php endforeach; ?>
     <li id="panel-button">
         <?= $this->Html->image('DebugKit.cake.icon.png', [
@@ -31,8 +31,8 @@ use Cake\Core\Configure;
 </ul>
 <?php $this->Html->script('DebugKit.debug_kit', [
     'block' => true,
-    'id' => '__debug_kit',
+    'id' => '__debug_kit_app',
     'data-id' => $toolbar->id,
-    'data-url' => json_encode($this->Url->build('/')),
-    'data-full-url' => Router::url('/', true)
+    'data-url' => Router::url('/', true),
+    'data-webroot' => $this->request->webroot,
 ]) ?>

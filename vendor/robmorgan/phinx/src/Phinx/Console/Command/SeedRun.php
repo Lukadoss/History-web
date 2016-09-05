@@ -44,18 +44,18 @@ class SeedRun extends AbstractCommand
         $this->addOption('--environment', '-e', InputOption::VALUE_REQUIRED, 'The target environment');
 
         $this->setName('seed:run')
-            ->setDescription('Run database seeders')
-            ->addOption('--seed', '-s', InputOption::VALUE_REQUIRED, 'What is the name of the seeder?')
-            ->setHelp(
-                <<<EOT
-                The <info>seed:run</info> command runs all available or individual seeders
+             ->setDescription('Run database seeders')
+             ->addOption('--seed', '-s', InputOption::VALUE_REQUIRED, 'What is the name of the seeder?')
+             ->setHelp(
+<<<EOT
+The <info>seed:run</info> command runs all available or individual seeders
 
 <info>phinx seed:run -e development</info>
 <info>phinx seed:run -e development -s UserSeeder</info>
 <info>phinx seed:run -e development -v</info>
 
 EOT
-            );
+             );
     }
 
     /**
@@ -69,7 +69,7 @@ EOT
     {
         $this->bootstrap($input, $output);
 
-        $seed = $input->getOption('seed');
+        $seed        = $input->getOption('seed');
         $environment = $input->getOption('environment');
 
         if (null === $environment) {

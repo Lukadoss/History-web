@@ -14,19 +14,17 @@ class While_ extends Node\Stmt
     /**
      * Constructs a while node.
      *
-     * @param Node\Expr $cond Condition
-     * @param Node[] $stmts Statements
-     * @param array $attributes Additional attributes
+     * @param Node\Expr $cond       Condition
+     * @param Node[]    $stmts      Statements
+     * @param array     $attributes Additional attributes
      */
-    public function __construct(Node\Expr $cond, array $stmts = array(), array $attributes = array())
-    {
+    public function __construct(Node\Expr $cond, array $stmts = array(), array $attributes = array()) {
         parent::__construct($attributes);
         $this->cond = $cond;
         $this->stmts = $stmts;
     }
 
-    public function getSubNodeNames()
-    {
+    public function getSubNodeNames() {
         return array('cond', 'stmts');
     }
 }

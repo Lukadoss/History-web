@@ -18,7 +18,7 @@ class AbstractClassPassTest extends CodeCleanerTestCase
 {
     public function setUp()
     {
-        $this->pass = new AbstractClassPass();
+        $this->pass      = new AbstractClassPass();
         $this->traverser = new NodeTraverser();
         $this->traverser->addVisitor($this->pass);
     }

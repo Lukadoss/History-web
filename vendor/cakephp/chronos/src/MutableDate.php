@@ -30,7 +30,6 @@ class MutableDate extends DateTime implements ChronosInterface
     use Traits\FrozenTimeTrait;
     use Traits\MagicPropertyTrait;
     use Traits\ModifierTrait;
-    use Traits\RelativeKeywordTrait;
     use Traits\TestingAidTrait;
 
     /**
@@ -59,12 +58,14 @@ class MutableDate extends DateTime implements ChronosInterface
         $tz = new DateTimeZone('UTC');
         if (static::$testNow === null) {
             $time = $this->stripTime($time);
+
             return parent::__construct($time, $tz);
         }
 
         $relative = static::hasRelativeKeywords($time);
         if (!empty($time) && $time !== 'now' && !$relative) {
             $time = $this->stripTime($time);
+
             return parent::__construct($time, $tz);
         }
 

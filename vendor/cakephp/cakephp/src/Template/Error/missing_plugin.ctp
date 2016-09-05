@@ -23,11 +23,11 @@ $this->assign('templateName', 'missing_plugin.ctp');
 
 $this->start('subheading');
 ?>
-<strong>Error: </strong>
-The application is trying to load a file from the <em><?= h($plugin) ?></em> plugin.
-<br>
-<br>
-Make sure your plugin <em><?= h($plugin) ?></em> is in the <?= h($pluginPath) ?> directory and was loaded.
+    <strong>Error: </strong>
+    The application is trying to load a file from the <em><?= h($plugin) ?></em> plugin.
+    <br>
+    <br>
+    Make sure your plugin <em><?= h($plugin) ?></em> is in the <?= h($pluginPath) ?> directory and was loaded.
 <?php $this->end() ?>
 
 <?php $this->start('file') ?>

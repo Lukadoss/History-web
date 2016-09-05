@@ -20,7 +20,7 @@ use Psy\TabCompletion\Matcher\AbstractMatcher;
  */
 class AutoCompleter
 {
-    /** @var Matcher\AbstractMatcher[] */
+    /** @var Matcher\AbstractMatcher[]  */
     protected $matchers;
 
     /**
@@ -45,8 +45,8 @@ class AutoCompleter
      * Handle readline completion.
      *
      * @param string $input Readline current word
-     * @param int $index Current word index
-     * @param array $info readline_info() data
+     * @param int    $index Current word index
+     * @param array  $info  readline_info() data
      *
      * @return array
      */

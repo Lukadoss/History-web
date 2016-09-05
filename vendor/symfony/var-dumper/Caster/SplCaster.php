@@ -34,10 +34,10 @@ class SplCaster
         $flags = $c->getFlags();
 
         $b = array(
-            $prefix . 'flag::STD_PROP_LIST' => (bool)($flags & \ArrayObject::STD_PROP_LIST),
-            $prefix . 'flag::ARRAY_AS_PROPS' => (bool)($flags & \ArrayObject::ARRAY_AS_PROPS),
-            $prefix . 'iteratorClass' => $c->getIteratorClass(),
-            $prefix . 'storage' => $c->getArrayCopy(),
+            $prefix.'flag::STD_PROP_LIST' => (bool) ($flags & \ArrayObject::STD_PROP_LIST),
+            $prefix.'flag::ARRAY_AS_PROPS' => (bool) ($flags & \ArrayObject::ARRAY_AS_PROPS),
+            $prefix.'iteratorClass' => $c->getIteratorClass(),
+            $prefix.'storage' => $c->getArrayCopy(),
         );
 
         if ($class === 'ArrayObject') {
@@ -58,7 +58,7 @@ class SplCaster
     public static function castHeap(\Iterator $c, array $a, Stub $stub, $isNested)
     {
         $a += array(
-            Caster::PREFIX_VIRTUAL . 'heap' => iterator_to_array(clone $c),
+            Caster::PREFIX_VIRTUAL.'heap' => iterator_to_array(clone $c),
         );
 
         return $a;
@@ -71,8 +71,8 @@ class SplCaster
         $c->setIteratorMode(\SplDoublyLinkedList::IT_MODE_KEEP | $mode & ~\SplDoublyLinkedList::IT_MODE_DELETE);
 
         $a += array(
-            $prefix . 'mode' => new ConstStub((($mode & \SplDoublyLinkedList::IT_MODE_LIFO) ? 'IT_MODE_LIFO' : 'IT_MODE_FIFO') . ' | ' . (($mode & \SplDoublyLinkedList::IT_MODE_KEEP) ? 'IT_MODE_KEEP' : 'IT_MODE_DELETE'), $mode),
-            $prefix . 'dllist' => iterator_to_array($c),
+            $prefix.'mode' => new ConstStub((($mode & \SplDoublyLinkedList::IT_MODE_LIFO) ? 'IT_MODE_LIFO' : 'IT_MODE_FIFO').' | '.(($mode & \SplDoublyLinkedList::IT_MODE_KEEP) ? 'IT_MODE_KEEP' : 'IT_MODE_DELETE'), $mode),
+            $prefix.'dllist' => iterator_to_array($c),
         );
         $c->setIteratorMode($mode);
 
@@ -110,19 +110,19 @@ class SplCaster
 
         foreach ($map as $key => $accessor) {
             try {
-                $a[$prefix . $key] = $c->$accessor();
+                $a[$prefix.$key] = $c->$accessor();
             } catch (\Exception $e) {
             }
         }
 
-        if (isset($a[$prefix . 'perms'])) {
-            $a[$prefix . 'perms'] = new ConstStub(sprintf('0%o', $a[$prefix . 'perms']), $a[$prefix . 'perms']);
+        if (isset($a[$prefix.'perms'])) {
+            $a[$prefix.'perms'] = new ConstStub(sprintf('0%o', $a[$prefix.'perms']), $a[$prefix.'perms']);
         }
 
         static $mapDate = array('aTime', 'mTime', 'cTime');
         foreach ($mapDate as $key) {
-            if (isset($a[$prefix . $key])) {
-                $a[$prefix . $key] = new ConstStub(date('Y-m-d H:i:s', $a[$prefix . $key]), $a[$prefix . $key]);
+            if (isset($a[$prefix.$key])) {
+                $a[$prefix.$key] = new ConstStub(date('Y-m-d H:i:s', $a[$prefix.$key]), $a[$prefix.$key]);
             }
         }
 
@@ -144,23 +144,23 @@ class SplCaster
 
         foreach ($map as $key => $accessor) {
             try {
-                $a[$prefix . $key] = $c->$accessor();
+                $a[$prefix.$key] = $c->$accessor();
             } catch (\Exception $e) {
             }
         }
 
-        if (isset($a[$prefix . 'flags'])) {
+        if (isset($a[$prefix.'flags'])) {
             $flagsArray = array();
             foreach (self::$splFileObjectFlags as $value => $name) {
-                if ($a[$prefix . 'flags'] & $value) {
+                if ($a[$prefix.'flags'] & $value) {
                     $flagsArray[] = $name;
                 }
             }
-            $a[$prefix . 'flags'] = new ConstStub(implode('|', $flagsArray), $a[$prefix . 'flags']);
+            $a[$prefix.'flags'] = new ConstStub(implode('|', $flagsArray), $a[$prefix.'flags']);
         }
 
-        if (isset($a[$prefix . 'fstat'])) {
-            $a[$prefix . 'fstat'] = new CutArrayStub($a[$prefix . 'fstat'], array('dev', 'ino', 'nlink', 'rdev', 'blksize', 'blocks'));
+        if (isset($a[$prefix.'fstat'])) {
+            $a[$prefix.'fstat'] = new CutArrayStub($a[$prefix.'fstat'], array('dev', 'ino', 'nlink', 'rdev', 'blksize', 'blocks'));
         }
 
         return $a;
@@ -169,7 +169,7 @@ class SplCaster
     public static function castFixedArray(\SplFixedArray $c, array $a, Stub $stub, $isNested)
     {
         $a += array(
-            Caster::PREFIX_VIRTUAL . 'storage' => $c->toArray(),
+            Caster::PREFIX_VIRTUAL.'storage' => $c->toArray(),
         );
 
         return $a;
@@ -178,17 +178,17 @@ class SplCaster
     public static function castObjectStorage(\SplObjectStorage $c, array $a, Stub $stub, $isNested)
     {
         $storage = array();
-        unset($a[Caster::PREFIX_DYNAMIC . "\0gcdata"]); // Don't hit https://bugs.php.net/65967
+        unset($a[Caster::PREFIX_DYNAMIC."\0gcdata"]); // Don't hit https://bugs.php.net/65967
 
         foreach ($c as $obj) {
             $storage[spl_object_hash($obj)] = array(
                 'object' => $obj,
                 'info' => $c->getInfo(),
-            );
+             );
         }
 
         $a += array(
-            Caster::PREFIX_VIRTUAL . 'storage' => $storage,
+            Caster::PREFIX_VIRTUAL.'storage' => $storage,
         );
 
         return $a;
@@ -196,7 +196,7 @@ class SplCaster
 
     public static function castOuterIterator(\OuterIterator $c, array $a, Stub $stub, $isNested)
     {
-        $a[Caster::PREFIX_VIRTUAL . 'innerIterator'] = $c->getInnerIterator();
+        $a[Caster::PREFIX_VIRTUAL.'innerIterator'] = $c->getInnerIterator();
 
         return $a;
     }

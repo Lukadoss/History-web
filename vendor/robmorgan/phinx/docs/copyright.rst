@@ -1,5 +1,5 @@
 .. index::
-single: Copyright
+   single: Copyright
    
 Copyright
 =========

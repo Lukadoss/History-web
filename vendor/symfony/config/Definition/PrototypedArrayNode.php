@@ -63,7 +63,7 @@ class PrototypedArrayNode extends ArrayNode
      * array, then you can set the second argument of this method to false.
      *
      * @param string $attribute The name of the attribute which value is to be used as a key
-     * @param bool $remove Whether or not to remove the key
+     * @param bool   $remove    Whether or not to remove the key
      */
     public function setKeyAttribute($attribute, $remove = true)
     {
@@ -91,7 +91,7 @@ class PrototypedArrayNode extends ArrayNode
     public function setDefaultValue($value)
     {
         if (!is_array($value)) {
-            throw new \InvalidArgumentException($this->getPath() . ': the default value of an array node has to be an array.');
+            throw new \InvalidArgumentException($this->getPath().': the default value of an array node has to be an array.');
         }
 
         $this->defaultValue = $value;
@@ -117,7 +117,7 @@ class PrototypedArrayNode extends ArrayNode
         if (null === $children) {
             $this->defaultChildren = array('defaults');
         } else {
-            $this->defaultChildren = is_int($children) && $children > 0 ? range(1, $children) : (array)$children;
+            $this->defaultChildren = is_int($children) && $children > 0 ? range(1, $children) : (array) $children;
         }
     }
 
@@ -278,8 +278,8 @@ class PrototypedArrayNode extends ArrayNode
     /**
      * Merges values together.
      *
-     * @param mixed $leftSide The left side to merge.
-     * @param mixed $rightSide The right side to merge.
+     * @param mixed $leftSide  The left side to merge
+     * @param mixed $rightSide The right side to merge
      *
      * @return mixed The merged values
      *
@@ -309,7 +309,7 @@ class PrototypedArrayNode extends ArrayNode
             if (!array_key_exists($k, $leftSide)) {
                 if (!$this->allowNewKeys) {
                     $ex = new InvalidConfigurationException(sprintf(
-                        'You are not allowed to define new elements for path "%s". ' .
+                        'You are not allowed to define new elements for path "%s". '.
                         'Please define all elements for this path in one config file.',
                         $this->getPath()
                     ));

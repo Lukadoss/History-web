@@ -78,7 +78,7 @@ class ProxyAdapterTest extends \PHPUnit_Framework_TestCase
         $table = new \Phinx\Db\Table('atable');
         $index = new \Phinx\Db\Table\Index();
         $index->setType(\Phinx\Db\Table\Index::INDEX)
-            ->setColumns(array('email'));
+              ->setColumns(array('email'));
 
         $this->adapter->addIndex($table, $index);
 
@@ -94,8 +94,8 @@ class ProxyAdapterTest extends \PHPUnit_Framework_TestCase
         $refTable = new \Phinx\Db\Table('refTable');
         $fk = new \Phinx\Db\Table\ForeignKey();
         $fk->setReferencedTable($refTable)
-            ->setColumns(array('ref_table_id'))
-            ->setReferencedColumns(array('id'));
+           ->setColumns(array('ref_table_id'))
+           ->setReferencedColumns(array('id'));
 
         $this->adapter->addForeignKey($table, $fk);
 

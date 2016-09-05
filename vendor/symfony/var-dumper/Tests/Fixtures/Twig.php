@@ -1,7 +1,6 @@
 <?php
 
 /* foo.twig */
-
 class __TwigTemplate_VarDumperFixture_u75a09 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -10,7 +9,8 @@ class __TwigTemplate_VarDumperFixture_u75a09 extends Twig_Template
 
         $this->parent = false;
 
-        $this->blocks = array();
+        $this->blocks = array(
+        );
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -26,9 +26,9 @@ class __TwigTemplate_VarDumperFixture_u75a09 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array(19 => 2);
+        return array (19 => 2);
     }
 }
-/* foo bar*/
+/*   foo bar*/
 /*     twig source*/
 /* */

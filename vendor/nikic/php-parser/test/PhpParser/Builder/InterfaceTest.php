@@ -12,26 +12,22 @@ class InterfaceTest extends \PHPUnit_Framework_TestCase
     /** @var Interface_ */
     protected $builder;
 
-    protected function setUp()
-    {
+    protected function setUp() {
         $this->builder = new Interface_('Contract');
     }
 
-    private function dump($node)
-    {
+    private function dump($node) {
         $pp = new \PhpParser\PrettyPrinter\Standard;
         return $pp->prettyPrint(array($node));
     }
 
-    public function testEmpty()
-    {
+    public function testEmpty() {
         $contract = $this->builder->getNode();
         $this->assertInstanceOf('PhpParser\Node\Stmt\Interface_', $contract);
         $this->assertSame('Contract', $contract->name);
     }
 
-    public function testExtending()
-    {
+    public function testExtending() {
         $contract = $this->builder->extend('Space\Root1', 'Root2')->getNode();
         $this->assertEquals(
             new Stmt\Interface_('Contract', array(
@@ -43,15 +39,13 @@ class InterfaceTest extends \PHPUnit_Framework_TestCase
         );
     }
 
-    public function testAddMethod()
-    {
+    public function testAddMethod() {
         $method = new Stmt\ClassMethod('doSomething');
         $contract = $this->builder->addStmt($method)->getNode();
         $this->assertSame(array($method), $contract->stmts);
     }
 
-    public function testAddConst()
-    {
+    public function testAddConst() {
         $const = new Stmt\ClassConst(array(
             new Node\Const_('SPEED_OF_LIGHT', new DNumber(299792458.0))
         ));
@@ -59,8 +53,7 @@ class InterfaceTest extends \PHPUnit_Framework_TestCase
         $this->assertSame(299792458.0, $contract->stmts[0]->consts[0]->value->value);
     }
 
-    public function testOrder()
-    {
+    public function testOrder() {
         $const = new Stmt\ClassConst(array(
             new Node\Const_('SPEED_OF_LIGHT', new DNumber(299792458))
         ));
@@ -68,14 +61,14 @@ class InterfaceTest extends \PHPUnit_Framework_TestCase
         $contract = $this->builder
             ->addStmt($method)
             ->addStmt($const)
-            ->getNode();
+            ->getNode()
+        ;
 
         $this->assertInstanceOf('PhpParser\Node\Stmt\ClassConst', $contract->stmts[0]);
         $this->assertInstanceOf('PhpParser\Node\Stmt\ClassMethod', $contract->stmts[1]);
     }
 
-    public function testDocComment()
-    {
+    public function testDocComment() {
         $node = $this->builder
             ->setDocComment('/** Test */')
             ->getNode();
@@ -89,13 +82,11 @@ class InterfaceTest extends \PHPUnit_Framework_TestCase
      * @expectedException \LogicException
      * @expectedExceptionMessage Unexpected node of type "Stmt_PropertyProperty"
      */
-    public function testInvalidStmtError()
-    {
+    public function testInvalidStmtError() {
         $this->builder->addStmt(new Stmt\PropertyProperty('invalid'));
     }
 
-    public function testFullFunctional()
-    {
+    public function testFullFunctional() {
         $const = new Stmt\ClassConst(array(
             new Node\Const_('SPEED_OF_LIGHT', new DNumber(299792458))
         ));
@@ -103,7 +94,8 @@ class InterfaceTest extends \PHPUnit_Framework_TestCase
         $contract = $this->builder
             ->addStmt($method)
             ->addStmt($const)
-            ->getNode();
+            ->getNode()
+        ;
 
         eval($this->dump($contract));
 

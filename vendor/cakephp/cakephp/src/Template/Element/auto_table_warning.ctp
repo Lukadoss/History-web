@@ -13,7 +13,6 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 use Cake\ORM\TableRegistry;
-
 $autoTables = TableRegistry::genericInstances();
 if (!$autoTables) {
     return;
@@ -21,8 +20,8 @@ if (!$autoTables) {
 ?>
 <h3>Could this be caused by using Auto-Tables?</h3>
 <p>
-    Some of the Table objects in your application were created by instantiating "<strong>Cake\ORM\Table</strong>"
-    instead of any other specific subclass.
+Some of the Table objects in your application were created by instantiating "<strong>Cake\ORM\Table</strong>"
+instead of any other specific subclass.
 </p>
 <p>This could be the cause for this exception. Auto-Tables are created for you under the following circumstances:</p>
 <ul>
@@ -36,8 +35,8 @@ if (!$autoTables) {
 <br/>
 <p>Please try correcting the issue for the following table aliases:</p>
 <ul>
-    <?php foreach ($autoTables as $alias => $table) : ?>
-        <li><strong><?= $alias ?></strong></li>
-    <?php endforeach; ?>
+<?php foreach ($autoTables as $alias => $table) : ?>
+    <li><strong><?= $alias ?></strong></li>
+<?php endforeach; ?>
 </ul>
 <br/>

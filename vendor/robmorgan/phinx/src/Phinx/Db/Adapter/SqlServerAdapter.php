@@ -213,8 +213,8 @@ class SqlServerAdapter extends PdoAdapter implements AdapterInterface
         if (!isset($options['id']) || (isset($options['id']) && $options['id'] === true)) {
             $column = new Column();
             $column->setName('id')
-                ->setType('integer')
-                ->setIdentity(true);
+                   ->setType('integer')
+                   ->setIdentity(true);
 
             array_unshift($columns, $column);
             $options['primary_key'] = 'id';
@@ -223,8 +223,8 @@ class SqlServerAdapter extends PdoAdapter implements AdapterInterface
             // Handle id => "field_name" to support AUTO_INCREMENT
             $column = new Column();
             $column->setName($options['id'])
-                ->setType('integer')
-                ->setIdentity(true);
+                   ->setType('integer')
+                   ->setIdentity(true);
 
             array_unshift($columns, $column);
             $options['primary_key'] = $options['id'];
@@ -300,7 +300,7 @@ class SqlServerAdapter extends PdoAdapter implements AdapterInterface
     /**
      * Gets the SqlServer Column Comment Defininition for a column object.
      *
-     * @param Column $column Column
+     * @param Column $column    Column
      * @param string $tableName Table name
      *
      * @return string
@@ -388,11 +388,11 @@ class SqlServerAdapter extends PdoAdapter implements AdapterInterface
         foreach ($rows as $columnInfo) {
             $column = new Column();
             $column->setName($columnInfo['name'])
-                ->setType($this->getPhinxType($columnInfo['type']))
-                ->setNull($columnInfo['null'] !== 'NO')
-                ->setDefault($this->parseDefault($columnInfo['default']))
-                ->setIdentity($columnInfo['identity'] === '1')
-                ->setComment($this->getColumnComment($columnInfo['table_name'], $columnInfo['name']));
+                   ->setType($this->getPhinxType($columnInfo['type']))
+                   ->setNull($columnInfo['null'] !== 'NO')
+                   ->setDefault($this->parseDefault($columnInfo['default']))
+                   ->setIdentity($columnInfo['identity'] === '1')
+                   ->setComment($this->getColumnComment($columnInfo['table_name'], $columnInfo['name']));
 
             if (!empty($columnInfo['char_length'])) {
                 $column->setLimit($columnInfo['char_length']);
@@ -411,7 +411,7 @@ class SqlServerAdapter extends PdoAdapter implements AdapterInterface
         if (strtoupper($default) === 'NULL') {
             $default = null;
         } elseif (is_numeric($default)) {
-            $default = (int)$default;
+            $default = (int) $default;
         }
 
         return $default;
@@ -465,12 +465,12 @@ class SqlServerAdapter extends PdoAdapter implements AdapterInterface
         $this->writeCommand('renameColumn', array($tableName, $columnName, $newColumnName));
         $this->renameDefault($tableName, $columnName, $newColumnName);
         $this->execute(
-            sprintf(
-                "EXECUTE sp_rename N'%s.%s', N'%s', 'COLUMN' ",
-                $tableName,
-                $columnName,
-                $newColumnName
-            )
+             sprintf(
+                 "EXECUTE sp_rename N'%s.%s', N'%s', 'COLUMN' ",
+                 $tableName,
+                 $columnName,
+                 $newColumnName
+             )
         );
         $this->endCommandTimer();
     }
@@ -621,7 +621,7 @@ ORDER BY IC.[key_ordinal];";
 
         $rows = $this->fetchAll($sql);
         $columns = array();
-        foreach ($rows as $row) {
+        foreach($rows as $row) {
             $columns[] = strtolower($row['column_name']);
         }
         return $columns;
@@ -683,7 +683,7 @@ ORDER BY T.[name], I.[index_id];";
 
         foreach ($indexes as $name => $index) {
             if ($name === $indexName) {
-                return true;
+                 return true;
             }
         }
 
@@ -1056,7 +1056,7 @@ SQL;
         if (is_string($default) && 'CURRENT_TIMESTAMP' !== $default) {
             $default = $this->getConnection()->quote($default);
         } elseif (is_bool($default)) {
-            $default = (int)$default;
+            $default = (int) $default;
         }
         return isset($default) ? ' DEFAULT ' . $default : '';
     }
@@ -1168,14 +1168,14 @@ SQL;
     /**
      * {@inheritdoc}
      */
-    public function migrated(MigrationInterface $migration, $direction, $startTime, $endTime)
-    {
+    public function migrated(MigrationInterface $migration, $direction, $startTime, $endTime) {
         if (strcasecmp($direction, MigrationInterface::UP) === 0) {
             // up
             $sql = sprintf(
-                "INSERT INTO %s ([version], [start_time], [end_time]) VALUES ('%s', '%s', '%s');",
+                "INSERT INTO %s ([version], [migration_name], [start_time], [end_time]) VALUES ('%s', '%s', '%s', '%s');",
                 $this->getSchemaTableName(),
                 $migration->getVersion(),
+                substr($migration->getName(), 0, 100),
                 $startTime,
                 $endTime
             );

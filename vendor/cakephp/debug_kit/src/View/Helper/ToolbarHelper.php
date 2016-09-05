@@ -127,10 +127,10 @@ class ToolbarHelper extends Helper
             }
 
             if ((
-                    $value instanceof ArrayAccess ||
-                    $value instanceof Iterator ||
-                    is_array($value) ||
-                    $isObject
+                $value instanceof ArrayAccess ||
+                $value instanceof Iterator ||
+                is_array($value) ||
+                $isObject
                 ) && !empty($value)
             ) {
                 $out .= $this->makeNeatArray($value, $openDepth, $nextDepth, $doubleEncode, $ancestors);
@@ -140,6 +140,7 @@ class ToolbarHelper extends Helper
             $out .= '</li>';
         }
         $out .= '</ul>';
+
         return $out;
     }
 }

@@ -8,17 +8,17 @@ class UserSeeder extends AbstractSeed
     {
         $data = array(
             array(
-                'name' => 'foo',
+                'name'    => 'foo',
                 'created' => date('Y-m-d H:i:s'),
             ),
             array(
-                'name' => 'bar',
+                'name'    => 'bar',
                 'created' => date('Y-m-d H:i:s'),
             )
         );
 
         $users = $this->table('users');
         $users->insert($data)
-            ->save();
+              ->save();
     }
 }

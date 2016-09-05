@@ -12,17 +12,15 @@ class Variable extends Expr
     /**
      * Constructs a variable node.
      *
-     * @param string|Expr $name Name
-     * @param array $attributes Additional attributes
+     * @param string|Expr $name       Name
+     * @param array                      $attributes Additional attributes
      */
-    public function __construct($name, array $attributes = array())
-    {
+    public function __construct($name, array $attributes = array()) {
         parent::__construct($attributes);
         $this->name = $name;
     }
 
-    public function getSubNodeNames()
-    {
+    public function getSubNodeNames() {
         return array('name');
     }
 }

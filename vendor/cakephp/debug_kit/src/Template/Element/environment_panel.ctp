@@ -16,107 +16,106 @@
  */
 use Cake\Error\Debugger;
 use Cake\Utility\Inflector;
-
 ?>
 
 <h2><?= __d('debug_kit', 'Application Constants') ?></h2>
 
 <?php if (!empty($app)): ?>
-    <table cellspacing="0" cellpadding="0" class="debug-table">
-        <thead>
+<table cellspacing="0" cellpadding="0" class="debug-table">
+    <thead>
         <tr>
             <th>Constant</th>
             <th>Value</th>
         </tr>
-        </thead>
-        <tbody>
+    </thead>
+    <tbody>
         <?php foreach ($app as $key => $val): ?>
-            <tr>
-                <td><?= h($key) ?></td>
-                <td><?= h(Debugger::exportVar($val)) ?></td>
-            </tr>
+        <tr>
+            <td><?= h($key) ?></td>
+            <td><?= h(Debugger::exportVar($val)) ?></td>
+        </tr>
         <?php endforeach; ?>
-        </tbody>
-    </table>
+    </tbody>
+</table>
 <?php else: ?>
-    <div class="warning">
-        <?= __d('debug_kit', 'No application environment available.'); ?>
-    </div>
+<div class="warning">
+    <?= __d('debug_kit', 'No application environment available.'); ?>
+</div>
 <?php endif; ?>
 
 <h2><?= __d('debug_kit', 'CakePHP Constants') ?></h2>
 
 <?php if (!empty($cake)): ?>
-    <table cellspacing="0" cellpadding="0" class="debug-table">
-        <thead>
+<table cellspacing="0" cellpadding="0" class="debug-table">
+    <thead>
         <tr>
             <th>Constant</th>
             <th>Value</th>
         </tr>
-        </thead>
-        <tbody>
+    </thead>
+    <tbody>
         <?php foreach ($cake as $key => $val): ?>
-            <tr>
-                <td><?= h($key) ?></td>
-                <td><?= h(Debugger::exportVar($val)) ?></td>
-            </tr>
+        <tr>
+            <td><?= h($key) ?></td>
+            <td><?= h(Debugger::exportVar($val)) ?></td>
+        </tr>
         <?php endforeach; ?>
-        </tbody>
-    </table>
+    </tbody>
+</table>
 <?php else: ?>
-    <div class="warning">
-        <?= __d('debug_kit', 'CakePHP environment unavailable.'); ?>
-    </div>
+<div class="warning">
+    <?= __d('debug_kit', 'CakePHP environment unavailable.'); ?>
+</div>
 <?php endif; ?>
 
 <h2><?= __d('debug_kit', 'PHP Environment') ?></h2>
 
 <?php if (!empty($php)): ?>
-    <table cellspacing="0" cellpadding="0" class="debug-table">
-        <thead>
+<table cellspacing="0" cellpadding="0" class="debug-table">
+    <thead>
         <tr>
             <th>Environment Variable</th>
             <th>Value</th>
         </tr>
-        </thead>
-        <tbody>
+    </thead>
+    <tbody>
         <?php foreach ($php as $key => $val): ?>
-            <tr>
-                <td><?= h($key) ?></td>
-                <td><?= h($val) ?></td>
-            </tr>
+        <tr>
+            <td><?= h($key) ?></td>
+            <td><?= h($val) ?></td>
+        </tr>
         <?php endforeach; ?>
-        </tbody>
-    </table>
+    </tbody>
+</table>
 <?php else: ?>
-    <div class="warning">
-        <?= __d('debug_kit', 'PHP environment unavailable.'); ?>
-    </div>
+<div class="warning">
+    <?= __d('debug_kit', 'PHP environment unavailable.'); ?>
+</div>
 <?php endif; ?>
 
 <?php if (isset($hidef)): ?>
     <h2><?= __d('debug_kit', 'Hidef Environment') ?></h2>
 
     <?php if (!empty($hidef)): ?>
-        <table cellspacing="0" cellpadding="0" class="debug-table">
-            <thead>
+    <table cellspacing="0" cellpadding="0" class="debug-table">
+        <thead>
             <tr>
                 <th>Constant</th>
                 <th>Value</th>
             </tr>
-            </thead>
-            <tbody>
+        </thead>
+        <tbody>
             <?php foreach ($hidef as $key => $val): ?>
-                <tr>
-                    <td><?= h($key) ?></td>
-                    <td><?= h(Debugger::exportVar($val)) ?></td>
-                </tr>
+            <tr>
+                <td><?= h($key) ?></td>
+                <td><?= h(Debugger::exportVar($val)) ?></td>
+            </tr>
             <?php endforeach; ?>
-            </tbody>
-        </table>
+        </tbody>
+    </table>
     <?php else: ?>
-        <div class="warning">
-            <?= __d('debug_kit', 'No Hidef environment available.'); ?>
-        </div>
+    <div class="warning">
+        <?= __d('debug_kit', 'No Hidef environment available.'); ?>
+    </div>
     <?php endif; ?>
 <?php endif; ?>

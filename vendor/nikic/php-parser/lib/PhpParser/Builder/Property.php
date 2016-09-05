@@ -18,8 +18,7 @@ class Property extends PhpParser\BuilderAbstract
      *
      * @param string $name Name of the property
      */
-    public function __construct($name)
-    {
+    public function __construct($name) {
         $this->name = $name;
     }
 
@@ -28,8 +27,7 @@ class Property extends PhpParser\BuilderAbstract
      *
      * @return $this The builder instance (for fluid interface)
      */
-    public function makePublic()
-    {
+    public function makePublic() {
         $this->setModifier(Stmt\Class_::MODIFIER_PUBLIC);
 
         return $this;
@@ -40,8 +38,7 @@ class Property extends PhpParser\BuilderAbstract
      *
      * @return $this The builder instance (for fluid interface)
      */
-    public function makeProtected()
-    {
+    public function makeProtected() {
         $this->setModifier(Stmt\Class_::MODIFIER_PROTECTED);
 
         return $this;
@@ -52,8 +49,7 @@ class Property extends PhpParser\BuilderAbstract
      *
      * @return $this The builder instance (for fluid interface)
      */
-    public function makePrivate()
-    {
+    public function makePrivate() {
         $this->setModifier(Stmt\Class_::MODIFIER_PRIVATE);
 
         return $this;
@@ -64,8 +60,7 @@ class Property extends PhpParser\BuilderAbstract
      *
      * @return $this The builder instance (for fluid interface)
      */
-    public function makeStatic()
-    {
+    public function makeStatic() {
         $this->setModifier(Stmt\Class_::MODIFIER_STATIC);
 
         return $this;
@@ -78,8 +73,7 @@ class Property extends PhpParser\BuilderAbstract
      *
      * @return $this The builder instance (for fluid interface)
      */
-    public function setDefault($value)
-    {
+    public function setDefault($value) {
         $this->default = $this->normalizeValue($value);
 
         return $this;
@@ -92,8 +86,7 @@ class Property extends PhpParser\BuilderAbstract
      *
      * @return $this The builder instance (for fluid interface)
      */
-    public function setDocComment($docComment)
-    {
+    public function setDocComment($docComment) {
         $this->attributes = array(
             'comments' => array($this->normalizeDocComment($docComment))
         );
@@ -106,8 +99,7 @@ class Property extends PhpParser\BuilderAbstract
      *
      * @return Stmt\Property The built property node
      */
-    public function getNode()
-    {
+    public function getNode() {
         return new Stmt\Property(
             $this->type !== 0 ? $this->type : Stmt\Class_::MODIFIER_PUBLIC,
             array(

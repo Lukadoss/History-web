@@ -12,17 +12,15 @@ class Print_ extends Expr
     /**
      * Constructs an print() node.
      *
-     * @param Expr $expr Expression
+     * @param Expr  $expr       Expression
      * @param array $attributes Additional attributes
      */
-    public function __construct(Expr $expr, array $attributes = array())
-    {
+    public function __construct(Expr $expr, array $attributes = array()) {
         parent::__construct($attributes);
         $this->expr = $expr;
     }
 
-    public function getSubNodeNames()
-    {
+    public function getSubNodeNames() {
         return array('expr');
     }
 }

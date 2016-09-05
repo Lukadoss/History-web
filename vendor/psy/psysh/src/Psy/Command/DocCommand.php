@@ -58,7 +58,7 @@ HELP
         list($value, $reflector) = $this->getTargetAndReflector($input->getArgument('value'));
 
         $doc = $this->getManualDoc($reflector) ?: DocblockFormatter::format($reflector);
-        $db = $this->getApplication()->getManualDb();
+        $db  = $this->getApplication()->getManualDb();
 
         $output->page(function ($output) use ($reflector, $doc, $db) {
             $output->writeln(SignatureFormatter::format($reflector));

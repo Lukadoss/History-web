@@ -45,7 +45,7 @@ class RollbackTest extends \PHPUnit_Framework_TestCase
         // mock the manager class
         $managerStub = $this->getMock('\Phinx\Migration\Manager', array(), array($this->config, $output));
         $managerStub->expects($this->once())
-            ->method('rollback');
+                    ->method('rollback');
 
         $command->setConfig($this->config);
         $command->setManager($managerStub);
@@ -69,7 +69,7 @@ class RollbackTest extends \PHPUnit_Framework_TestCase
         // mock the manager class
         $managerStub = $this->getMock('\Phinx\Migration\Manager', array(), array($this->config, $output));
         $managerStub->expects($this->once())
-            ->method('rollback');
+                    ->method('rollback');
 
         $command->setConfig($this->config);
         $command->setManager($managerStub);
@@ -92,7 +92,7 @@ class RollbackTest extends \PHPUnit_Framework_TestCase
         // mock the manager class
         $managerStub = $this->getMock('\Phinx\Migration\Manager', array(), array($this->config, $output));
         $managerStub->expects($this->once())
-            ->method('rollback');
+                    ->method('rollback');
 
         $command->setConfig($this->config);
         $command->setManager($managerStub);

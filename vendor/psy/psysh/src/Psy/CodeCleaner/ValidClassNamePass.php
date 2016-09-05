@@ -30,9 +30,9 @@ use Psy\Exception\FatalErrorException;
  */
 class ValidClassNamePass extends NamespaceAwarePass
 {
-    const CLASS_TYPE = 'class';
+    const CLASS_TYPE     = 'class';
     const INTERFACE_TYPE = 'interface';
-    const TRAIT_TYPE = 'trait';
+    const TRAIT_TYPE     = 'trait';
 
     protected $checkTraits;
 
@@ -42,7 +42,29 @@ class ValidClassNamePass extends NamespaceAwarePass
     }
 
     /**
-     * Validate class, interface and trait statements, and `new` expressions.
+     * Validate class, interface and trait definitions.
+     *
+     * Validate them upon entering the node, so that we know about their
+     * presence and can validate constant fetches and static calls in class or
+     * trait methods.
+     *
+     * @param Node
+     */
+    public function enterNode(Node $node)
+    {
+        parent::enterNode($node);
+
+        if ($node instanceof ClassStmt) {
+            $this->validateClassStatement($node);
+        } elseif ($node instanceof InterfaceStmt) {
+            $this->validateInterfaceStatement($node);
+        } elseif ($node instanceof TraitStmt) {
+            $this->validateTraitStatement($node);
+        }
+    }
+
+    /**
+     * Validate `new` expressions, class constant fetches, and static calls.
      *
      * @throws FatalErrorException if a class, interface or trait is referenced which does not exist.
      * @throws FatalErrorException if a class extends something that is not a class.
@@ -54,13 +76,7 @@ class ValidClassNamePass extends NamespaceAwarePass
      */
     public function leaveNode(Node $node)
     {
-        if ($node instanceof ClassStmt) {
-            $this->validateClassStatement($node);
-        } elseif ($node instanceof InterfaceStmt) {
-            $this->validateInterfaceStatement($node);
-        } elseif ($node instanceof TraitStmt) {
-            $this->validateTraitStatement($node);
-        } elseif ($node instanceof NewExpr) {
+        if ($node instanceof NewExpr) {
             $this->validateNewExpression($node);
         } elseif ($node instanceof ClassConstFetch) {
             $this->validateClassConstFetchExpression($node);
@@ -126,8 +142,7 @@ class ValidClassNamePass extends NamespaceAwarePass
     {
         // there is no need to check exists for ::class const for php 5.5 or newer
         if (strtolower($stmt->name) === 'class'
-            && version_compare(PHP_VERSION, '5.5', '>=')
-        ) {
+            && version_compare(PHP_VERSION, '5.5', '>=')) {
             return;
         }
 
@@ -186,7 +201,7 @@ class ValidClassNamePass extends NamespaceAwarePass
      * @throws FatalErrorException
      *
      * @param string $name
-     * @param Stmt $stmt
+     * @param Stmt   $stmt
      */
     protected function ensureClassExists($name, $stmt)
     {
@@ -201,7 +216,7 @@ class ValidClassNamePass extends NamespaceAwarePass
      * @throws FatalErrorException
      *
      * @param string $name
-     * @param Stmt $stmt
+     * @param Stmt   $stmt
      */
     protected function ensureClassOrInterfaceExists($name, $stmt)
     {
@@ -217,11 +232,16 @@ class ValidClassNamePass extends NamespaceAwarePass
      *
      * @param string $class
      * @param string $name
-     * @param Stmt $stmt
+     * @param Stmt   $stmt
      */
     protected function ensureMethodExists($class, $name, $stmt)
     {
         $this->ensureClassExists($class, $stmt);
+
+        // let's pretend all calls to self, parent and static are valid
+        if (in_array(strtolower($class), array('self', 'parent', 'static'))) {
+            return;
+        }
 
         // if method name is an expression, give it a pass for now
         if ($name instanceof Expr) {
@@ -334,7 +354,7 @@ class ValidClassNamePass extends NamespaceAwarePass
      * Error creation factory.
      *
      * @param string $msg
-     * @param Stmt $stmt
+     * @param Stmt   $stmt
      *
      * @return FatalErrorException
      */

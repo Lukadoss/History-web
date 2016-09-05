@@ -232,13 +232,13 @@ class XmlDescriptor extends Descriptor
         $dom = new \DOMDocument('1.0', 'UTF-8');
 
         $dom->appendChild($objectXML = $dom->createElement('option'));
-        $objectXML->setAttribute('name', '--' . $option->getName());
+        $objectXML->setAttribute('name', '--'.$option->getName());
         $pos = strpos($option->getShortcut(), '|');
         if (false !== $pos) {
-            $objectXML->setAttribute('shortcut', '-' . substr($option->getShortcut(), 0, $pos));
-            $objectXML->setAttribute('shortcuts', '-' . implode('|-', explode('|', $option->getShortcut())));
+            $objectXML->setAttribute('shortcut', '-'.substr($option->getShortcut(), 0, $pos));
+            $objectXML->setAttribute('shortcuts', '-'.implode('|-', explode('|', $option->getShortcut())));
         } else {
-            $objectXML->setAttribute('shortcut', $option->getShortcut() ? '-' . $option->getShortcut() : '');
+            $objectXML->setAttribute('shortcut', $option->getShortcut() ? '-'.$option->getShortcut() : '');
         }
         $objectXML->setAttribute('accept_value', $option->acceptValue() ? 1 : 0);
         $objectXML->setAttribute('is_value_required', $option->isValueRequired() ? 1 : 0);

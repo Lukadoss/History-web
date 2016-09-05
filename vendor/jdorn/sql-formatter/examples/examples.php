@@ -31,7 +31,7 @@
 <body>
 <?php
 
-require_once(__DIR__ . '/../lib/SqlFormatter.php');
+require_once(__DIR__.'/../lib/SqlFormatter.php');
 
 // Example statements for formatting and highlighting
 $statements = array(
@@ -43,10 +43,10 @@ $statements = array(
     DATE_FORMAT((DATE_SUB(NOW(),INTERVAL 1 DAY)),'%Y-%c-%d') AND t_create 
     < DATE_FORMAT(NOW(), '%Y-%c-%d') ORDER BY d.id LIMIT 2,10) a, 
     orc_scheme_detail b WHERE a.id = b.id",
-
+    
     "SELECT * from Table1 LEFT 
     OUTER JOIN Table2 on Table1.id = Table2.id",
-
+    
     "SELECT * FROM MyTable WHERE id = 46",
 
     "SELECT count(*),`Column1` as count,`Testing`, `Testing Three` FROM `Table1`
@@ -86,7 +86,7 @@ $split_statements = array(
         abc\";
     SELECT a,b #comment;
     FROM test;",
-
+    
     "
     -- Drop the table first if it exists
     DROP TABLE IF EXISTS MyTable;
@@ -128,13 +128,13 @@ $comment_statements = array(
         <th>Formatted And Highlighted</th>
     </tr>
     <?php foreach ($statements as $sql) { ?>
-        <tr>
-            <td>
-                <pre><?php echo $sql; ?></pre>
-            </td>
-            <td><?php echo SqlFormatter::format($sql); ?></td>
-        </tr>
-    <?php } ?>
+    <tr>
+        <td>
+            <pre><?php echo $sql; ?></pre>
+        </td>
+        <td><?php echo SqlFormatter::format($sql); ?></td>
+    </tr>
+    <?php }    ?>
 </table>
 
 
@@ -152,15 +152,13 @@ $comment_statements = array(
         <th>Formatted</th>
     </tr>
     <?php foreach ($statements as $sql) { ?>
-        <tr>
-            <td>
-                <pre><?php echo $sql; ?></pre>
-            </td>
-            <td>
-                <pre><?php echo htmlentities(SqlFormatter::format($sql, false)); ?></pre>
-            </td>
-        </tr>
-    <?php } ?>
+    <tr>
+        <td>
+            <pre><?php echo $sql; ?></pre>
+        </td>
+        <td><pre><?php echo htmlentities(SqlFormatter::format($sql,false)); ?></pre></td>
+    </tr>
+    <?php }    ?>
 </table>
 
 
@@ -178,13 +176,13 @@ $comment_statements = array(
         <th>Highlighted</th>
     </tr>
     <?php foreach ($statements as $sql) { ?>
-        <tr>
-            <td>
-                <pre><?php echo $sql; ?></pre>
-            </td>
-            <td><?php echo SqlFormatter::highlight($sql); ?></td>
-        </tr>
-    <?php } ?>
+    <tr>
+        <td>
+            <pre><?php echo $sql; ?></pre>
+        </td>
+        <td><?php echo SqlFormatter::highlight($sql); ?></td>
+    </tr>
+    <?php }    ?>
 </table>
 
 
@@ -202,15 +200,13 @@ $comment_statements = array(
         <th>Compressed</th>
     </tr>
     <?php foreach ($statements as $sql) { ?>
-        <tr>
-            <td>
-                <pre><?php echo $sql; ?></pre>
-            </td>
-            <td>
-                <pre><?php echo SqlFormatter::compress($sql); ?></pre>
-            </td>
-        </tr>
-    <?php } ?>
+    <tr>
+        <td>
+            <pre><?php echo $sql; ?></pre>
+        </td>
+        <td><pre><?php echo SqlFormatter::compress($sql); ?></pre></td>
+    </tr>
+    <?php }    ?>
 </table>
 
 
@@ -228,20 +224,20 @@ $comment_statements = array(
         <th>Split</th>
     </tr>
     <?php foreach ($split_statements as $sql) { ?>
-        <tr>
-            <td>
-                <pre><?php echo SqlFormatter::highlight($sql); ?></pre>
-            </td>
-            <td><?php
-                $queries = SqlFormatter::splitQuery($sql);
-                echo "<ol>";
-                foreach ($queries as $query) {
-                    echo "<li><pre>" . SqlFormatter::highlight($query) . "</pre></li>";
-                }
-                echo "</ol>";
-                ?></td>
-        </tr>
-    <?php } ?>
+    <tr>
+        <td>
+            <pre><?php echo SqlFormatter::highlight($sql); ?></pre>
+        </td>
+        <td><?php
+            $queries = SqlFormatter::splitQuery($sql);
+            echo "<ol>";
+            foreach ($queries as $query) {
+                echo "<li><pre>" . SqlFormatter::highlight($query) . "</pre></li>";
+            }
+            echo "</ol>";
+            ?></td>
+    </tr>
+    <?php }    ?>
 </table>
 
 
@@ -259,15 +255,15 @@ $comment_statements = array(
         <th>Comments Removed</th>
     </tr>
     <?php foreach ($comment_statements as $sql) { ?>
-        <tr>
-            <td>
-                <pre><?php echo SqlFormatter::highlight($sql); ?></pre>
-            </td>
-            <td>
-                <pre><?php echo SqlFormatter::highlight(SqlFormatter::removeComments($sql)) ?></pre>
-            </td>
-        </tr>
-    <?php } ?>
+    <tr>
+        <td>
+            <pre><?php echo SqlFormatter::highlight($sql); ?></pre>
+        </td>
+        <td>
+            <pre><?php echo SqlFormatter::highlight(SqlFormatter::removeComments($sql)) ?></pre>
+        </td>
+    </tr>
+    <?php }    ?>
 </table>
 
 </body>

@@ -29,8 +29,8 @@ use PhpParser\Node\Stmt\Use_ as UseStmt;
  */
 class UseStatementPass extends NamespaceAwarePass
 {
-    private $aliases = array();
-    private $lastAliases = array();
+    private $aliases       = array();
+    private $lastAliases   = array();
     private $lastNamespace = null;
 
     /**
@@ -74,8 +74,8 @@ class UseStatementPass extends NamespaceAwarePass
         } elseif ($node instanceof NamespaceStmt) {
             // Start fresh, since we're done with this namespace.
             $this->lastNamespace = $node->name;
-            $this->lastAliases = $this->aliases;
-            $this->aliases = array();
+            $this->lastAliases   = $this->aliases;
+            $this->aliases       = array();
         } else {
             foreach ($node as $name => $subNode) {
                 if ($subNode instanceof Name) {

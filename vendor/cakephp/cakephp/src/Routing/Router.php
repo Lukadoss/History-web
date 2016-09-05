@@ -219,12 +219,15 @@ class Router
      *   shifted into the passed arguments. As well as supplying patterns for routing parameters.
      * @return void
      * @see \Cake\Routing\RouteBuilder::redirect()
+     * @deprecated 3.3.0 Use Router::scope() and RouteBuilder::redirect() instead.
      */
     public static function redirect($route, $url, $options = [])
     {
-        $options['routeClass'] = 'Cake\Routing\Route\RedirectRoute';
         if (is_string($url)) {
             $url = ['redirect' => $url];
+        }
+        if (!isset($options['routeClass'])) {
+            $options['routeClass'] = 'Cake\Routing\Route\RedirectRoute';
         }
         static::connect($route, $url, $options);
     }
@@ -279,6 +282,7 @@ class Router
      * @param string|array $controller A controller name or array of controller names (i.e. "Posts" or "ListItems")
      * @param array $options Options to use when generating REST routes
      * @see \Cake\Routing\RouteBuilder::resources()
+     * @deprecated 3.3.0 Use Router::scope() and RouteBuilder::resources() instead.
      * @return void
      */
     public static function mapResources($controller, $options = [])
@@ -289,6 +293,7 @@ class Router
             $prefix = $pluginUrl = false;
             if (!empty($options['prefix'])) {
                 $prefix = $options['prefix'];
+                unset($options['prefix']);
             }
             if ($plugin) {
                 $pluginUrl = Inflector::underscore($plugin);
@@ -302,20 +307,24 @@ class Router
                 $path = '/' . implode('/', [$prefix, $pluginUrl]);
                 $params = ['prefix' => $prefix, 'plugin' => $plugin];
                 static::scope($path, $params, $callback);
+
                 return;
             }
 
             if ($prefix) {
                 static::prefix($prefix, $callback);
+
                 return;
             }
 
             if ($plugin) {
                 static::plugin($plugin, $callback);
+
                 return;
             }
 
             static::scope('/', $callback);
+
             return;
         }
     }
@@ -323,11 +332,12 @@ class Router
     /**
      * Parses given URL string. Returns 'routing' parameters for that URL.
      *
-     * @param string $url URL to be parsed
-     * @return array Parsed elements from URL
+     * @param string $url URL to be parsed.
+     * @param string $method The HTTP method being used.
+     * @return array Parsed elements from URL.
      * @throws \Cake\Routing\Exception\MissingRouteException When a route cannot be handled
      */
-    public static function parse($url)
+    public static function parse($url, $method = '')
     {
         if (!static::$initialized) {
             static::_loadRoutes();
@@ -335,7 +345,8 @@ class Router
         if (strpos($url, '/') !== 0) {
             $url = '/' . $url;
         }
-        return static::$_collection->parse($url);
+
+        return static::$_collection->parse($url, $method);
     }
 
     /**
@@ -414,6 +425,7 @@ class Router
             static::_setContext($last);
             reset(static::$_requests);
         }
+
         return $removed;
     }
 
@@ -428,6 +440,7 @@ class Router
         if ($current) {
             return end(static::$_requests);
         }
+
         return isset(static::$_requests[0]) ? static::$_requests[0] : null;
     }
 
@@ -442,6 +455,7 @@ class Router
         if (empty(static::$_initialState)) {
             static::$_collection = new RouteCollection();
             static::$_initialState = get_class_vars(get_called_class());
+
             return;
         }
         foreach (static::$_initialState as $key => $val) {
@@ -500,6 +514,7 @@ class Router
         foreach (static::$_urlFilters as $filter) {
             $url = $filter($url, $request);
         }
+
         return $url;
     }
 
@@ -532,7 +547,7 @@ class Router
      * - `_name` - Name of route. If you have setup named routes you can use this key
      *   to specify it.
      *
-     * @param string|array $url An array specifying any of the following:
+     * @param string|array|null $url An array specifying any of the following:
      *   'controller', 'action', 'plugin' additionally, you can provide routed
      *   elements or query string parameters. If string it can be name any valid url
      *   string.
@@ -570,6 +585,7 @@ class Router
             if ($full) {
                 $output = static::fullBaseUrl() . $output;
             }
+
             return $output;
         }
         if (is_array($url)) {
@@ -634,6 +650,7 @@ class Router
                 $output = static::fullBaseUrl() . $output;
             }
         }
+
         return $output . $frag;
     }
 
@@ -661,6 +678,7 @@ class Router
         if (empty(static::$_fullBaseUrl)) {
             static::$_fullBaseUrl = Configure::read('App.fullBaseUrl');
         }
+
         return static::$_fullBaseUrl;
     }
 
@@ -701,13 +719,15 @@ class Router
             $params['bare'],
             $params['requested'],
             $params['return'],
-            $params['_Token']
+            $params['_Token'],
+            $params['_matchedRoute']
         );
         $params = array_merge($params, $pass);
         if (!empty($url)) {
             $params['?'] = $url;
         }
-        return Router::url($params, $full);
+
+        return static::url($params, $full);
     }
 
     /**
@@ -722,12 +742,12 @@ class Router
     public static function normalize($url = '/')
     {
         if (is_array($url)) {
-            $url = Router::url($url);
+            $url = static::url($url);
         }
         if (preg_match('/^[a-z\-]+:\/\//', $url)) {
             return $url;
         }
-        $request = Router::getRequest();
+        $request = static::getRequest();
 
         if (!empty($request->base) && stristr($url, $request->base)) {
             $url = preg_replace('/^' . preg_quote($request->base, '/') . '/', '', $url, 1);
@@ -742,6 +762,7 @@ class Router
         if (empty($url)) {
             return '/';
         }
+
         return $url;
     }
 
@@ -760,7 +781,7 @@ class Router
      * A string or an array of valid extensions can be passed to this method.
      * If called without any parameters it will return current list of set extensions.
      *
-     * @param array|string $extensions List of extensions to be added.
+     * @param array|string|null $extensions List of extensions to be added.
      * @param bool $merge Whether to merge with or override existing extensions.
      *   Defaults to `true`.
      * @return array Array of extensions Router is configured to parse.
@@ -772,12 +793,14 @@ class Router
             if (!static::$initialized) {
                 static::_loadRoutes();
             }
+
             return array_unique(array_merge(static::$_defaultExtensions, $collection->extensions()));
         }
         $extensions = (array)$extensions;
         if ($merge) {
             $extensions = array_unique(array_merge(static::$_defaultExtensions, $extensions));
         }
+
         return static::$_defaultExtensions = $extensions;
     }
 
@@ -796,12 +819,14 @@ class Router
      * @param \Cake\Network\Request $request The request object to modify.
      * @param array $options The array of options.
      * @return \Cake\Network\Request The modified request
+     * @deprecated 3.3.0 Named parameter backwards compatibility will be removed in 4.0.
      */
     public static function parseNamedParams(Request $request, array $options = [])
     {
         $options += ['separator' => ':'];
         if (empty($request->params['pass'])) {
             $request->params['named'] = [];
+
             return $request;
         }
         $named = [];
@@ -831,6 +856,7 @@ class Router
             $named = array_merge_recursive($named, [$key => $value]);
         }
         $request->params['named'] = $named;
+
         return $request;
     }
 
@@ -896,7 +922,7 @@ class Router
      * @param string $name The prefix name to use.
      * @param array|callable $params An array of routing defaults to add to each connected route.
      *   If you have no parameters, this argument can be a callable.
-     * @param callable $callback The callback to invoke that builds the prefixed routes.
+     * @param callable|null $callback The callback to invoke that builds the prefixed routes.
      * @return void
      */
     public static function prefix($name, $params = [], $callback = null)
@@ -955,6 +981,7 @@ class Router
         if (!static::$initialized) {
             static::_loadRoutes();
         }
+
         return static::$_collection->routes();
     }
 

@@ -32,7 +32,7 @@ use DateTimeZone;
  * @property-read DateTimeZone $timezone the current timezone
  * @property-read DateTimeZone $tz alias of timezone
  * @property-read int $micro
- * @property-read int $dayOfWeek 0 (for Sunday) through 6 (for Saturday)
+ * @property-read int $dayOfWeek 1 (for Monday) through 7 (for Sunday)
  * @property-read int $dayOfYear 0 through 365
  * @property-read int $weekOfMonth 1 through 5
  * @property-read int $weekOfYear ISO-8601 week number of year, weeks starting on Monday
@@ -44,8 +44,8 @@ use DateTimeZone;
  * @property-read bool $dst daylight savings time indicator, true if DST, false otherwise
  * @property-read bool $local checks if the timezone is local, true if local, false otherwise
  * @property-read bool $utc checks if the timezone is UTC, true if UTC, false otherwise
- * @property-read string $timezoneName
- * @property-read string $tzName
+ * @property-read string  $timezoneName
+ * @property-read string  $tzName
  */
 class Chronos extends DateTimeImmutable implements ChronosInterface
 {
@@ -81,6 +81,7 @@ class Chronos extends DateTimeImmutable implements ChronosInterface
             $tz = $tz instanceof DateTimeZone ? $tz : new DateTimeZone($tz);
         }
 
+        static::$_lastErrors = [];
         if (static::$testNow === null) {
             return parent::__construct($time === null ? 'now' : $time, $tz);
         }

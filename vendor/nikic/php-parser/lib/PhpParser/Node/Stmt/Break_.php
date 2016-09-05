@@ -12,17 +12,15 @@ class Break_ extends Node\Stmt
     /**
      * Constructs a break node.
      *
-     * @param null|Node\Expr $num Number of loops to break
-     * @param array $attributes Additional attributes
+     * @param null|Node\Expr $num        Number of loops to break
+     * @param array          $attributes Additional attributes
      */
-    public function __construct(Node\Expr $num = null, array $attributes = array())
-    {
+    public function __construct(Node\Expr $num = null, array $attributes = array()) {
         parent::__construct($attributes);
         $this->num = $num;
     }
 
-    public function getSubNodeNames()
-    {
+    public function getSubNodeNames() {
         return array('num');
     }
 }

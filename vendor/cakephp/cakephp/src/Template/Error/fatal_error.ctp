@@ -20,14 +20,14 @@ $this->assign('templateName', 'fatal_error.ctp');
 $this->start('subheading');
 ?>
     <strong>Error: </strong>
-<?= h($error->getMessage()) ?>
+    <?= h($error->getMessage()) ?>
     <br/>
 
     <strong>File</strong>
-<?= h($error->getFile()) ?>
+    <?= h($error->getFile()) ?>
     <br/>
     <strong>Line: </strong>
-<?= h($error->getLine()) ?>
+    <?= h($error->getLine()) ?>
 <?php $this->end() ?>
 
 <?php

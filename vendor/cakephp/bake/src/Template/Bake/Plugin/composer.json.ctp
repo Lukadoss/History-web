@@ -15,25 +15,25 @@
 $namespace = str_replace('\\', '\\\\', $namespace);
 %>
 {
-"name": "<%= $package %>",
-"description": "<%= $plugin %> plugin for CakePHP",
-"type": "cakephp-plugin",
-"require": {
-"php": ">=5.4.16",
-"cakephp/cakephp": "~3.0"
-},
-"require-dev": {
-"phpunit/phpunit": "*"
-},
-"autoload": {
-"psr-4": {
-"<%= $namespace %>\\": "src"
-}
-},
-"autoload-dev": {
-"psr-4": {
-"<%= $namespace %>\\Test\\": "tests",
-"Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
-}
-}
+    "name": "<%= $package %>",
+    "description": "<%= $plugin %> plugin for CakePHP",
+    "type": "cakephp-plugin",
+    "require": {
+        "php": ">=5.4.16",
+        "cakephp/cakephp": "~3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "<%= $namespace %>\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "<%= $namespace %>\\Test\\": "tests",
+            "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
+        }
+    }
 }

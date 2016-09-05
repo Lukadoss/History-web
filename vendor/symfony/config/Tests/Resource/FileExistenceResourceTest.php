@@ -21,7 +21,7 @@ class FileExistenceResourceTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->file = realpath(sys_get_temp_dir()) . '/tmp.xml';
+        $this->file = realpath(sys_get_temp_dir()).'/tmp.xml';
         $this->time = time();
         $this->resource = new FileExistenceResource($this->file);
     }
@@ -35,7 +35,7 @@ class FileExistenceResourceTest extends \PHPUnit_Framework_TestCase
 
     public function testToString()
     {
-        $this->assertSame($this->file, (string)$this->resource);
+        $this->assertSame($this->file, (string) $this->resource);
     }
 
     public function testGetResource()

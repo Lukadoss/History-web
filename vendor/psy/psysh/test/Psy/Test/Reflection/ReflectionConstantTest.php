@@ -19,13 +19,13 @@ class ReflectionConstantTest extends \PHPUnit_Framework_TestCase
 
     public function testConstruction()
     {
-        $refl = new ReflectionConstant($this, 'CONSTANT_ONE');
+        $refl  = new ReflectionConstant($this, 'CONSTANT_ONE');
         $class = $refl->getDeclaringClass();
 
         $this->assertTrue($class instanceof \ReflectionClass);
         $this->assertEquals('Psy\Test\Reflection\ReflectionConstantTest', $class->getName());
         $this->assertEquals('CONSTANT_ONE', $refl->getName());
-        $this->assertEquals('CONSTANT_ONE', (string)$refl);
+        $this->assertEquals('CONSTANT_ONE', (string) $refl);
         $this->assertEquals('one', $refl->getValue());
         $this->assertEquals(null, $refl->getFileName());
         $this->assertFalse($refl->getDocComment());

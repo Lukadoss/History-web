@@ -17,21 +17,19 @@ class StaticCall extends Expr
     /**
      * Constructs a static method call node.
      *
-     * @param Node\Name|Expr $class Class name
-     * @param string|Expr $name Method name
-     * @param Node\Arg[] $args Arguments
-     * @param array $attributes Additional attributes
+     * @param Node\Name|Expr $class      Class name
+     * @param string|Expr    $name       Method name
+     * @param Node\Arg[]     $args       Arguments
+     * @param array          $attributes Additional attributes
      */
-    public function __construct($class, $name, array $args = array(), array $attributes = array())
-    {
+    public function __construct($class, $name, array $args = array(), array $attributes = array()) {
         parent::__construct($attributes);
         $this->class = $class;
         $this->name = $name;
         $this->args = $args;
     }
 
-    public function getSubNodeNames()
-    {
+    public function getSubNodeNames() {
         return array('class', 'name', 'args');
     }
 }

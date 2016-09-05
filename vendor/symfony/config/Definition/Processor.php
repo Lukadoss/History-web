@@ -22,7 +22,7 @@ class Processor
      * Processes an array of configurations.
      *
      * @param NodeInterface $configTree The node tree describing the configuration
-     * @param array $configs An array of configuration items to process
+     * @param array         $configs    An array of configuration items to process
      *
      * @return array The processed configuration
      */
@@ -41,7 +41,7 @@ class Processor
      * Processes an array of configurations.
      *
      * @param ConfigurationInterface $configuration The configuration class
-     * @param array $configs An array of configuration items to process
+     * @param array                  $configs       An array of configuration items to process
      *
      * @return array The processed configuration
      */
@@ -67,8 +67,8 @@ class Processor
      *
      * extensions: ['twig.extension.foo', 'twig.extension.bar']
      *
-     * @param array $config A config array
-     * @param string $key The key to normalize
+     * @param array  $config A config array
+     * @param string $key    The key to normalize
      * @param string $plural The plural form of the key if it is irregular
      *
      * @return array
@@ -76,7 +76,7 @@ class Processor
     public static function normalizeConfig($config, $key, $plural = null)
     {
         if (null === $plural) {
-            $plural = $key . 's';
+            $plural = $key.'s';
         }
 
         if (isset($config[$plural])) {
@@ -86,10 +86,10 @@ class Processor
         if (isset($config[$key])) {
             if (is_string($config[$key]) || !is_int(key($config[$key]))) {
                 // only one
-                return array($config[$key]);
+                return  array($config[$key]);
             }
 
-            return $config[$key];
+            return  $config[$key];
         }
 
         return array();

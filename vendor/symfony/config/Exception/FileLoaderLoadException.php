@@ -19,10 +19,10 @@ namespace Symfony\Component\Config\Exception;
 class FileLoaderLoadException extends \Exception
 {
     /**
-     * @param string $resource The resource that could not be imported
-     * @param string $sourceResource The original resource importing the new resource
-     * @param int $code The error code
-     * @param \Exception $previous A previous exception
+     * @param string     $resource       The resource that could not be imported
+     * @param string     $sourceResource The original resource importing the new resource
+     * @param int        $code           The error code
+     * @param \Exception $previous       A previous exception
      */
     public function __construct($resource, $sourceResource = null, $code = null, $previous = null)
     {
@@ -33,11 +33,11 @@ class FileLoaderLoadException extends \Exception
             // Trim the trailing period of the previous message. We only want 1 period remove so no rtrim...
             if ('.' === substr($previous->getMessage(), -1)) {
                 $trimmedMessage = substr($previous->getMessage(), 0, -1);
-                $message .= sprintf('%s', $trimmedMessage) . ' in ';
+                $message .= sprintf('%s', $trimmedMessage).' in ';
             } else {
-                $message .= sprintf('%s', $previous->getMessage()) . ' in ';
+                $message .= sprintf('%s', $previous->getMessage()).' in ';
             }
-            $message .= $resource . ' ';
+            $message .= $resource.' ';
 
             // show tweaked trace to complete the human readable sentence
             if (null === $sourceResource) {
@@ -47,7 +47,7 @@ class FileLoaderLoadException extends \Exception
             }
             $message .= '.';
 
-            // if there's no previous message, present it the default way
+        // if there's no previous message, present it the default way
         } elseif (null === $sourceResource) {
             $message .= sprintf('Cannot load resource "%s".', $this->varToString($resource));
         } else {
@@ -96,6 +96,6 @@ class FileLoaderLoadException extends \Exception
             return 'true';
         }
 
-        return (string)$var;
+        return (string) $var;
     }
 }

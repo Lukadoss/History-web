@@ -98,7 +98,7 @@ HELP
         if (preg_match('/eval\(/', $backtrace['file'])) {
             preg_match_all('/([^\(]+)\((\d+)/', $backtrace['file'], $matches);
             $file = $matches[1][0];
-            $line = (int)$matches[2][0];
+            $line = (int) $matches[2][0];
         } else {
             $file = $backtrace['file'];
             $line = $backtrace['line'];

@@ -92,8 +92,8 @@ interface StyleInterface
     /**
      * Asks a question.
      *
-     * @param string $question
-     * @param string|null $default
+     * @param string        $question
+     * @param string|null   $default
      * @param callable|null $validator
      *
      * @return string
@@ -103,7 +103,7 @@ interface StyleInterface
     /**
      * Asks a question with the user input hidden.
      *
-     * @param string $question
+     * @param string        $question
      * @param callable|null $validator
      *
      * @return string
@@ -114,7 +114,7 @@ interface StyleInterface
      * Asks for confirmation.
      *
      * @param string $question
-     * @param bool $default
+     * @param bool   $default
      *
      * @return bool
      */
@@ -123,8 +123,8 @@ interface StyleInterface
     /**
      * Asks a choice question.
      *
-     * @param string $question
-     * @param array $choices
+     * @param string          $question
+     * @param array           $choices
      * @param string|int|null $default
      *
      * @return string

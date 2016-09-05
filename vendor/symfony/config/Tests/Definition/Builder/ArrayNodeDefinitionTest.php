@@ -25,8 +25,8 @@ class ArrayNodeDefinitionTest extends \PHPUnit_Framework_TestCase
 
         $parent
             ->children()
-            ->scalarNode('foo')->end()
-            ->scalarNode('bar')->end()
+                ->scalarNode('foo')->end()
+                ->scalarNode('bar')->end()
             ->end()
             ->append($child);
 
@@ -65,7 +65,8 @@ class ArrayNodeDefinitionTest extends \PHPUnit_Framework_TestCase
         $node = new ArrayNodeDefinition('root');
         $node
             ->addDefaultsIfNotSet()
-            ->prototype('array');
+            ->prototype('array')
+        ;
         $node->getNode();
     }
 
@@ -78,7 +79,8 @@ class ArrayNodeDefinitionTest extends \PHPUnit_Framework_TestCase
         $node
             ->defaultValue(array())
             ->addDefaultChildrenIfNoneSet('foo')
-            ->prototype('array');
+            ->prototype('array')
+        ;
         $node->getNode();
     }
 
@@ -87,7 +89,8 @@ class ArrayNodeDefinitionTest extends \PHPUnit_Framework_TestCase
         $node = new ArrayNodeDefinition('root');
         $node
             ->addDefaultChildrenIfNoneSet()
-            ->prototype('array');
+            ->prototype('array')
+        ;
         $tree = $node->getNode();
         $this->assertEquals(array(array()), $tree->getDefaultValue());
     }
@@ -100,7 +103,8 @@ class ArrayNodeDefinitionTest extends \PHPUnit_Framework_TestCase
         $node = new ArrayNodeDefinition('root');
         $node
             ->addDefaultChildrenIfNoneSet($args)
-            ->prototype('array');
+            ->prototype('array')
+        ;
 
         try {
             $tree = $node->getNode();
@@ -114,7 +118,8 @@ class ArrayNodeDefinitionTest extends \PHPUnit_Framework_TestCase
         $node
             ->useAttributeAsKey('attr')
             ->addDefaultChildrenIfNoneSet($args)
-            ->prototype('array');
+            ->prototype('array')
+        ;
 
         try {
             $tree = $node->getNode();
@@ -143,7 +148,8 @@ class ArrayNodeDefinitionTest extends \PHPUnit_Framework_TestCase
         $node
             ->addDefaultChildrenIfNoneSet()
             ->prototype('array')
-            ->prototype('array');
+                  ->prototype('array')
+        ;
         $node->getNode();
     }
 
@@ -153,7 +159,8 @@ class ArrayNodeDefinitionTest extends \PHPUnit_Framework_TestCase
         $node
             ->canBeEnabled()
             ->children()
-            ->scalarNode('foo')->defaultValue('bar')->end();
+                ->scalarNode('foo')->defaultValue('bar')->end()
+        ;
 
         $this->assertEquals(array('enabled' => false, 'foo' => 'bar'), $node->getNode()->getDefaultValue());
     }
@@ -168,13 +175,56 @@ class ArrayNodeDefinitionTest extends \PHPUnit_Framework_TestCase
         $node
             ->canBeEnabled()
             ->children()
-            ->scalarNode('foo')->defaultValue('bar')->end();
+                ->scalarNode('foo')->defaultValue('bar')->end()
+        ;
 
         $this->assertEquals(
             $expected,
             $processor->process($node->getNode(), $config),
             $message
         );
+    }
+
+    public function testCanBeDisabled()
+    {
+        $node = new ArrayNodeDefinition('root');
+        $node->canBeDisabled();
+
+        $this->assertTrue($this->getField($node, 'addDefaults'));
+        $this->assertEquals(array('enabled' => false), $this->getField($node, 'falseEquivalent'));
+        $this->assertEquals(array('enabled' => true), $this->getField($node, 'trueEquivalent'));
+        $this->assertEquals(array('enabled' => true), $this->getField($node, 'nullEquivalent'));
+
+        $nodeChildren = $this->getField($node, 'children');
+        $this->assertArrayHasKey('enabled', $nodeChildren);
+
+        $enabledNode = $nodeChildren['enabled'];
+        $this->assertTrue($this->getField($enabledNode, 'default'));
+        $this->assertTrue($this->getField($enabledNode, 'defaultValue'));
+    }
+
+    public function testIgnoreExtraKeys()
+    {
+        $node = new ArrayNodeDefinition('root');
+
+        $this->assertFalse($this->getField($node, 'ignoreExtraKeys'));
+
+        $result = $node->ignoreExtraKeys();
+
+        $this->assertEquals($node, $result);
+        $this->assertTrue($this->getField($node, 'ignoreExtraKeys'));
+    }
+
+    public function testNormalizeKeys()
+    {
+        $node = new ArrayNodeDefinition('root');
+
+        $this->assertTrue($this->getField($node, 'normalizeKeys'));
+
+        $result = $node->normalizeKeys(false);
+
+        $this->assertEquals($node, $result);
+        $this->assertFalse($this->getField($node, 'normalizeKeys'));
     }
 
     public function getEnableableNodeFixtures()

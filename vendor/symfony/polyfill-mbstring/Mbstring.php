@@ -68,8 +68,8 @@ final class Mbstring
     private static $language = 'neutral';
     private static $internalEncoding = 'UTF-8';
     private static $caseFold = array(
-        array('µ', 'ſ', "\xCD\x85", 'ς', "\xCF\x90", "\xCF\x91", "\xCF\x95", "\xCF\x96", "\xCF\xB0", "\xCF\xB1", "\xCF\xB5", "\xE1\xBA\x9B", "\xE1\xBE\xBE"),
-        array('μ', 's', 'ι', 'σ', 'β', 'θ', 'φ', 'π', 'κ', 'ρ', 'ε', "\xE1\xB9\xA1", 'ι'),
+        array('µ','ſ',"\xCD\x85",'ς',"\xCF\x90","\xCF\x91","\xCF\x95","\xCF\x96","\xCF\xB0","\xCF\xB1","\xCF\xB5","\xE1\xBA\x9B","\xE1\xBE\xBE"),
+        array('μ','s','ι',       'σ','β',       'θ',       'φ',       'π',       'κ',       'ρ',       'ε',       "\xE1\xB9\xA1",'ι'),
     );
 
     public static function mb_convert_encoding($s, $toEncoding, $fromEncoding = null)
@@ -192,7 +192,7 @@ final class Mbstring
                     } else {
                         $s = substr_replace($s, $uchr, $i - $ulen, $ulen);
                         $len += $nlen - $ulen;
-                        $i += $nlen - $ulen;
+                        $i   += $nlen - $ulen;
                     }
                 }
             }
@@ -343,7 +343,7 @@ final class Mbstring
         $encoding = self::getEncoding($encoding);
 
         if ('' === $needle .= '') {
-            trigger_error(__METHOD__ . ': Empty delimiter', E_USER_WARNING);
+            trigger_error(__METHOD__.': Empty delimiter', E_USER_WARNING);
 
             return false;
         }
@@ -355,9 +355,9 @@ final class Mbstring
     {
         $encoding = self::getEncoding($encoding);
 
-        if ($offset != (int)$offset) {
+        if ($offset != (int) $offset) {
             $offset = 0;
-        } elseif ($offset = (int)$offset) {
+        } elseif ($offset = (int) $offset) {
             if ($offset < 0) {
                 $haystack = self::mb_substr($haystack, 0, $offset, $encoding);
                 $offset = 0;
@@ -410,7 +410,7 @@ final class Mbstring
             }
         }
 
-        return iconv_substr($s, $start, $length, $encoding) . '';
+        return iconv_substr($s, $start, $length, $encoding).'';
     }
 
     public static function mb_stripos($haystack, $needle, $offset = 0, $encoding = null)
@@ -559,7 +559,7 @@ final class Mbstring
                 $c = (($m[$i++] - 0xC0) << 6) + $m[$i++] - 0x80;
             }
 
-            $entities .= '&#' . $c . ';';
+            $entities .= '&#'.$c.';';
         }
 
         return $entities;
@@ -577,8 +577,8 @@ final class Mbstring
 
     private static function getData($file)
     {
-        if (file_exists($file = __DIR__ . '/Resources/unidata/' . $file . '.ser')) {
-            return unserialize(file_get_contents($file));
+        if (file_exists($file = __DIR__.'/Resources/unidata/'.$file.'.php')) {
+            return require $file;
         }
 
         return false;

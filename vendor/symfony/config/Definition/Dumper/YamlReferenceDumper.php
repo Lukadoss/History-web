@@ -44,7 +44,7 @@ class YamlReferenceDumper
 
     /**
      * @param NodeInterface $node
-     * @param int $depth
+     * @param int           $depth
      */
     private function writeNode(NodeInterface $node, $depth = 0)
     {
@@ -67,12 +67,12 @@ class YamlReferenceDumper
 
                 // check for attribute as key
                 if ($key = $node->getKeyAttribute()) {
-                    $keyNodeClass = 'Symfony\Component\Config\Definition\\' . ($prototype instanceof ArrayNode ? 'ArrayNode' : 'ScalarNode');
+                    $keyNodeClass = 'Symfony\Component\Config\Definition\\'.($prototype instanceof ArrayNode ? 'ArrayNode' : 'ScalarNode');
                     $keyNode = new $keyNodeClass($key, $node);
 
                     $info = 'Prototype';
                     if (null !== $prototype->getInfo()) {
-                        $info .= ': ' . $prototype->getInfo();
+                        $info .= ': '.$prototype->getInfo();
                     }
                     $keyNode->setInfo($info);
 
@@ -92,7 +92,7 @@ class YamlReferenceDumper
                 }
             }
         } elseif ($node instanceof EnumNode) {
-            $comments[] = 'One of ' . implode('; ', array_map('json_encode', $node->getValues()));
+            $comments[] = 'One of '.implode('; ', array_map('json_encode', $node->getValues()));
             $default = $node->hasDefaultValue() ? Inline::dump($node->getDefaultValue()) : '~';
         } else {
             $default = '~';
@@ -119,19 +119,19 @@ class YamlReferenceDumper
 
         // example
         if ($example && !is_array($example)) {
-            $comments[] = 'Example: ' . $example;
+            $comments[] = 'Example: '.$example;
         }
 
-        $default = (string)$default != '' ? ' ' . $default : '';
-        $comments = count($comments) ? '# ' . implode(', ', $comments) : '';
+        $default = (string) $default != '' ? ' '.$default : '';
+        $comments = count($comments) ? '# '.implode(', ', $comments) : '';
 
-        $text = rtrim(sprintf('%-20s %s %s', $node->getName() . ':', $default, $comments), ' ');
+        $text = rtrim(sprintf('%-20s %s %s', $node->getName().':', $default, $comments), ' ');
 
         if ($info = $node->getInfo()) {
             $this->writeLine('');
             // indenting multi-line info
-            $info = str_replace("\n", sprintf("\n%" . ($depth * 4) . 's# ', ' '), $info);
-            $this->writeLine('# ' . $info, $depth * 4);
+            $info = str_replace("\n", sprintf("\n%".($depth * 4).'s# ', ' '), $info);
+            $this->writeLine('# '.$info, $depth * 4);
         }
 
         $this->writeLine($text, $depth * 4);
@@ -142,7 +142,7 @@ class YamlReferenceDumper
 
             $message = count($defaultArray) > 1 ? 'Defaults' : 'Default';
 
-            $this->writeLine('# ' . $message . ':', $depth * 4 + 4);
+            $this->writeLine('# '.$message.':', $depth * 4 + 4);
 
             $this->writeArray($defaultArray, $depth + 1);
         }
@@ -152,7 +152,7 @@ class YamlReferenceDumper
 
             $message = count($example) > 1 ? 'Examples' : 'Example';
 
-            $this->writeLine('# ' . $message . ':', $depth * 4 + 4);
+            $this->writeLine('# '.$message.':', $depth * 4 + 4);
 
             $this->writeArray($example, $depth + 1);
         }
@@ -168,14 +168,14 @@ class YamlReferenceDumper
      * Outputs a single config reference line.
      *
      * @param string $text
-     * @param int $indent
+     * @param int    $indent
      */
     private function writeLine($text, $indent = 0)
     {
         $indent = strlen($text) + $indent;
-        $format = '%' . $indent . 's';
+        $format = '%'.$indent.'s';
 
-        $this->reference .= sprintf($format, $text) . "\n";
+        $this->reference .= sprintf($format, $text)."\n";
     }
 
     private function writeArray(array $array, $depth)
@@ -190,9 +190,9 @@ class YamlReferenceDumper
             }
 
             if ($isIndexed) {
-                $this->writeLine('- ' . $val, $depth * 4);
+                $this->writeLine('- '.$val, $depth * 4);
             } else {
-                $this->writeLine(sprintf('%-20s %s', $key . ':', $val), $depth * 4);
+                $this->writeLine(sprintf('%-20s %s', $key.':', $val), $depth * 4);
             }
 
             if (is_array($value)) {

@@ -26,9 +26,7 @@ class CommandTesterTest extends \PHPUnit_Framework_TestCase
         $this->command = new Command('foo');
         $this->command->addArgument('command');
         $this->command->addArgument('foo');
-        $this->command->setCode(function ($input, $output) {
-            $output->writeln('foo');
-        });
+        $this->command->setCode(function ($input, $output) { $output->writeln('foo'); });
 
         $this->tester = new CommandTester($this->command);
         $this->tester->execute(array('foo' => 'bar'), array('interactive' => false, 'decorated' => false, 'verbosity' => Output::VERBOSITY_VERBOSE));
@@ -55,12 +53,12 @@ class CommandTesterTest extends \PHPUnit_Framework_TestCase
     public function testGetOutput()
     {
         rewind($this->tester->getOutput()->getStream());
-        $this->assertEquals('foo' . PHP_EOL, stream_get_contents($this->tester->getOutput()->getStream()), '->getOutput() returns the current output instance');
+        $this->assertEquals('foo'.PHP_EOL, stream_get_contents($this->tester->getOutput()->getStream()), '->getOutput() returns the current output instance');
     }
 
     public function testGetDisplay()
     {
-        $this->assertEquals('foo' . PHP_EOL, $this->tester->getDisplay(), '->getDisplay() returns the display of the last execution');
+        $this->assertEquals('foo'.PHP_EOL, $this->tester->getDisplay(), '->getDisplay() returns the display of the last execution');
     }
 
     public function testGetStatusCode()
@@ -74,9 +72,7 @@ class CommandTesterTest extends \PHPUnit_Framework_TestCase
         $application->setAutoExit(false);
 
         $command = new Command('foo');
-        $command->setCode(function ($input, $output) {
-            $output->writeln('foo');
-        });
+        $command->setCode(function ($input, $output) { $output->writeln('foo'); });
 
         $application->add($command);
 

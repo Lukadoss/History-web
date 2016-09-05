@@ -16,6 +16,8 @@
 namespace Cake\ORM\Association;
 
 use Cake\Collection\Collection;
+use Cake\Database\Expression\FieldInterface;
+use Cake\Database\Expression\QueryExpression;
 use Cake\Datasource\EntityInterface;
 use Cake\ORM\Association;
 use Cake\ORM\Table;
@@ -109,6 +111,7 @@ class HasMany extends Association
             $msg = sprintf('Invalid save strategy "%s"', $strategy);
             throw new InvalidArgumentException($msg);
         }
+
         return $this->_saveStrategy = $strategy;
     }
 
@@ -178,11 +181,13 @@ class HasMany extends Association
             if (!empty($options['atomic'])) {
                 $original[$k]->errors($targetEntity->errors());
                 $entity->set($this->property(), $original);
+
                 return false;
             }
         }
 
         $entity->set($this->property(), $targetEntities);
+
         return $entity;
     }
 
@@ -288,6 +293,9 @@ class HasMany extends Association
         } else {
             $options += ['cleanProperty' => true];
         }
+        if (count($targetEntities) === 0) {
+            return;
+        }
 
         $foreignKey = (array)$this->foreignKey();
         $target = $this->target();
@@ -304,16 +312,17 @@ class HasMany extends Association
 
         $this->_unlink($foreignKey, $target, $conditions, $options);
 
-        if ($options['cleanProperty']) {
+        $result = $sourceEntity->get($property);
+        if ($options['cleanProperty'] && $result !== null) {
             $sourceEntity->set(
                 $property,
                 (new Collection($sourceEntity->get($property)))
-                    ->reject(
-                        function ($assoc) use ($targetEntities) {
-                            return in_array($assoc, $targetEntities);
-                        }
-                    )
-                    ->toList()
+                ->reject(
+                    function ($assoc) use ($targetEntities) {
+                        return in_array($assoc, $targetEntities);
+                    }
+                )
+                ->toList()
             );
         }
 
@@ -349,7 +358,7 @@ class HasMany extends Association
      * $author->articles = [$article1, $article2, $article3, $article4];
      * $authors->save($author);
      * $articles = [$article1, $article3];
-     * $authors->association('articles')->replaceLinks($author, $articles);
+     * $authors->association('articles')->replace($author, $articles);
      * ```
      *
      * `$author->get('articles')` will contain only `[$article1, $article3]` at the end
@@ -376,6 +385,7 @@ class HasMany extends Association
             $sourceEntity = $result;
         }
         $this->saveStrategy($saveStrategy);
+
         return $ok;
     }
 
@@ -399,12 +409,12 @@ class HasMany extends Association
                 return $ent->extract($primaryKey);
             }
         )
-            ->filter(
-                function ($v) {
-                    return !in_array(null, array_values($v), true);
-                }
-            )
-            ->toArray();
+        ->filter(
+            function ($v) {
+                return !in_array(null, array_values($v), true);
+            }
+        )
+        ->toArray();
 
         $conditions = $properties;
 
@@ -436,20 +446,29 @@ class HasMany extends Association
 
         if ($mustBeDependent) {
             if ($this->_cascadeCallbacks) {
+                $conditions = new QueryExpression($conditions);
+                $conditions->traverse(function ($entry) use ($target) {
+                    if ($entry instanceof FieldInterface) {
+                        $entry->setField($target->aliasField($entry->getField()));
+                    }
+                });
                 $query = $this->find('all')->where($conditions);
                 $ok = true;
                 foreach ($query as $assoc) {
                     $ok = $ok && $target->delete($assoc, $options);
                 }
+
                 return $ok;
             }
 
             $target->deleteAll($conditions);
+
             return true;
         }
 
         $updateFields = array_fill_keys($foreignKey, null);
         $target->updateAll($updateFields, $conditions);
+
         return true;
     }
 
@@ -482,7 +501,7 @@ class HasMany extends Association
         $name = $this->alias();
         if ($options['foreignKey'] === false) {
             $msg = 'Cannot have foreignKey = false for hasMany associations. ' .
-                'You must provide a foreignKey column.';
+                   'You must provide a foreignKey column.';
             throw new RuntimeException($msg);
         }
 

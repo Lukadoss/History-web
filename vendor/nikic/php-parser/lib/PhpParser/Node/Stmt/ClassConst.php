@@ -12,17 +12,15 @@ class ClassConst extends Node\Stmt
     /**
      * Constructs a class const list node.
      *
-     * @param Node\Const_[] $consts Constant declarations
-     * @param array $attributes Additional attributes
+     * @param Node\Const_[] $consts     Constant declarations
+     * @param array         $attributes Additional attributes
      */
-    public function __construct(array $consts, array $attributes = array())
-    {
+    public function __construct(array $consts, array $attributes = array()) {
         parent::__construct($attributes);
         $this->consts = $consts;
     }
 
-    public function getSubNodeNames()
-    {
+    public function getSubNodeNames() {
         return array('consts');
     }
 }

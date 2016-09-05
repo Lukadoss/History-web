@@ -5,7 +5,6 @@ use Cake\TestSuite\TestCase;
 
 /**
  * This class helps in indirectly testing the functionalities of TestCase::assertHtml
- *
  */
 class AssertHtmlTestCase extends TestCase
 {
@@ -54,9 +53,9 @@ class AssertHtmlTestCase extends TestCase
         $input = '<p><strong>' . $value . '</strong></p>';
         $pattern = [
             '<p',
-            '<strong',
-            $value,
-            '/strong',
+                '<strong',
+                    $value,
+                '/strong',
             '/p'
         ];
         $this->assertHtml($pattern, $input);
@@ -64,14 +63,14 @@ class AssertHtmlTestCase extends TestCase
         $input = '<p><strong>' . $value . '</strong></p><p><strong>' . $value . '</strong></p>';
         $pattern = [
             '<p',
-            '<strong',
-            $value,
-            '/strong',
+                '<strong',
+                    $value,
+                '/strong',
             '/p',
             '<p',
-            '<strong',
-            $value,
-            '/strong',
+                '<strong',
+                    $value,
+                '/strong',
             '/p',
         ];
         $this->assertHtml($pattern, $input);
@@ -79,14 +78,14 @@ class AssertHtmlTestCase extends TestCase
         $input = '<p><strong>' . $value . '</strong></p><p id="' . $value . '"><strong>' . $value . '</strong></p>';
         $pattern = [
             '<p',
-            '<strong',
-            $value,
-            '/strong',
+                '<strong',
+                    $value,
+                '/strong',
             '/p',
             'p' => ['id' => $value],
-            '<strong',
-            $value,
-            '/strong',
+                '<strong',
+                    $value,
+                '/strong',
             '/p',
         ];
         $this->assertHtml($pattern, $input);

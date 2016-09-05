@@ -37,9 +37,7 @@
     "psr-4": {
       "Cake\\Chronos\\": "src"
     },
-    "files": [
-      "src/carbon_compat.php"
-    ]
+    "files": ["src/carbon_compat.php"]
   },
   "autoload-dev": {
     "psr-4": {

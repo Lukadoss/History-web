@@ -4,8 +4,7 @@ namespace PhpParser\Node;
 
 class NameTest extends \PHPUnit_Framework_TestCase
 {
-    public function testConstruct()
-    {
+    public function testConstruct() {
         $name = new Name(array('foo', 'bar'));
         $this->assertSame(array('foo', 'bar'), $name->parts);
 
@@ -13,8 +12,7 @@ class NameTest extends \PHPUnit_Framework_TestCase
         $this->assertSame(array('foo', 'bar'), $name->parts);
     }
 
-    public function testGet()
-    {
+    public function testGet() {
         $name = new Name('foo');
         $this->assertSame('foo', $name->getFirst());
         $this->assertSame('foo', $name->getLast());
@@ -24,17 +22,15 @@ class NameTest extends \PHPUnit_Framework_TestCase
         $this->assertSame('bar', $name->getLast());
     }
 
-    public function testToString()
-    {
+    public function testToString() {
         $name = new Name('foo\bar');
 
-        $this->assertSame('foo\bar', (string)$name);
+        $this->assertSame('foo\bar', (string) $name);
         $this->assertSame('foo\bar', $name->toString());
         $this->assertSame('foo_bar', $name->toString('_'));
     }
 
-    public function testSet()
-    {
+    public function testSet() {
         $name = new Name('foo');
 
         $name->set('foo\bar');
@@ -47,8 +43,7 @@ class NameTest extends \PHPUnit_Framework_TestCase
         $this->assertSame('foo\bar', $name->toString());
     }
 
-    public function testSetFirst()
-    {
+    public function testSetFirst() {
         $name = new Name('foo');
 
         $name->setFirst('bar');
@@ -64,8 +59,7 @@ class NameTest extends \PHPUnit_Framework_TestCase
         $this->assertSame('D\E\B', $name->toString());
     }
 
-    public function testSetLast()
-    {
+    public function testSetLast() {
         $name = new Name('foo');
 
         $name->setLast('bar');
@@ -81,8 +75,7 @@ class NameTest extends \PHPUnit_Framework_TestCase
         $this->assertSame('A\D\E', $name->toString());
     }
 
-    public function testAppend()
-    {
+    public function testAppend() {
         $name = new Name('foo');
 
         $name->append('bar');
@@ -92,8 +85,7 @@ class NameTest extends \PHPUnit_Framework_TestCase
         $this->assertSame('foo\bar\bar\foo', $name->toString());
     }
 
-    public function testPrepend()
-    {
+    public function testPrepend() {
         $name = new Name('foo');
 
         $name->prepend('bar');
@@ -103,8 +95,7 @@ class NameTest extends \PHPUnit_Framework_TestCase
         $this->assertSame('foo\bar\bar\foo', $name->toString());
     }
 
-    public function testSlice()
-    {
+    public function testSlice() {
         $name = new Name('foo\bar');
         $this->assertEquals(new Name('foo\bar'), $name->slice(0));
         $this->assertEquals(new Name('bar'), $name->slice(1));
@@ -115,13 +106,11 @@ class NameTest extends \PHPUnit_Framework_TestCase
      * @expectedException \OutOfBoundsException
      * @expectedExceptionMessage Offset 4 is out of bounds
      */
-    public function testSliceException()
-    {
+    public function testSliceException() {
         (new Name('foo\bar\baz'))->slice(4);
     }
 
-    public function testConcat()
-    {
+    public function testConcat() {
         $this->assertEquals(new Name('foo\bar\baz'), Name::concat('foo', 'bar\baz'));
         $this->assertEquals(
             new Name\FullyQualified('foo\bar'),
@@ -138,39 +127,37 @@ class NameTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(new Name([]), Name::concat([], []));
     }
 
-    public function testIs()
-    {
+    public function testIs() {
         $name = new Name('foo');
-        $this->assertTrue($name->isUnqualified());
+        $this->assertTrue ($name->isUnqualified());
         $this->assertFalse($name->isQualified());
         $this->assertFalse($name->isFullyQualified());
         $this->assertFalse($name->isRelative());
 
         $name = new Name('foo\bar');
         $this->assertFalse($name->isUnqualified());
-        $this->assertTrue($name->isQualified());
+        $this->assertTrue ($name->isQualified());
         $this->assertFalse($name->isFullyQualified());
         $this->assertFalse($name->isRelative());
 
         $name = new Name\FullyQualified('foo');
         $this->assertFalse($name->isUnqualified());
         $this->assertFalse($name->isQualified());
-        $this->assertTrue($name->isFullyQualified());
+        $this->assertTrue ($name->isFullyQualified());
         $this->assertFalse($name->isRelative());
 
         $name = new Name\Relative('foo');
         $this->assertFalse($name->isUnqualified());
         $this->assertFalse($name->isQualified());
         $this->assertFalse($name->isFullyQualified());
-        $this->assertTrue($name->isRelative());
+        $this->assertTrue ($name->isRelative());
     }
 
     /**
      * @expectedException        \InvalidArgumentException
      * @expectedExceptionMessage When changing a name you need to pass either a string, an array or a Name node
      */
-    public function testInvalidArg()
-    {
+    public function testInvalidArg() {
         $name = new Name('foo');
         $name->set(new \stdClass);
     }

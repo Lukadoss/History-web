@@ -6,8 +6,7 @@ use PhpParser\Node;
 
 class InterfaceTest extends \PHPUnit_Framework_TestCase
 {
-    public function testGetMethods()
-    {
+    public function testGetMethods() {
         $methods = array(
             new ClassMethod('foo'),
             new ClassMethod('bar'),

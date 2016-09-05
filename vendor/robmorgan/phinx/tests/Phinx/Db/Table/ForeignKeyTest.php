@@ -77,14 +77,14 @@ class ForeignKeyTest extends \PHPUnit_Framework_TestCase
     public function actionsProvider()
     {
         return array(
-            array(ForeignKey::CASCADE, ForeignKey::CASCADE),
-            array(ForeignKey::RESTRICT, ForeignKey::RESTRICT),
+            array(ForeignKey::CASCADE,   ForeignKey::CASCADE),
+            array(ForeignKey::RESTRICT,  ForeignKey::RESTRICT),
             array(ForeignKey::NO_ACTION, ForeignKey::NO_ACTION),
-            array(ForeignKey::SET_NULL, ForeignKey::SET_NULL),
-            array('no Action ', ForeignKey::NO_ACTION),
-            array('Set nuLL', ForeignKey::SET_NULL),
-            array('no_Action', ForeignKey::NO_ACTION),
-            array('Set_nuLL', ForeignKey::SET_NULL),
+            array(ForeignKey::SET_NULL,  ForeignKey::SET_NULL),
+            array('no Action ',          ForeignKey::NO_ACTION),
+            array('Set nuLL',            ForeignKey::SET_NULL),
+            array('no_Action',           ForeignKey::NO_ACTION),
+            array('Set_nuLL',            ForeignKey::SET_NULL),
         );
     }
 }

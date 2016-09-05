@@ -53,8 +53,8 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
         putenv("HOME=$home");
 
         $config = new Configuration();
-        $this->assertEquals(realpath($configFile), realpath($config->getConfigFile()));
-        $this->assertEquals(realpath($historyFile), realpath($config->getHistoryFile()));
+        $this->assertEquals(realpath($configFile),   realpath($config->getConfigFile()));
+        $this->assertEquals(realpath($historyFile),  realpath($config->getHistoryFile()));
         $this->assertEquals(realpath($manualDbFile), realpath($config->getManualDbFile()));
 
         putenv("HOME=$oldHome");
@@ -88,20 +88,20 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
 
     public function testLoadConfig()
     {
-        $config = new Configuration();
+        $config  = new Configuration();
         $cleaner = new CodeCleaner();
-        $pager = new PassthruPager(new ConsoleOutput());
-        $loop = new Loop($config);
+        $pager   = new PassthruPager(new ConsoleOutput());
+        $loop    = new Loop($config);
 
         $config->loadConfig(array(
-            'useReadline' => false,
-            'usePcntl' => false,
-            'codeCleaner' => $cleaner,
-            'pager' => $pager,
-            'loop' => $loop,
+            'useReadline'       => false,
+            'usePcntl'          => false,
+            'codeCleaner'       => $cleaner,
+            'pager'             => $pager,
+            'loop'              => $loop,
             'requireSemicolons' => true,
             'errorLoggingLevel' => E_ERROR | E_WARNING,
-            'colorMode' => Configuration::COLOR_MODE_FORCED,
+            'colorMode'         => Configuration::COLOR_MODE_FORCED,
         ));
 
         $this->assertFalse($config->useReadline());
@@ -166,7 +166,7 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
     {
         $config = new Configuration(array(
             'defaultIncludes' => array('/file.php'),
-            'configFile' => __DIR__ . '/../../fixtures/empty.php',
+            'configFile'      => __DIR__ . '/../../fixtures/empty.php',
         ));
 
         $includes = $config->getDefaultIncludes();
@@ -212,8 +212,8 @@ class ConfigurationTest extends \PHPUnit_Framework_TestCase
     public function setColorModeValidProvider()
     {
         return array(
-            'auto' => array(Configuration::COLOR_MODE_AUTO),
-            'forced' => array(Configuration::COLOR_MODE_FORCED),
+            'auto'     => array(Configuration::COLOR_MODE_AUTO),
+            'forced'   => array(Configuration::COLOR_MODE_FORCED),
             'disabled' => array(Configuration::COLOR_MODE_DISABLED),
         );
     }

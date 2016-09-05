@@ -46,7 +46,7 @@ class ControllerTask extends BakeTask
      * Execution method always used for tasks
      *
      * @param string|null $name The name of the controller to bake.
-     * @return void
+     * @return null|bool
      */
     public function main($name = null)
     {
@@ -58,6 +58,7 @@ class ControllerTask extends BakeTask
             foreach ($this->listAll() as $table) {
                 $this->out('- ' . $this->_camelize($table));
             }
+
             return true;
         }
 
@@ -117,7 +118,13 @@ class ControllerTask extends BakeTask
             $plugin .= '.';
         }
 
-        $modelObj = TableRegistry::get($plugin . $currentModelName);
+        if (TableRegistry::exists($plugin . $currentModelName)) {
+            $modelObj = TableRegistry::get($plugin . $currentModelName);
+        } else {
+            $modelObj = TableRegistry::get($plugin . $currentModelName, [
+                'connectionName' => $this->connection
+            ]);
+        }
 
         $pluralName = $this->_variableName($currentModelName);
         $singularName = $this->_singularName($currentModelName);
@@ -143,6 +150,7 @@ class ControllerTask extends BakeTask
 
         $out = $this->bakeController($controllerName, $data);
         $this->bakeTest($controllerName);
+
         return $out;
     }
 
@@ -173,6 +181,7 @@ class ControllerTask extends BakeTask
         $path = $this->getPath();
         $filename = $path . $controllerName . 'Controller.php';
         $this->createFile($filename, $contents);
+
         return $contents;
     }
 
@@ -180,7 +189,7 @@ class ControllerTask extends BakeTask
      * Assembles and writes a unit test file
      *
      * @param string $className Controller class name
-     * @return string Baked test
+     * @return void|string Baked test
      */
     public function bakeTest($className)
     {
@@ -193,6 +202,7 @@ class ControllerTask extends BakeTask
         if ($prefix) {
             $className = str_replace('/', '\\', $prefix) . '\\' . $className;
         }
+
         return $this->Test->bake('Controller', $className);
     }
 
@@ -208,6 +218,7 @@ class ControllerTask extends BakeTask
             $components = explode(',', $this->params['components']);
             $components = array_values(array_filter(array_map('trim', $components)));
         }
+
         return $components;
     }
 
@@ -223,6 +234,7 @@ class ControllerTask extends BakeTask
             $helpers = explode(',', $this->params['helpers']);
             $helpers = array_values(array_filter(array_map('trim', $helpers)));
         }
+
         return $helpers;
     }
 
@@ -234,6 +246,7 @@ class ControllerTask extends BakeTask
     public function listAll()
     {
         $this->Model->connection = $this->connection;
+
         return $this->Model->listUnskipped();
     }
 
@@ -257,7 +270,7 @@ class ControllerTask extends BakeTask
             'help' => 'The namespace/routing prefix to use.'
         ])->addOption('actions', [
             'help' => 'The comma separated list of actions to generate. ' .
-                'You can include custom methods provided by your template set here.'
+                      'You can include custom methods provided by your template set here.'
         ])->addOption('no-test', [
             'boolean' => true,
             'help' => 'Do not generate a test skeleton.'

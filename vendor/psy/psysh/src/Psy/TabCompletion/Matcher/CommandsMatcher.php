@@ -98,8 +98,7 @@ class CommandsMatcher extends AbstractMatcher
      */
     public function hasMatched(array $tokens)
     {
-        /* $openTag */
-        array_shift($tokens);
+        /* $openTag */ array_shift($tokens);
         $command = array_shift($tokens);
 
         switch (true) {

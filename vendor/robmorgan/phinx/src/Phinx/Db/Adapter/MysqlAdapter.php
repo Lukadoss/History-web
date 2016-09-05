@@ -43,26 +43,26 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
 
     protected $signedColumnTypes = array('integer' => true, 'biginteger' => true, 'float' => true, 'decimal' => true, 'boolean' => true);
 
-    const TEXT_TINY = 255;
-    const TEXT_SMALL = 255; /* deprecated, alias of TEXT_TINY */
+    const TEXT_TINY    = 255;
+    const TEXT_SMALL   = 255; /* deprecated, alias of TEXT_TINY */
     const TEXT_REGULAR = 65535;
-    const TEXT_MEDIUM = 16777215;
-    const TEXT_LONG = 4294967295;
+    const TEXT_MEDIUM  = 16777215;
+    const TEXT_LONG    = 4294967295;
 
     // According to https://dev.mysql.com/doc/refman/5.0/en/blob.html BLOB sizes are the same as TEXT
-    const BLOB_TINY = 255;
-    const BLOB_SMALL = 255; /* deprecated, alias of BLOB_TINY */
+    const BLOB_TINY    = 255;
+    const BLOB_SMALL   = 255; /* deprecated, alias of BLOB_TINY */
     const BLOB_REGULAR = 65535;
-    const BLOB_MEDIUM = 16777215;
-    const BLOB_LONG = 4294967295;
+    const BLOB_MEDIUM  = 16777215;
+    const BLOB_LONG    = 4294967295;
 
-    const INT_TINY = 255;
-    const INT_SMALL = 65535;
-    const INT_MEDIUM = 16777215;
+    const INT_TINY    = 255;
+    const INT_SMALL   = 65535;
+    const INT_MEDIUM  = 16777215;
     const INT_REGULAR = 4294967295;
-    const INT_BIG = 18446744073709551615;
+    const INT_BIG     = 18446744073709551615;
 
-    const TYPE_YEAR = 'year';
+    const TYPE_YEAR   = 'year';
 
     /**
      * {@inheritdoc}
@@ -214,8 +214,8 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
         if (!isset($options['id']) || (isset($options['id']) && $options['id'] === true)) {
             $column = new Column();
             $column->setName('id')
-                ->setType('integer')
-                ->setIdentity(true);
+                   ->setType('integer')
+                   ->setIdentity(true);
 
             array_unshift($columns, $column);
             $options['primary_key'] = 'id';
@@ -224,8 +224,8 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
             // Handle id => "field_name" to support AUTO_INCREMENT
             $column = new Column();
             $column->setName($options['id'])
-                ->setType('integer')
-                ->setIdentity(true);
+                   ->setType('integer')
+                   ->setIdentity(true);
 
             array_unshift($columns, $column);
             $options['primary_key'] = $options['id'];
@@ -341,10 +341,10 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
 
             $column = new Column();
             $column->setName($columnInfo['Field'])
-                ->setNull($columnInfo['Null'] !== 'NO')
-                ->setDefault($columnInfo['Default'])
-                ->setType($phinxType['name'])
-                ->setLimit($phinxType['limit']);
+                   ->setNull($columnInfo['Null'] !== 'NO')
+                   ->setDefault($columnInfo['Default'])
+                   ->setType($phinxType['name'])
+                   ->setLimit($phinxType['limit']);
 
             if ($columnInfo['Extra'] === 'auto_increment') {
                 $column->setIdentity(true);
@@ -382,7 +382,7 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
         if (is_string($default) && 'CURRENT_TIMESTAMP' !== $default) {
             $default = $this->getConnection()->quote($default);
         } elseif (is_bool($default)) {
-            $default = (int)$default;
+            $default = (int) $default;
         }
         return isset($default) ? ' DEFAULT ' . $default : '';
     }
@@ -533,7 +533,7 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
 
         foreach ($indexes as $name => $index) {
             if ($name === $indexName) {
-                return true;
+                 return true;
             }
         }
 
@@ -745,10 +745,10 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
                 if ($limit) {
                     $sizes = array(
                         // Order matters! Size must always be tested from longest to shortest!
-                        'longtext' => static::TEXT_LONG,
+                        'longtext'   => static::TEXT_LONG,
                         'mediumtext' => static::TEXT_MEDIUM,
-                        'text' => static::TEXT_REGULAR,
-                        'tinytext' => static::TEXT_SMALL,
+                        'text'       => static::TEXT_REGULAR,
+                        'tinytext'   => static::TEXT_SMALL,
                     );
                     foreach ($sizes as $name => $length) {
                         if ($limit >= $length) {
@@ -765,10 +765,10 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
                 if ($limit) {
                     $sizes = array(
                         // Order matters! Size must always be tested from longest to shortest!
-                        'longblob' => static::BLOB_LONG,
+                        'longblob'   => static::BLOB_LONG,
                         'mediumblob' => static::BLOB_MEDIUM,
-                        'blob' => static::BLOB_REGULAR,
-                        'tinyblob' => static::BLOB_SMALL,
+                        'blob'       => static::BLOB_REGULAR,
+                        'tinyblob'   => static::BLOB_SMALL,
                     );
                     foreach ($sizes as $name => $length) {
                         if ($limit >= $length) {
@@ -782,14 +782,14 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
                 if ($limit && $limit >= static::INT_TINY) {
                     $sizes = array(
                         // Order matters! Size must always be tested from longest to shortest!
-                        'bigint' => static::INT_BIG,
-                        'int' => static::INT_REGULAR,
+                        'bigint'    => static::INT_BIG,
+                        'int'       => static::INT_REGULAR,
                         'mediumint' => static::INT_MEDIUM,
-                        'smallint' => static::INT_SMALL,
-                        'tinyint' => static::INT_TINY,
+                        'smallint'  => static::INT_SMALL,
+                        'tinyint'   => static::INT_TINY,
                     );
                     $limits = array(
-                        'int' => 11,
+                        'int'    => 11,
                         'bigint' => 20,
                     );
                     foreach ($sizes as $name => $length) {
@@ -849,6 +849,9 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
                     $limit = 4;
                 return array('name' => 'year', 'limit' => $limit);
                 break;
+            case static::PHINX_TYPE_JSON:
+                return array('name' => 'json');
+                break;
             default:
                 throw new \RuntimeException('The type: "' . $type . '" is not supported.');
         }
@@ -871,10 +874,10 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
             $precision = null;
             $type = $matches[1];
             if (count($matches) > 2) {
-                $limit = $matches[3] ? (int)$matches[3] : null;
+                $limit = $matches[3] ? (int) $matches[3] : null;
             }
             if (count($matches) > 4) {
-                $precision = (int)$matches[5];
+                $precision = (int) $matches[5];
             }
             if ($type === 'tinyint' && $limit === 1) {
                 $type = static::PHINX_TYPE_BOOLEAN;
@@ -897,15 +900,15 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
                     }
                     break;
                 case 'tinyint':
-                    $type = static::PHINX_TYPE_INTEGER;
+                    $type  = static::PHINX_TYPE_INTEGER;
                     $limit = static::INT_TINY;
                     break;
                 case 'smallint':
-                    $type = static::PHINX_TYPE_INTEGER;
+                    $type  = static::PHINX_TYPE_INTEGER;
                     $limit = static::INT_SMALL;
                     break;
                 case 'mediumint':
-                    $type = static::PHINX_TYPE_INTEGER;
+                    $type  = static::PHINX_TYPE_INTEGER;
                     $limit = static::INT_MEDIUM;
                     break;
                 case 'int':
@@ -924,27 +927,27 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
                     $type = static::PHINX_TYPE_BINARY;
                     break;
                 case 'tinyblob':
-                    $type = static::PHINX_TYPE_BINARY;
+                    $type  = static::PHINX_TYPE_BINARY;
                     $limit = static::BLOB_TINY;
                     break;
                 case 'mediumblob':
-                    $type = static::PHINX_TYPE_BINARY;
+                    $type  = static::PHINX_TYPE_BINARY;
                     $limit = static::BLOB_MEDIUM;
                     break;
                 case 'longblob':
-                    $type = static::PHINX_TYPE_BINARY;
+                    $type  = static::PHINX_TYPE_BINARY;
                     $limit = static::BLOB_LONG;
                     break;
                 case 'tinytext':
-                    $type = static::PHINX_TYPE_TEXT;
+                    $type  = static::PHINX_TYPE_TEXT;
                     $limit = static::TEXT_TINY;
                     break;
                 case 'mediumtext':
-                    $type = static::PHINX_TYPE_TEXT;
+                    $type  = static::PHINX_TYPE_TEXT;
                     $limit = static::TEXT_MEDIUM;
                     break;
                 case 'longtext':
-                    $type = static::PHINX_TYPE_TEXT;
+                    $type  = static::PHINX_TYPE_TEXT;
                     $limit = static::TEXT_LONG;
                     break;
             }
@@ -1028,7 +1031,7 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
         if (($values = $column->getValues()) && is_array($values)) {
             $def .= "('" . implode("', '", $values) . "')";
         }
-        $def .= (!$column->isSigned() && isset($this->signedColumnTypes[$column->getType()])) ? ' unsigned' : '';
+        $def .= (!$column->isSigned() && isset($this->signedColumnTypes[$column->getType()])) ? ' unsigned' : '' ;
         $def .= ($column->isNull() == false) ? ' NOT NULL' : ' NULL';
         $def .= ($column->isIdentity()) ? ' AUTO_INCREMENT' : '';
         $def .= $this->getDefaultValueDefinition($column->getDefault());
@@ -1053,9 +1056,17 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
     protected function getIndexSqlDefinition(Index $index)
     {
         $def = '';
+        $limit = '';
+        if ($index->getLimit()) {
+            $limit = '(' . $index->getLimit() . ')';
+        }
 
         if ($index->getType() == Index::UNIQUE) {
             $def .= ' UNIQUE';
+        }
+
+        if ($index->getType() == Index::FULLTEXT) {
+            $def .= ' FULLTEXT';
         }
 
         $def .= ' KEY';
@@ -1064,7 +1075,7 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
             $def .= ' `' . $index->getName() . '`';
         }
 
-        $def .= ' (`' . implode('`,`', $index->getColumns()) . '`)';
+        $def .= ' (`' . implode('`,`', $index->getColumns()) . '`' . $limit . ')';
 
         return $def;
     }
@@ -1129,6 +1140,6 @@ class MysqlAdapter extends PdoAdapter implements AdapterInterface
      */
     public function getColumnTypes()
     {
-        return array_merge(parent::getColumnTypes(), array('enum', 'set', 'year'));
+        return array_merge(parent::getColumnTypes(), array ('enum', 'set', 'year', 'json'));
     }
 }

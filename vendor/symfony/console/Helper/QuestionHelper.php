@@ -34,9 +34,9 @@ class QuestionHelper extends Helper
     /**
      * Asks a question to the user.
      *
-     * @param InputInterface $input An InputInterface instance
-     * @param OutputInterface $output An OutputInterface instance
-     * @param Question $question The question to ask
+     * @param InputInterface  $input    An InputInterface instance
+     * @param OutputInterface $output   An OutputInterface instance
+     * @param Question        $question The question to ask
      *
      * @return string The user answer
      *
@@ -103,7 +103,7 @@ class QuestionHelper extends Helper
      * Asks the question to the user.
      *
      * @param OutputInterface $output
-     * @param Question $question
+     * @param Question        $question
      *
      * @return bool|mixed|null|string
      *
@@ -130,7 +130,11 @@ class QuestionHelper extends Helper
             }
 
             if (false === $ret) {
-                $ret = $this->readFromInput($inputStream);
+                $ret = fgets($inputStream, 4096);
+                if (false === $ret) {
+                    throw new \RuntimeException('Aborted');
+                }
+                $ret = trim($ret);
             }
         } else {
             $ret = trim($this->autocomplete($output, $question, $inputStream));
@@ -149,7 +153,7 @@ class QuestionHelper extends Helper
      * Outputs the question prompt.
      *
      * @param OutputInterface $output
-     * @param Question $question
+     * @param Question        $question
      */
     protected function writePrompt(OutputInterface $output, Question $question)
     {
@@ -158,10 +162,10 @@ class QuestionHelper extends Helper
         if ($question instanceof ChoiceQuestion) {
             $maxWidth = max(array_map(array($this, 'strlen'), array_keys($question->getChoices())));
 
-            $messages = (array)$question->getQuestion();
+            $messages = (array) $question->getQuestion();
             foreach ($question->getChoices() as $key => $value) {
                 $width = $maxWidth - $this->strlen($key);
-                $messages[] = '  [<info>' . $key . str_repeat(' ', $width) . '</info>] ' . $value;
+                $messages[] = '  [<info>'.$key.str_repeat(' ', $width).'</info>] '.$value;
             }
 
             $output->writeln($messages);
@@ -176,14 +180,14 @@ class QuestionHelper extends Helper
      * Outputs an error message.
      *
      * @param OutputInterface $output
-     * @param \Exception $error
+     * @param \Exception      $error
      */
     protected function writeError(OutputInterface $output, \Exception $error)
     {
         if (null !== $this->getHelperSet() && $this->getHelperSet()->has('formatter')) {
             $message = $this->getHelperSet()->get('formatter')->formatBlock($error->getMessage(), 'error');
         } else {
-            $message = '<error>' . $error->getMessage() . '</error>';
+            $message = '<error>'.$error->getMessage().'</error>';
         }
 
         $output->writeln($message);
@@ -193,7 +197,7 @@ class QuestionHelper extends Helper
      * Autocompletes a question.
      *
      * @param OutputInterface $output
-     * @param Question $question
+     * @param Question        $question
      *
      * @return string
      */
@@ -295,7 +299,7 @@ class QuestionHelper extends Helper
                 // Save cursor position
                 $output->write("\0337");
                 // Write highlighted text
-                $output->write('<hl>' . substr($matches[$ofs], $i) . '</hl>');
+                $output->write('<hl>'.substr($matches[$ofs], $i).'</hl>');
                 // Restore cursor position
                 $output->write("\0338");
             }
@@ -319,11 +323,11 @@ class QuestionHelper extends Helper
     private function getHiddenResponse(OutputInterface $output, $inputStream)
     {
         if ('\\' === DIRECTORY_SEPARATOR) {
-            $exe = __DIR__ . '/../Resources/bin/hiddeninput.exe';
+            $exe = __DIR__.'/../Resources/bin/hiddeninput.exe';
 
             // handle code running from a phar
             if ('phar:' === substr(__FILE__, 0, 5)) {
-                $tmpExe = sys_get_temp_dir() . '/hiddeninput.exe';
+                $tmpExe = sys_get_temp_dir().'/hiddeninput.exe';
                 copy($exe, $tmpExe);
                 $exe = $tmpExe;
             }
@@ -370,9 +374,9 @@ class QuestionHelper extends Helper
     /**
      * Validates an attempt.
      *
-     * @param callable $interviewer A callable that will ask for a question and return the result
-     * @param OutputInterface $output An Output instance
-     * @param Question $question A Question instance
+     * @param callable        $interviewer A callable that will ask for a question and return the result
+     * @param OutputInterface $output      An Output instance
+     * @param Question        $question    A Question instance
      *
      * @return string The validated response
      *
@@ -421,30 +425,6 @@ class QuestionHelper extends Helper
         }
 
         return self::$shell;
-    }
-
-    /**
-     * Reads user input.
-     *
-     * @param resource $stream The input stream
-     *
-     * @return string User input
-     *
-     * @throws RuntimeException
-     */
-    private function readFromInput($stream)
-    {
-        if (STDIN === $stream && function_exists('readline')) {
-            $ret = readline('');
-        } else {
-            $ret = fgets($stream, 4096);
-        }
-
-        if (false === $ret) {
-            throw new RuntimeException('Aborted');
-        }
-
-        return trim($ret);
     }
 
     /**

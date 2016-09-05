@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @license     MIT License https://github.com/serbanghita/Mobile-Detect/blob/master/LICENSE.txt
  * @link        http://mobiledetect.net
@@ -54,6 +53,7 @@ class UserAgentTest extends PHPUnit_Framework_TestCase
         if (!is_writable(dirname($jsonFile))) {
             throw new RuntimeException("Insufficient permissions to create this file: $jsonFile");
         }
+
 
 
         //print_r($list['Acer']); exit;
@@ -167,7 +167,7 @@ class UserAgentTest extends PHPUnit_Framework_TestCase
 
         if (isset($version)) {
             foreach ($version as $condition => $assertion) {
-                $this->assertEquals($assertion, $this->detect->version($condition), 'FAILED UA (version("' . $condition . '")): ' . $userAgent);
+                $this->assertEquals($assertion, $this->detect->version($condition), 'FAILED UA (version("'.$condition.'")): '.$userAgent);
             }
         }
 

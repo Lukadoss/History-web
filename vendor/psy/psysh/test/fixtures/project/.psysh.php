@@ -11,5 +11,5 @@
 
 return array(
     'useReadline' => false,
-    'usePcntl' => true,
+    'usePcntl'    => true,
 );

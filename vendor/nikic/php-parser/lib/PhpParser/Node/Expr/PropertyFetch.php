@@ -14,19 +14,17 @@ class PropertyFetch extends Expr
     /**
      * Constructs a function call node.
      *
-     * @param Expr $var Variable holding object
-     * @param string|Expr $name Property name
-     * @param array $attributes Additional attributes
+     * @param Expr        $var        Variable holding object
+     * @param string|Expr $name       Property name
+     * @param array       $attributes Additional attributes
      */
-    public function __construct(Expr $var, $name, array $attributes = array())
-    {
+    public function __construct(Expr $var, $name, array $attributes = array()) {
         parent::__construct($attributes);
         $this->var = $var;
         $this->name = $name;
     }
 
-    public function getSubNodeNames()
-    {
+    public function getSubNodeNames() {
         return array('var', 'name');
     }
 }

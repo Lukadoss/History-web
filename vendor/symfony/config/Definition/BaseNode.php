@@ -35,7 +35,7 @@ abstract class BaseNode implements NodeInterface
     /**
      * Constructor.
      *
-     * @param string $name The name of the node
+     * @param string        $name   The name of the node
      * @param NodeInterface $parent The parent of this node
      *
      * @throws \InvalidArgumentException if the name contains a period.
@@ -138,7 +138,7 @@ abstract class BaseNode implements NodeInterface
      */
     public function setRequired($boolean)
     {
-        $this->required = (bool)$boolean;
+        $this->required = (bool) $boolean;
     }
 
     /**
@@ -148,7 +148,7 @@ abstract class BaseNode implements NodeInterface
      */
     public function setAllowOverwrite($allow)
     {
-        $this->allowOverwrite = (bool)$allow;
+        $this->allowOverwrite = (bool) $allow;
     }
 
     /**
@@ -184,7 +184,7 @@ abstract class BaseNode implements NodeInterface
     /**
      * Returns the name of this node.
      *
-     * @return string The Node's name.
+     * @return string The Node's name
      */
     public function getName()
     {
@@ -201,7 +201,7 @@ abstract class BaseNode implements NodeInterface
         $path = $this->name;
 
         if (null !== $this->parent) {
-            $path = $this->parent->getPath() . '.' . $path;
+            $path = $this->parent->getPath().'.'.$path;
         }
 
         return $path;
@@ -222,8 +222,8 @@ abstract class BaseNode implements NodeInterface
         if (!$this->allowOverwrite) {
             throw new ForbiddenOverwriteException(sprintf(
                 'Configuration path "%s" cannot be overwritten. You have to '
-                . 'define all options for this path, and any of its sub-paths in '
-                . 'one configuration section.',
+               .'define all options for this path, and any of its sub-paths in '
+               .'one configuration section.',
                 $this->getPath()
             ));
         }
@@ -237,9 +237,9 @@ abstract class BaseNode implements NodeInterface
     /**
      * Normalizes a value, applying all normalization closures.
      *
-     * @param mixed $value Value to normalize.
+     * @param mixed $value Value to normalize
      *
-     * @return mixed The normalized value.
+     * @return mixed The normalized value
      */
     final public function normalize($value)
     {
@@ -329,7 +329,7 @@ abstract class BaseNode implements NodeInterface
     /**
      * Normalizes the value.
      *
-     * @param mixed $value The value to normalize.
+     * @param mixed $value The value to normalize
      *
      * @return mixed The normalized value
      */

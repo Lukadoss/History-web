@@ -78,7 +78,7 @@ class StaticConstructorPass extends CodeCleanerPass
             if ($constructor && $constructor->isStatic()) {
                 throw new FatalErrorException(sprintf(
                     'Constructor %s::%s() cannot be static',
-                    implode('\\', array_merge($this->namespace, (array)$node->name)),
+                    implode('\\', array_merge($this->namespace, (array) $node->name)),
                     $constructor->name
                 ));
             }

@@ -13,6 +13,7 @@ use Cake\Event\Event;
 use Cake\Validation\Validator;
 use Cake\Mailer\Email;
 use Cake\Routing\Router;
+use Cake\Datasource\ConnectionManager;
 
 require_once "components/recaptchalib.php";
 

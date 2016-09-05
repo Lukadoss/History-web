@@ -55,7 +55,6 @@ class ProxyAdapter extends AdapterWrapper
     {
         return 'ProxyAdapter';
     }
-
     /**
      * {@inheritdoc}
      */
@@ -170,7 +169,7 @@ class ProxyAdapter extends AdapterWrapper
     public function recordCommand($name, $arguments)
     {
         $this->commands[] = array(
-            'name' => $name,
+            'name'      => $name,
             'arguments' => $arguments
         );
     }
@@ -224,7 +223,7 @@ class ProxyAdapter extends AdapterWrapper
             $invertMethod = 'invert' . ucfirst($command['name']);
             $invertedCommand = $this->$invertMethod($command['arguments']);
             $invCommands[] = array(
-                'name' => $invertedCommand['name'],
+                'name'      => $invertedCommand['name'],
                 'arguments' => $invertedCommand['arguments']
             );
         }

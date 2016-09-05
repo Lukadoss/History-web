@@ -14,23 +14,21 @@ class XML implements Serializer
     /**
      * Constructs a XML serializer.
      */
-    public function __construct()
-    {
+    public function __construct() {
         $this->writer = new XMLWriter;
         $this->writer->openMemory();
         $this->writer->setIndent(true);
     }
 
-    public function serialize(array $nodes)
-    {
+    public function serialize(array $nodes) {
         $this->writer->flush();
         $this->writer->startDocument('1.0', 'UTF-8');
 
         $this->writer->startElement('AST');
-        $this->writer->writeAttribute('xmlns:node', 'http://nikic.github.com/PHPParser/XML/node');
-        $this->writer->writeAttribute('xmlns:subNode', 'http://nikic.github.com/PHPParser/XML/subNode');
+        $this->writer->writeAttribute('xmlns:node',      'http://nikic.github.com/PHPParser/XML/node');
+        $this->writer->writeAttribute('xmlns:subNode',   'http://nikic.github.com/PHPParser/XML/subNode');
         $this->writer->writeAttribute('xmlns:attribute', 'http://nikic.github.com/PHPParser/XML/attribute');
-        $this->writer->writeAttribute('xmlns:scalar', 'http://nikic.github.com/PHPParser/XML/scalar');
+        $this->writer->writeAttribute('xmlns:scalar',    'http://nikic.github.com/PHPParser/XML/scalar');
 
         $this->_serialize($nodes);
 
@@ -39,8 +37,7 @@ class XML implements Serializer
         return $this->writer->outputMemory();
     }
 
-    protected function _serialize($node)
-    {
+    protected function _serialize($node) {
         if ($node instanceof Node) {
             $this->writer->startElement('node:' . $node->getType());
 
@@ -60,7 +57,7 @@ class XML implements Serializer
         } elseif ($node instanceof Comment) {
             $this->writer->startElement('comment');
             $this->writer->writeAttribute('isDocComment', $node instanceof Comment\Doc ? 'true' : 'false');
-            $this->writer->writeAttribute('line', (string)$node->getLine());
+            $this->writer->writeAttribute('line', (string) $node->getLine());
             $this->writer->text($node->getText());
             $this->writer->endElement();
         } elseif (is_array($node)) {
@@ -72,10 +69,10 @@ class XML implements Serializer
         } elseif (is_string($node)) {
             $this->writer->writeElement('scalar:string', $node);
         } elseif (is_int($node)) {
-            $this->writer->writeElement('scalar:int', (string)$node);
+            $this->writer->writeElement('scalar:int', (string) $node);
         } elseif (is_float($node)) {
             // TODO Higher precision conversion?
-            $this->writer->writeElement('scalar:float', (string)$node);
+            $this->writer->writeElement('scalar:float', (string) $node);
         } elseif (true === $node) {
             $this->writer->writeElement('scalar:true');
         } elseif (false === $node) {

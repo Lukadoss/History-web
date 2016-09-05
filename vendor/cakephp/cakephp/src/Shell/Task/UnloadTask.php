@@ -19,7 +19,6 @@ use Cake\Filesystem\File;
 
 /**
  * Task for unloading plugins.
- *
  */
 class UnloadTask extends Shell
 {
@@ -34,7 +33,7 @@ class UnloadTask extends Shell
     /**
      * Execution method always used for tasks.
      *
-     * @param string $plugin The plugin name.
+     * @param string|null $plugin The plugin name.
      * @return bool if action passed.
      */
     public function main($plugin = null)
@@ -44,6 +43,7 @@ class UnloadTask extends Shell
         if (empty($plugin)) {
             $this->err('<error>You must provide a plugin name in CamelCase format.</error>');
             $this->err('To unload an "Example" plugin, run <info>`cake plugin unload Example`</info>.');
+
             return false;
         }
 
@@ -73,6 +73,7 @@ class UnloadTask extends Shell
 
             return true;
         }
+
         return false;
     }
 

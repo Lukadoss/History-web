@@ -46,7 +46,6 @@ use Cake\ORM\Locator\LocatorInterface;
  * ```
  * $table = TableRegistry::get('Users', $config);
  * ```
- *
  */
 class TableRegistry
 {
@@ -68,7 +67,7 @@ class TableRegistry
     /**
      * Sets and returns a singleton instance of LocatorInterface implementation.
      *
-     * @param \Cake\ORM\Locator\LocatorInterface $locator Instance of a locator to use.
+     * @param \Cake\ORM\Locator\LocatorInterface|null $locator Instance of a locator to use.
      * @return \Cake\ORM\Locator\LocatorInterface
      */
     public static function locator(LocatorInterface $locator = null)

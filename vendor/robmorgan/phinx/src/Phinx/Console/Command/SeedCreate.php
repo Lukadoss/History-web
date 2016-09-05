@@ -82,7 +82,7 @@ class SeedCreate extends AbstractCommand
         $path = $this->getConfig()->getSeedPath();
 
         if (!file_exists($path)) {
-            $helper = $this->getHelper('question');
+            $helper   = $this->getHelper('question');
             $question = $this->getCreateSeedDirectoryQuestion();
 
             if ($helper->ask($input, $output, $question)) {
@@ -115,8 +115,8 @@ class SeedCreate extends AbstractCommand
         // inject the class names appropriate to this seeder
         $contents = file_get_contents($this->getSeedTemplateFilename());
         $classes = array(
-            '$useClassName' => 'Phinx\Seed\AbstractSeed',
-            '$className' => $className,
+            '$useClassName'  => 'Phinx\Seed\AbstractSeed',
+            '$className'     => $className,
             '$baseClassName' => 'AbstractSeed',
         );
         $contents = strtr($contents, $classes);

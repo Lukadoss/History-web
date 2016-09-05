@@ -5,8 +5,7 @@ namespace PhpParser\Parser;
 use PhpParser\Error;
 use PhpParser\Parser;
 
-class Multiple implements Parser
-{
+class Multiple implements Parser {
     /** @var Parser[] List of parsers to try, in order of preference */
     private $parsers;
     /** @var Error[] Errors collected during last parse */
@@ -21,14 +20,12 @@ class Multiple implements Parser
      *
      * @param Parser[] $parsers
      */
-    public function __construct(array $parsers)
-    {
+    public function __construct(array $parsers) {
         $this->parsers = $parsers;
         $this->errors = [];
     }
 
-    public function parse($code)
-    {
+    public function parse($code) {
         list($firstStmts, $firstErrors, $firstError) = $this->tryParse($this->parsers[0], $code);
         if ($firstErrors === []) {
             $this->errors = [];
@@ -50,19 +47,16 @@ class Multiple implements Parser
         return $firstStmts;
     }
 
-    public function getErrors()
-    {
+    public function getErrors() {
         return $this->errors;
     }
 
-    private function tryParse(Parser $parser, $code)
-    {
+    private function tryParse(Parser $parser, $code) {
         $stmts = null;
         $error = null;
         try {
             $stmts = $parser->parse($code);
-        } catch (Error $error) {
-        }
+        } catch (Error $error) {}
         $errors = $parser->getErrors();
         return [$stmts, $errors, $error];
     }

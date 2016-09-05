@@ -70,6 +70,7 @@ class App
         if (static::_classExistsInBase($fullname, 'Cake')) {
             return 'Cake' . $fullname;
         }
+
         return false;
     }
 
@@ -170,7 +171,7 @@ class App
      * Will return the path for datasources under the 'MyPlugin' plugin.
      *
      * @param string $type type of path
-     * @param string $plugin name of plugin
+     * @param string|null $plugin name of plugin
      * @return array
      * @link http://book.cakephp.org/3.0/en/core-libraries/app.html#finding-paths-to-namespaces
      */
@@ -188,6 +189,7 @@ class App
         if (!empty($plugin)) {
             return [Plugin::classPath($plugin) . $type . DIRECTORY_SEPARATOR];
         }
+
         return [APP . $type . DIRECTORY_SEPARATOR];
     }
 

@@ -14,7 +14,8 @@
  */
 namespace Cake\I18n\Formatter;
 
-use Aura\Intl\Exception;
+use Aura\Intl\Exception\CannotFormat;
+use Aura\Intl\Exception\CannotInstantiateFormatter;
 use Aura\Intl\FormatterInterface;
 use Cake\I18n\PluralRules;
 use MessageFormatter;
@@ -65,7 +66,7 @@ class IcuFormatter implements FormatterInterface
             $count = isset($vars['_count']) ? $vars['_count'] : 0;
             unset($vars['_count'], $vars['_singular']);
             $form = PluralRules::calculate($locale, $count);
-            $message = $message[$form];
+            $message = isset($message[$form]) ? $message[$form] : end($message);
         }
 
         return $this->_formatMessage($locale, $message, $vars);
@@ -94,11 +95,11 @@ class IcuFormatter implements FormatterInterface
             // previous action using the object oriented style to figure out
             $formatter = new MessageFormatter($locale, $message);
             if (!$formatter) {
-                throw new Exception\CannotInstantiateFormatter(intl_get_error_message(), intl_get_error_code());
+                throw new CannotInstantiateFormatter(intl_get_error_message(), intl_get_error_code());
             }
 
             $formatter->format($vars);
-            throw new Exception\CannotFormat($formatter->getErrorMessage(), $formatter->getErrorCode());
+            throw new CannotFormat($formatter->getErrorMessage(), $formatter->getErrorCode());
         }
 
         return $result;

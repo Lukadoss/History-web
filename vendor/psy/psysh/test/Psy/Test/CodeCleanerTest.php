@@ -27,13 +27,13 @@ class CodeCleanerTest extends \PHPUnit_Framework_TestCase
     public function semicolonCodeProvider()
     {
         return array(
-            array(array('true'), false, 'return true;'),
+            array(array('true'),  false, 'return true;'),
             array(array('true;'), false, 'return true;'),
-            array(array('true;'), true, 'return true;'),
-            array(array('true'), true, false),
+            array(array('true;'), true,  'return true;'),
+            array(array('true'),  true,  false),
 
             array(array('echo "foo";', 'true'), false, "echo 'foo';\nreturn true;"),
-            array(array('echo "foo";', 'true'), true, false),
+            array(array('echo "foo";', 'true'), true,  false),
         );
     }
 
@@ -42,7 +42,7 @@ class CodeCleanerTest extends \PHPUnit_Framework_TestCase
      */
     public function testUnclosedStatements(array $lines, $isUnclosed)
     {
-        $cc = new CodeCleaner();
+        $cc  = new CodeCleaner();
         $res = $cc->clean($lines);
 
         if ($isUnclosed) {
@@ -55,15 +55,15 @@ class CodeCleanerTest extends \PHPUnit_Framework_TestCase
     public function unclosedStatementsProvider()
     {
         return array(
-            array(array('echo "'), true),
-            array(array('echo \''), true),
+            array(array('echo "'),   true),
+            array(array('echo \''),  true),
             array(array('if (1) {'), true),
 
-            array(array('echo ""'), false),
-            array(array("echo ''"), false),
+            array(array('echo ""'),   false),
+            array(array("echo ''"),   false),
             array(array('if (1) {}'), false),
 
-            array(array("\$content = <<<EOS\n"), true),
+            array(array("\$content = <<<EOS\n"),   true),
             array(array("\$content = <<<'EOS'\n"), true),
         );
     }

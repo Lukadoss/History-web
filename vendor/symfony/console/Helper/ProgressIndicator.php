@@ -11,6 +11,8 @@
 
 namespace Symfony\Component\Console\Helper;
 
+use Symfony\Component\Console\Exception\InvalidArgumentException;
+use Symfony\Component\Console\Exception\LogicException;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
@@ -34,9 +36,9 @@ class ProgressIndicator
 
     /**
      * @param OutputInterface $output
-     * @param string|null $format Indicator format
-     * @param int $indicatorChangeInterval Change interval in milliseconds
-     * @param array|null $indicatorValues Animated indicator characters
+     * @param string|null     $format                  Indicator format
+     * @param int             $indicatorChangeInterval Change interval in milliseconds
+     * @param array|null      $indicatorValues         Animated indicator characters
      */
     public function __construct(OutputInterface $output, $format = null, $indicatorChangeInterval = 100, $indicatorValues = null)
     {
@@ -53,7 +55,7 @@ class ProgressIndicator
         $indicatorValues = array_values($indicatorValues);
 
         if (2 > count($indicatorValues)) {
-            throw new \InvalidArgumentException('Must have at least 2 indicator value characters.');
+            throw new InvalidArgumentException('Must have at least 2 indicator value characters.');
         }
 
         $this->format = self::getFormatDefinition($format);
@@ -75,42 +77,6 @@ class ProgressIndicator
     }
 
     /**
-     * Gets the current indicator message.
-     *
-     * @return string|null
-     *
-     * @internal for PHP 5.3 compatibility
-     */
-    public function getMessage()
-    {
-        return $this->message;
-    }
-
-    /**
-     * Gets the progress bar start time.
-     *
-     * @return int The progress bar start time
-     *
-     * @internal for PHP 5.3 compatibility
-     */
-    public function getStartTime()
-    {
-        return $this->startTime;
-    }
-
-    /**
-     * Gets the current animated indicator character.
-     *
-     * @return string
-     *
-     * @internal for PHP 5.3 compatibility
-     */
-    public function getCurrentValue()
-    {
-        return $this->indicatorValues[$this->indicatorCurrent % count($this->indicatorValues)];
-    }
-
-    /**
      * Starts the indicator output.
      *
      * @param $message
@@ -118,7 +84,7 @@ class ProgressIndicator
     public function start($message)
     {
         if ($this->started) {
-            throw new \LogicException('Progress indicator already started.');
+            throw new LogicException('Progress indicator already started.');
         }
 
         $this->message = $message;
@@ -137,7 +103,7 @@ class ProgressIndicator
     public function advance()
     {
         if (!$this->started) {
-            throw new \LogicException('Progress indicator has not yet been started.');
+            throw new LogicException('Progress indicator has not yet been started.');
         }
 
         if (!$this->output->isDecorated()) {
@@ -164,7 +130,7 @@ class ProgressIndicator
     public function finish($message)
     {
         if (!$this->started) {
-            throw new \LogicException('Progress indicator has not yet been started.');
+            throw new LogicException('Progress indicator has not yet been started.');
         }
 
         $this->message = $message;
@@ -194,7 +160,7 @@ class ProgressIndicator
      *
      * This method also allow you to override an existing placeholder.
      *
-     * @param string $name The placeholder name (including the delimiter char like %)
+     * @param string   $name     The placeholder name (including the delimiter char like %)
      * @param callable $callable A PHP callable
      */
     public static function setPlaceholderFormatterDefinition($name, $callable)
@@ -292,13 +258,13 @@ class ProgressIndicator
     {
         return array(
             'indicator' => function (ProgressIndicator $indicator) {
-                return $indicator->getCurrentValue();
+                return $indicator->indicatorValues[$indicator->indicatorCurrent % count($indicator->indicatorValues)];
             },
             'message' => function (ProgressIndicator $indicator) {
-                return $indicator->getMessage();
+                return $indicator->message;
             },
             'elapsed' => function (ProgressIndicator $indicator) {
-                return Helper::formatTime(time() - $indicator->getStartTime());
+                return Helper::formatTime(time() - $indicator->startTime);
             },
             'memory' => function () {
                 return Helper::formatMemory(memory_get_usage(true));

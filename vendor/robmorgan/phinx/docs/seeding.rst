@@ -1,5 +1,5 @@
 .. index::
-single: Database Seeding
+   single: Database Seeding
 
 Database Seeding
 ================

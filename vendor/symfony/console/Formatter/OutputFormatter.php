@@ -33,18 +33,26 @@ class OutputFormatter implements OutputFormatterInterface
      */
     public static function escape($text)
     {
-        return preg_replace('/([^\\\\]?)</', '$1\\<', $text);
+        $text = preg_replace('/([^\\\\]?)</', '$1\\<', $text);
+
+        if ('\\' === substr($text, -1)) {
+            $len = strlen($text);
+            $text = rtrim($text, '\\');
+            $text .= str_repeat('<<', $len - strlen($text));
+        }
+
+        return $text;
     }
 
     /**
      * Initializes console output formatter.
      *
-     * @param bool $decorated Whether this formatter should actually decorate strings
-     * @param OutputFormatterStyleInterface[] $styles Array of "name => FormatterStyle" instances
+     * @param bool                            $decorated Whether this formatter should actually decorate strings
+     * @param OutputFormatterStyleInterface[] $styles    Array of "name => FormatterStyle" instances
      */
     public function __construct($decorated = false, array $styles = array())
     {
-        $this->decorated = (bool)$decorated;
+        $this->decorated = (bool) $decorated;
 
         $this->setStyle('error', new OutputFormatterStyle('white', 'red'));
         $this->setStyle('info', new OutputFormatterStyle('green'));
@@ -65,7 +73,7 @@ class OutputFormatter implements OutputFormatterInterface
      */
     public function setDecorated($decorated)
     {
-        $this->decorated = (bool)$decorated;
+        $this->decorated = (bool) $decorated;
     }
 
     /**
@@ -81,7 +89,7 @@ class OutputFormatter implements OutputFormatterInterface
     /**
      * Sets a new style.
      *
-     * @param string $name The style name
+     * @param string                        $name  The style name
      * @param OutputFormatterStyleInterface $style The style instance
      */
     public function setStyle($name, OutputFormatterStyleInterface $style)
@@ -128,10 +136,10 @@ class OutputFormatter implements OutputFormatterInterface
      */
     public function format($message)
     {
-        $message = (string)$message;
+        $message = (string) $message;
         $offset = 0;
         $output = '';
-        $tagRegex = '[a-z][a-z0-9_=;-]*';
+        $tagRegex = '[a-z][a-z0-9_=;-]*+';
         preg_match_all("#<(($tagRegex) | /($tagRegex)?)>#ix", $message, $matches, PREG_OFFSET_CAPTURE);
         foreach ($matches[0] as $i => $match) {
             $pos = $match[1];
@@ -165,6 +173,10 @@ class OutputFormatter implements OutputFormatterInterface
         }
 
         $output .= $this->applyCurrentStyle(substr($message, $offset));
+
+        if (false !== strpos($output, '<<')) {
+            return strtr($output, array('\\<' => '<', '<<' => '\\'));
+        }
 
         return str_replace('\\<', '<', $output);
     }

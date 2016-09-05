@@ -38,9 +38,9 @@ $this->assign('templateName', 'missing_helper.ctp');
 
 $this->start('subheading');
 ?>
-<strong>Error: </strong>
-<em><?= h($pluginDot . $class) ?></em> could not be found.
-<?= $this->element('plugin_class_error', ['pluginPath' => $pluginPath]) ?>
+    <strong>Error: </strong>
+    <em><?= h($pluginDot . $class) ?></em> could not be found.
+    <?= $this->element('plugin_class_error', ['pluginPath' => $pluginPath]) ?>
 <?php $this->end() ?>
 
 <?php $this->start('file') ?>

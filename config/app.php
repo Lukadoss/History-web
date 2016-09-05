@@ -15,6 +15,7 @@ return [
      * Configure basic information about the application.
      *
      * - namespace - The namespace to find app classes under.
+     * - defaultLocale - The default locale for translation, formatting currencies and numbers, date and time.
      * - encoding - The encoding used for HTML + database connections.
      * - base - The base directory the app resides in. If false this
      *   will be auto detected.
@@ -63,7 +64,7 @@ return [
      *   You should treat it as extremely sensitive data.
      */
     'Security' => [
-        'salt' => env('SECURITY_SALT', '8817e1e57be5537540baf43e65d213911e7399cb3dffb5e42978573df44e3508'),
+        'salt' => env('SECURITY_SALT', '43e282289a29d6c4b2008406be7f9740f7533221565f8fcceb483b23d19a9d0f'),
     ],
 
     /**
@@ -92,6 +93,7 @@ return [
          * Configure the cache used for general framework caching.
          * Translation cache files are stored with this configuration.
          * Duration will be set to '+1 year' in bootstrap.php when debug = false
+         * If you set 'className' => 'Null' core cache will be disabled.
          */
         '_cake_core_' => [
             'className' => 'File',
@@ -148,7 +150,7 @@ return [
      *   breathing room to complete logging or error handling.
      */
     'Error' => [
-        'errorLevel' => E_ALL & ~E_DEPRECATED,
+        'errorLevel' => E_ALL,
         'exceptionRenderer' => 'Cake\Error\ExceptionRenderer',
         'skipLog' => [],
         'log' => true,
@@ -180,7 +182,7 @@ return [
             // The following keys are used in SMTP transports
             'host' => 'smtp.gmail.com',
             'port' => 587,
-            'timeout' => 60,
+            'timeout' => 30,
             'username' => 'kulisackyweb@gmail.com',
             'password' => 'jafaktnevim',
             'client' => null,
@@ -210,6 +212,8 @@ return [
     /**
      * Connection information used by the ORM to connect
      * to your application's datastores.
+     * Do not use periods in database name - it may lead to error.
+     * See https://github.com/cakephp/cakephp/issues/6471 for details.
      * Drivers include Mysql Postgres Sqlite Sqlserver
      * See vendor\cakephp\cakephp\src\Database\Driver for complete list
      */
@@ -224,7 +228,7 @@ return [
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
              * the following line and set the port accordingly
              */
-            //'port' => '',
+            //'port' => 'non_standard_port_number',
             'username' => 'root',
             'password' => '',
             'database' => 'd15579_lisaci',
@@ -252,7 +256,7 @@ return [
              * which is the recommended value in production environments
              */
             //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
-            
+
             'url' => env('DATABASE_URL', null),
         ],
 

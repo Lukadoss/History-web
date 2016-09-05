@@ -19,7 +19,7 @@ class FunctionReturnInWriteContextPassTest extends CodeCleanerTestCase
 {
     public function setUp()
     {
-        $this->pass = new FunctionReturnInWriteContextPass();
+        $this->pass      = new FunctionReturnInWriteContextPass();
         $this->traverser = new NodeTraverser();
         $this->traverser->addVisitor($this->pass);
     }

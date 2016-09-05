@@ -32,7 +32,7 @@ class LockHandler
     private $handle;
 
     /**
-     * @param string $name The lock name
+     * @param string      $name     The lock name
      * @param string|null $lockPath The directory to store the lock. Default values will use temporary directory
      *
      * @throws IOException If the lock directory could not be created or is not writable
@@ -69,8 +69,7 @@ class LockHandler
         }
 
         // Silence error reporting
-        set_error_handler(function () {
-        });
+        set_error_handler(function () {});
 
         if (!$this->handle = fopen($this->file, 'r')) {
             if ($this->handle = fopen($this->file, 'x')) {

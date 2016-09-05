@@ -39,8 +39,8 @@ class ReflectionCaster
         $stub->class = 'Closure'; // HHVM generates unique class names for closures
         $a = static::castFunctionAbstract($c, $a, $stub, $isNested);
 
-        if (isset($a[$prefix . 'parameters'])) {
-            foreach ($a[$prefix . 'parameters']->value as &$v) {
+        if (isset($a[$prefix.'parameters'])) {
+            foreach ($a[$prefix.'parameters']->value as &$v) {
                 $param = $v;
                 $v = new EnumStub(array());
                 foreach (static::castParameter($param, array(), $stub, true) as $k => $param) {
@@ -53,12 +53,12 @@ class ReflectionCaster
         }
 
         if ($f = $c->getFileName()) {
-            $a[$prefix . 'file'] = $f;
-            $a[$prefix . 'line'] = $c->getStartLine() . ' to ' . $c->getEndLine();
+            $a[$prefix.'file'] = $f;
+            $a[$prefix.'line'] = $c->getStartLine().' to '.$c->getEndLine();
         }
 
         $prefix = Caster::PREFIX_DYNAMIC;
-        unset($a['name'], $a[$prefix . '0'], $a[$prefix . 'this'], $a[$prefix . 'parameter'], $a[Caster::PREFIX_VIRTUAL . 'extra']);
+        unset($a['name'], $a[$prefix.'this'], $a[$prefix.'parameter'], $a[Caster::PREFIX_VIRTUAL.'extra']);
 
         return $a;
     }
@@ -73,9 +73,9 @@ class ReflectionCaster
         $prefix = Caster::PREFIX_VIRTUAL;
 
         $a += array(
-            $prefix . 'type' => $c->__toString(),
-            $prefix . 'allowsNull' => $c->allowsNull(),
-            $prefix . 'isBuiltin' => $c->isBuiltin(),
+            $prefix.'type' => $c->__toString(),
+            $prefix.'allowsNull' => $c->allowsNull(),
+            $prefix.'isBuiltin' => $c->isBuiltin(),
         );
 
         return $a;
@@ -86,7 +86,7 @@ class ReflectionCaster
         $prefix = Caster::PREFIX_VIRTUAL;
 
         if ($c->getThis()) {
-            $a[$prefix . 'this'] = new CutStub($c->getThis());
+            $a[$prefix.'this'] = new CutStub($c->getThis());
         }
         $x = $c->getFunction();
         $frame = array(
@@ -104,12 +104,12 @@ class ReflectionCaster
                 'line' => $x->getExecutingLine() - 1,
             ));
             $trace[] = $frame;
-            $a[$prefix . 'trace'] = new TraceStub($trace, false, 0, -1, -1);
+            $a[$prefix.'trace'] = new TraceStub($trace, false, 0, -1, -1);
         } else {
             $x = new FrameStub($frame, false, true);
             $x = ExceptionCaster::castFrameStub($x, array(), $x, true);
-            $a[$prefix . 'executing'] = new EnumStub(array(
-                $frame['class'] . $frame['type'] . $frame['function'] . '()' => $x[$prefix . 'src'],
+            $a[$prefix.'executing'] = new EnumStub(array(
+                $frame['class'].$frame['type'].$frame['function'].'()' => $x[$prefix.'src'],
             ));
         }
 
@@ -121,7 +121,7 @@ class ReflectionCaster
         $prefix = Caster::PREFIX_VIRTUAL;
 
         if ($n = \Reflection::getModifierNames($c->getModifiers())) {
-            $a[$prefix . 'modifiers'] = implode(' ', $n);
+            $a[$prefix.'modifiers'] = implode(' ', $n);
         }
 
         self::addMap($a, $c, array(
@@ -131,11 +131,11 @@ class ReflectionCaster
         ));
 
         foreach ($c->getProperties() as $n) {
-            $a[$prefix . 'properties'][$n->name] = $n;
+            $a[$prefix.'properties'][$n->name] = $n;
         }
 
         foreach ($c->getMethods() as $n) {
-            $a[$prefix . 'methods'][$n->name] = $n;
+            $a[$prefix.'methods'][$n->name] = $n;
         }
 
         if (!($filter & Caster::EXCLUDE_VERBOSE) && !$isNested) {
@@ -156,33 +156,33 @@ class ReflectionCaster
             'this' => 'getClosureThis',
         ));
 
-        if (isset($a[$prefix . 'returnType'])) {
-            $a[$prefix . 'returnType'] = (string)$a[$prefix . 'returnType'];
+        if (isset($a[$prefix.'returnType'])) {
+            $a[$prefix.'returnType'] = (string) $a[$prefix.'returnType'];
         }
-        if (isset($a[$prefix . 'this'])) {
-            $a[$prefix . 'this'] = new CutStub($a[$prefix . 'this']);
+        if (isset($a[$prefix.'this'])) {
+            $a[$prefix.'this'] = new CutStub($a[$prefix.'this']);
         }
 
         foreach ($c->getParameters() as $v) {
-            $k = '$' . $v->name;
+            $k = '$'.$v->name;
             if ($v->isPassedByReference()) {
-                $k = '&' . $k;
+                $k = '&'.$k;
             }
             if (method_exists($v, 'isVariadic') && $v->isVariadic()) {
-                $k = '...' . $k;
+                $k = '...'.$k;
             }
-            $a[$prefix . 'parameters'][$k] = $v;
+            $a[$prefix.'parameters'][$k] = $v;
         }
-        if (isset($a[$prefix . 'parameters'])) {
-            $a[$prefix . 'parameters'] = new EnumStub($a[$prefix . 'parameters']);
+        if (isset($a[$prefix.'parameters'])) {
+            $a[$prefix.'parameters'] = new EnumStub($a[$prefix.'parameters']);
         }
 
         if ($v = $c->getStaticVariables()) {
             foreach ($v as $k => &$v) {
-                $a[$prefix . 'use']['$' . $k] = &$v;
+                $a[$prefix.'use']['$'.$k] = &$v;
             }
             unset($v);
-            $a[$prefix . 'use'] = new EnumStub($a[$prefix . 'use']);
+            $a[$prefix.'use'] = new EnumStub($a[$prefix.'use']);
         }
 
         if (!($filter & Caster::EXCLUDE_VERBOSE) && !$isNested) {
@@ -190,14 +190,14 @@ class ReflectionCaster
         }
 
         // Added by HHVM
-        unset($a[Caster::PREFIX_DYNAMIC . 'static']);
+        unset($a[Caster::PREFIX_DYNAMIC.'static']);
 
         return $a;
     }
 
     public static function castMethod(\ReflectionMethod $c, array $a, Stub $stub, $isNested)
     {
-        $a[Caster::PREFIX_VIRTUAL . 'modifiers'] = implode(' ', \Reflection::getModifierNames($c->getModifiers()));
+        $a[Caster::PREFIX_VIRTUAL.'modifiers'] = implode(' ', \Reflection::getModifierNames($c->getModifiers()));
 
         return $a;
     }
@@ -218,29 +218,28 @@ class ReflectionCaster
         try {
             if (method_exists($c, 'hasType')) {
                 if ($c->hasType()) {
-                    $a[$prefix . 'typeHint'] = $c->getType()->__toString();
+                    $a[$prefix.'typeHint'] = $c->getType()->__toString();
                 }
-            } elseif ($c->isArray()) {
-                $a[$prefix . 'typeHint'] = 'array';
-            } elseif (method_exists($c, 'isCallable') && $c->isCallable()) {
-                $a[$prefix . 'typeHint'] = 'callable';
-            } elseif ($v = $c->getClass()) {
-                $a[$prefix . 'typeHint'] = $v->name;
+            } else {
+                $v = explode(' ', $c->__toString(), 6);
+                if (isset($v[5]) && 0 === strspn($v[4], '.&$')) {
+                    $a[$prefix.'typeHint'] = $v[4];
+                }
             }
         } catch (\ReflectionException $e) {
             if (preg_match('/^Class ([^ ]++) does not exist$/', $e->getMessage(), $m)) {
-                $a[$prefix . 'typeHint'] = $m[1];
+                $a[$prefix.'typeHint'] = $m[1];
             }
         }
 
         try {
-            $a[$prefix . 'default'] = $v = $c->getDefaultValue();
+            $a[$prefix.'default'] = $v = $c->getDefaultValue();
             if (method_exists($c, 'isDefaultValueConstant') && $c->isDefaultValueConstant()) {
-                $a[$prefix . 'default'] = new ConstStub($c->getDefaultValueConstantName(), $v);
+                $a[$prefix.'default'] = new ConstStub($c->getDefaultValueConstantName(), $v);
             }
         } catch (\ReflectionException $e) {
-            if (isset($a[$prefix . 'typeHint']) && $c->allowsNull()) {
-                $a[$prefix . 'default'] = null;
+            if (isset($a[$prefix.'typeHint']) && $c->allowsNull()) {
+                $a[$prefix.'default'] = null;
             }
         }
 
@@ -249,7 +248,7 @@ class ReflectionCaster
 
     public static function castProperty(\ReflectionProperty $c, array $a, Stub $stub, $isNested)
     {
-        $a[Caster::PREFIX_VIRTUAL . 'modifiers'] = implode(' ', \Reflection::getModifierNames($c->getModifiers()));
+        $a[Caster::PREFIX_VIRTUAL.'modifiers'] = implode(' ', \Reflection::getModifierNames($c->getModifiers()));
         self::addExtra($a, $c);
 
         return $a;
@@ -285,17 +284,17 @@ class ReflectionCaster
 
     private static function addExtra(&$a, \Reflector $c)
     {
-        $x = isset($a[Caster::PREFIX_VIRTUAL . 'extra']) ? $a[Caster::PREFIX_VIRTUAL . 'extra']->value : array();
+        $x = isset($a[Caster::PREFIX_VIRTUAL.'extra']) ? $a[Caster::PREFIX_VIRTUAL.'extra']->value : array();
 
         if (method_exists($c, 'getFileName') && $m = $c->getFileName()) {
             $x['file'] = $m;
-            $x['line'] = $c->getStartLine() . ' to ' . $c->getEndLine();
+            $x['line'] = $c->getStartLine().' to '.$c->getEndLine();
         }
 
         self::addMap($x, $c, self::$extraMap, '');
 
         if ($x) {
-            $a[Caster::PREFIX_VIRTUAL . 'extra'] = new EnumStub($x);
+            $a[Caster::PREFIX_VIRTUAL.'extra'] = new EnumStub($x);
         }
     }
 
@@ -303,7 +302,7 @@ class ReflectionCaster
     {
         foreach ($map as $k => $m) {
             if (method_exists($c, $m) && false !== ($m = $c->$m()) && null !== $m) {
-                $a[$prefix . $k] = $m instanceof \Reflector ? $m->name : $m;
+                $a[$prefix.$k] = $m instanceof \Reflector ? $m->name : $m;
             }
         }
     }

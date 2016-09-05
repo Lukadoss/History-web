@@ -18,7 +18,7 @@ class CallTimePassByReferencePassTest extends CodeCleanerTestCase
 {
     public function setUp()
     {
-        $this->pass = new CallTimePassByReferencePass();
+        $this->pass      = new CallTimePassByReferencePass();
         $this->traverser = new NodeTraverser();
         $this->traverser->addVisitor($this->pass);
     }

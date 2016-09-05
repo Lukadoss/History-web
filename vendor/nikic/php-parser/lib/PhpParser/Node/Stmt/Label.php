@@ -12,17 +12,15 @@ class Label extends Stmt
     /**
      * Constructs a label node.
      *
-     * @param string $name Name
-     * @param array $attributes Additional attributes
+     * @param string $name       Name
+     * @param array  $attributes Additional attributes
      */
-    public function __construct($name, array $attributes = array())
-    {
+    public function __construct($name, array $attributes = array()) {
         parent::__construct($attributes);
         $this->name = $name;
     }
 
-    public function getSubNodeNames()
-    {
+    public function getSubNodeNames() {
         return array('name');
     }
 }

@@ -18,15 +18,14 @@ class If_ extends Node\Stmt
     /**
      * Constructs an if node.
      *
-     * @param Node\Expr $cond Condition
-     * @param array $subNodes Array of the following optional subnodes:
+     * @param Node\Expr $cond       Condition
+     * @param array     $subNodes   Array of the following optional subnodes:
      *                              'stmts'   => array(): Statements
      *                              'elseifs' => array(): Elseif clauses
      *                              'else'    => null   : Else clause
-     * @param array $attributes Additional attributes
+     * @param array     $attributes Additional attributes
      */
-    public function __construct(Node\Expr $cond, array $subNodes = array(), array $attributes = array())
-    {
+    public function __construct(Node\Expr $cond, array $subNodes = array(), array $attributes = array()) {
         parent::__construct($attributes);
         $this->cond = $cond;
         $this->stmts = isset($subNodes['stmts']) ? $subNodes['stmts'] : array();
@@ -34,8 +33,7 @@ class If_ extends Node\Stmt
         $this->else = isset($subNodes['else']) ? $subNodes['else'] : null;
     }
 
-    public function getSubNodeNames()
-    {
+    public function getSubNodeNames() {
         return array('cond', 'stmts', 'elseifs', 'else');
     }
 }

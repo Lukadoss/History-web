@@ -16,8 +16,7 @@ class Function_ extends FunctionLike
      *
      * @param string $name Name of the function
      */
-    public function __construct($name)
-    {
+    public function __construct($name) {
         $this->name = $name;
     }
 
@@ -28,8 +27,7 @@ class Function_ extends FunctionLike
      *
      * @return $this The builder instance (for fluid interface)
      */
-    public function addStmt($stmt)
-    {
+    public function addStmt($stmt) {
         $this->stmts[] = $this->normalizeNode($stmt);
 
         return $this;
@@ -40,12 +38,12 @@ class Function_ extends FunctionLike
      *
      * @return Stmt\Function_ The built function node
      */
-    public function getNode()
-    {
+    public function getNode() {
         return new Stmt\Function_($this->name, array(
-            'byRef' => $this->returnByRef,
-            'params' => $this->params,
-            'stmts' => $this->stmts,
+            'byRef'      => $this->returnByRef,
+            'params'     => $this->params,
+            'returnType' => $this->returnType,
+            'stmts'      => $this->stmts,
         ), $this->attributes);
     }
 }

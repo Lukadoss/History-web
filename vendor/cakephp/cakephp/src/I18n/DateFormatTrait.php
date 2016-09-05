@@ -30,6 +30,7 @@ trait DateFormatTrait
      * The default locale to be used for displaying formatted date strings.
      *
      * @var string
+     * @deprecated 3.2.9 Use static::setDefaultLocale() and static::getDefaultLocale() instead.
      */
     public static $defaultLocale;
 
@@ -54,14 +55,35 @@ trait DateFormatTrait
      * @var string|array|int
      * @see \Cake\I18n\Time::i18nFormat()
      */
-    protected static $_jsonEncodeFormat = "yyyy-MM-dd'T'HH:mm:ssZ";
+    protected static $_jsonEncodeFormat = "yyyy-MM-dd'T'HH:mm:ssxxx";
 
     /**
      * Caches whether or not this class is a subclass of a Date or MutableDate
      *
-     * @var boolean
+     * @var bool
      */
     protected static $_isDateInstance;
+
+    /**
+     * Gets the default locale.
+     *
+     * @return string|null The default locale string to be used or null.
+     */
+    public static function getDefaultLocale()
+    {
+        return static::$defaultLocale;
+    }
+
+    /**
+     * Sets the default locale.
+     *
+     * @param string|null $locale The default locale string to be used or null.
+     * @return void
+     */
+    public static function setDefaultLocale($locale = null)
+    {
+        static::$defaultLocale = $locale;
+    }
 
     /**
      * Returns a nicely formatted date string for this object.
@@ -143,6 +165,7 @@ trait DateFormatTrait
 
         $format = $format !== null ? $format : static::$_toStringFormat;
         $locale = $locale ?: static::$defaultLocale;
+
         return $this->_formatObject($time, $format, $locale);
     }
 
@@ -256,7 +279,7 @@ trait DateFormatTrait
      * ```
      *
      * @param string $time The time string to parse.
-     * @param string|array $format Any format accepted by IntlDateFormatter.
+     * @param string|array|null $format Any format accepted by IntlDateFormatter.
      * @return static|null
      */
     public static function parseDateTime($time, $format = null)
@@ -290,8 +313,10 @@ trait DateFormatTrait
         $time = $formatter->parse($time);
         if ($time !== false) {
             $result = new static('@' . $time);
+
             return static::$_isDateInstance ? $result : $result->setTimezone($defaultTimezone);
         }
+
         return null;
     }
 
@@ -314,7 +339,7 @@ trait DateFormatTrait
      * ```
      *
      * @param string $date The date string to parse.
-     * @param string|int $format Any format accepted by IntlDateFormatter.
+     * @param string|int|null $format Any format accepted by IntlDateFormatter.
      * @return static|null
      */
     public static function parseDate($date, $format = null)
@@ -323,6 +348,7 @@ trait DateFormatTrait
             $format = [$format, -1];
         }
         $format = $format ?: static::$wordFormat;
+
         return static::parseDateTime($date, $format);
     }
 
@@ -343,7 +369,7 @@ trait DateFormatTrait
      * ```
      *
      * @param string $time The time string to parse.
-     * @param string|int $format Any format accepted by IntlDateFormatter.
+     * @param string|int|null $format Any format accepted by IntlDateFormatter.
      * @return static|null
      */
     public static function parseTime($time, $format = null)
@@ -352,6 +378,7 @@ trait DateFormatTrait
             $format = [-1, $format];
         }
         $format = $format ?: [-1, IntlDateFormatter::SHORT];
+
         return static::parseDateTime($time, $format);
     }
 
@@ -378,9 +405,11 @@ trait DateFormatTrait
             if (static::$diffFormatter === null) {
                 static::$diffFormatter = new RelativeTimeFormatter();
             }
+
             return static::$diffFormatter;
         }
-        return static::$diffFormatter = $translator;
+
+        return static::$diffFormatter = $formatter;
     }
 
     /**

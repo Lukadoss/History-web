@@ -30,8 +30,8 @@ class TraceCommand extends Command
         $this
             ->setName('trace')
             ->setDefinition(array(
-                new InputOption('include-psy', 'p', InputOption::VALUE_NONE, 'Include Psy in the call stack.'),
-                new InputOption('num', 'n', InputOption::VALUE_REQUIRED, 'Only include NUM lines.'),
+                new InputOption('include-psy', 'p', InputOption::VALUE_NONE,     'Include Psy in the call stack.'),
+                new InputOption('num',         'n', InputOption::VALUE_REQUIRED, 'Only include NUM lines.'),
             ))
             ->setDescription('Show the current call stack.')
             ->setHelp(
@@ -62,9 +62,9 @@ HELP
      * Optionally limit the number of rows to include with $count, and exclude
      * Psy from the trace.
      *
-     * @param \Exception $e The exception with a backtrace.
-     * @param int $count (default: PHP_INT_MAX)
-     * @param bool $includePsy (default: true)
+     * @param \Exception $e          The exception with a backtrace.
+     * @param int        $count      (default: PHP_INT_MAX)
+     * @param bool       $includePsy (default: true)
      *
      * @return array Formatted stacktrace lines.
      */
@@ -83,9 +83,9 @@ HELP
         $trace = $e->getTrace();
         array_unshift($trace, array(
             'function' => '',
-            'file' => $e->getFile() !== null ? $e->getFile() : 'n/a',
-            'line' => $e->getLine() !== null ? $e->getLine() : 'n/a',
-            'args' => array(),
+            'file'     => $e->getFile() !== null ? $e->getFile() : 'n/a',
+            'line'     => $e->getLine() !== null ? $e->getLine() : 'n/a',
+            'args'     => array(),
         ));
 
         if (!$includePsy) {
@@ -99,11 +99,11 @@ HELP
         }
 
         for ($i = 0, $count = min($count, count($trace)); $i < $count; $i++) {
-            $class = isset($trace[$i]['class']) ? $trace[$i]['class'] : '';
-            $type = isset($trace[$i]['type']) ? $trace[$i]['type'] : '';
+            $class    = isset($trace[$i]['class']) ? $trace[$i]['class'] : '';
+            $type     = isset($trace[$i]['type']) ? $trace[$i]['type'] : '';
             $function = $trace[$i]['function'];
-            $file = isset($trace[$i]['file']) ? $this->replaceCwd($cwd, $trace[$i]['file']) : 'n/a';
-            $line = isset($trace[$i]['line']) ? $trace[$i]['line'] : 'n/a';
+            $file     = isset($trace[$i]['file']) ? $this->replaceCwd($cwd, $trace[$i]['file']) : 'n/a';
+            $line     = isset($trace[$i]['line']) ? $trace[$i]['line'] : 'n/a';
 
             $lines[] = sprintf(
                 ' <class>%s</class>%s%s() at <info>%s:%s</info>',

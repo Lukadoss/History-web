@@ -47,6 +47,7 @@ trait DifferenceTrait
     public function diffInYears(ChronosInterface $dt = null, $abs = true)
     {
         $dt = $dt === null ? static::now($this->tz) : $dt;
+
         return (int)$this->diff($dt, $abs)->format('%r%y');
     }
 
@@ -60,6 +61,7 @@ trait DifferenceTrait
     public function diffInMonths(ChronosInterface $dt = null, $abs = true)
     {
         $dt = $dt === null ? static::now($this->tz) : $dt;
+
         return $this->diffInYears($dt, $abs) * ChronosInterface::MONTHS_PER_YEAR + (int)$this->diff($dt, $abs)->format('%r%m');
     }
 
@@ -85,6 +87,7 @@ trait DifferenceTrait
     public function diffInDays(ChronosInterface $dt = null, $abs = true)
     {
         $dt = $dt === null ? static::now($this->tz) : $dt;
+
         return (int)$this->diff($dt, $abs)->format('%r%a');
     }
 
@@ -246,6 +249,7 @@ trait DifferenceTrait
     public static function fromNow($datetime)
     {
         $timeNow = new static();
+
         return $timeNow->diff($datetime);
     }
 
@@ -272,7 +276,7 @@ trait DifferenceTrait
      * @param bool $absolute removes time difference modifiers ago, after, etc
      * @return string
      */
-    public function diffForhumans(ChronosInterface $other = null, $absolute = false)
+    public function diffForHumans(ChronosInterface $other = null, $absolute = false)
     {
         return static::diffFormatter()->diffForHumans($this, $other, $absolute);
     }
@@ -289,8 +293,10 @@ trait DifferenceTrait
             if (static::$diffFormatter === null) {
                 static::$diffFormatter = new DifferenceFormatter();
             }
+
             return static::$diffFormatter;
         }
-        return static::$diffFormatter = $translator;
+
+        return static::$diffFormatter = $formatter;
     }
 }
